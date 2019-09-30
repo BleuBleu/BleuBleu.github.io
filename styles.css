@@ -1,0 +1,26 @@
+body {
+  background-color: #212529;
+  margin:0px;
+  font-family: 'Quicksand';
+}
+a {
+	color: #B2B9C6; 
+}
+h1 {
+  color: #C6CDDA;
+  font-size: 48px;
+  font-weight: 400;  
+}
+h2 {
+  color: #C6CDDA;
+  font-size: 28px;
+}
+li
+{
+  color: #C6CDDA;
+  font-weight: 400;
+}
+p {
+  color: #C6CDDA;
+  font-weight: 400;
+}
