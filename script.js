@@ -1,4 +1,3 @@
-// update position of square 1 and square 2 when scroll event fires.
 window.addEventListener('scroll', function()
 {
 	var banner = document.getElementsByClassName('banner')[0];
