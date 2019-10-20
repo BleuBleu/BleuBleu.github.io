@@ -4,5 +4,5 @@ window.addEventListener('scroll', function()
 	var gradient = document.getElementsByClassName('gradient')[0];
 	var scrollTop = window.pageYOffset || window.scrollTop;
 
-	gradient.style.top = -(Math.max(0, scrollTop - banner.height / 2) / (banner.height / 2)) * 120 + 'px';
+	gradient.style.top = Math.max(0, 164 + scrollTop - banner.height) * -0.75 + 'px';
 });
