@@ -1,10 +1,9 @@
 body {
   background-color: #212529;
-  margin:0px;
   font-family: 'Quicksand';
 }
 a {
-	color: #B2B9C6; 
+  color: #B2B9C6; 
 }
 h1 {
   color: #C6CDDA;
@@ -13,6 +12,14 @@ h1 {
 h2 {
   color: #C6CDDA;
   font-size: 16px;
+}
+h3 {
+  color: #C6CDDA;
+  font-size: 14px;
+}
+h4 {
+  color: #C6CDDA;
+  font-size: 12px;
 }
 li
 {
