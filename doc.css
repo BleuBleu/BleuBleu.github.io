@@ -49,10 +49,10 @@ p {
 
 #toc
 {
-	background-color: #32363a;
-	display: table;
-	width: auto;
-	padding: 10px; /* adjust as needed */
+  background-color: #32363a;
+  display: table;
+  width: auto;
+  padding: 10px; /* adjust as needed */
 }
 #toc div.h2 { margin-left: 0em }
 #toc div.h3 { margin-left: 2em }
