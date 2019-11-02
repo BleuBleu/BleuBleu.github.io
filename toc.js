@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	{
 		var documentRef = documentRef || document;
 		documentRef.getElementById("headertoc").style.display = "none";
+		documentRef.getElementById("toc").style.display = "none";
 	}
 } );
 
