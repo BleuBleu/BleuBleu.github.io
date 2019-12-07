@@ -21,6 +21,12 @@ h4 {
   color: #C6CDDA;
   font-size: 12px;
 }
+h1:after
+{
+    content:' ';
+    display:block;
+    border:1px solid #C6CDDA;
+}
 li
 {
   color: #C6CDDA;
