@@ -28,6 +28,12 @@ h4 {
   color: #C6CDDA;
   font-size: 18px;
 }
+h2:after
+{
+    content:' ';
+    display:block;
+    border:1px solid #C6CDDA;
+}
 li
 {
   color: #C6CDDA;
