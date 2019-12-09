@@ -23,6 +23,34 @@
 <div id="toc">
 </div>
 
+<h2 id="concepts">Installation</h2>
+
+<p>Depending on how you download FamiStudio, you might get scary warnings the first time you try to install or run it.</p>
+
+<h3 id="installwin">Windows</h3>
+
+<p>On Windows, SmartScreen might say "Windows protected your PC". To bypass the warning, simply click "More Info" and then "Run Anyway".</p>
+
+<center>
+<table><tr>
+<td><img src="SmartScreen1.png" width="400px" alt="SmartScreen warning 1" /></td>
+<td><img src="SmartScreen2.png" width="400px" alt="SmartScreen warning 2" /></td>
+</tr></table>
+</center>
+
+<h3 id="installmac">MacOS</h3>
+
+<p>On MacOS, GateKeeper is a bit more agressive. At first it will look like you simply cannot run it and it will give you the option to throw FamiStudio in the recycling bin.</p>
+<p>To bypass this warning, open the "Security and Privacy" settings and look for the warning saying that FamiStudio was blocked. Click "Open Anyway" and then you will have the option to launch it.</p>
+
+<center>
+<table><tr>
+<td><img src="GateKeeper1.png" width="400px" alt="GateKeeper warning 1" /></td>
+<td><img src="GateKeeper2.png" width="400px" alt="GateKeeper warning 2" /></td>
+<td><img src="GateKeeper3.png" width="400px" alt="GateKeeper warning 3" /></td>
+</tr></table>
+</center>
+
 <h2 id="concepts">Concepts</h2>
 
 <p>A FamiStudio project contains:</p>
@@ -90,8 +118,8 @@
 	<li><strong>Ctrl+S</strong>: Save</li>
 	<li><strong>Ctrl+E</strong>: Export</li>
 	<li><strong>Ctrl+O</strong>: Open</li>
-	<li><strong>Delete</strong>: Delete selected patterns.</li>
-	<li><strong>Escape</strong>: Deselects patterns, stops any sound that is stuck playing.</li>
+	<li><strong>Delete</strong>: Delete selected patterns or notes.</li>
+	<li><strong>Escape</strong>: Deselects patterns or notes, stops any sound that is stuck playing.</li>
 </ul>
 
 <h2 id="toolbar">Toolbar</h2>
@@ -261,13 +289,17 @@
 
 <p>Clicking in the timeline (header) of the sequencer will move the play position.</p>
 
-<h3 id="selectingeditingpatterns">Selecting/editing patterns</h3>
+<h3 id="selectingeditingpatterns">Editing patterns</h3>
 
 <p>Clicking a pattern selects it and opens the piano roll for the current channel at the location of the pattern. Double-clicking a pattern allows renaming and changing its color (pattern names need to be unique per channel). </p>
 
 <img src="EditPattern.png" alt="Edit pattern" />
 
-<p>You can select multiple patterns (in a rectangular grid) by shift-clicking to a second pattern. To un-select everything, simply press Esc. When multiple patterns are selected, only the color can be edited. </p>
+<p>You can select multiple patterns by right-cliking and dragging in the header bar of the Sequencer. To un-select everything, simply press Esc. When multiple patterns are selected, only the color can be edited. </p>
+
+<img src="PatternSelection.png" alt="Square selection" />
+
+<p>You can select multiple patterns in a rectangular grid, first select a pattern and shift-clicking to a second pattern.</p>
 
 <img src="SquareSelection.png" alt="Square selection" />
 
@@ -278,6 +310,10 @@
 <h3 id="movingcopyingpatterns">Moving/copying patterns</h3>
 
 <p>When one or multiple patterns are selected, dragging them will move them in the timeline. While dragging, holding Ctrl will copy a of the pattern(s). Note that when copying a pattern, it creates an instance of the same pattern, so modifying one instance will modify all of them.</p>
+
+<h3 id="movingcopyingpatterns">Cut/copy/pasting patterns</h3>
+
+<p>When one or multiple patterns are selected, press CTRL+C (or CTRL+X for cut). Move the selection somewhere else and paste with CTRL+V.</p>
 
 <h3 id="mutingsoloingchannels">Muting/soloing channels</h3>
 
@@ -305,7 +341,7 @@
 
 <p>Clicking in the timeline (header) of the piano roll will move the play position.</p>
 
-<h3 id="editingpatterns">Editing patterns</h3>
+<h3 id="editingpatterns">Adding and deleting notes</h3>
 
 <p>Clicking a pattern in the sequencer will scroll the piano roll to its location. Left-clicking in the piano roll will add a note of the currently selected instrument. Right-clicking deletes a note. </p>
 
@@ -318,6 +354,22 @@
 <img src="ReleaseNote.png" alt="Release Note" />
 
 <p>Hovering the mouse in the piano roll will display the location and note in the toolbar. Hovering over a note will display which instrument it uses.</p>
+
+<h3 id="editingpatterns">Selecting and editing notes</h3>
+
+<p>You can select notes by right-clicking and dragging in the header of the piano roll. Selected notes will appear with a thick silver border. Once notes are selected, then can be moved using the arrows keys (up, down, left and right). Holding CTRL while doing so will make the notes move by larger increments.</p>
+
+<img src="SelectNotes.png" alt="Selecting Notes" />
+
+<h3 id="editingpatterns">Cutting, copying and pasting notes</h3>
+
+<p>Much like the sequencer, selcted notes can be copy (or cut) by pressing CTRL+C (or CTRL+X). You can then move the selection somewhere else and paste the notes with CTRL+V.</p>
+
+<h3 id="editingpatterns">Special paste</h3>
+
+<p>If you want to paste notes, without their associated effets or volume track (or vice-versa). You can use a "special paste" by pressing CTRL+SHIFT+V. This will open a popup dialog asking you to choose what you want to paste.</p>
+
+<img src="PasteSpecial.png" alt="Special paste" />
 
 <h3 id="editingvolumetrackseffects">Editing volume tracks &amp; effects</h3>
 
