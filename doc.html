@@ -32,9 +32,9 @@
 <p>On Windows, SmartScreen might say "Windows protected your PC". To bypass the warning, simply click "More Info" and then "Run Anyway".</p>
 
 <center>
-<table><tr>
-<td><img src="SmartScreen1.png" width="400px" alt="SmartScreen warning 1" /></td>
-<td><img src="SmartScreen2.png" width="400px" alt="SmartScreen warning 2" /></td>
+<table style="border:none;"><tr>
+<td style="border:none;"><img src="SmartScreen1.png" width="400px" alt="SmartScreen warning 1" /></td>
+<td style="border:none;"><img src="SmartScreen2.png" width="400px" alt="SmartScreen warning 2" /></td>
 </tr></table>
 </center>
 
@@ -44,10 +44,10 @@
 <p>To bypass this warning, open the "Security and Privacy" settings and look for the warning saying that FamiStudio was blocked. Click "Open Anyway" and then you will have the option to launch it.</p>
 
 <center>
-<table><tr>
-<td><img src="GateKeeper1.png" width="400px" alt="GateKeeper warning 1" /></td>
-<td><img src="GateKeeper2.png" width="400px" alt="GateKeeper warning 2" /></td>
-<td><img src="GateKeeper3.png" width="400px" alt="GateKeeper warning 3" /></td>
+<table style="border:none;"><tr>
+<td style="border:none;"><img src="GateKeeper1.png" width="400px" alt="GateKeeper warning 1" /></td>
+<td style="border:none;"><img src="GateKeeper2.png" width="400px" alt="GateKeeper warning 2" /></td>
+<td style="border:none;"><img src="GateKeeper3.png" width="400px" alt="GateKeeper warning 3" /></td>
 </tr></table>
 </center>
 
@@ -100,6 +100,10 @@
 
 <h3 id="keyboardshortcuts">Keyboard shortcuts</h3>
 
+<p>Keyboard shortcuts or special actions are always displayed as tooltips in the upper-right corner of the toolbar. Please keep an eye on it to learn new functionalities.</p>
+
+<img src="Tooltip.png" alt="Tooltips" />
+
 <p>Here is a list of useful keyboard shortcuts:</p>
 
 <ul>
@@ -120,6 +124,15 @@
 	<li><strong>Ctrl+O</strong>: Open</li>
 	<li><strong>Delete</strong>: Delete selected patterns or notes.</li>
 	<li><strong>Escape</strong>: Deselects patterns or notes, stops any sound that is stuck playing.</li>
+</ul>
+
+<p>Some keyboard shortcuts specific to the piano roll:</p>
+
+<ul>
+	<li><strong>Ctrl+Click</strong>: Adds a stop note.</li>
+	<li><strong>Shift+Click</strong>: Adds a release note.</li>
+	<li><strong>S+Click (and drag)</strong>: Creates or edit a slide note.</li>
+	<li><strong>A+Click</strong>: Toggles the attack of a note.</li>
 </ul>
 
 <h2 id="toolbar">Toolbar</h2>
@@ -209,12 +222,13 @@
 <img src="ConfigSound.png" alt="Sound Configuration" />
 
 <ul>
-<li><strong>Stop Instrument After</strong>: When instruments have release notes, there is no way for FamiStudio to know when to stop the notes. This allows stopping any sound after a specified number of seconds. This only applies to MIDI or when previewing instruments on the piano roll and has no impact on the actual song.</li>
+<li><strong>Stop instrument after</strong>: When instruments have release notes, there is no way for FamiStudio to know when to stop the notes. This allows stopping any sound after a specified number of seconds. This only applies to MIDI or when previewing instruments on the piano roll and has no impact on the actual song.</li>
+<li><strong>Prevent popping on square channels:</strong>: The NES had a bug where the phase of square channels will reset around some notes (A-3, A-2, D-2, A-1, F-1, D-1, and B-0 on NTSC, or A#3, A#2, D#2, A#1, F#1, D#1, and C-0 on PAL), resulting in audible clicks or pops. This option will work around that bug using the <a href='http://forums.nesdev.com/viewtopic.php?t=231'>Smooth Vibrato technique by Blargg</a>, resulting in smooth pitch changes. Note that this option will not carry over to FamiTracker if you export.</li>
 </ul>
 
 <h4 id="midiconfiguration">MIDI Configuration</h4>
 
-<img src="ConfigSound.png" alt="MIDI Configuration" />
+<img src="ConfigMIDI.png" alt="MIDI Configuration" />
 
 <ul>
 <li><strong>Device</strong>: Allows choosing the MIDI device to use for previewing instruments.</li>
@@ -232,7 +246,7 @@
 <li>The <strong>volume</strong> envelope</li>
 <li>The <strong><em>pitch</em></strong> envelope</li>
 <li>The <strong>arpeggio</strong> envelope</li>
-<li>The <strong>duty cycle</strong>, four possible settings (only useful for the Square channel).</li>
+<li>The <strong>duty cycle</strong>, four possible settings, eight settings on VRC6 (only useful for the Square channel but has effects on some others).</li>
 </ul>
 
 <p>If an instrument has no envelope for a particular type, it will appear dimmed.</p>
@@ -245,11 +259,19 @@
 
 <p>Double-clicking on project name (first button in the project explorer) will allow you to change its name, author and copyright information. This information are used when exporting to NSF, for example.</p>
 
+<p>The project properties is also where you select your expansion audio. Expansion will add extra channels on top of the default 5 that the NES supported. Note that changing the expansion audio in a project will delete all data (patterns, notes, instrument) related to the previous expansion.</p>
+
+<p>List of expansions supported (will grow in the future):</p>
+
+<ul>
+<li><strong>Konami VRC6</strong>: Adds 2 square channels and a Sawtooth channel. The square channels are better quality than the stock square as they give more control over the duty cycle and dont suffer for the phase reset bug. The Sawtooth channel will sound slightly differently if using odd duty cycles (1, 3, 5 & 7).</li>
+</ul>
+
 <img src="EditProject.png" alt="Editing project properties" />
 
-<h3 id="editingsonginstrumentattributes">Editing song/instrument attributes</h3>
+<h3 id="editingsongattributes">Editing song attributes</h3>
 
-<p>Double-clicking on the a song or instrument will allow you to change its name, color and other attributes. Names must be unique.</p>
+<p>Double-clicking on the a song will allow you to change its name, color and other attributes. Names must be unique.</p>
 
 <p>Some song properties worth mentioning:</p>
 
@@ -262,6 +284,14 @@
 </ul>
 
 <img src="EditSong.png" alt="Editing song properties" />
+
+<p>Double-clicking on an instrument works similarly.</p>
+
+<ul>
+<li><strong>Relative pitch</strong>: By default, FamiStudio's pitch envelope are <i>absolute</i>. Meaning that the envelope values are the pitch you are going to hear, this is especially useful for vibrato where you can draw a simple sine wave. It is sometimes useful to have <i>relative</i> pitch envelope to create pitches that rapidly ascend or decend (useful for bassdrum sounds). This is how FamiTracker handles pitch envelopes.</li>
+</ul>
+
+<img src="EditInstrument.png" alt="Editing instrument properties" />
 
 <h3 id="replacinganinstrumentbyanother">Replacing an instrument by another</h3>
 
@@ -297,7 +327,7 @@
 
 <p>You can select multiple patterns by right-cliking and dragging in the header bar of the Sequencer. To un-select everything, simply press Esc. When multiple patterns are selected, only the color can be edited. </p>
 
-<img src="PatternSelection.png" alt="Square selection" />
+<img src="PatternSelection2.png" alt="Square selection" />
 
 <p>You can select multiple patterns in a rectangular grid, first select a pattern and shift-clicking to a second pattern.</p>
 
@@ -345,6 +375,8 @@
 
 <p>Clicking a pattern in the sequencer will scroll the piano roll to its location. Left-clicking in the piano roll will add a note of the currently selected instrument. Right-clicking deletes a note. </p>
 
+<h3 id="stoprelease">Stop & Release notes</h3>
+
 <p>Using Ctrl+click will add a stop note. Stops notes are displayed as little triangles. Although they are displayed next to the note preceding them, they actually have no pitch or instrument, they simply stop the sound. Stop notes are important because on the NES, a note will play indefinitely unless you tell it to stop.</p>
 
 <img src="StopNote.png" alt="Stop Note" />
@@ -354,6 +386,36 @@
 <img src="ReleaseNote.png" alt="Release Note" />
 
 <p>Hovering the mouse in the piano roll will display the location and note in the toolbar. Hovering over a note will display which instrument it uses.</p>
+
+<h3 id="noattack">Note attack</h3>
+
+<p>By default, notes will have an "attack" which mean they will restart their envelopes (volume, pitch, etc.) from the beginning. This is represented by the little dark rectangle on the left of each note. This can be toggled for a particular note by hold the A key and clicking on a note. Note that if a note does not use the same instrument as the previous one, the attack will still play, even if disabled. Also please note that this will generally not carry over to FamiTracker, besides specific use cases around slide notes.</p>
+
+<p>In this example, the first note will have an attack, while the second one will not.</p>
+
+<img src="NoAttack.png" alt="Toggling attack" />
+
+<p>Since envelopes are not resetted, this means that if a note was released, it will remain released if the subsequent notes have no attack.</p>
+
+<img src="NoAttackReleased.png" alt="Releases preserved without attack." />
+
+<h3 id="slidenotes">Slide notes</h3>
+
+<p>Slide notes are notes that start at a given pitch (the pitch of the note) and slowly change to hit a target pitch which is represented by where the triangle ends. In this example, the attack of the second note has been disabled.</p>
+
+<img src="SlideNote.png" alt="Slide note." />
+
+<p>Slide notes garantees that the target pitch will be reached by the end of the note (end of the triangle) but this might happen a bit earlier than the visual repesentation suggests. Especially in the higher pitches. This is due to the fact that the pitch calculations are all integer-based (with 1-bit of fraction) and it is often impossible to get the exact required slope to reach the pitch at the exact time. This will be somewhat worse when exporting to FamiTracker since FamiTracker does not have the 1-bit of fraction FamiStudio has.</p>
+
+<p>When <strong>importing</strong> from FamiTracker, all possible slide effects (1xx, 2xx, 3xx, Qxx and Rxx) will be converted to slide notes. Sometimes attack will be disabled as well to mimic the same behavior. This in an inherently imperfect process since they approaches are so different. For this reason, importing/exporting slide notes with FamiTracker should be considered a lossy process.</p>
+
+<p>When <strong>exporting</strong> to FamiTracker, FamiStudio will do its very best to choose which FamiTracker effect to use. Here are the general rules:</p>
+
+<ul>
+<li>If the slide note and its target are within 16 semitones, Qxx/Rxx (note slide up/down) will be favored as it is the most similar effect to what we are doing.</li>
+<li>Otherwise, if the previous note has the same pitch as the slide note, 3xx (auto-portamento) will be used.</li>
+<li>Finally, if none of these conditions are satisfied, 1xx/2xx (slide up/down) will be used. This is not ideal since the pitch might not exactly match the target note.</li>
+</ul>
 
 <h3 id="editingpatterns">Selecting and editing notes</h3>
 
@@ -376,19 +438,51 @@
 <p>The effect panel can be opened by clicking the little triangle at the top-left of the piano roll. Right now, only a handful of effects are supported:</p>
 
 <ul>
+<li><strong>Volume</strong>: The overall volume of the channel.</li>
+<li><strong>Vib Speed</strong>: Vibrato speed, used in conjuction with vibrato depth to create a vibrato effect.</li>
+<li><strong>Vib Depth</strong>: Vibrato depth, used in conjuction with vibrato speed to create a vibrato effect.</li>
 <li><strong>Volume</strong>: Each channel can have a volume track.</li>
 <li><strong>Jump</strong>: Jumps back to a previous pattern in the song. The effect value is the pattern index to jump to</li>
 <li><strong>Skip</strong>: Skips to the next pattern, at the note specified by the effect value</li>
 <li><strong>Speed</strong>: Changes the speed of the song</li>
 </ul>
 
+<p>Effects are edited by selecting and effect and dragging up or down to change the value. Right-clicking on an effect value deletes it.</p>
+
+<h4 id="volumetrack">Volume track</h3>
+
 <p>The volume tracks dictates how loud the current channel should play. This volume is combined with volume envelope by multiplication (50% volume track x 50% envelope volume = 25% total volume). It is much more efficient to use volume envelopes wherever possible and only use volume tracks to control the global volume of the song.</p>
 
 <img src="VolumeTrack.png" alt="Editing volume track" />
 
-<p>Besides the volume, there also can only be 1 effect for each note. Left-clicking a note that does not currently have an effect will add the currently selected effect. Dragging up and down will change its value. Right-clicking removes the effect.</p>
+<h4 id="vibratotrack">Vibrato depth & speed.</h3>
 
-<img src="Effect.png" alt="Editing effect" />
+<p>Vibrato depth and speed are used to add vibrato to a portion of the song without having to bother creating a new instrument. Please note that vibrato will temporarely override any pitch envelope on the current instrument. When vibrato is disabled (by setting depth or speed, or both to zero), the instrument will essentially have no pitch envelope until a new note is played.</p>
+
+<img src="Vibrato.png" alt="Editing vibrato track" />
+
+<p>The depth values for the vibrato are <a href='http://famitracker.com/wiki/index.php?title=4xy'>indentical to FamiTracker</a> but the speeds are slightly different. The way FamiTracker implements vibrato, while clever, is flawed as it undersamples the vibrato curve at high speed, leading to aliasing which ends up with a low-frequency tone that has a "ringing" sound to it. Here is a table relating the speeds in FamiStudio and FamiTracker (this is applied automatically when importing/exporting):</p>
+
+<center>
+<table>
+<tr><th>FamiTracker speed</th><th>FamiTracker period</th><th>FamiStudio speed</th><th>FamiStudio period</th></tr>
+<tr><td>1</td><td>64</td><td>1</td><td>64</td></tr>
+<tr><td>2</td><td>32</td><td>2</td><td>32</td></tr>
+<tr><td>3</td><td>21.3</td><td>3</td><td>21</td></tr>
+<tr><td>4</td><td>16</td><td>4</td><td>16</td></tr>
+<tr><td>5</td><td>12.8</td><td>5</td><td>13</td></tr>
+<tr><td>6</td><td>10.7</td><td>6</td><td>11</td></tr>
+<tr><td>7</td><td>9.1</td><td>7</td><td>9</td></tr>
+<tr><td>8</td><td>8</td><td>8</td><td>8</td></tr>
+<tr><td>9</td><td>7.1</td><td>9</td><td>7</td></tr>
+<tr><td>10</td><td>6.4</td><td>10</td><td>6</td></tr>
+<tr><td>11</td><td>5.8</td><td>10</td><td>6</td></tr>
+<tr><td>12</td><td>5.3</td><td>11</td><td>5</td></tr>
+<tr><td>13</td><td>4.9</td><td>11</td><td>5</td></tr>
+<tr><td>14</td><td>4.6</td><td>11</td><td>5</td></tr>
+<tr><td>15</td><td>4.3</td><td>12</td><td>4</td></tr>
+</table>
+</center>
 
 <h3 id="editinginstrumentenvelopes">Editing instrument envelopes</h3>
 

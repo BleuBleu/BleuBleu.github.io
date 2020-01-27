@@ -43,7 +43,26 @@ p {
   color: #C6CDDA;
   font-weight: 400;
 }
-
+table {
+  border:1px solid #C6CDDA;
+  border-collapse: collapse;
+}
+th {
+  color: #C6CDDA;
+  font-weight: 800;
+  text-align: center;
+  border:1px solid #C6CDDA;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+td {
+  color: #C6CDDA;
+  font-weight: 400;
+  text-align: center;
+  border:1px solid #C6CDDA;
+  padding-left: 5px;
+  padding-right: 5px;
+}
 .header img {
   float: left;
 }
