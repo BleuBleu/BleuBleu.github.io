@@ -143,11 +143,11 @@
 <p><img alt="" src="../images/EditProject.png#center" /></p>
 <p>The project properties is also where you select your <a href="../expansion/">Expansion Audio</a>. Expansion will add extra channels on top of the default 5 that the NES supported. Note that changing the expansion audio in a project will delete all data (patterns, notes, instrument) related to the previous expansion.</p>
 <p>Please visit the <a href="../expansion/">Expansion Audio</a> section for more detail about each expansion.</p>
-<p>The tempo mode will affect how the tempo of you songs is calculated, how much control you have over the notes of your song and how your song plays on PAL systems. Note that changing the tempo mode when you have songs created is possible, but not recommended, the conversion is quite crude at the moment.</p>
 <h2 id="tempo-modes">Tempo Modes</h2>
+<p>The tempo mode will affect how the tempo of you songs is calculated, how much control you have over the notes of your song and how your song plays on PAL systems. Note that changing the tempo mode when you have songs created is possible, but not recommended, the conversion is quite crude at the moment.</p>
 <h3 id="famistudio-tempo-mode-default">FamiStudio tempo mode (default)</h3>
 <p>In this mode, you always have control over every single frame (1/60th of a second of the song) and you always edit in NTSC. You will be able to choose a <strong>Note Length</strong> which has a fixed number a frame (1/60s). More frames means a slower tempo. </p>
-<p>The biggest different with FamiTracker tempo is in the wait it handles PAL conversion. </p>
+<p>The biggest different with FamiTracker tempo is in the way it handles PAL conversion. </p>
 <p>For example, in the image below, we have a 7 NTSC frames (1/60th of a sec) per note. On PAL system, it takes only 6 frames (1/50th of a sec) to cover approximately the same amount of time. </p>
 <p><img alt="" src="../images/NtscPalFrames.png#center" /></p>
 <p>Since our song is edited and stored as NTSC and we want to faitfully play it back on PAL systems, FamiStudio will sometimes run 2 NTSC frames in a single PAL frame so it can keep up with NTSC. </p>
@@ -209,7 +209,7 @@
 <tr>
 <td>8</td>
 <td>4 frames every 3 note</td>
-<td>2, 5,</td>
+<td>2, 5</td>
 <td>112.5</td>
 </tr>
 <tr>
@@ -276,7 +276,9 @@
 </table>
 <p>Note that you arent not limited to the BPM values suggested by the different note lengths. You can create in-between ones by putting multiples notes into a larger one. For example, Gimmick! uses a 11 frames per note, but puts 2 notes inside it. One of 5 frames and one of 6 frames. This creates an approximate tempo of 163.6 BPM and the different note lengths is not audible.</p>
 <p><img alt="" src="../images/GimmickNote.png#center" /></p>
-<p>The FamiTracker documentation has a <a href="http://famitracker.com/wiki/index.php?title=Common_tempo_values">handy chart</a> for these. Note that you are limited to 16 frames per note a the moment.</p>
+<p>The FamiTracker documentation has a <a href="http://famitracker.com/wiki/index.php?title=Common_tempo_values">handy chart</a> for these. Note that you are limited to 18 frames per note a the moment.</p>
+<p>If you are using the FamiStudio tempo mode and wish to have correct PAL playback in you homebrew game, please check out this custom version of FamiTone2 (named FamiTone2FS) that supports it:</p>
+<p><a href="https://github.com/BleuBleu/FamiTone2FS">https://github.com/BleuBleu/FamiTone2FS</a></p>
 <h3 id="famitracker-tempo-mode">FamiTracker tempo mode</h3>
 <p>This mode is mostly for compatibility with FamiTracker. It uses the speed/tempo paradigm. Please check out the <a href="http://famitracker.com/wiki/index.php?title=Fxx">FamiTracker documentation</a> for a detailed explanation on how the playback speed is affected. If you import a FamiTracker Text or FTM file, it will be in this tempo mode. </p>
 <p>Only use this mode if you have specific compatibility needs with FamiTracker (such as exporting to an audio engine that only supports this tempo mode), as it will not receive any future improvement. When using this tempo mode, the <em>Speed</em> effect will be available in the effect panel.</p>
