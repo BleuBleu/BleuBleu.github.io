@@ -156,12 +156,25 @@
 <h1 id="installation">Installation</h1>
 <p>Depending on how you download FamiStudio, you might get scary warnings the first time you try to install or run it.</p>
 <h2 id="windows">Windows</h2>
+<p>On Windows, if you get an error trying to start the application, but sure to install these 2 requirements:</p>
+<ul>
+<li>You will need the <a href="https://www.microsoft.com/en-us/download/confirmation.aspx?id=8109">Visual Studio 2015 runtime</a> (x86 version)</li>
+<li>
+<p>You also may need (especially on Windows 7) to install this rather old and cluncky <a href="https://www.microsoft.com/en-us/download/confirmation.aspx?id=8109">DirectX package</a></p>
+<ol>
+<li>It is going to ask you to extra the files to somewhere, extract to a temporary folder</li>
+<li>Run DXSETUP.exe inside that temporary folder to really install.</li>
+<li>Delete the temp folder afterwards to cleanup.</li>
+</ol>
+</li>
+</ul>
 <p>On Windows, SmartScreen might say "Windows protected your PC".</p>
 <p><img alt="" src="images/SmartScreen1.png#center" /></p>
 <p>To bypass the warning, simply click "More Info" and then "Run Anyway".</p>
 <p><img alt="" src="images/SmartScreen2.png#center" /></p>
 <h2 id="macos">MacOS</h2>
-<p>On MacOS, GateKeeper is a bit more agressive. At first it will look like you simply cannot run it and it will give you the option to throw FamiStudio in the recycling bin.</p>
+<p>On MacOS, you will need to install <a href="https://www.mono-project.com/download/stable/#download-mac">Mono</a>.</p>
+<p>GateKeeper can be quite agressive when first running the application. At first it will look like you simply cannot run it and it will give you the option to throw FamiStudio in the recycling bin.</p>
 <p><img alt="" src="images/GateKeeper1.png#center" /></p>
 <p>To bypass this warning, open the "Security and Privacy" settings and look for the warning saying that FamiStudio was blocked. </p>
 <p><img alt="" src="images/GateKeeper2.png#center" /></p>
@@ -250,5 +263,5 @@
 
 <!--
 MkDocs version : 1.1
-Build Date UTC : 2020-05-03 03:46:49
+Build Date UTC : 2020-05-08 04:07:37
 -->
