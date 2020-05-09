@@ -148,12 +148,17 @@
 <h3 id="famistudio-tempo-mode-default">FamiStudio tempo mode (default)</h3>
 <p>In this mode, you always have control over every single frame (1/60th of a second of the song) and you always edit in NTSC. You will be able to choose a <strong>Note Length</strong> which has a fixed number a frame (1/60s). More frames means a slower tempo. </p>
 <p>The biggest different with FamiTracker tempo is in the way it handles PAL conversion. </p>
-<p>For example, in the image below, we have a 7 NTSC frames (1/60th of a sec) per note. On PAL system, it takes only 6 frames (1/50th of a sec) to cover approximately the same amount of time. </p>
-<p><img alt="" src="../images/NtscPalFrames.png#center" /></p>
-<p>Since our song is edited and stored as NTSC and we want to faitfully play it back on PAL systems, FamiStudio will sometimes run 2 NTSC frames in a single PAL frame so it can keep up with NTSC. </p>
-<p><img alt="" src="../images/PalSkipFrames.png#center" /></p>
-<p>To make the PAL playback speed even more similar, the frame skips are ditributed over multiple notes, leading to a PAL playback speed error that is always less that 0.15%. </p>
-<p>This table sumarizes the number of frames that will be skipped on PAL for different note length, as well as their exact positions inside the notes.</p>
+<p>For example, in the image below, we have a 6 NTSC frames (1/60th of a sec) per note. On PAL system (50 FPS), if were were to play back this song, it would play 20% slower.</p>
+<p><img alt="" src="../images/NtscPalFrames6.png#center" /></p>
+<p>To faitfully play back our NTSC song on PAL systems, FamiStudio will sometimes run 2 NTSC frames in a single PAL frame so it can keep up with NTSC. </p>
+<p><img alt="" src="../images/PalSkipFrames6.png#center" /></p>
+<p>This makes the playback speed almost the same, but unfortunately, this is not always this simple. Let's take a note length of 8 for example. Again, if we were to try to naively play this back on PAL, it would play back 20% slower than NTSC.</p>
+<p><img alt="" src="../images/NtscPalFrames8.png#center" /></p>
+<p>If we try to apply the same strategy of running 2 NTSC frame once per note, we would still end up playing 5% slower.</p>
+<p><img alt="" src="../images/PalSkipFrames8.png#center" /></p>
+<p>The solution here is to skip 4 NTSC frames, over 3 notes to distribute the error. This ends up reduce the playback speed error well below 1%.</p>
+<p><img alt="" src="../images/PalSkipFrames8-3Notes.png#center" /></p>
+<p>This table sumarizes the number of frames that will be skipped on PAL for different note length, as well as their exact positions inside the notes. These patterns will always lead to a PAL playback speed error that is always less that 0.15%. </p>
 <table>
 <thead>
 <tr>
