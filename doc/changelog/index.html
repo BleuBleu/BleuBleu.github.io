@@ -120,6 +120,10 @@
             
             <li class="nav-item" data-level="1"><a href="#change-log" class="nav-link">Change Log</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#version-202" class="nav-link">Version 2.0.2</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
             <li class="nav-item" data-level="2"><a href="#version-201" class="nav-link">Version 2.0.1</a>
               <ul class="nav flex-column">
               </ul>
@@ -161,6 +165,17 @@
 
 <h1 id="change-log">Change Log</h1>
 <p>Version history / release notes for each release.</p>
+<h2 id="version-202">Version 2.0.2</h2>
+<p>New features:</p>
+<ul>
+<li>Fixing seek bar position in sequencer on Hi-DPI (Retina on MacOS or scaling &gt; 100% on Windows).</li>
+<li>Fixing crash when importing FTM containing multiple songs with the same name.</li>
+<li>Fixing missing or out-of-order songs when exporting to FamiTone2.</li>
+<li>Interpreting zero-velocity MIDI note on events as note off as per specification.</li>
+<li>Highlighting notes being dragged on the piano roll.</li>
+<li>Detection of audio device changes on Windows 7.</li>
+<li>Handling of D3D device lost to improve stability on Windows 7.</li>
+</ul>
 <h2 id="version-201">Version 2.0.1</h2>
 <p>New features:</p>
 <ul>
