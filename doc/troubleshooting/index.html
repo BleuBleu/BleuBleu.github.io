@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>Configuring FamiStudio - FamiStudio Documentation</title>
+        <title>Troubleshooting - FamiStudio Documentation</title>
         <link href="../css/bootstrap.min.css" rel="stylesheet">
         <link href="../css/font-awesome.min.css" rel="stylesheet">
         <link href="../css/base.css" rel="stylesheet">
@@ -74,11 +74,11 @@
 </li>
                                     
 <li>
-    <a href="./" class="dropdown-item active">Configuring FamiStudio</a>
+    <a href="../config/" class="dropdown-item">Configuring FamiStudio</a>
 </li>
                                     
 <li>
-    <a href="../troubleshooting/" class="dropdown-item">Troubleshooting</a>
+    <a href="./" class="dropdown-item active">Troubleshooting</a>
 </li>
                                     
 <li>
@@ -95,12 +95,12 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../cleanup/" class="nav-link">
+                                <a rel="prev" href="../config/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../troubleshooting/" class="nav-link">
+                                <a rel="next" href="../changelog/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -122,21 +122,9 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#configuring-famistudio" class="nav-link">Configuring FamiStudio</a>
+            <li class="nav-item" data-level="1"><a href="#troubleshooting" class="nav-link">Troubleshooting</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#configuration-dialog" class="nav-link">Configuration Dialog</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#user-interface-configuration" class="nav-link">User Interface Configuration</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#sound-configuration" class="nav-link">Sound Configuration</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#midi-configuration" class="nav-link">MIDI Configuration</a>
+            <li class="nav-item" data-level="2"><a href="#the-keyboards-does-not-seems-to-work-on-macos" class="nav-link">The keyboards does not seems to work on MacOS</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -147,35 +135,11 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="configuring-famistudio">Configuring FamiStudio</h1>
-<p>The configuration dialog is accessed from the main toolbar.</p>
-<h2 id="configuration-dialog">Configuration Dialog</h2>
-<p>The configuration dialog dialog is accessed from the toolbar.</p>
-<h2 id="user-interface-configuration">User Interface Configuration</h2>
-<p><img alt="" src="../images/ConfigUI.png#center" /></p>
-<ul>
-<li>
-<p><strong>Scaling</strong>: By default, FamiStudio will use the scaling of your primary monitor on Windows (100%, 150% and 200% are support) and on macOS it will choose between 100% or 200% depending on if you have a retina display or not. This behavior can be overriden by a scaling of your choosing. This requires restarting the app.</p>
-</li>
-<li>
-<p><strong>Check for updates</strong>: At startup FamiStudio checks for new version online. This can be disabled.</p>
-</li>
-</ul>
-<h2 id="sound-configuration">Sound Configuration</h2>
-<p><img alt="" src="../images/ConfigSound.png#center" /></p>
-<ul>
-<li>
-<p><strong>Stop instrument after</strong>: When instruments have release notes, there is no way for FamiStudio to know when to stop the notes. This allows stopping any sound after a specified number of seconds. This only applies to MIDI or when previewing instruments on the piano roll and has no impact on the actual song.</p>
-</li>
-<li>
-<p><strong>Prevent popping on square channels</strong>: The NES had a bug where the phase of square channels will reset around some notes (A-3, A-2, D-2, A-1, F-1, D-1, and B-0 on NTSC, or A#3, A#2, D#2, A#1, F#1, D#1, and C-0 on PAL), resulting in audible clicks or pops. This option will work around that bug using the Smooth Vibrato technique by Blargg, resulting in smooth pitch changes. Note that this option will not carry over to FamiTracker if you export.</p>
-</li>
-</ul>
-<h2 id="midi-configuration">MIDI Configuration</h2>
-<p><img alt="" src="../images/ConfigMIDI.png#center" /></p>
-<ul>
-<li><strong>Device</strong>: Allows choosing the MIDI device to use for previewing instruments.</li>
-</ul></div>
+<h1 id="troubleshooting">Troubleshooting</h1>
+<p>This section will contain solutions to problems that have been encountered by FamiStudio users. This section is still work in progress.</p>
+<h2 id="the-keyboards-does-not-seems-to-work-on-macos">The keyboards does not seems to work on MacOS</h2>
+<p>This seems to be a permissions issue in macOS. In the <strong>Security &amp; Privacy</strong> settings, make sure <strong>Input Monitoring</strong> is allowed for both <strong>sh</strong> and <strong>Terminal</strong>. </p>
+<p><img alt="" src="../images/InputMacOs.png#center" /></p></div>
             </div>
         </div>
 

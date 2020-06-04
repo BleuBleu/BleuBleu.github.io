@@ -78,6 +78,10 @@
 </li>
                                     
 <li>
+    <a href="../troubleshooting/" class="dropdown-item">Troubleshooting</a>
+</li>
+                                    
+<li>
     <a href="../changelog/" class="dropdown-item">Change Log</a>
 </li>
                                 </ul>
@@ -152,6 +156,10 @@
               <ul class="nav flex-column">
               </ul>
             </li>
+            <li class="nav-item" data-level="2"><a href="#copypasting-patterns-between-projects" class="nav-link">Copy/pasting patterns between projects</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
             <li class="nav-item" data-level="2"><a href="#setting-the-loop-point" class="nav-link">Setting the loop point</a>
               <ul class="nav flex-column">
               </ul>
@@ -179,6 +187,10 @@
 <p>Left-clicking on the icon of a channel (Square, triangle, noise, DPCM) will toggle mute. Right-clicking will toggle solo.</p>
 <h2 id="force-display-channel">Force display channel</h2>
 <p>Clicking the tiny square icon next to the channel name will force display it in the piano roll.  Alternatively, you can press the keyboard key <strong>Ctrl + 1...5</strong> (more if using expansion).</p>
+<p><img alt="" src="../images/ForceDisplayButton.png#center" /></p>
+<p>Channels that are force displayed and are not the current channel will appear dimmed in the piano roll. This is useful when harmonizing between multiple channels, or editing drum patterns.</p>
+<p><img alt="" src="../images/ForceDisplayPianoRoll.png#center" /></p>
+<p>This can also achieved with the keyboard by pressing Ctrl + 1...5 (the number of the channel).</p>
 <h2 id="addingremoving-patterns">Adding/removing patterns</h2>
 <p>You can add a new pattern by left-clicking on an empty space. Right-clicking deletes.</p>
 <h2 id="editing-patterns_1">Editing patterns</h2>
@@ -192,10 +204,10 @@
 <p>When one or multiple patterns are selected, dragging them will move them in the timeline. While dragging, holding Ctrl will copy a of the pattern(s). Note that when copying a pattern, it creates an instance of the same pattern, so modifying one instance will modify all of them.</p>
 <h2 id="cutcopypasting-patterns">Cut/copy/pasting patterns</h2>
 <p>When one or multiple patterns are selected, press CTRL+C (or CTRL+X for cut). Move the selection somewhere else and paste with CTRL+V.</p>
-<p><img alt="" src="../images/ForceDisplayButton.png#center" /></p>
-<p>Channels that are force displayed and are not the current channel will appear dimmed in the piano roll. This is useful when harmonizing between multiple channels, or editing drum patterns.</p>
-<p><img alt="" src="../images/ForceDisplayPianoRoll.png#center" /></p>
-<p>This can also achieved with the keyboard by pressing Ctrl + 1...5 (the number of the channel).</p>
+<h2 id="copypasting-patterns-between-projects">Copy/pasting patterns between projects</h2>
+<p>Copy and pasting patterns between projects is possible When doing so, FamiStudio will assume patterns having the same name are identical. If a pattern is not found, it will offer you to create it for you. </p>
+<p>For example, if you copy a pattern named "Chorus1" from a project to another. If no such pattern is found, it will be copied. Otherwise, if an existing pattern named "Chorus1" is found in the second project, it will assume it is the same.</p>
+<p>Inside patterns, for notes and instrument, the <a href="../pianoroll/#copy-pasting-notes-between-projects">same rule</a> applies.</p>
 <h2 id="setting-the-loop-point">Setting the loop point</h2>
 <p>The <strong>Loop point</strong> is where the song will repeat once it reaches the end and is represented by a little arrow. </p>
 <p><img alt="" src="../images/LoopPoint.png#center" /></p>
