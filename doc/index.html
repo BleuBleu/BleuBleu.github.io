@@ -78,6 +78,10 @@
 </li>
                                     
 <li>
+    <a href="cmdline/" class="dropdown-item">Command-line Processing</a>
+</li>
+                                    
+<li>
     <a href="troubleshooting/" class="dropdown-item">Troubleshooting</a>
 </li>
                                     
@@ -154,6 +158,10 @@
               <ul class="nav flex-column">
               </ul>
             </li>
+            <li class="nav-item" data-level="2"><a href="#linux" class="nav-link">Linux</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
         </ul>
@@ -209,7 +217,20 @@
 <p>To bypass this warning, open the "Security and Privacy" settings and look for the warning saying that FamiStudio was blocked. </p>
 <p><img alt="" src="images/GateKeeper2.png#center" /></p>
 <p>Click "Open Anyway" and then you will have the option to launch it.</p>
-<p><img alt="" src="images/GateKeeper3.png#center" /></p></div>
+<p><img alt="" src="images/GateKeeper3.png#center" /></p>
+<h2 id="linux">Linux</h2>
+<p>The Linux version should work on most x64 ditros. But given the very non-stardard nature of the OS, your mileage may vary.</p>
+<p>Please install the following dependencies before trying ot run the Linux version.</p>
+<ol>
+<li>Install <a href="https://www.mono-project.com/download/stable/#download-lin">Mono</a></li>
+<li>Install gtk-sharp2, this is usually by typing this, but this might vary depending on your distro :<pre><code>sudo apt-get install gtk-sharp2
+</code></pre>
+</li>
+</ol>
+<p>Then to run provided amd64 (basically any x64 processor), simply run:</p>
+<pre><code>mono FamiStudio.exe
+</code></pre>
+<p>If you run a very old version of Linux or if you are running an exotic architecture, you may have missing dependencies. If this is the case, you may have to compile some of the libraries. This is a rather manual process. Please follow the build steps on <a href="https://github.com/BleuBleu/FamiStudio">GitHub</a>. </p></div>
             </div>
         </div>
 
@@ -293,5 +314,5 @@
 
 <!--
 MkDocs version : 1.1
-Build Date UTC : 2020-06-04 14:40:20
+Build Date UTC : 2020-06-29 06:53:43
 -->

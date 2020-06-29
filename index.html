@@ -37,57 +37,54 @@
 				<li>Low CPU usage (Direct2D for graphics, XAudio2 for audio)</li>
 			</ul>
 
-			<h1>FamiStudio 2.0.0 is out!</h1>
+			<h1>FamiStudio 2.1.0 is out!</h1>
 
 			<p>New features:</p>
 			<ul>
-				<li>More audio expansions: FDS, MMC5, VRC7, Namco 163 & Sunsoft S5B.</li>
-				<li>Real-time expansion instrument parameters edition</li>
-				<li>NSF import</li>
-				<li>Note drag & drop with audio preview</li>
-				<li>FamiTracker FTM import</li>
-				<li>ROM export</li>
-				<li>Fine pitch effect track</li>
-				<li>New tempo mode</li>
-				<li>PAL support</li>
-				<li>FamiStudio text import/export</li>
-				<li>Custom pattern settings and loop point</li>
+				<li>First Linux release</li>
+				<li>Trackpad controls</li>
+				<li>Note snapping in the piano roll</li>
+				<li>New time format (MM:SS:mmm)</li>
+				<li>Command-line interface</li>
+				<li>Import of instruments from any supported format</li>
+				<li>Duplication of patterns in the sequencer</li>
+				<li>Mix paste</li>
+				<li>Improved WAV export</li>
+				<li>FamiTone2 sound effect export support</li>
+				<li>Support for pasting text values in envelopes (comma, semicolon, space, tab or newline seperated)</li>
+				<li>PAL native authoring for FamiStudio tempo</li>
+				<li>MacOS+Linux MIDI keyboard support</li>
+				<li>Shift+Space plays from the beginning of the song</li>
+				<li>Alt+Right click up/down as an alternate zooming method</li>
 			</ul>
 
 			<p>Breaking/behavior changes:</p>
 			<ul>
-				<li>VRC6 saw is no longer affected by duty. The 0 to 15 volume range will map to the entire 0 to 31 possible range. Songs using VRC6 created prior to 2.0.0 will have to cut the volume in half to sound the same (either using volume track or instrument envelope).</li>
-				<li>Notes without attack will remain without attack until a new note with attack is reached (even after a stop note).</li>
+				<li>There was a bug in 2.0.x where release notes would abrutly interrupt slide notes (the NSF was doing it correctly). This is no longer the case.</li>
 			</ul>
 
+			<p>Release trailer:</p>
 			<div style="position:relative;margin-left: auto;margin-right: auto;width:80%;height:0;padding-bottom:45%;">
-				<iframe style="position:absolute;top:0;left:0;width:100%;height:100%" src="https://www.youtube.com/embed/QRn_ymIdUp8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<iframe style="position:absolute;top:0;left:0;width:100%;height:100%" src="https://www.youtube.com/embed/r3oHXZ3MhyA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			</div>
 
 			<h1>Download</h1>
-			<p>
-				FamiStudio 2.0.3 is available for Windows and macOS.
-			</p>
-
-			<h2>Changes in 2.0.3</h2>
-			<p>These are only the changes since the last version. The documentation contains the <a href='https://famistudio.org/doc/changelog/'>full change log</a>.</p>
-			<ul>
-				<li>Fix crash when clicking on a note when a incompatible instrument is selected.</li>
-				<li>Fix WAV file export when using a sample rate different than 44100Hz.</li>
-			</ul>
 
 			<h2>Download links</h2>
 			<table style="margin-left: auto;margin-right: auto;">
 				<tr>
-					<td style="padding: 20px;"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/2.0.3/FamiStudio203-WinInstaller.zip"><img src="windows.png"></a></td>
-					<td style="padding: 20px;"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/2.0.3/FamiStudio203-MacOS.zip"><img src="macos.png"></a></td>
+					<td style="padding: 20px;"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/2.1.0/FamiStudio210-WinInstaller.zip"><img src="windows.png"></a></td>
+					<td style="padding: 20px;"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/2.1.0/FamiStudio210-MacOS.zip"><img src="macos.png"></a></td>
+					<td style="padding: 20px;"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/2.1.0/FamiStudio210-LinuxAMD64.zip"><img src="linux.png"></a></td>
 				</tr>
 				<tr>
-					<td style="padding: 0px;"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/2.0.3/FamiStudio203-WinInstaller.zip"><center>Windows Installer</center></a></td>
-					<td style="padding: 0px;"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/2.0.3/FamiStudio203-MacOS.zip"><center><p>MacOS Bundle</p></center></a></td>
+					<td style="padding: 0px;"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/2.1.0/FamiStudio210-WinInstaller.zip"><center>Windows Installer</center></a></td>
+					<td style="padding: 0px;"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/2.1.0/FamiStudio210-MacOS.zip"><center><p>MacOS Bundle</p></center></a></td>
+					<td style="padding: 0px;"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/2.1.0/FamiStudio210-LinuxAMD64.zip"><center><p>Linux AMD64 Binaries</p></center></a></td>
 				</tr>
 				<tr>
-					<td style="padding: 0px;"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/2.0.3/FamiStudio203-WinPortableExe.zip"><center>Windows Portable EXE</center></a></td>
+					<td style="padding: 0px;"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/2.1.0/FamiStudio210-WinPortableExe.zip"><center>Windows Portable EXE</center></a></td>
+					<td style="padding: 0px;"></td>
 					<td style="padding: 0px;"></td>
 				</tr>
 			</table>
@@ -96,6 +93,7 @@
 			<ul>
 				<li>On Windows simply download and run the installer (.msi). A shortcut to FamiStudio and the included demo songs will be added to your Start Menu. If you get a warning when installing or if the app crashes when running, please check out the <a href='doc/index.html#windows'>documentation</a> for the fix.</li>
 				<li>On macOS, download and uncompress the file anywhere and the launch FamiStudio app. The demo songs and included in the zip. The app is unsigned and might require you to <a href='doc/index.html#macos'>ignore a few warning</a>.</li>
+				<li>On Linux, please read the <a href='https://famistudio.org/doc/#linux'>installation instructions</a>.</li>
 			</ul>
 
 			<h2>Demo Songs</h2>
@@ -110,6 +108,7 @@
 				<li>Shovel Knight - Strike the Earth! (Plains of Passage) (my approximate recreation)</li>
 				<li>Shatterhand - Final Stage (my approximate recreation)</li>
 				<li>Gimmick - Strange Memories of Death (my approximate recreation)</li>
+				<li>Layla : The Iris Missions - Iris (by Supper, my approximate recreation)</li>
 				<li>FamiStudio - Tutorial Song (song created in tutorial)</li>
 			</ul>
 

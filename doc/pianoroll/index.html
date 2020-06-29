@@ -78,6 +78,10 @@
 </li>
                                     
 <li>
+    <a href="../cmdline/" class="dropdown-item">Command-line Processing</a>
+</li>
+                                    
+<li>
     <a href="../troubleshooting/" class="dropdown-item">Troubleshooting</a>
 </li>
                                     
@@ -133,6 +137,10 @@
               </ul>
             </li>
             <li class="nav-item" data-level="2"><a href="#adding-and-deleting-notes" class="nav-link">Adding and deleting notes</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#snapping" class="nav-link">Snapping</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -206,6 +214,11 @@
 <h2 id="adding-and-deleting-notes">Adding and deleting notes</h2>
 <p>Clicking a pattern in the sequencer will scroll the piano roll to its location. Left-clicking in the piano roll will add a note of the currently selected instrument. Holding the mouse when clicking will allow you to drag the note and will give audio feedback. You cannot add a note where the is not a pattern created.</p>
 <p>Right-clicking deletes a note.</p>
+<h2 id="snapping">Snapping</h2>
+<p>Snapping can be toggle by clicking the little magnet in the top-left corner of the piano roll. <strong>SHIFT+S</strong> can also be used to quickly toggle snapping on/off. The precision of the snapping can be changed by left/right clicking the number of using the mousewheel over the number or magnet icon. </p>
+<p><img alt="" src="../images/Snap.png#center" /></p>
+<p>Using FamiStudio tempo mode will allow you to use both fractional snapping (1/4, 1/3, 1/2) and integer snapping (1, 2, 3, 4). FamiTracker tempo mode is limited to integer snapping since it does not give you full control over the individual frames. Fractional snapping will perform rounding when the number of frames in a note isnt exactly divisible by the precision.</p>
+<p>Adding, selecting and dragging of notes are currently the only actions affected by snapping. More might be added in future based on user feedback.</p>
 <h2 id="stop-release-notes">Stop &amp; Release notes</h2>
 <p>Using Ctrl+click will add a stop note. Stops notes are displayed as little triangles. Although they are displayed next to the note preceding them, they actually have no pitch or instrument, they simply stop the sound. Stop notes are important because on the NES, a note will play indefinitely unless you tell it to stop.</p>
 <p><img alt="" src="../images/StopNote.png#center" /></p>
@@ -230,6 +243,7 @@
 <h2 id="special-paste">Special paste</h2>
 <p>If you want to paste notes, without their associated effets or volume track (or vice-versa). You can use a "special paste" by pressing CTRL+SHIFT+V. This will open a popup dialog asking you to choose what you want to paste.</p>
 <p><img alt="" src="../images/PasteSpecial.png#center" /></p>
+<p>The default behavior of pasting is to completely replace everything by the content of the clipboard. Using the "Mix with existing notes" option will preserve any existing data (notes, volumes, effects) and only insert new data if there is nothing there already.</p>
 <h2 id="copy-pasting-notes-between-projects">Copy &amp; pasting notes between projects</h2>
 <p>It is possible to copy notes from one project to another. When doing so, FamiStudio will first look to make sure the instruments used by these notes exist in the other project. It will look for instruments having <em>the same name</em>. If some instruments are not found in the second project, it will offer you to create them for you, thus bringing the instrument from one project to another.</p>
 <p>For example, if you copy a note from project 1 using an instrument called "Piano", FamiStudio will look for an instrument named "Piano" in the second. If it finds one, it will assume it is the same (even though it might not be). If no "Piano" instrument is found, it will offer you to create it for you.</p>

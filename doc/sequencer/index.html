@@ -78,6 +78,10 @@
 </li>
                                     
 <li>
+    <a href="../cmdline/" class="dropdown-item">Command-line Processing</a>
+</li>
+                                    
+<li>
     <a href="../troubleshooting/" class="dropdown-item">Troubleshooting</a>
 </li>
                                     
@@ -201,9 +205,12 @@
 <p>You can select multiple patterns in a rectangular grid, first select a pattern and shift-clicking to a second pattern.</p>
 <p><img alt="" src="../images/SquareSelection.png#center" /></p>
 <h2 id="movingcopying-patterns">Moving/copying patterns</h2>
-<p>When one or multiple patterns are selected, dragging them will move them in the timeline. While dragging, holding Ctrl will copy a of the pattern(s). Note that when copying a pattern, it creates an instance of the same pattern, so modifying one instance will modify all of them.</p>
+<p>When one or multiple patterns are selected, dragging them will move them in the timeline. While dragging, holding CTRL will create another instance of the pattern(s). An instance is a copy that is linked to the original pattern, it will have the same name and color. Modifying one instance will modify all of them. This will be shown by a "link" icon when dragging.</p>
+<p><img alt="" src="../images/InstancePattern.png#center" /></p>
+<p>Holding CTRL+SHIFT while dragging will create a completely independant copy of the selected patterns. This will be showned by a "copy" icon when dragging. They will change name and possibly color as well. </p>
+<p><img alt="" src="../images/CopyPattern.png#center" /></p>
 <h2 id="cutcopypasting-patterns">Cut/copy/pasting patterns</h2>
-<p>When one or multiple patterns are selected, press CTRL+C (or CTRL+X for cut). Move the selection somewhere else and paste with CTRL+V.</p>
+<p>When one or multiple patterns are selected, press CTRL+C (or CTRL+X for cut). Move the selection somewhere else and paste with CTRL+V. Copy and pasting always create instances of patterns.</p>
 <h2 id="copypasting-patterns-between-projects">Copy/pasting patterns between projects</h2>
 <p>Copy and pasting patterns between projects is possible When doing so, FamiStudio will assume patterns having the same name are identical. If a pattern is not found, it will offer you to create it for you. </p>
 <p>For example, if you copy a pattern named "Chorus1" from a project to another. If no such pattern is found, it will be copied. Otherwise, if an existing pattern named "Chorus1" is found in the second project, it will assume it is the same.</p>

@@ -78,6 +78,10 @@
 </li>
                                     
 <li>
+    <a href="../cmdline/" class="dropdown-item">Command-line Processing</a>
+</li>
+                                    
+<li>
     <a href="../troubleshooting/" class="dropdown-item">Troubleshooting</a>
 </li>
                                     
@@ -144,7 +148,11 @@
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#famitone2-assembly-code" class="nav-link">FamiTone2 Assembly Code</a>
+            <li class="nav-item" data-level="2"><a href="#famitone2-music" class="nav-link">FamiTone2 Music</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#famitone2-sound-effect" class="nav-link">FamiTone2 Sound Effect</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -175,14 +183,17 @@
 <h1 id="exporting-songs">Exporting Songs</h1>
 <p>The export dialog is access through the main toolbar.</p>
 <h2 id="wave-file">Wave File</h2>
-<p>Only a single song can be exported at a time. You can choose the sample rate, it is recommended to stick to 44.1KHz if you want the soung to be exactly as you hear it in FamiStudio. Lower sample rate might lack high frequencies.</p>
-<p>When exporting to WAV, the song will simply play once fully, all jump effects will be ignored.</p>
+<p>Only a single song can be exported at a time. You can choose the sample rate, it is recommended to stick to 44.1KHz if you want the sound to be exactly as you hear it in FamiStudio. Lower sample rate might lack high frequencies.</p>
+<p>The song can be exported in one of two modes:
+* Play Once : Will play the song until the end, ignoring the loop point.
+* Duration : Will loop though the song for the specified number of seconds.</p>
 <p><img alt="" src="../images/ExportWav.png#center" /></p>
+<p>Channels can optionally be muted. This can be used, for example, to create stereo mix using and external application.</p>
 <h2 id="nintendo-sound-format">Nintendo Sound Format</h2>
 <p>Every feature supported by FamiStudio can be used in an NSF. </p>
 <p><img alt="" src="../images/ExportNsf.png#center" /></p>
 <p>Song that do not use any audio expansion can export as PAL and Dual mode, where as only NTSC is available for expansion audio.</p>
-<p>The maximum song sizet is approximately 28KB minus the size of the DPCM samples used. Note that this size are not printed anywhere and are not related to the size of the *.fms file. Best to simply try and see if it works.</p>
+<p>The maximum song size is approximately 28KB minus the size of the DPCM samples used. Note that this size are not printed anywhere and are not related to the size of the *.fms file. Best to simply try and see if it works.</p>
 <h2 id="rom">ROM</h2>
 <p>Song(s) can be exported to a NES ROM file to play if back on an emulator or on actual hardware. The current iteration uses <a href="https://wiki.nesdev.com/w/index.php/INES_Mapper_031">Mapper 31</a> which is supported by most emulators and the <a href="https://krikzz.com/store/home/31-everdrive-n8-nes.html">Everdrive N8</a>. You can then copy the ROM to an SD card and listen to it on actual hardware. Note that expansion audio is not supported with this mapper.</p>
 <p><img alt="" src="../images/Rom.png#center" /></p>
@@ -197,7 +208,7 @@
 <p>Pitch envelopes with looping sections will be modified on export so that the looping part sums to zero. This is done to prevent pitch from drifting up/down every time the envelope loops. The reason for this is that FamiTracker's pitch envelopes are relative while FamiStudio's are absolute.</p>
 </li>
 <li>
-<p>Instruments using both pitch and arpeggio envlopes at the same time will not sound correct in FamiTracker. This is due to the vastly different way both applications handles these. FamiTracker re-triggers the pitch envelope at each arpeggio notes (probably the more sensible way), while FamiStudio simply runs both at the same time.</p>
+<p>Instruments using both pitch and arpeggio envelopes at the same time will not sound correct in FamiTracker. This is due to the vastly different way both applications handles these. FamiTracker re-triggers the pitch envelope at each arpeggio notes (probably the more sensible way), while FamiStudio simply runs both at the same time.</p>
 </li>
 <li>
 <p>For slide notes, FamiStudio will do its very best to choose which FamiTracker effect to use. Note that importing/exporting slide notes with FamiTracker should be considered a <strong>lossy</strong> process. Here are the general rules:</p>
@@ -208,10 +219,10 @@
 </ul>
 </li>
 <li>
-<p>Slide notes of VRC7 will definately not export perfectly due to the different way in which both applications handle VRC7 pitches.</p>
+<p>Slide notes of VRC7 will definitely not export perfectly due to the different way in which both applications handle VRC7 pitches.</p>
 </li>
 <li>
-<p>VRC6 saw channel is not incluenced by duty cycle in FamiStudio. FamiStudio always allow the full volume range for the saw. Import/export process does not try account for this. This might lead to volume inconsistencies between FamiTracker and FamiStudio where the volume needs to be doubled or halved to sound correct.</p>
+<p>VRC6 saw channel is not influenced by duty cycle in FamiStudio. FamiStudio always allow the full volume range for the saw. Import/export process does not try account for this. This might lead to volume inconsistencies between FamiTracker and FamiStudio where the volume needs to be doubled or halved to sound correct.</p>
 </li>
 <li>
 <p>Vibrato effect might sound slightly different once exported to FamiTracker. The speed values in FamiStudio are slightly different than FamiTracker. Here is a table relating the speeds in FamiStudio and FamiTracker (this is applied automatically when importing/exporting):</p>
@@ -336,7 +347,7 @@
 </ul>
 </li>
 <li><strong>Song</strong> : A song<ul>
-<li><strong>PatternCustomSettings</strong> : Custom length or tempo settings of a pattern colume.</li>
+<li><strong>PatternCustomSettings</strong> : Custom length or tempo settings of a pattern column.</li>
 <li><strong>Channel</strong> : A channel of the NES (or audio expansion)<ul>
 <li><strong>Pattern</strong> : A short part of the song that can be repeated.<ul>
 <li><strong>Note</strong> : A note inside a pattern.</li>
@@ -570,7 +581,7 @@
 <td></td>
 <td>Values</td>
 <td>Yes</td>
-<td>Coma seperated values of the envelopes -64 to 63 range.</td>
+<td>Coma separated values of the envelopes -64 to 63 range.</td>
 </tr>
 <tr>
 <td>Song</td>
@@ -732,17 +743,20 @@
 <td></td>
 <td>Pattern</td>
 <td>Yes</td>
-<td>Name of the pattern to instanciate.</td>
+<td>Name of the pattern to instantiate.</td>
 </tr>
 </tbody>
 </table>
-<h2 id="famitone2-assembly-code">FamiTone2 Assembly Code</h2>
-<p>Exporting to FamiTone2 works in the same way as the command line tools provided by Shiru.</p>
+<h2 id="famitone2-music">FamiTone2 Music</h2>
+<p>Exporting to FamiTone2 works in the same way as the command line tools provided by Shiru. It will generate assembly code that can be included in your homebrew project and played using the FamiTone2 sound engine. </p>
 <p><img alt="" src="../images/ExportFamiTone2.png#center" /></p>
-<p>When exporting file in seperate files, you can specific a name format template for each song. The {project} and {song} macros are available.</p>
-<p>When exporting as a single file (non-seperate), you will be prompt to name the output assembly file. If any of the exported songs uses DPCM samples, a .dmc file of the same name will also be outputted.</p>
+<p>When exporting file in separate files, you can specific a name format template for each song. The {project} and {song} macros are available.</p>
+<p>When exporting as a single file (non-separate), you will be prompt to name the output assembly file. If any of the exported songs uses DPCM samples, a .dmc file of the same name will also be outputted.</p>
 <p>If you are using the FamiStudio tempo mode and wish to have correct PAL playback in you homebrew game, please check out this custom version of FamiTone2 (named FamiTone2FS) that supports it:</p>
 <p><a href="https://github.com/BleuBleu/FamiTone2FS">https://github.com/BleuBleu/FamiTone2FS</a></p>
+<h2 id="famitone2-sound-effect">FamiTone2 Sound Effect</h2>
+<p>The same goes for sound effect export. It should work very similarly as original FamiTone 2 tools provided by Shiru. In this mode, one song is one sound effect, so songs should be very short. Unlike the FamiTone2 music format which only support a subset of all the FamiTracker/FamiStudio features, here any feature (except DPCM samples) can be used and the sound effect should export correctly.</p>
+<p><img alt="" src="../images/ExportFamiTone2SFX.png#center" /></p>
 <h1 id="importing-songs">Importing Songs</h1>
 <p>To import songs, simply open a file. On Windows it is also possible drag &amp; drop a file in the application.</p>
 <h2 id="famitracker-text-or-binary">FamiTracker Text or Binary</h2>
@@ -765,8 +779,8 @@
 <li>Namco 163 instrument can only have a single waveform. Any other waveform than zero will be ignored.</li>
 <li>Namco 163 instrument only support wave size 4, 8, 16 and 32 and wave positions that are multiples of these sizes. Other values might lead to undefined behaviors.</li>
 <li>VRC7 1xx/2xx/3xx/Qxx/Rxx effects will likely not sound like FamiTracker and will need manual corrections.</li>
-<li>Instruments using both pitch and arpeggio envlopes at the same time will not sound the same as in FamiTracker. This is due to the vastly different way both applications handles these. FamiTracker re-triggers the pitch envelope at each arpeggio notes (probably the more sensible way), while FamiStudio simply runs both at the same time.</li>
-<li>VRC6 saw channel is not incluenced by duty cycle in FamiStudio. FamiStudio always allow the full volume range for the saw. Import/export process does not try account for this. This might lead to volume inconsistencies between FamiTracker and FamiStudio where the volume needs to be doubled or halved to sound correct.</li>
+<li>Instruments using both pitch and arpeggio envelopes at the same time will not sound the same as in FamiTracker. This is due to the vastly different way both applications handles these. FamiTracker re-triggers the pitch envelope at each arpeggio notes (probably the more sensible way), while FamiStudio simply runs both at the same time.</li>
+<li>VRC6 saw channel is not influenced by duty cycle in FamiStudio. FamiStudio always allow the full volume range for the saw. Import/export process does not try account for this. This might lead to volume inconsistencies between FamiTracker and FamiStudio where the volume needs to be doubled or halved to sound correct.</li>
 <li>Vibrato effect might sound a bit different, please see table above for exact mappings.</li>
 </ul>
 <p>When importing from FamiTracker, all possible slide effects (1xx, 2xx, 3xx, Qxx and Rxx) will be converted to slide notes. Sometimes attack will be disabled as well to mimic the same behavior. This in an inherently imperfect process since they approaches are so different. For this reason, importing/exporting slide notes with FamiTracker should be considered a <strong>lossy</strong> process.</p>
