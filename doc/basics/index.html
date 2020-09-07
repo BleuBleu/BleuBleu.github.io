@@ -54,7 +54,7 @@
 </li>
                                     
 <li>
-    <a href="../instruments/" class="dropdown-item">Editing Instruments</a>
+    <a href="../instruments/" class="dropdown-item">Editing Instruments & Arpeggios</a>
 </li>
                                     
 <li>
@@ -79,6 +79,10 @@
                                     
 <li>
     <a href="../cmdline/" class="dropdown-item">Command-line Processing</a>
+</li>
+                                    
+<li>
+    <a href="../soundengine/" class="dropdown-item">NES Sound Engine</a>
 </li>
                                     
 <li>
@@ -199,8 +203,9 @@
 <li>A list of Songs</li>
 <li>A list of Instruments</li>
 <li>A list of DPCM samples</li>
+<li>A list of Arpeggios</li>
 </ul>
-<p>Songs are made of Patterns, which are on one of the five Channels supported by the NES. Patterns contain Notes which are played by an Instrument (DPCM samples do not require an instrument). Instruments may have some of their attributes (pitch, volume, arpeggio) modulated by Envelopes.</p>
+<p>Songs are made of Patterns, which are on one of the five Channels supported by the NES. Patterns contain Notes which are played by an Instrument (DPCM samples do not require an instrument) and may refer to an arpeggio. Instruments may have some of their attributes (pitch, volume, arpeggio) modulated by Envelopes.</p>
 <p>Most of the operations are performed with the mouse. In general:</p>
 <ul>
 <li>The <strong>left mouse button</strong> adds stuff, double-clicking something edits properties (songs, patterns, instruments, DPCM)</li>
@@ -228,6 +233,7 @@
 <li>A selected channel, in bold in the sequencer</li>
 <li>A selected song, in bold in the project explorer song list</li>
 <li>A selected instrument, in bold in the project explorer instrument list.</li>
+<li>A selected arpeggio, in bold in the project explorer arpeggio list.</li>
 </ul>
 <p>The sequencer and piano roll will display the information for the currently selected song. When pressing the keys on the piano roll, it will play notes for the currently selected instrument, and output it on the currently selected channel. The same applies if you have a MIDI keyboard connected.</p>
 <h1 id="toolbar">Toolbar</h1>
@@ -256,9 +262,11 @@
 <h1 id="project-explorer">Project Explorer</h1>
 <p>The project explorer displays the list of songs and instruments in the current project.</p>
 <p><img alt="" src="../images/ProjectExplorer.png#center" /></p>
-<p>For more details on what you can do with the Project Explorer, please check out these sections:
-* <a href="../song/">Editing Songs &amp; Project</a>
-* <a href="../instruments/">Editing Instruments</a></p>
+<p>For more details on what you can do with the Project Explorer, please check out these sections:</p>
+<ul>
+<li><a href="../song/">Editing Songs &amp; Project</a></li>
+<li><a href="../instruments/">Editing Instruments &amp; Arpeggios</a></li>
+</ul>
 <h1 id="sequencer">Sequencer</h1>
 <p>The sequencer is where you organize the high-level structure of the song: which patterns play and when they play. The thumbnails of the patterns in the sequencer are by no mean accurate. Please visit the <a href="../sequencer/">Editing Patterns</a> section for more details.</p>
 <p><img alt="" src="../images/Sequencer.png#center" /></p>
@@ -270,11 +278,12 @@
 <p>Here is a list of useful keyboard shortcuts:</p>
 <ul>
 <li><strong>Space</strong>: Play/stop the stop</li>
+<li><strong>Enter</strong>: Toggles recording mode.</li>
 <li><strong>Ctrl+Space</strong>: Plays from beginning of current pattern.</li>
 <li><strong>Shift+Space</strong>: Plays from beginning of the song.</li>
 <li><strong>Home</strong>: Seeks back to beginning of the song.</li>
 <li><strong>Ctrl+Home</strong>: Seeks to beginning of the current pattern.</li>
-<li><strong>Esc</strong>: Stops any stop, clears the selection.</li>
+<li><strong>Esc</strong>: Stops any lindering sound, stops recording mode, clears the selection.</li>
 <li><strong>Ctrl+Z</strong>: Undo</li>
 <li><strong>Ctrl+Y</strong>: Redo</li>
 <li><strong>Ctrl+N</strong>: New project</li>
@@ -298,7 +307,9 @@
 <li><strong>A+Click</strong>: Toggles the attack of a note.</li>
 <li><strong>~ (Tilde)</strong>: Expand/collapse the effect panel.</li>
 <li><strong>Shift+S</strong>: Toggles snapping.</li>
-</ul></div>
+</ul>
+<p>When recording mode is active, some of the keys will be overriden to support piano input.</p>
+<p><img alt="" src="../images/QWERTY.png#center" /></p></div>
             </div>
         </div>
 

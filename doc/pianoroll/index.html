@@ -54,7 +54,7 @@
 </li>
                                     
 <li>
-    <a href="../instruments/" class="dropdown-item">Editing Instruments</a>
+    <a href="../instruments/" class="dropdown-item">Editing Instruments & Arpeggios</a>
 </li>
                                     
 <li>
@@ -79,6 +79,10 @@
                                     
 <li>
     <a href="../cmdline/" class="dropdown-item">Command-line Processing</a>
+</li>
+                                    
+<li>
+    <a href="../soundengine/" class="dropdown-item">NES Sound Engine</a>
 </li>
                                     
 <li>
@@ -140,6 +144,10 @@
               <ul class="nav flex-column">
               </ul>
             </li>
+            <li class="nav-item" data-level="2"><a href="#recoding-mode" class="nav-link">Recoding mode</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
             <li class="nav-item" data-level="2"><a href="#snapping" class="nav-link">Snapping</a>
               <ul class="nav flex-column">
               </ul>
@@ -153,6 +161,10 @@
               </ul>
             </li>
             <li class="nav-item" data-level="2"><a href="#slide-notes" class="nav-link">Slide notes</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#arpeggios" class="nav-link">Arpeggios</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -214,6 +226,19 @@
 <h2 id="adding-and-deleting-notes">Adding and deleting notes</h2>
 <p>Clicking a pattern in the sequencer will scroll the piano roll to its location. Left-clicking in the piano roll will add a note of the currently selected instrument. Holding the mouse when clicking will allow you to drag the note and will give audio feedback. You cannot add a note where the is not a pattern created.</p>
 <p>Right-clicking deletes a note.</p>
+<h2 id="recoding-mode">Recoding mode</h2>
+<p>Recording mode is another way to input notes and is enabled by pressing the record button on the toolbar. Recording mode allows inputting notes using a MIDI controller or using a piano-type layout on the QWERTY keyboard. This layout is very similar to what FamiTracker uses. Note that this is not a "real-time" recording mode, simply a note-by-note input mode.</p>
+<p><img alt="" src="../images/QWERTY.png#center" /></p>
+<p>The QWERTY keyboard input will give you a range of approximately 2.5 octaves. By default, this will go from C3 to C5 but it can be moved up/down by pressing <strong>Page Up</strong> and <strong>Page Down</strong>. Which keyboard key maps to which piano key will be displayed in the piano roll. </p>
+<p><img alt="" src="../images/RecordingPiano.png#center" /></p>
+<p>When recording mode is active, the seek bar will turn red. Each note you input will be snapped to the current snap precision (see next section for info about snapping) and the seek bar will advance to the next snapping position. </p>
+<p>There are a few other special keys that are enabled when recording mode is activated:</p>
+<ul>
+<li><strong>Backspace</strong>: moves back by 1 note (or snapping interval), erasing any note inside the interval. </li>
+<li><strong>Tab</strong>: Advances by 1 note (or snapping interval), not recording anything.</li>
+<li><strong>1</strong>: Inserts a stop note and advances.</li>
+<li><strong>Page Up/Down</strong>: Moves the octave range that can be inputted using the QWERTY keyboard up/down.</li>
+</ul>
 <h2 id="snapping">Snapping</h2>
 <p>Snapping can be toggle by clicking the little magnet in the top-left corner of the piano roll. <strong>SHIFT+S</strong> can also be used to quickly toggle snapping on/off. The precision of the snapping can be changed by left/right clicking the number of using the mousewheel over the number or magnet icon. </p>
 <p><img alt="" src="../images/Snap.png#center" /></p>
@@ -235,6 +260,11 @@
 <p>Slide notes are notes that start at a given pitch (the pitch of the note) and slowly change to hit a target pitch which is represented by where the triangle ends. In this example, the attack of the second note has been disabled.</p>
 <p><img alt="" src="../images/SlideNote.png#center" /></p>
 <p>Slide notes garantees that the target pitch will be reached by the end of the note (end of the triangle) but this might happen a bit earlier than the visual repesentation suggests. Especially in the higher pitches. This is due to the fact that the pitch calculations are all integer-based (with 1-bit of fraction) and it is often impossible to get the exact required slope to reach the pitch at the exact time. </p>
+<h2 id="arpeggios">Arpeggios</h2>
+<p>Arpeggios (not to be confused with arpeggio instrument envelopes) are typically used to simulate chords by playing changing notes very rapidly. A note can optionally have an arpeggio associated to it, just like it has an instrument associated to it. When an arpeggio is used, the notes used by this arpeggio will be displayed in a semi-transparent way and the extra notes will take the color of the associated arpeggio. Note that in order to keep things simple, the individual sequence of notes inside the arpeggio will not be displayed.</p>
+<p><img alt="" src="../images/Arpeggio.png#center" /></p>
+<p>You can change which arpeggio is associated with a note the same way to can replace an instrument. You can select a new arpeggio and click on an existing note. Or you can select a few notes and drag and drop an arpeggio from the Project Explorer on to the selection.</p>
+<p>If an instrument uses an arpeggio envelope and also uses an arpeggio chord, the chord will take over and completely override the arpeggio envelope of the instrument. </p>
 <h2 id="selecting-and-editing-notes">Selecting and editing notes</h2>
 <p>You can select notes by right-clicking and dragging in the header of the piano roll. Selected notes will appear with a thick silver border. Once notes are selected, then can be moved using the arrows keys (up, down, left and right). Holding CTRL while doing so will make the notes move by larger increments.</p>
 <p><img alt="" src="../images/SelectNotes.png#center" /></p>

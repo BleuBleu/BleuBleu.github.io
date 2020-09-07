@@ -2,62 +2,66 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> 
   <url>
     <loc>https://famistudio.org/</loc>
-    <lastmod>2020-06-29</lastmod>
+    <lastmod>2020-09-01</lastmod>
   </url>
   <url>
     <loc>https://famistudio.org/doc/index.html</loc>
-    <lastmod>2020-06-29</lastmod>
+    <lastmod>2020-09-01</lastmod>
   </url>
   <url>
     <loc>https://famistudio.org/doc/404.html</loc>
-    <lastmod>2020-06-29</lastmod>
+    <lastmod>2020-09-01</lastmod>
   </url>
   <url>
     <loc>https://famistudio.org/doc/basics/index.html</loc>
-    <lastmod>2020-06-29</lastmod>
+    <lastmod>2020-09-01</lastmod>
   </url>
   <url>
     <loc>https://famistudio.org/doc/changelog/index.html</loc>
-    <lastmod>2020-06-29</lastmod>
+    <lastmod>2020-09-01</lastmod>
   </url>
   <url>
     <loc>https://famistudio.org/doc/cleanup/index.html</loc>
-    <lastmod>2020-06-29</lastmod>
+    <lastmod>2020-09-01</lastmod>
   </url>
   <url>
     <loc>https://famistudio.org/doc/config/index.html</loc>
-    <lastmod>2020-06-29</lastmod>
+    <lastmod>2020-09-01</lastmod>
   </url>
   <url>
     <loc>https://famistudio.org/doc/expansion/index.html</loc>
-    <lastmod>2020-06-29</lastmod>
+    <lastmod>2020-09-01</lastmod>
   </url>
   <url>
     <loc>https://famistudio.org/doc/importexport/index.html</loc>
-    <lastmod>2020-06-29</lastmod>
+    <lastmod>2020-09-01</lastmod>
   </url>
   <url>
     <loc>https://famistudio.org/doc/instruments/index.html</loc>
-    <lastmod>2020-06-29</lastmod>
+    <lastmod>2020-09-01</lastmod>
   </url>
   <url>
     <loc>https://famistudio.org/doc/pianoroll/index.html</loc>
-    <lastmod>2020-06-29</lastmod>
+    <lastmod>2020-09-01</lastmod>
   </url>
   <url>
     <loc>https://famistudio.org/doc/sequencer/index.html</loc>
-    <lastmod>2020-06-29</lastmod>
+    <lastmod>2020-09-01</lastmod>
   </url>
   <url>
     <loc>https://famistudio.org/doc/troubleshooting/index.html</loc>
-    <lastmod>2020-06-29</lastmod>
+    <lastmod>2020-09-01</lastmod>
+  </url> 
+  <url>
+    <loc>https://famistudio.org/doc/soundengine/index.html</loc>
+    <lastmod>2020-09-01</lastmod>
   </url> 
   <url>
     <loc>https://famistudio.org/doc/cmdline/index.html</loc>
-    <lastmod>2020-06-29</lastmod>
+    <lastmod>2020-09-01</lastmod>
   </url>    
   <url>
     <loc>https://famistudio.org/doc/song/index.html</loc>
-    <lastmod>2020-06-29</lastmod>
+    <lastmod>2020-09-01</lastmod>
   </url>
 </urlset>

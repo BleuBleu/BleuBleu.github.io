@@ -54,7 +54,7 @@
 </li>
                                     
 <li>
-    <a href="../instruments/" class="dropdown-item">Editing Instruments</a>
+    <a href="../instruments/" class="dropdown-item">Editing Instruments & Arpeggios</a>
 </li>
                                     
 <li>
@@ -79,6 +79,10 @@
                                     
 <li>
     <a href="../cmdline/" class="dropdown-item">Command-line Processing</a>
+</li>
+                                    
+<li>
+    <a href="../soundengine/" class="dropdown-item">NES Sound Engine</a>
 </li>
                                     
 <li>
@@ -464,9 +468,6 @@
 <p>Note that you arent not limited to the BPM values suggested by the different note lengths. You can create in-between ones by putting multiples notes into a larger one. For example, Gimmick! uses a 11 frames per note, but puts 2 notes inside it. One of 5 frames and one of 6 frames. This creates an approximate tempo of 163.6 BPM and the different note lengths is not audible.</p>
 <p><img alt="" src="../images/GimmickNote.png#center" /></p>
 <p>The FamiTracker documentation has a <a href="http://famitracker.com/wiki/index.php?title=Common_tempo_values">handy chart</a> for these. Note that you are limited to 18 frames per note a the moment.</p>
-<h3 id="famitone2-support-of-famistudio-tempo-mode">FamiTone2 support of FamiStudio tempo mode</h3>
-<p>If you are using the FamiStudio tempo mode and wish to have correct PAL playback in you homebrew game, please check out this custom version of FamiTone2 (named FamiTone2FS) that supports it:</p>
-<p><a href="https://github.com/BleuBleu/FamiTone2FS">https://github.com/BleuBleu/FamiTone2FS</a></p>
 <h3 id="famitracker-tempo-mode">FamiTracker tempo mode</h3>
 <p>This mode is mostly for compatibility with FamiTracker. It uses the speed/tempo paradigm. Please check out the <a href="http://famitracker.com/wiki/index.php?title=Fxx">FamiTracker documentation</a> for a detailed explanation on how the playback speed is affected. If you import a FamiTracker Text or FTM file, it will be in this tempo mode. </p>
 <p>Only use this mode if you have specific compatibility needs with FamiTracker (such as exporting to an audio engine that only supports this tempo mode), as it will not receive any future improvement. When using this tempo mode, the <em>Speed</em> effect will be available in the effect panel.</p>

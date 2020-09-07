@@ -54,7 +54,7 @@
 </li>
                                     
 <li>
-    <a href="../instruments/" class="dropdown-item">Editing Instruments</a>
+    <a href="../instruments/" class="dropdown-item">Editing Instruments & Arpeggios</a>
 </li>
                                     
 <li>
@@ -79,6 +79,10 @@
                                     
 <li>
     <a href="../cmdline/" class="dropdown-item">Command-line Processing</a>
+</li>
+                                    
+<li>
+    <a href="../soundengine/" class="dropdown-item">NES Sound Engine</a>
 </li>
                                     
 <li>
@@ -128,7 +132,11 @@
             
             <li class="nav-item" data-level="1"><a href="#change-log" class="nav-link">Change Log</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#version-211" class="nav-link">Version 2.1.1</a>
+            <li class="nav-item" data-level="2"><a href="#version-220" class="nav-link">Version 2.2.0</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#version-211-hotfix" class="nav-link">Version 2.1.1 (Hotfix)</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -136,15 +144,15 @@
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#version-203" class="nav-link">Version 2.0.3</a>
+            <li class="nav-item" data-level="2"><a href="#version-203-hotfix" class="nav-link">Version 2.0.3 (Hotfix)</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#version-202" class="nav-link">Version 2.0.2</a>
+            <li class="nav-item" data-level="2"><a href="#version-202-hotfix" class="nav-link">Version 2.0.2 (Hotfix)</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#version-201" class="nav-link">Version 2.0.1</a>
+            <li class="nav-item" data-level="2"><a href="#version-201-hotfix" class="nav-link">Version 2.0.1 (Hotfix)</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -160,7 +168,7 @@
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#version-121" class="nav-link">Version 1.2.1</a>
+            <li class="nav-item" data-level="2"><a href="#version-121-hotfix" class="nav-link">Version 1.2.1 (Hotfix)</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -185,14 +193,28 @@
 
 <h1 id="change-log">Change Log</h1>
 <p>Version history / release notes for each release.</p>
-<h2 id="version-211">Version 2.1.1</h2>
+<h2 id="version-220">Version 2.2.0</h2>
+<p>Changes:</p>
+<ul>
+<li>Recording mode to record note-by-note using MIDI controller or QWERTY keyboard</li>
+<li>Arpeggio support</li>
+<li>Official FamiStudio Sound Engine release</li>
+<li>Follow mode</li>
+<li>Displaying the piano roll view range in the sequencer</li>
+<li>FDS disk export</li>
+<li>Basic tutorials for first time users</li>
+<li>Error logging when importing/exporting files</li>
+<li>Wav export loop count</li>
+<li>Option to disable dragging sounds when a song is playing</li>
+</ul>
+<h2 id="version-211-hotfix">Version 2.1.1 (Hotfix)</h2>
 <p>Changes:</p>
 <ul>
 <li>Fixed first frame not being audible when pressing play</li>
 <li>Fixed multiple crashes &amp; issues when exporting to NSF</li>
 <li>Fixed missing notes on noise channel when importing NSFs</li>
 <li>Fixed import of FamiTracker FTM files that uses expansion audio</li>
-<li>Fixed incorrect DPCM samples alignment when exporting NSF, ROM &amp; FamiTone2.</li>
+<li>Fixed incorrect DPCM samples alignment when exporting NSF, ROM &amp; FamiTone2</li>
 <li>Renaming .so files on Linux to support older version of Mono</li>
 <li>Setting correct file extension when saving on Linux</li>
 <li>FamiTone2 sound effect export fixes</li>
@@ -225,13 +247,13 @@
 </div>
 
 <p><br/></p>
-<h2 id="version-203">Version 2.0.3</h2>
+<h2 id="version-203-hotfix">Version 2.0.3 (Hotfix)</h2>
 <p>New features:</p>
 <ul>
 <li>Fix crash when clicking on a note when a incompatible instrument is selected.</li>
 <li>Fix WAV file export when using a sample rate different than 44100Hz.</li>
 </ul>
-<h2 id="version-202">Version 2.0.2</h2>
+<h2 id="version-202-hotfix">Version 2.0.2 (Hotfix)</h2>
 <p>New features:</p>
 <ul>
 <li>Fixing seek bar position in sequencer on Hi-DPI (Retina on MacOS or scaling &gt; 100% on Windows).</li>
@@ -242,7 +264,7 @@
 <li>Detection of audio device changes on Windows 7.</li>
 <li>Handling of D3D device lost to improve stability on Windows 7.</li>
 </ul>
-<h2 id="version-201">Version 2.0.1</h2>
+<h2 id="version-201-hotfix">Version 2.0.1 (Hotfix)</h2>
 <p>New features:</p>
 <ul>
 <li>Hotfix for 150% scaling crash.</li>
@@ -305,7 +327,7 @@
 </div>
 
 <p><br/></p>
-<h2 id="version-121">Version 1.2.1</h2>
+<h2 id="version-121-hotfix">Version 1.2.1 (Hotfix)</h2>
 <p>New features:</p>
 <ul>
 <li>Windows 7 hotfix</li>

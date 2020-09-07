@@ -54,7 +54,7 @@
 </li>
                                     
 <li>
-    <a href="../instruments/" class="dropdown-item">Editing Instruments</a>
+    <a href="../instruments/" class="dropdown-item">Editing Instruments & Arpeggios</a>
 </li>
                                     
 <li>
@@ -79,6 +79,10 @@
                                     
 <li>
     <a href="../cmdline/" class="dropdown-item">Command-line Processing</a>
+</li>
+                                    
+<li>
+    <a href="../soundengine/" class="dropdown-item">NES Sound Engine</a>
 </li>
                                     
 <li>
@@ -136,7 +140,7 @@
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#rom" class="nav-link">ROM</a>
+            <li class="nav-item" data-level="2"><a href="#rom-fds-disk" class="nav-link">ROM / FDS Disk</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -148,11 +152,11 @@
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#famitone2-music" class="nav-link">FamiTone2 Music</a>
+            <li class="nav-item" data-level="2"><a href="#famistudio-famitone2-music-code" class="nav-link">FamiStudio / FamiTone2 Music Code</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#famitone2-sound-effect" class="nav-link">FamiTone2 Sound Effect</a>
+            <li class="nav-item" data-level="2"><a href="#famistudio-famitone2-sound-effect-code" class="nav-link">FamiStudio / FamiTone2 Sound Effect Code</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -175,6 +179,11 @@
             </li>
               </ul>
             </li>
+            
+            <li class="nav-item" data-level="1"><a href="#error-log" class="nav-link">Error Log</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
         </ul>
     </div>
 </div></div>
@@ -184,9 +193,11 @@
 <p>The export dialog is access through the main toolbar.</p>
 <h2 id="wave-file">Wave File</h2>
 <p>Only a single song can be exported at a time. You can choose the sample rate, it is recommended to stick to 44.1KHz if you want the sound to be exactly as you hear it in FamiStudio. Lower sample rate might lack high frequencies.</p>
-<p>The song can be exported in one of two modes:
-* Play Once : Will play the song until the end, ignoring the loop point.
-* Duration : Will loop though the song for the specified number of seconds.</p>
+<p>The song can be exported in one of two modes:</p>
+<ul>
+<li>Play N Times: Will play the song a specified number of times.</li>
+<li>Duration : Will loop though the song for the specified number of seconds.</li>
+</ul>
 <p><img alt="" src="../images/ExportWav.png#center" /></p>
 <p>Channels can optionally be muted. This can be used, for example, to create stereo mix using and external application.</p>
 <h2 id="nintendo-sound-format">Nintendo Sound Format</h2>
@@ -194,11 +205,13 @@
 <p><img alt="" src="../images/ExportNsf.png#center" /></p>
 <p>Song that do not use any audio expansion can export as PAL and Dual mode, where as only NTSC is available for expansion audio.</p>
 <p>The maximum song size is approximately 28KB minus the size of the DPCM samples used. Note that this size are not printed anywhere and are not related to the size of the *.fms file. Best to simply try and see if it works.</p>
-<h2 id="rom">ROM</h2>
-<p>Song(s) can be exported to a NES ROM file to play if back on an emulator or on actual hardware. The current iteration uses <a href="https://wiki.nesdev.com/w/index.php/INES_Mapper_031">Mapper 31</a> which is supported by most emulators and the <a href="https://krikzz.com/store/home/31-everdrive-n8-nes.html">Everdrive N8</a>. You can then copy the ROM to an SD card and listen to it on actual hardware. Note that expansion audio is not supported with this mapper.</p>
+<h2 id="rom-fds-disk">ROM / FDS Disk</h2>
+<p>Song(s) can be exported to a NES ROM file or a Famicom Disk System disk to play if back on an emulator or on actual hardware. </p>
+<p>For ROM export, the current iteration uses <a href="https://wiki.nesdev.com/w/index.php/INES_Mapper_031">Mapper 31</a> which is supported by most emulators and the <a href="https://krikzz.com/store/home/31-everdrive-n8-nes.html">Everdrive N8</a>. You can then copy the ROM to an SD card and listen to it on actual hardware. Note that expansion audio is not supported with this mapper.</p>
 <p><img alt="" src="../images/Rom.png#center" /></p>
-<p>The user interface is very simple, pressing left/right on the D-PAD will change the current track. Track/song names will be truncated to 28 characters.</p>
-<p>For something a lot more customizable, check out <a href="https://github.com/bbbradsmith/eznsf">EZNSF</a> by Brad Smith.</p>
+<p>The user interface is very simple, pressing left/right on the D-PAD will change the current track. Track/song names will be truncated to 28 characters. For something a lot more customizable, check out <a href="https://github.com/bbbradsmith/eznsf">EZNSF</a> by Brad Smith.</p>
+<p>For FDS export, the process is very similar and will output a FDS disk image instead of a ROM. It has been tested on actual hardware using the <a href="https://3dscapture.com/fdsstick/">FDSStick</a>. Songs are loaded on demand from the disk, so switching tracks will be a bit slower on FDS than on a ROM. </p>
+<p><img alt="" src="../images/FdsExport.png#center" /></p>
 <h2 id="famitracker-text">FamiTracker Text</h2>
 <p>You can export songs to FamiTracker using their Text Export format.</p>
 <p><img alt="" src="../images/ExportFamiTracker.png#center" /></p>
@@ -470,6 +483,30 @@
 <td>True or False.</td>
 </tr>
 <tr>
+<td>Arpeggio</td>
+<td>Name</td>
+<td>Yes</td>
+<td>Name of the arpeggio.</td>
+</tr>
+<tr>
+<td></td>
+<td>Length</td>
+<td>Yes</td>
+<td>Length of the arpeggio note sequence, 0 to 255.</td>
+</tr>
+<tr>
+<td></td>
+<td>Loop</td>
+<td>Yes</td>
+<td>The loop point of the envelope.</td>
+</tr>
+<tr>
+<td></td>
+<td>Values</td>
+<td>Yes</td>
+<td>Coma separated values of the arpeggio -64 to 63 range.</td>
+</tr>
+<tr>
 <td>Instrument</td>
 <td>Name</td>
 <td>Yes</td>
@@ -556,7 +593,7 @@
 <tr>
 <td></td>
 <td>Length</td>
-<td></td>
+<td>Yes</td>
 <td>Length of the envelope, 0 to 255.</td>
 </tr>
 <tr>
@@ -687,6 +724,12 @@
 </tr>
 <tr>
 <td></td>
+<td>Arpeggio</td>
+<td></td>
+<td>Optional, name of the arpeggio to use.</td>
+</tr>
+<tr>
+<td></td>
 <td>Attack</td>
 <td></td>
 <td>If the note has an attack, True of False.</td>
@@ -747,15 +790,13 @@
 </tr>
 </tbody>
 </table>
-<h2 id="famitone2-music">FamiTone2 Music</h2>
-<p>Exporting to FamiTone2 works in the same way as the command line tools provided by Shiru. It will generate assembly code that can be included in your homebrew project and played using the FamiTone2 sound engine. </p>
+<h2 id="famistudio-famitone2-music-code">FamiStudio / FamiTone2 Music Code</h2>
+<p>Exporting music to the <a href="../soundengine/">FamiStudio Sound Engine</a> or <a href="https://shiru.untergrund.net/code.shtml">FamiTone2</a> work very similarely. It will generate assembly code that can be included in your homebrew project and played using the FamiTone2 sound engine. </p>
 <p><img alt="" src="../images/ExportFamiTone2.png#center" /></p>
 <p>When exporting file in separate files, you can specific a name format template for each song. The {project} and {song} macros are available.</p>
 <p>When exporting as a single file (non-separate), you will be prompt to name the output assembly file. If any of the exported songs uses DPCM samples, a .dmc file of the same name will also be outputted.</p>
-<p>If you are using the FamiStudio tempo mode and wish to have correct PAL playback in you homebrew game, please check out this custom version of FamiTone2 (named FamiTone2FS) that supports it:</p>
-<p><a href="https://github.com/BleuBleu/FamiTone2FS">https://github.com/BleuBleu/FamiTone2FS</a></p>
-<h2 id="famitone2-sound-effect">FamiTone2 Sound Effect</h2>
-<p>The same goes for sound effect export. It should work very similarly as original FamiTone 2 tools provided by Shiru. In this mode, one song is one sound effect, so songs should be very short. Unlike the FamiTone2 music format which only support a subset of all the FamiTracker/FamiStudio features, here any feature (except DPCM samples) can be used and the sound effect should export correctly.</p>
+<h2 id="famistudio-famitone2-sound-effect-code">FamiStudio / FamiTone2 Sound Effect Code</h2>
+<p>The same goes for sound effect export. In this mode, one song is one sound effect, so songs should be very short. Unlike the FamiStudio/FamiTone2 music format which only support a subset of all the FamiTracker/FamiStudio features, here any feature (except DPCM samples) can be used and the sound effect should export correctly.</p>
 <p><img alt="" src="../images/ExportFamiTone2SFX.png#center" /></p>
 <h1 id="importing-songs">Importing Songs</h1>
 <p>To import songs, simply open a file. On Windows it is also possible drag &amp; drop a file in the application.</p>
@@ -763,6 +804,7 @@
 <p>Import from FamiTracker (official 0.4.6 only) is supported through the text (TXT file) or binary format (FTM file). </p>
 <p>Note that only a small subset of features is supported. Only the following effects are supported. Every other effect will be ignored:</p>
 <ul>
+<li>0xy (Arpeggio) : Will be converted to arpeggio, name will be based one the xy value.</li>
 <li>1xx/2xx (Slide up/down) : Will be converted to slide notes</li>
 <li>3xx (Portamento) : Will be converted to slide notes.</li>
 <li>4xy (Vibrato) : Vibrator speed will be slightly modified, see table above for mapping.</li>
@@ -777,7 +819,6 @@
 <ul>
 <li>When the limit of 16KB is reached, all subsequent DPCM samples will stop loading.</li>
 <li>Namco 163 instrument can only have a single waveform. Any other waveform than zero will be ignored.</li>
-<li>Namco 163 instrument only support wave size 4, 8, 16 and 32 and wave positions that are multiples of these sizes. Other values might lead to undefined behaviors.</li>
 <li>VRC7 1xx/2xx/3xx/Qxx/Rxx effects will likely not sound like FamiTracker and will need manual corrections.</li>
 <li>Instruments using both pitch and arpeggio envelopes at the same time will not sound the same as in FamiTracker. This is due to the vastly different way both applications handles these. FamiTracker re-triggers the pitch envelope at each arpeggio notes (probably the more sensible way), while FamiStudio simply runs both at the same time.</li>
 <li>VRC6 saw channel is not influenced by duty cycle in FamiStudio. FamiStudio always allow the full volume range for the saw. Import/export process does not try account for this. This might lead to volume inconsistencies between FamiTracker and FamiStudio where the volume needs to be doubled or halved to sound correct.</li>
@@ -794,7 +835,10 @@
 <p>That being said, NSF can still be extremely useful to reverse engineer how songs were made. In fact, this is how most of the Demo Songs that come with FamiStudio were made. </p>
 <p>In the example below, we can imagine that the notes on the right were all using the same instrument with a decreasing volume envelope. The notes of the left were clearly using a vibrato effect or a pitch envelope. </p>
 <p><img alt="" src="../images/NsfMess.png#center" /></p>
-<p>Only features that are supported by FamiStudio will be imported. Things like hardware sweeps &amp; advanced DPCM manipulations will all be ignored.</p></div>
+<p>Only features that are supported by FamiStudio will be imported. Things like hardware sweeps &amp; advanced DPCM manipulations will all be ignored.</p>
+<h1 id="error-log">Error Log</h1>
+<p>When importing/exporting from/to specific format, an error log may appear providing a list of warnings/errors that occured during the process. Please pay attention to these as they may explain why your song sound differently than intended.</p>
+<p><img alt="" src="../images/ErrorLog.png#center" /></p></div>
             </div>
         </div>
 
