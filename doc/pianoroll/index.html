@@ -180,6 +180,10 @@
               <ul class="nav flex-column">
               </ul>
             </li>
+            <li class="nav-item" data-level="2"><a href="#special-delete" class="nav-link">Special delete</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
             <li class="nav-item" data-level="2"><a href="#copy-pasting-notes-between-projects" class="nav-link">Copy &amp; pasting notes between projects</a>
               <ul class="nav flex-column">
               </ul>
@@ -200,6 +204,18 @@
               <ul class="nav flex-column">
               </ul>
             </li>
+            <li class="nav-item" data-level="2"><a href="#duty-cycle" class="nav-link">Duty Cycle</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#speed" class="nav-link">Speed</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#note-and-cut-delay" class="nav-link">Note and Cut delay</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
         </ul>
@@ -214,10 +230,10 @@
 <h2 id="subdivision">Subdivision</h2>
 <p>Horizontal lines in the piano rolls are align with the notes of the piano. The vertical lines represents multiple levels of subdivisions:</p>
 <ul>
-<li>Thick black lines seperate patterns (not shown in this image)</li>
-<li>Thin black lines seperate bars (a bar is a simple group of notes, purely a visual aid)</li>
-<li>Thin gray lines seperate notes</li>
 <li>Thin dashes gray lines seperate individual NTSC frames, 1/60th of a sec. (FamiStudio tempo mode only)</li>
+<li>Thin gray lines seperate notes</li>
+<li>Thin black lines seperate beats</li>
+<li>Thick black lines seperate patterns</li>
 </ul>
 <p>In FamiTracker tempo mode, you do not have access to the individual frames, so the dashes lines will not be visible.</p>
 <p><img alt="" src="../images/PianoRollFrames.png#center" /></p>
@@ -271,23 +287,51 @@
 <h2 id="cutting-copying-and-pasting-notes">Cutting, copying and pasting notes</h2>
 <p>Much like the sequencer, selcted notes can be copy (or cut) by pressing CTRL+C (or CTRL+X). You can then move the selection somewhere else and paste the notes with CTRL+V.</p>
 <h2 id="special-paste">Special paste</h2>
-<p>If you want to paste notes, without their associated effets or volume track (or vice-versa). You can use a "special paste" by pressing CTRL+SHIFT+V. This will open a popup dialog asking you to choose what you want to paste.</p>
+<p>"Special paste" is a more advanced form of pasting. It is used to to do things like pasting notes without their associated effets or volume track (or vice-versa), or to just paste specific effects. You can use a "special paste" by pressing CTRL+SHIFT+V. This will open a popup dialog.</p>
 <p><img alt="" src="../images/PasteSpecial.png#center" /></p>
-<p>The default behavior of pasting is to completely replace everything by the content of the clipboard. Using the "Mix with existing notes" option will preserve any existing data (notes, volumes, effects) and only insert new data if there is nothing there already.</p>
+<ul>
+<li>
+<p><strong>Mix With Existing Notes</strong> : The default behavior of pasting is to completely replace everything by the content of the clipboard. Using the "Mix with existing notes" option will preserve any existing data (notes, volumes, effects) and only insert new data if there is nothing there already.</p>
+</li>
+<li>
+<p><strong>Paste Notes</strong> : Will paste the actual notes (including slide notes and arpeggio information).</p>
+</li>
+<li>
+<p><strong>Paste Effects</strong> : You can choose the list of effect that you with to paste. Unchecked effect will not be pasted.</p>
+</li>
+<li>
+<p><strong>Repeat</strong> : You can repeat the same paste operation multiple times to quickly repeat a sequence of note/effect values mutiple times. The start of the next paste will be where the last one ended.</p>
+</li>
+</ul>
+<h2 id="special-delete">Special delete</h2>
+<p>Much like Special paste, "Special delete" is a more advanced form of deletion. You can bring up the special delete dialong by selecting a rango of notes and pressing CTRL+SHIFT+DELETE. </p>
+<p><img alt="" src="../images/DeleteSpecial.png#center" /></p>
+<ul>
+<li>
+<p><strong>Delete Notes</strong> : If checked, will delete all the selected notes.</p>
+</li>
+<li>
+<p><strong>Delete Effects</strong> : You can choose here the list of effects to delete. All unchecked effects will be preserved.</p>
+</li>
+</ul>
 <h2 id="copy-pasting-notes-between-projects">Copy &amp; pasting notes between projects</h2>
 <p>It is possible to copy notes from one project to another. When doing so, FamiStudio will first look to make sure the instruments used by these notes exist in the other project. It will look for instruments having <em>the same name</em>. If some instruments are not found in the second project, it will offer you to create them for you, thus bringing the instrument from one project to another.</p>
 <p>For example, if you copy a note from project 1 using an instrument called "Piano", FamiStudio will look for an instrument named "Piano" in the second. If it finds one, it will assume it is the same (even though it might not be). If no "Piano" instrument is found, it will offer you to create it for you.</p>
 <p>This can be used as a way of transfering instruments from one project to another. Place a few notes using all the instruments you can to transfer. Copy them and paste them in the second project.</p>
 <h2 id="editing-volume-tracks-effects">Editing volume tracks &amp; effects</h2>
-<p>The effect panel can be opened by clicking the little triangle at the top-left of the piano roll. Right now, only a handful of effects are supported:</p>
+<p>The effect panel can be opened by clicking the little triangle at the top-left of the piano roll. </p>
+<p>Here is the list of effects currently supported, note that not every effect is available on every channel:</p>
 <ul>
 <li><strong>Volume</strong>: The overall volume of the channel.</li>
 <li><strong>Vib Speed</strong>: Vibrato speed, used in conjuction with vibrato depth to create a vibrato effect.</li>
 <li><strong>Vib Depth</strong>: Vibrato depth, used in conjuction with vibrato speed to create a vibrato effect.</li>
 <li><strong>Pitch</strong>: Allow tweaking the fine-pitch of a channel.</li>
+<li><strong>Duty Cycle</strong> : Allow changing the duty cycle of an instrument without using a duty cycle envelope (only instruments with no duty cycle envelopes will use the specifed value).</li>
 <li><strong>FDS Speed</strong>: Famicom Disk System audio modulation speed (FDS audio expansion only).</li>
 <li><strong>FDS Depth</strong>: Famicom Disk System audio modulation depth (FDS audio expansion only).</li>
 <li><strong>Speed</strong>: Changes the speed of the song (FamiTracker tempo mode only)</li>
+<li><strong>Note Delay</strong>: Number of frames to delay the current note (FamiTracker tempo mode only)</li>
+<li><strong>Cut Delay</strong>: Stop the note after the specified number of frames (FamiTracker tempo mode only)</li>
 </ul>
 <p>Effects are edited by selecting and effect and dragging up or down to change the value. Right-clicking on an effect value deletes it. </p>
 <p>For effects that have huge values (such as FDS Depth), you can hold Shift to fine tune the exact value (a movement of 1 pixel will change the value by 1).</p>
@@ -298,7 +342,13 @@
 <p>Vibrato depth and speed are used to add vibrato to a portion of the song without having to bother creating a new instrument. Please note that vibrato will temporarely override any pitch envelope on the current instrument. When vibrato is disabled (by setting depth or speed, or both to zero), the instrument will essentially have no pitch envelope until a new note is played.</p>
 <p>The depth values for the vibrato are indentical to FamiTracker but the speeds are slightly different. The way FamiTracker implements vibrato, while clever, is flawed as it undersamples the vibrato curve at high speed, leading to aliasing which ends up with a low-frequency tone that has a "ringing" sound to it. Please see the <a href="../importexport/">Import/Export</a> for a table that maps between FamiStudio and FamiTracker.</p>
 <h2 id="pitch">Pitch</h2>
-<p>Controls the global pitch of the track. Can be used to make an entire channel slightly out of tune.</p></div>
+<p>Controls the global pitch of the track. Can be used to make an entire channel slightly out of tune.</p>
+<h2 id="duty-cycle">Duty Cycle</h2>
+<p>Allow changing the duty cycle of an instrument without using a duty cycle envelope. This can only affect instruments with no duty cycle envelopes. This effect is mostly just there for compatibility with FamiTracker. Unless you have special cases where you often need to change the duty cycle, you should always favor creating different instruments instead of using this effect. </p>
+<h2 id="speed">Speed</h2>
+<p>This changes the speed parameter of the FamiTracker tempo settings and is only available in FamiTracker tempo mode. Larger values will make the song scroll slower. Please refer to the <a href="../song/">Editing Songs &amp; Project</a> section for more information about tempo management.</p>
+<h2 id="note-and-cut-delay">Note and Cut delay</h2>
+<p>Note delays allows delaying the moment a note is played by a few frames while cut delay will stop a note after a few frames. This also is only available in FamiTracker tempo mode. Please refer to the <a href="../song/">Editing Songs &amp; Project</a> section for more information about tempo management.</p></div>
             </div>
         </div>
 

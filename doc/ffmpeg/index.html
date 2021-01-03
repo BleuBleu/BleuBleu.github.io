@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>Configuring FamiStudio - FamiStudio Documentation</title>
+        <title>FFmpeg Download - FamiStudio Documentation</title>
         <link href="../css/bootstrap.min.css" rel="stylesheet">
         <link href="../css/font-awesome.min.css" rel="stylesheet">
         <link href="../css/base.css" rel="stylesheet">
@@ -37,7 +37,7 @@
                             <li class="navitem">
                                 <a href=".." class="nav-link">Welcome</a>
                             </li>
-                            <li class="dropdown active">
+                            <li class="dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">User Guide <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
@@ -74,7 +74,7 @@
 </li>
                                     
 <li>
-    <a href="./" class="dropdown-item active">Configuring FamiStudio</a>
+    <a href="../config/" class="dropdown-item">Configuring FamiStudio</a>
 </li>
                                     
 <li>
@@ -102,16 +102,6 @@
                                 <i class="fa fa-search"></i> Search
                             </a>
                         </li>
-                            <li class="nav-item">
-                                <a rel="prev" href="../cleanup/" class="nav-link">
-                                    <i class="fa fa-arrow-left"></i> Previous
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a rel="next" href="../cmdline/" class="nav-link">
-                                    Next <i class="fa fa-arrow-right"></i>
-                                </a>
-                            </li>
                     </ul>
                 </div>
             </div>
@@ -130,24 +120,8 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#configuring-famistudio" class="nav-link">Configuring FamiStudio</a>
+            <li class="nav-item" data-level="1"><a href="#ffmpeg-download" class="nav-link">FFmpeg Download</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#configuration-dialog" class="nav-link">Configuration Dialog</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#user-interface-configuration" class="nav-link">User Interface Configuration</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#sound-configuration" class="nav-link">Sound Configuration</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#midi-configuration" class="nav-link">MIDI Configuration</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
               </ul>
             </li>
         </ul>
@@ -155,68 +129,13 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="configuring-famistudio">Configuring FamiStudio</h1>
-<p>The configuration dialog is accessed from the main toolbar.</p>
-<h2 id="configuration-dialog">Configuration Dialog</h2>
-<p>The configuration dialog dialog is accessed from the toolbar.</p>
-<h2 id="user-interface-configuration">User Interface Configuration</h2>
-<p><img alt="" src="../images/ConfigUI.png#center" /></p>
+<h1 id="ffmpeg-download">FFmpeg Download</h1>
+<p>Here are some download links for ffmpeg. If you are a more advanced user, feel free to get a more recent version, these links are simply here for convenience. Whatever you do, <strong>be sure to download the GPL version</strong>.</p>
 <ul>
-<li>
-<p><strong>Scaling</strong>: By default, FamiStudio will use the scaling of your primary monitor on Windows (100%, 150% and 200% are support) and on macOS it will choose between 100% or 200% depending on if you have a retina display or not. This behavior can be overriden by a scaling of your choosing. This requires restarting the app:</p>
-</li>
-<li>
-<p><strong>Time Format</strong>: Allow changing the format of the timer in the main toolbar of the application. </p>
-</li>
-<li>
-<p><strong>Follow Mode</strong>: Select which type of follow mode to use:</p>
-<ul>
-<li><strong>Jump</strong>: Once the play position reaches the right edge of the screen, advances by a full screen.</li>
-<li><strong>Continuous</strong>: Once the play position is at least 75% of the way to the right, starts scrolling smoothly.<br><br></li>
+<li><a href="https://github.com/BtbN/FFmpeg-Builds/releases/download/autobuild-2020-12-21-12-38/ffmpeg-n4.3.1-26-gca55240b8c-win64-gpl-shared-4.3.zip">Windows</a></li>
+<li><a href="https://evermeet.cx/ffmpeg/ffmpeg-4.3.1.7z">MacOS</a></li>
 </ul>
-</li>
-<li>
-<p><strong>Follow Views</strong>: Select which type of follow mode to use:</p>
-<ul>
-<li><strong>Sequencer</strong>: Only enables follow mode in the sequencer.</li>
-<li><strong>Piano Roll</strong>: Only enables follow mode in the piano roll.</li>
-<li><strong>Both</strong>: Enables follow mode on both controls.<br><br></li>
-</ul>
-</li>
-<li>
-<p><strong>Check for updates</strong>: At startup FamiStudio checks for new version online. This can be disabled.</p>
-</li>
-<li>
-<p><strong>Show Piano Roll View Range</strong>: Displays a yellow rectangle in the sequencer representing the view range of the piano roll.</p>
-</li>
-<li>
-<p><strong>Show Note Labels</strong>: Displays note labels (e.q. "C#3") in the piano roll.</p>
-</li>
-<li>
-<p><strong>Trackpad controls</strong>: Enabling trackpad controls will switch to a control scheme that is better suited for trackpad users:</p>
-<ul>
-<li>Vertical mouse wheel up/down will scroll up/down instead of zooming in/out. This is the equivalent of swiping your fingers up/down on the trackpad.</li>
-<li>Horizontal mouse wheel will scroll left/right. This is equivalent of swiping your fingers left/right on the trackpad.</li>
-<li>Pinch to zoom (or alternatively CTRL + MouseWheel) will zoom in/out. If pinch-to-zoom does not work on Windows, please check your trackpad drivers, this is not an issue with FamiStudio.</li>
-</ul>
-<p>Note that these are poorly supported on Linux due to the fact that the app uses GTK 2 and gestures are generally poorly supported in Linux.</p>
-</li>
-</ul>
-<h2 id="sound-configuration">Sound Configuration</h2>
-<p><img alt="" src="../images/ConfigSound.png#center" /></p>
-<ul>
-<li>
-<p><strong>Stop instrument after</strong>: When instruments have release notes, there is no way for FamiStudio to know when to stop the notes. This allows stopping any sound after a specified number of seconds. This only applies to MIDI or when previewing instruments on the piano roll and has no impact on the actual song.</p>
-</li>
-<li>
-<p><strong>Prevent popping on square channels</strong>: The NES had a bug where the phase of square channels will reset around some notes (A-3, A-2, D-2, A-1, F-1, D-1, and B-0 on NTSC, or A#3, A#2, D#2, A#1, F#1, D#1, and C-0 on PAL), resulting in audible clicks or pops. This option will work around that bug using the Smooth Vibrato technique by Blargg, resulting in smooth pitch changes. Note that this option will not carry over to FamiTracker if you export.</p>
-</li>
-</ul>
-<h2 id="midi-configuration">MIDI Configuration</h2>
-<p><img alt="" src="../images/ConfigMIDI.png#center" /></p>
-<ul>
-<li><strong>Device</strong>: Allows choosing the MIDI device to use for previewing instruments.</li>
-</ul></div>
+<p>On Linux, simply use your favorite package manager. You should be able to figure it out.</p></div>
             </div>
         </div>
 
