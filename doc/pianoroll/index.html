@@ -62,6 +62,10 @@
 </li>
                                     
 <li>
+    <a href="../dpcm/" class="dropdown-item">Editing DPCM Samples</a>
+</li>
+                                    
+<li>
     <a href="../importexport/" class="dropdown-item">Importing & Exporting Your Songs</a>
 </li>
                                     
@@ -82,7 +86,7 @@
 </li>
                                     
 <li>
-    <a href="../soundengine/" class="dropdown-item">NES Sound Engine</a>
+    <a href="../soundengine/" class="dropdown-item">NES/Famicom Sound Engine</a>
 </li>
                                     
 <li>
@@ -141,6 +145,10 @@
               </ul>
             </li>
             <li class="nav-item" data-level="2"><a href="#adding-and-deleting-notes" class="nav-link">Adding and deleting notes</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#instrument-picker" class="nav-link">Instrument Picker</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -238,10 +246,13 @@
 <p>In FamiTracker tempo mode, you do not have access to the individual frames, so the dashes lines will not be visible.</p>
 <p><img alt="" src="../images/PianoRollFrames.png#center" /></p>
 <h2 id="seeking">Seeking</h2>
-<p>Clicking in the timeline (header) of the piano roll will move the play position.</p>
+<p>Clicking in the timeline (header) of the piano roll will move the play position. You can also drag the seek back to more it more accurately.</p>
 <h2 id="adding-and-deleting-notes">Adding and deleting notes</h2>
 <p>Clicking a pattern in the sequencer will scroll the piano roll to its location. Left-clicking in the piano roll will add a note of the currently selected instrument. Holding the mouse when clicking will allow you to drag the note and will give audio feedback. You cannot add a note where the is not a pattern created.</p>
 <p>Right-clicking deletes a note.</p>
+<h2 id="instrument-picker">Instrument Picker</h2>
+<p>Holding <strong>I</strong> and clicking on a note will make the instrument of that note the current instrument. This is often known as the eye dropper or pipette tool in drawing software.</p>
+<p><img alt="" src="../images/InstrumentPicker.png#center" /></p>
 <h2 id="recoding-mode">Recoding mode</h2>
 <p>Recording mode is another way to input notes and is enabled by pressing the record button on the toolbar. Recording mode allows inputting notes using a MIDI controller or using a piano-type layout on the QWERTY keyboard. This layout is very similar to what FamiTracker uses. Note that this is not a "real-time" recording mode, simply a note-by-note input mode.</p>
 <p><img alt="" src="../images/QWERTY.png#center" /></p>
@@ -282,7 +293,7 @@
 <p>You can change which arpeggio is associated with a note the same way to can replace an instrument. You can select a new arpeggio and click on an existing note. Or you can select a few notes and drag and drop an arpeggio from the Project Explorer on to the selection.</p>
 <p>If an instrument uses an arpeggio envelope and also uses an arpeggio chord, the chord will take over and completely override the arpeggio envelope of the instrument. </p>
 <h2 id="selecting-and-editing-notes">Selecting and editing notes</h2>
-<p>You can select notes by right-clicking and dragging in the header of the piano roll. Selected notes will appear with a thick silver border. Once notes are selected, then can be moved using the arrows keys (up, down, left and right). Holding CTRL while doing so will make the notes move by larger increments.</p>
+<p>You can select notes by right-clicking and dragging in the header of the piano roll or anywhere in the background of the piano roll (where there is no note). Selected notes will appear with a thick silver border. Once notes are selected, then can be moved using the arrows keys (up, down, left and right). Holding CTRL while doing so will make the notes move by larger increments.</p>
 <p><img alt="" src="../images/SelectNotes.png#center" /></p>
 <h2 id="cutting-copying-and-pasting-notes">Cutting, copying and pasting notes</h2>
 <p>Much like the sequencer, selcted notes can be copy (or cut) by pressing CTRL+C (or CTRL+X). You can then move the selection somewhere else and paste the notes with CTRL+V.</p>

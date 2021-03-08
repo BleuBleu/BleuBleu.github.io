@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Editing DPCM Samples - FamiStudio Documentation</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/darcula.min.css">
+        <link href="../css/extra.css" rel="stylesheet">
+
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">FamiStudio Documentation</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href=".." class="nav-link">Welcome</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">User Guide <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../basics/" class="dropdown-item">Basics</a>
+</li>
+                                    
+<li>
+    <a href="../pianoroll/" class="dropdown-item">Editing Notes</a>
+</li>
+                                    
+<li>
+    <a href="../sequencer/" class="dropdown-item">Editing Patterns</a>
+</li>
+                                    
+<li>
+    <a href="../instruments/" class="dropdown-item">Editing Instruments & Arpeggios</a>
+</li>
+                                    
+<li>
+    <a href="../song/" class="dropdown-item">Editing Songs & Project</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active">Editing DPCM Samples</a>
+</li>
+                                    
+<li>
+    <a href="../importexport/" class="dropdown-item">Importing & Exporting Your Songs</a>
+</li>
+                                    
+<li>
+    <a href="../expansion/" class="dropdown-item">Using Expansion Audio</a>
+</li>
+                                    
+<li>
+    <a href="../cleanup/" class="dropdown-item">Cleaning-up your Project</a>
+</li>
+                                    
+<li>
+    <a href="../config/" class="dropdown-item">Configuring FamiStudio</a>
+</li>
+                                    
+<li>
+    <a href="../cmdline/" class="dropdown-item">Command-line Processing</a>
+</li>
+                                    
+<li>
+    <a href="../soundengine/" class="dropdown-item">NES/Famicom Sound Engine</a>
+</li>
+                                    
+<li>
+    <a href="../troubleshooting/" class="dropdown-item">Troubleshooting</a>
+</li>
+                                    
+<li>
+    <a href="../changelog/" class="dropdown-item">Change Log</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../song/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../importexport/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#editing-dpcm-samples" class="nav-link">Editing DPCM Samples</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#loading-dpcm-samples" class="nav-link">Loading DPCM Samples</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#modifying-dpcm-samples" class="nav-link">Modifying DPCM Samples</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#editing-dpcm-waveform" class="nav-link">Editing DPCM Waveform</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#exporting-dpcm-samples" class="nav-link">Exporting DPCM samples</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#assigning-a-dpcm-sample-to-a-key-of-the-dpcm-instrument" class="nav-link">Assigning a DPCM sample to a key of the DPCM instrument</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#unassigning-a-dpcm-sample" class="nav-link">Unassigning a DPCM sample</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#moving-dpcm-samples-to-another-key" class="nav-link">Moving DPCM samples to another key</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#editing-dpcm-samples-properties" class="nav-link">Editing DPCM samples properties</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="editing-dpcm-samples">Editing DPCM Samples</h1>
+<p>DPCM (Delta Pulse Coded Modulation)samples are very low quality 1-bit digital samples that the NES/Famicom supported. They are of very low quality but have been used quite successfully for drums and basses. </p>
+<p>To use a DPCM sample, it first needs to be loaded, then it needs to be assigned to a key of the piano, in the DPCM instrument.</p>
+<p>The samples workflow in FamiStudio is lossless in a way that once a sample is imported, any modification done to it will not modify the source data. Every time a parameter is changed, the source data will be re-processed to generate the final sample.</p>
+<p>If you do not wish to use the built-in DPCM sample editor of FamiStudio there are many other alternative : <a href="http://famitracker.com/">FamiTracker</a>, <a href="http://forums.famitracker.com/viewtopic.php?t=95">RJDMC</a> and <a href="https://www.romhacking.net/utilities/1451/">MakeDPCM</a>. </p>
+<h2 id="loading-dpcm-samples">Loading DPCM Samples</h2>
+<p>Samples are loaded by clicking the little folder icon next to the "DPCM Samples" section in the project explorer. FamiStudio can import samples from a WAV file or from a DMC file. Not that importing DMC files and doing extensive processing is not recommended as these samples are very low-quality fo begin with and any extra processing will degrade it further.</p>
+<p>Once loaded, you can rename a sample or change its color by double-clicking on this button. You can also play the sample by clicking the little play button next to it:</p>
+<ul>
+<li>Left-clicking will play the processed sample.</li>
+<li>Right-clicking will play the source sample (DMC or WAV).</li>
+</ul>
+<p><img alt="" src="../images/EditDPCMSample.png#center" /></p>
+<h2 id="modifying-dpcm-samples">Modifying DPCM Samples</h2>
+<p>Once a sample is loaded, it can be expanded by clicking the little arrow to reveal some of its properties. </p>
+<p><img alt="" src="../images/DPCMParameters.png#center" /></p>
+<ul>
+<li>
+<p><strong>Preview Rate</strong> : Rate at which to preview the sample when pressing the little Play button. It has no impact on the processing of the sample. These sample rates are the sample rates supported by the NES/Famicom and are the same as when you assign a sample to a key of the piano. These will change slighting depending if you are playing back in NTSC or PAL mode.</p>
+</li>
+<li>
+<p><strong>Sample Rate</strong> : Rate at which to re-sample the sample. This can be useful to lower the size of the final sample, but will also degrade the quality significantly. To keep the pitch consistent, you probably should adjust the preview rate to match the sample rate. </p>
+</li>
+<li>
+<p><strong>Padding Mode</strong> : Affects how the final size of the sample is calculated:</p>
+<ul>
+<li>
+<p><strong>Unpadded</strong> : The sample will be unpadded.</p>
+</li>
+<li>
+<p><strong>Pad to 16</strong> : The sample will be padded with silence until a multiple of 16 bytes is reached. This is what most games did and will cause an extra by of garbage to be played every time the sample is played, but this is usucally not audible. </p>
+</li>
+<li>
+<p><strong>Pad to 16 + 1</strong> : The sample will be padded with silence until a multiple of 16 bytes (plus one) is reached. This is technically the best way to process samples and it will ensure that no extra garbage sample is played but will waste 15 bytes.</p>
+</li>
+<li>
+<p><strong>Round to 16</strong> : The sample will be resampled in a way that the end of sample aligned to 16 bytes. This may affect the pitch slightly. This will cause an extra by of garbage to be played every time the sample is played, but this is usucally not audible. </p>
+</li>
+<li>
+<p><strong>Round to 16 + 1</strong> : The sample will be resampled in a way that the end of sample aligned to 16 bytes (plus one). This may affect the pitch slightly. This is a good mode to create looping samples.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Volume Adjust</strong> : Global volume adjustment, from 0% to 200%. </p>
+</li>
+<li>
+<p><strong>Process as PAL</strong> : Perform all resampling/processing using PAL sample rates. </p>
+</li>
+<li>
+<p><strong>Trim Zero Volume</strong> : Remove leading/trailing parts of the waveform that have near-zero volume.</p>
+</li>
+<li>
+<p><strong>Reverse Bits</strong> : This option is only enabled when the source data is a DMC file. Will reverse the bits of each byte. This can be used correct problem is some existing games where samples were packed backwards.</p>
+</li>
+</ul>
+<h2 id="editing-dpcm-waveform">Editing DPCM Waveform</h2>
+<h3 id="waveform-overview">Waveform overview</h3>
+<p>Clicking on the waveform icon next to a sample will reveal its waveform in the piano roll.</p>
+<ul>
+<li>The source sample is display in gray</li>
+<li>The processed sample is display in the color of the sample</li>
+</ul>
+<p>The color of in the header will also show the length of the processed sample, which may be shorter than the source.</p>
+<p><img alt="" src="../images/EditWaveform.png#center" /></p>
+<h3 id="selecting-and-deleting-samples">Selecting and deleting samples</h3>
+<p>Zooming in will reveal the indivual samples of both waveforms. It is possible to select samples of the source data to trim them (by pressing the Delete key). Note that deleting samples manually is the only destructive operation that you can perform on the source data.</p>
+<p><img alt="" src="../images/EditWaveformSelectSamples.png#center" /></p>
+<h3 id="adjusting-volume-with-the-volume-envelope">Adjusting volume with the volume envelope</h3>
+<p>Much like when editing notes, the effect panel can be expanded by clicking the little arrow in the upper left corner of the piano roll. This will reveal the 4-point volume envelope which can be used to adjust the volume of sample with more precision. </p>
+<p><img alt="" src="../images/EditWaveformVolumeEnvelope.png#center" /></p>
+<p>The center line represents 100% volume which the bottom and top represente 0% and 200% respectively. You can drag the envelope points by left clicking and dragging them. Note that the first and last vertex will always be at the beginning and end of the sample. Right-clicking on a vertex will reset its volume to 100%. </p>
+<p>This is especially powerful when combined with the "Trim Zero Volume" option. For example, in the example above, the sample is made a lot shorter (and smaller) without deleting anything from the source data by reducing the volume to zero and letting FamiStudio trim the part with zero volume. </p>
+<h2 id="exporting-dpcm-samples">Exporting DPCM samples</h2>
+<p>Clicking on the little disk icon in the Project Explorer allows you to export a sample. Both the source and processed data can be exported.</p>
+<ul>
+<li>Left-clicking will export the processed sample as a DMC file.</li>
+<li>Right-clicking will export the source data (in its original format, WAV or DMC)</li>
+</ul>
+<h2 id="assigning-a-dpcm-sample-to-a-key-of-the-dpcm-instrument">Assigning a DPCM sample to a key of the DPCM instrument</h2>
+<p>Once a sample is loaded, it can be assign to a key of the "DPCM instrument". Clicking on the little icon next to the DPCM Instrument in the project explorer will open the piano roll in DPCM edition mode.</p>
+<p><img alt="" src="../images/DPCMInstrument.png#center" /></p>
+<p>Samples can be assign to a key in 2 ways:</p>
+<ul>
+<li>Click in the piano roll will prompt you to select sample</li>
+<li>Dragging a sample from the Project Explorer will allow you to place it anywhere on the keyboard</li>
+</ul>
+<h2 id="unassigning-a-dpcm-sample">Unassigning a DPCM sample</h2>
+<p>Right clicking on a sample that has been mapped to a key will remove it from that key. The memory for a sample will not be freed if it is still being used by another key. </p>
+<h2 id="moving-dpcm-samples-to-another-key">Moving DPCM samples to another key</h2>
+<p>DPCM samples can be dragged to another key. When the drag is completed, FamiStudio will offer you to transpose all notes using the old key to the new key.</p>
+<h2 id="editing-dpcm-samples-properties">Editing DPCM samples properties</h2>
+<p>Double-clicking on an existing sample will show its properties. These are the property of the assignment of the sample to this key, not of the sample itself (the same sample can be used at different pitch, for example).</p>
+<ul>
+<li><strong>Pitch</strong> : Allows pitching the sample down. These pitch values are the sample rates that the NES/Famicom supports and will sound a bit different on NTSC or PAL.</li>
+<li><strong>Loop</strong> : Makes the sample loop or not.</li>
+</ul>
+<p><img alt="" src="../images/DPCMProperties.png#center" /></p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js" defer></script>
+        <script src="../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

@@ -62,6 +62,10 @@
 </li>
                                     
 <li>
+    <a href="../dpcm/" class="dropdown-item">Editing DPCM Samples</a>
+</li>
+                                    
+<li>
     <a href="./" class="dropdown-item active">Importing & Exporting Your Songs</a>
 </li>
                                     
@@ -82,7 +86,7 @@
 </li>
                                     
 <li>
-    <a href="../soundengine/" class="dropdown-item">NES Sound Engine</a>
+    <a href="../soundengine/" class="dropdown-item">NES/Famicom Sound Engine</a>
 </li>
                                     
 <li>
@@ -103,7 +107,7 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../song/" class="nav-link">
+                                <a rel="prev" href="../dpcm/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
@@ -194,7 +198,7 @@
                     <div class="col-md-9" role="main">
 
 <h1 id="exporting-songs">Exporting Songs</h1>
-<p>The export dialog is access through the main toolbar.</p>
+<p>The export dialog is access through the main toolbar or with CTRL+E on the keyboard. To quickly repeat a previous export (same format and output file), you can right click on the export icon in the toolbar or press CTRL+SHIFT+E.</p>
 <h2 id="wave-mp3-file">Wave / MP3 File</h2>
 <p>Only a single song can be exported at a time. You can choose the sample rate (and bitrate in case of MP3). It is recommended to stick to 44.1KHz if you want the sound to be exactly as you hear it in FamiStudio. Lower sample rate might lack high frequencies.</p>
 <p>The song can be exported in one of two modes:</p>
@@ -209,12 +213,10 @@
 <h2 id="video">Video</h2>
 <p>Video export is a great way to add a visual element to your songs when sharing them on YouTube/social media. For this to work, you will need to <a href="../ffmpeg/">manually download FFmpeg</a> and extract it somewhere on your computer. </p>
 <p><img alt="" src="../images/VideoScreenshot.jpg#center" /></p>
-<p>The exported videos are always 1080p / 60FPS at the moment (or 50FPS in PAL mode). </p>
 <p><img alt="" src="../images/ExportVideo.png#center" /></p>
 <p>Besides the audio/video quality settings, there are a few options to control the look and feel of the video:</p>
 <ul>
 <li><strong>Piano roll zoom</strong> : The higher the zoom, the faster notes will scroll by. </li>
-<li><strong>Thin notes</strong> : This will make the notes narrower (in the X direction). This is useful when exporting songs that have more than 5 channels.</li>
 <li><strong>Channels</strong> : It is recommended to not export channels that do not have any notes, this will leave more space to the other channels.</li>
 </ul>
 <h2 id="nintendo-sound-format">Nintendo Sound Format</h2>
@@ -361,11 +363,23 @@
 </tbody>
 </table>
 <h2 id="famistudio-text">FamiStudio Text</h2>
-<p>FamiStudio text format is a textual representation of the of the binary FamiStudio format. It is designed to favor interopability with other softwares, tools and sound engines. Exporting or importing this mostly lossless. The only this not stored in this format are the custom colors assigned to instruments, patterns and songs (they will be randomized every time you re-import the file).</p>
+<p>FamiStudio text format is a textual representation of the of the binary FamiStudio format. It is designed to favor interopability with other softwares, tools and sound engines. </p>
 <p><img alt="" src="../images/ExportFamiStudioText.png#center" /></p>
+<p>Exporting or importing using this format mostly lossless. These are the features that will not be preserved:</p>
+<ul>
+<li>
+<p>The custom colors assigned to songs, instruments, patterns, arpeggios and DPCM samples will not be preserved, they will be randomized every time you re-import the file.</p>
+</li>
+<li>
+<p>Only the final processed data of DPCM samples will exported. The source data as well as any processing parameter will be lost. </p>
+</li>
+</ul>
 <h3 id="format-specification">Format Specification</h3>
 <p>The format describe one object per line followed by some attributes and values. Attribute are always between double-quotes. All indentation is purely cosmetic. </p>
 <pre><code>Object Attribute1="Value1" Attribute2="Value2"
+</code></pre>
+<p>Double quotes in values can be escaped by doubling them, similar to some CSV dialects:</p>
+<pre><code>Object Attribute1="Example ""Quoted"" Value1" Attribute2="Value2"
 </code></pre>
 <p>The general structure of a file has these objects nested like this:</p>
 <ul>
@@ -473,7 +487,7 @@
 <td></td>
 <td>Data</td>
 <td>Yes</td>
-<td>The data as a series of hexadecimal nibbles.</td>
+<td>The processed data as a series of hexadecimal nibbles.</td>
 </tr>
 <tr>
 <td>DPCMMapping</td>
@@ -581,13 +595,13 @@
 <td></td>
 <td>N163WaveSize</td>
 <td></td>
-<td>(N163 instrument only) 4, 8, 16 or 32.</td>
+<td>(N163 instrument only) 4 to 248, multiple of 4 (4, 8, 12, etc.).</td>
 </tr>
 <tr>
 <td></td>
 <td>N163WavePos</td>
 <td></td>
-<td>(N163 instrument only) 0 to 124.</td>
+<td>(N163 instrument only) 0 to 244, multiple of 4 (4, 8, 12, etc.).</td>
 </tr>
 <tr>
 <td></td>
@@ -675,13 +689,13 @@
 </tr>
 <tr>
 <td></td>
-<td>Tempo</td>
+<td>FamiTrackerTempo</td>
 <td>Yes</td>
 <td>(FamiTracker tempo only) The FamiTracker tempo.</td>
 </tr>
 <tr>
 <td></td>
-<td>Speed</td>
+<td>FamiTrackerSpeed</td>
 <td>Yes</td>
 <td>(FamiTracker tempo only) The FamiTracker speed.</td>
 </tr>
@@ -771,6 +785,12 @@
 </tr>
 <tr>
 <td></td>
+<td>Speed</td>
+<td></td>
+<td>(FamiTracker tempo only) Updates the FamiTracker speed to a new value.</td>
+</tr>
+<tr>
+<td></td>
 <td>FinePitch</td>
 <td></td>
 <td>The fine pitch, -128 to 127.</td>
@@ -855,12 +875,14 @@
 </ul>
 <p>Besides effects, there are also other limitations:</p>
 <ul>
-<li>When the limit of 16KB is reached, all subsequent DPCM samples will stop loading.</li>
+<li>If multiple instruments assign DPCM samples to the same key of the DPCM instrument, only the first one will be assigned. Other samples will be loaded, but unassigned to any keys.</li>
+<li>All DPCM samples will be loaded (and potentially assigned to a key of the DPCM instrument) but any sample over the 16KB FamiStudio limit will not play correctly or at all.</li>
 <li>Namco 163 instrument can only have a single waveform. Any other waveform than zero will be ignored.</li>
 <li>VRC7 1xx/2xx/3xx/Qxx/Rxx effects will likely not sound like FamiTracker and will need manual corrections.</li>
 <li>Instruments using both pitch and arpeggio envelopes at the same time will not sound the same as in FamiTracker. This is due to the vastly different way both applications handles these. FamiTracker re-triggers the pitch envelope at each arpeggio notes (probably the more sensible way), while FamiStudio simply runs both at the same time.</li>
 <li>VRC6 saw channel is not influenced by duty cycle in FamiStudio. FamiStudio always allow the full volume range for the saw. Import/export process does not try account for this. This might lead to volume inconsistencies between FamiTracker and FamiStudio where the volume needs to be doubled or halved to sound correct.</li>
 <li>Vibrato effect might sound a bit different, please see table above for exact mappings.</li>
+<li>The noise channel in FamiStudio is not affected by pitch envelope or any pitch effects (1xx, 2xx, 3xx, Qxx and Rxx).</li>
 </ul>
 <p>When importing from FamiTracker, all possible slide effects (1xx, 2xx, 3xx, Qxx and Rxx) will be converted to slide notes. Sometimes attack will be disabled as well to mimic the same behavior. This in an inherently imperfect process since they approaches are so different. For this reason, importing/exporting slide notes with FamiTracker should be considered a <strong>lossy</strong> process.</p>
 <h2 id="famistudio-text_1">FamiStudio Text</h2>
@@ -875,6 +897,7 @@
 <li><strong>Start frame</strong> : Used to offset the entire song by a number of frames. This is useful when a song has an intro that is not the same length as the other patterns.</li>
 <li><strong>Remove intro silence</strong> : Some songs start with a bit of silence, this will wait until any sound is produce to start recording.</li>
 <li><strong>Reverse DPCM bits</strong> : This will set the "Reverse Bits" flag on all the imported samples. This come from a recent discovery that quite a few games had packed their bits in the wrong order, leading to samples sounding worse than they should.</li>
+<li><strong>Preserve DPCM padding bytes</strong> : Force FamiStudio to keep the last byte of every sample, this will make all samples 16 bytes larger simply to keep an extra byte. This could be useful to keep looping samples intact. Should remain off most of the time since most games seem to ignore this byte.</li>
 </ul>
 <p>NSF file are essentially programs designed to run on actual hardware. They will contain no instrument, no envelopes, no repeating pattern, etc. All the volumes and pitches will be set through the effect panel. They are going to appear extremely messy and unoptimized. </p>
 <p>That being said, NSF can still be extremely useful to reverse engineer how songs were made. In fact, this is how most of the Demo Songs that come with FamiStudio were made. </p>

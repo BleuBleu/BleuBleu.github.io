@@ -62,6 +62,10 @@
 </li>
                                     
 <li>
+    <a href="../dpcm/" class="dropdown-item">Editing DPCM Samples</a>
+</li>
+                                    
+<li>
     <a href="../importexport/" class="dropdown-item">Importing & Exporting Your Songs</a>
 </li>
                                     
@@ -82,7 +86,7 @@
 </li>
                                     
 <li>
-    <a href="../soundengine/" class="dropdown-item">NES Sound Engine</a>
+    <a href="../soundengine/" class="dropdown-item">NES/Famicom Sound Engine</a>
 </li>
                                     
 <li>
@@ -136,6 +140,14 @@
               <ul class="nav flex-column">
               </ul>
             </li>
+            <li class="nav-item" data-level="2"><a href="#cleaning-up-song" class="nav-link">Cleaning-up Song</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#cleaning-up-projects" class="nav-link">Cleaning-up Projects</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
         </ul>
@@ -146,8 +158,9 @@
 <h1 id="cleaning-up-your-project">Cleaning-up Your Project</h1>
 <h2 id="clean-up-dialog">Clean-up Dialog</h2>
 <p>The clean-up dialog dialog is accessed from the toolbar. It can perform various cleaning operations, such as deleting unused elements and merging identical ones.</p>
-<p><img alt="" src="../images/Cleanup.png#center" /></p>
-<p>Here are the operations that can be performed:</p>
+<h2 id="cleaning-up-song">Cleaning-up Song</h2>
+<p><img alt="" src="../images/CleanupSong.png#center" /></p>
+<p>Here are the operations that can be performed on songs:</p>
 <ul>
 <li>
 <p><strong>Merge identical patterns</strong> : Patterns that are identical on the same channel will be assumed to be the same and will all be replaced by instances of a single one. To be identical, patterns must have the exact same notes, effects, etc.</p>
@@ -155,6 +168,11 @@
 <li>
 <p><strong>Delete empty patterns</strong> : Patterns with zero notes or effect values will be deleted. Only applies to the selected songs. </p>
 </li>
+</ul>
+<h2 id="cleaning-up-projects">Cleaning-up Projects</h2>
+<p><img alt="" src="../images/CleanupProject.png#center" /></p>
+<p>Here are the operations that can be performed on the project:</p>
+<ul>
 <li>
 <p><strong>Merge identical instruments</strong> : Instruments that have the same settings and envelopes will be combined into ones and every notes using the intruments to be deleted will use the new one. </p>
 </li>
@@ -162,7 +180,13 @@
 <p><strong>Delete unused instruments</strong> : Instruments without a single note played will be deleted.</p>
 </li>
 <li>
-<p><strong>Delete unused samples</strong> : Samples without a single note played will be deleted.</p>
+<p><strong>Unassign unused DPCM instrument keys</strong> : Unassign samples to keys of the DPCM instrument that are not used by any song in the project.</p>
+</li>
+<li>
+<p><strong>Delete unassigned samples</strong> : Samples that are not assigned to any key of the DPCM instrument will be deleted.</p>
+</li>
+<li>
+<p><strong>Permanently apply all DPCM sample processing</strong> : Remove all the source data of any DPCM sample and replaces it with its processed DMC data. This will also reset all the processing parameters. Only do this when you know you are completely done adjusting your samples, to reduce the file size (it you were using WAV files as source). This will not affect the sound of the song, but will severely limit your ability to go back and adjust things like volume, etc. in a lossless way.</p>
 </li>
 <li>
 <p><strong>Delete unused arpeggios</strong> : Arpeggios that are not used by a single note will be deleted.</p>

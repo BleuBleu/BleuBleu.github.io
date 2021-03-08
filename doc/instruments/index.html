@@ -62,6 +62,10 @@
 </li>
                                     
 <li>
+    <a href="../dpcm/" class="dropdown-item">Editing DPCM Samples</a>
+</li>
+                                    
+<li>
     <a href="../importexport/" class="dropdown-item">Importing & Exporting Your Songs</a>
 </li>
                                     
@@ -82,7 +86,7 @@
 </li>
                                     
 <li>
-    <a href="../soundengine/" class="dropdown-item">NES Sound Engine</a>
+    <a href="../soundengine/" class="dropdown-item">NES/Famicom Sound Engine</a>
 </li>
                                     
 <li>
@@ -167,28 +171,8 @@
               </ul>
             </li>
             
-            <li class="nav-item" data-level="1"><a href="#editing-dpcm-samples" class="nav-link">Editing DPCM samples</a>
+            <li class="nav-item" data-level="1"><a href="#dpcm-instrument" class="nav-link">DPCM Instrument</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#assigning-a-dpcm-sample-to-a-key" class="nav-link">Assigning a DPCM sample to a key</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#unassigning-a-dpcm-sample" class="nav-link">Unassigning a DPCM sample</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#moving-dpcm-samples-to-another-key" class="nav-link">Moving DPCM samples to another key</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#editing-dpcm-samples-properties" class="nav-link">Editing DPCM samples properties</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#exporting-dpcm-samples" class="nav-link">Exporting DPCM samples</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
               </ul>
             </li>
             
@@ -249,29 +233,8 @@
 <p>Clicking on an envelope button and dragging it on another instrument will copy that envelope from the first to the second. Note that unlike FamiTracker, envelopes are not explicitly shared between instruments. Identical envelopes will be combined when exporting to FamiTone2, but it is your responsibility to optimize the content and ensure that you limit the number of unique envelopes.</p>
 <h2 id="deleting-envelopes">Deleting envelopes</h2>
 <p>Right-clicking on the icon of an envelope deletes it.</p>
-<h1 id="editing-dpcm-samples">Editing DPCM samples</h1>
-<p>Clicking on the little icon next to the DPCM samples in the project explorer will open the piano roll in DPCM edition mode.</p>
-<p>DPCM (Delta Pulse Coded Modulation)samples are very low quality 1-bit digital samples that the NES supported. They are of very low quality but have been used quite successfully for drums and basses. </p>
-<p><img alt="" src="../images/EditDPCM.png#center" /></p>
-<h2 id="assigning-a-dpcm-sample-to-a-key">Assigning a DPCM sample to a key</h2>
-<p>You can assign a sample to a key of the piano. Clicking anywhere on a note that does not have a DPCM sample associated will prompt you to open a .DMC file. </p>
-<p>No DMC edition tool is provided, you can use <a href="http://famitracker.com/">FamiTracker</a>, <a href="http://forums.famitracker.com/viewtopic.php?t=95">RJDMC</a>, <a href="https://www.romhacking.net/utilities/1451/">MakeDPCM</a> or any other tool. DPCM samples are assumed to have unique names and 2 samples with the same name will be assume to be the same. Note that only notes between C1 and D6 are allowed to have DPCM samples.</p>
-<h2 id="unassigning-a-dpcm-sample">Unassigning a DPCM sample</h2>
-<p>Right clicking on a sample that has been mapped to a key will remove it from that key. The memory for a sample will not be freed if it is still being used by another key. </p>
-<h2 id="moving-dpcm-samples-to-another-key">Moving DPCM samples to another key</h2>
-<p>DPCM samples can be dragged to another key. When the drag is completed, FamiStudio will offer you to transpose all notes using the old key to the new key.</p>
-<h2 id="editing-dpcm-samples-properties">Editing DPCM samples properties</h2>
-<p>Double-clicking on an existing sample will show its properties. </p>
-<ul>
-<li><strong>Name</strong> : Name of the sample. Needs to be unique. The name is shared accross all instances of the same sample, renaming one will rename all the others.</li>
-<li><strong>Pitch</strong> : Allows pitching the sample down.</li>
-<li><strong>Loop</strong> : Makes the sample loop.</li>
-<li><strong>Reverse Bits</strong> : Will reverse the bits of the sample. This come from a recent discovery that quite a few games had packed their bits in the wrong order, leading to samples sounding worse than they should. Much like the name, this is shared accross all instances of the sample (all samples will the same name). </li>
-</ul>
-<p><img alt="" src="../images/DPCMProperties.png#center" /></p>
-<h2 id="exporting-dpcm-samples">Exporting DPCM samples</h2>
-<p>Holding <strong>S</strong> and clicking on a sample will allow you to save it to a file. Only the RAW sample data will be save. Any properties set, such as pitch, loop and bit reverse will be ignored.</p>
-<p>DPCMProperties.png</p>
+<h1 id="dpcm-instrument">DPCM Instrument</h1>
+<p>The DPCM Instrument is a special instrument able to play DPCM samples. It is always present and cannot be deleted. For more information, please refer to the <a href="../dpcm/">DPCM Samples</a> section. </p>
 <h1 id="editing-arpeggios">Editing Arpeggios</h1>
 <p>Arpeggios (not to be confused with arpeggio instrument envelopes) are typically used to simulate chords by playing changing notes very rapidly. They work in the exact same way as arpeggio instrument envelopes, but they are not bound to any specific instrument. For example, if you define a "Major chord" arpeggio that repeats a sequence 0-4-7 of notes, you can then re-use this arpeggio on any instrument later on. Saving you the trouble or either inputting many tiny notes, or creating many instruments for each chord.</p>
 <p>Arpeggios are handled in a very similar way to instrument. You can add a new arpeggio by click on the <strong>+</strong> button of the <strong>Arpeggios</strong> section. To edit the sequence of note you can then click of the little note icon on the right side of the arpeggio button. </p>

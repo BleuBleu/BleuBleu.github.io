@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>NES Sound Engine - FamiStudio Documentation</title>
+        <title>NES/Famicom Sound Engine - FamiStudio Documentation</title>
         <link href="../css/bootstrap.min.css" rel="stylesheet">
         <link href="../css/font-awesome.min.css" rel="stylesheet">
         <link href="../css/base.css" rel="stylesheet">
@@ -62,6 +62,10 @@
 </li>
                                     
 <li>
+    <a href="../dpcm/" class="dropdown-item">Editing DPCM Samples</a>
+</li>
+                                    
+<li>
     <a href="../importexport/" class="dropdown-item">Importing & Exporting Your Songs</a>
 </li>
                                     
@@ -82,7 +86,7 @@
 </li>
                                     
 <li>
-    <a href="./" class="dropdown-item active">NES Sound Engine</a>
+    <a href="./" class="dropdown-item active">NES/Famicom Sound Engine</a>
 </li>
                                     
 <li>
@@ -130,7 +134,7 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#famistudio-nes-sound-engine" class="nav-link">FamiStudio NES Sound Engine</a>
+            <li class="nav-item" data-level="1"><a href="#famistudio-nesfamicom-sound-engine" class="nav-link">FamiStudio NES/Famicom Sound Engine</a>
               <ul class="nav flex-column">
             <li class="nav-item" data-level="2"><a href="#overview" class="nav-link">Overview</a>
               <ul class="nav flex-column">
@@ -171,10 +175,10 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="famistudio-nes-sound-engine">FamiStudio NES Sound Engine</h1>
+<h1 id="famistudio-nesfamicom-sound-engine">FamiStudio NES/Famicom Sound Engine</h1>
 <p>This section will cover the NES sound engine that comes with FamiStudio that you can use to play music/sound effects made with FamiStudio in your homebrew NES games.</p>
 <h2 id="overview">Overview</h2>
-<p>The FamiStudio sound engine is used by the NSF and ROM exporter of FamiStudio and can be used to make homebrew NES games. It supports every feature from FamiStudio, including audio expansions, and will continue to do so in the future. Some of these features are toggeable to save CPU/memory.</p>
+<p>The FamiStudio sound engine is used by the NSF and ROM exporter of FamiStudio and can be used to make homebrew NES/Famicom games. It supports every feature from FamiStudio, including audio expansions, and will continue to do so in the future. Some of these features are toggeable to save CPU/memory.</p>
 <p>The engine is essentially a heavily modified version of <a href="https://shiru.untergrund.net/code.shtml">FamiTone2 by Shiru</a>. A lot of his code and comments are still present, so massive thanks to him!! I am not trying to steal his work or anything, i renamed a lot of functions and variables because at some point it was becoming a mess of coding standards and getting hard to maintain.</p>
 <p>The engine, as well as a demo project, is available for all 3 major assemblers:</p>
 <ul>
@@ -204,7 +208,7 @@
 <li>PAL/NTSC playback support. </li>
 <li>DPCM sample support</li>
 <li>Sound effect support (with configurable number of streams)</li>
-<li>Blaarg Smooth Vibrato technique to eliminate "pops" on square channels (incompatible with SFX at the moment)</li>
+<li>Blaarg Smooth Vibrato technique to eliminate "pops" on square channels</li>
 <li>FamiTracker/FamiStudio tempo mode.</li>
 <li>Volume track support.</li>
 <li>Fine pitch track support.</li>
@@ -343,8 +347,7 @@ FAMISTUDIO_CFG_SFX_SUPPORT   = 1
 FAMISTUDIO_CFG_SFX_STREAMS   = 2
 
 ; Blaarg's smooth vibrato technique. Eliminates phase resets ("pops") on
-; square channels. Will be ignored if SFX are enabled since they are 
-; currently incompatible with each other. This might change in the future.
+; square channels. 
 FAMISTUDIO_CFG_SMOOTH_VIBRATO = 1
 
 ; Enables DPCM playback support.

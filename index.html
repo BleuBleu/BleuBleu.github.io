@@ -25,6 +25,7 @@
 				<li>Modern DAW-style UI with sequencer and piano roll, no hexadecimal anywhere</li>
 				<li>Instrument & Envelope edition</li>
 				<li>NSF import</li>
+				<li>DPCM sample editor (WAV and DMC support)</li>
 				<li>Full Undo/Redo support</li>
 				<li>Copy & Paste support</li>
 				<li>Note drag & drop with audio preview</li>
@@ -41,40 +42,34 @@
 
 			<h1>Latest Release</h1>
 
-			<h2>Chages/Fixes in 2.3.2 (Latest Hotfix)</h2>
+			<h2>New features in 2.4.0</h2>
 			<ul>
-				<li>Added loop count to video export.</li>
-				<li>Fixed scaling issues on Retina display.</li>
-				<li>Fixed lingering noise when dragging/adding notes in VRC7.</li>
-				<li>Fixed multiple FamiTracker import (Text + Binary) issues/crashes.</li>
-				<li>Fixed potential desync in NSF/sound engine when using delayed notes.</li>
-				<li>Fixed various issues with expansion instruments UI (sliders/checkboxes for VRC7/FDS/N163).</li>
-				<li>Fixed import of older FamiStudio text files (pre 2.3.0).</li>
-				<li>Fixed NSF/sound engine crash when exporting empty arpeggios.</li>
-				<li>Fixed issue with arpeggios sometimes persisting when a song loops.</li>
-			</ul>
-
-			<h2>New features in 2.3.0</h2>
-			<ul>
-				<li>MP3 export</li>
-				<li>Video export</li>
-				<li>Song merge functionality</li>
-				<li>Duty cycle effect track support (equivalent of Vxx in FamiTracker) </li>
-				<li>Special paste improvements (repeat, effects, etc.)</li>
-				<li>Special delete</li>
-				<li>Copy patterns to different channels in sequencer</li>
-				<li>Option to display note labels in piano roll</li>
-				<li>FamiTracker tempo improvements (delayed notes, cuts, fixes).</li>
-				<li>Added support for Cxx (Halt) FamiTracker effect.</li>
-				<li>Option to export each channel to a seperate WAV/MP3 file. </li>
-				<li>Small DPCM improvements (Drag & drop, bit reverse option)</li>
-				<li>Small tempo improvements</li>
-				<li>Sound engine code size reduction</li>
+				<li>Basic DPCM sample editor</li>
+				<li>Darker theme and more color choices</li>
+				<li>Ability to use QWERTY keyboard input without using recording mode</li>
+				<li>Slightly reduced audio latency and configurable number of buffered frames</li>
+				<li>Right-clicking anywhere in the background also starts a selection</li>
+				<li>Seek bar can be dragged and respects snapping precision</li>
+				<li>Pattern duplication preserves names when possible</li>
+				<li>Instrument picker tool (hold "I" + click on a note)</li>
+				<li>Paste special in Sequencer</li>
+				<li>Pattern are created automatically when adding notes.</li>
+				<li>Quickly repeat last export by right clicking button or CTRL+SHIFT+E</li>
+				<li>Edit multiple custom patterns at once</li>
+				<li>Video export resolution/framerate options (Contributed by Thomas McGrew)</li>
+				<li>Multiple VRC7 fixes</li>
+				<li>Multiple FamiTracker fixes</li>
+				<li>Multiple sound engine improvements & fixes</li>
+				<ul>
+					<li>Blaarg smooth vibrato support for SFX</li>
+					<li>Unlimited SFX size (Contributed by Brad Smith)</li>
+					<li>Linker support in CA65 (Based on idea by Brad Smith)</li>
+				</ul>
 			</ul>
 
 			<h2>Release trailer</h2>
 			<div style="position:relative;margin-left: auto;margin-right: auto;width:80%;height:0;padding-bottom:45%;">
-				<iframe style="position:absolute;top:0;left:0;width:100%;height:100%" src="https://www.youtube.com/embed/wD5eZTc4H5o" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<iframe style="position:absolute;top:0;left:0;width:100%;height:100%" src="https://www.youtube.com/embed/zwkIV4VwlLw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			</div>
 
 			<h1>Download</h1>
@@ -82,28 +77,28 @@
 			<h2>Download links</h2>
 			<table style="margin-left: auto;margin-right: auto;">
 				<tr>
-					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/2.3.2/FamiStudio232-WinInstaller.zip"><img src="windows.png"></a></td>
-					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/2.3.2/FamiStudio232-MacOS.zip"><img src="macos.png"></a></td>
-					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/2.3.2/FamiStudio232-LinuxAMD64.zip"><img src="linux.png"></a></td>
-					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/2.3.0/FamiStudio232-SoundEngine.zip"><img src="6502.png"></a></td>
+					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/2.4.0/FamiStudio240-WinInstaller.zip"><img src="windows.png"></a></td>
+					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/2.4.0/FamiStudio240-MacOS.zip"><img src="macos.png"></a></td>
+					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/2.4.0/FamiStudio240-LinuxAMD64.zip"><img src="linux.png"></a></td>
+					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/2.4.0/FamiStudio240-SoundEngine.zip"><img src="6502.png"></a></td>
 				</tr>
 				<tr>
 					<td style="padding: 20px;" align="center">
-						<a href="https://github.com/BleuBleu/FamiStudio/releases/download/2.3.2/FamiStudio232-WinInstaller.zip"><center>Windows Installer</center></a><br>
-						<a href="https://github.com/BleuBleu/FamiStudio/releases/download/2.3.2/FamiStudio232-WinPortableExe.zip"><center>Windows Portable EXE</center></a>
+						<a href="https://github.com/BleuBleu/FamiStudio/releases/download/2.4.0/FamiStudio240-WinInstaller.zip"><center>Windows Installer</center></a><br>
+						<a href="https://github.com/BleuBleu/FamiStudio/releases/download/2.4.0/FamiStudio240-WinPortableExe.zip"><center>Windows Portable EXE</center></a>
 						</td>
-					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/2.3.2/FamiStudio232-MacOS.zip"><center><p>MacOS Bundle</p></center></a></td>
+					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/2.4.0/FamiStudio240-MacOS.zip"><center><p>MacOS Bundle</p></center></a></td>
 					<td style="padding: 20px;" align="center">
 						<a href="https://flathub.org/apps/details/org.famistudio.FamiStudio"><center>FlatHub</center></a><br>
-						<a href="https://github.com/BleuBleu/FamiStudio/releases/download/2.3.2/FamiStudio232-LinuxAMD64.zip"><center>Linux AMD64 Binaries</center></a>
+						<a href="https://github.com/BleuBleu/FamiStudio/releases/download/2.4.0/FamiStudio240-LinuxAMD64.zip"><center>Linux AMD64 Binaries</center></a>
 					</td>
-					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/2.3.0/FamiStudio230-SoundEngine.zip"><center><p>NES Sound Engine<br>(CA65, NESASM, ASM6)</p></center></a></td>
+					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/2.4.0/FamiStudio240-SoundEngine.zip"><center><p>NES Sound Engine<br>(CA65, NESASM, ASM6)</p></center></a></td>
 				</tr>
 			</table>
 
 			<h2>Installation Instructions</h2>
 			<ul>
-				<li>On Windows simply download and run the installer (.msi). A shortcut to FamiStudio and the included demo songs will be added to your Start Menu. If you get a warning when installing or if the app crashes when running, please check out the <a href='doc/index.html#windows'>documentation</a> for the fix.</li>
+				<li>On Windows simply download and run the installer (Setup.exe). A shortcut to FamiStudio and the included demo songs will be added to your Start Menu. If you get a warning when installing or if the app crashes when running, please check out the <a href='doc/index.html#windows'>documentation</a> for the fix.</li>
 				<li>On macOS, download and uncompress the file anywhere and the launch FamiStudio app. The demo songs and included in the zip. The app is unsigned and might require you to <a href='doc/index.html#macos'>ignore a few warning</a>.</li>
 				<li>On Linux, the FlatHub page contains the instructions, if installing from the ZIP file please read the <a href='https://famistudio.org/doc/#linux'>installation instructions</a>.</li>
 			</ul>
@@ -123,6 +118,7 @@
 				<li>Silver Surfer : BGM2 (my approximate recreation)</li>
 				<li>Gradius II - Farewell (my approximate recreation)</li>
 				<li>Layla : The Iris Missions - Iris (by Supper, my approximate recreation)</li>
+				<li>Tower of Heaven - Indignant Divinity (Flashygoodness, cover by <a href='https://www.youtube.com/watch?v=0qV4dSBOH5s'>Danooct1</a>. Thanks!!!)</li>
 				<li>FamiStudio - Tutorial Song (song created in tutorial)</li>
 			</ul>
 
@@ -132,7 +128,7 @@
 
 			<h1>Getting Started</h1>
 
-			<p>Here is a 40 minute video tutorial that will show you how to create a basic song from scratch.</p>
+			<p>Here is a 1h video tutorial that will show you how to create a basic song from scratch.</p>
 
 			<div style="position:relative;margin-left: auto;margin-right: auto;width:80%;height:0;padding-bottom:45%;">
 				<iframe style="position:absolute;top:0;left:0;width:100%;height:100%" src="https://www.youtube.com/embed/YN79633FrDg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
