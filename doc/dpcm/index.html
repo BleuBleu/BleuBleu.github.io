@@ -66,7 +66,11 @@
 </li>
                                     
 <li>
-    <a href="../importexport/" class="dropdown-item">Importing & Exporting Your Songs</a>
+    <a href="../import/" class="dropdown-item">Importing Songs</a>
+</li>
+                                    
+<li>
+    <a href="../export/" class="dropdown-item">Exporting Songs</a>
 </li>
                                     
 <li>
@@ -112,7 +116,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../importexport/" class="nav-link">
+                                <a rel="next" href="../import/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -165,6 +169,10 @@
               </ul>
             </li>
             <li class="nav-item" data-level="2"><a href="#editing-dpcm-samples-properties" class="nav-link">Editing DPCM samples properties</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#sampling-instruments" class="nav-link">Sampling Instruments</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -272,7 +280,65 @@
 <li><strong>Pitch</strong> : Allows pitching the sample down. These pitch values are the sample rates that the NES/Famicom supports and will sound a bit different on NTSC or PAL.</li>
 <li><strong>Loop</strong> : Makes the sample loop or not.</li>
 </ul>
-<p><img alt="" src="../images/DPCMProperties.png#center" /></p></div>
+<p><img alt="" src="../images/DPCMProperties.png#center" /></p>
+<h2 id="sampling-instruments">Sampling Instruments</h2>
+<p>Contribution by <em>.Hayabusa</em>, thanks!</p>
+<p>If you want to sample some instrument, for example the Sunsoft Bass on your own, you can try this method. This is the same technique that was used in Sunsoft games.</p>
+<ol>
+<li>
+<p>All you need to have is 5 different samples of same instrument, those samples should play these notes : A#, B, C, C#, D. These samples should be relatively high-pitched, since we will be pitching these down. Also this will help keeping the size down.</p>
+</li>
+<li>
+<p>Assign those 5 samples to corresponding notes, furthermore you will use these samples on lower notes, by assigning each one with lower pitch, to it's corresponding notes. For example let's take first source sample, A#, which with pitch 15, which is, of course the same A#. If you will lower the pitch to 14, it will become note F. With pitch 13, it will become D. And you will assign this same sample, by lowering pitch like that to it's corresponding notes.</p>
+</li>
+</ol>
+<p>Here is a chart of how many semitones it goes down by decreasing the pitch, currently as i write this, i only got to pitch 7, which is -24 semitones, so in theory, you can sample whole 2 octaves by using just 5 samples.</p>
+<table>
+<thead>
+<tr>
+<th>Pitch</th>
+<th>Semitones</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>15</td>
+<td>0</td>
+</tr>
+<tr>
+<td>14</td>
+<td>-5</td>
+</tr>
+<tr>
+<td>13</td>
+<td>-8</td>
+</tr>
+<tr>
+<td>12</td>
+<td>-12</td>
+</tr>
+<tr>
+<td>11</td>
+<td>-15</td>
+</tr>
+<tr>
+<td>10</td>
+<td>-17</td>
+</tr>
+<tr>
+<td>9</td>
+<td>-19</td>
+</tr>
+<tr>
+<td>8</td>
+<td>-22</td>
+</tr>
+<tr>
+<td>7</td>
+<td>-24</td>
+</tr>
+</tbody>
+</table></div>
             </div>
         </div>
 

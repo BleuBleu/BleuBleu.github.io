@@ -66,7 +66,11 @@
 </li>
                                     
 <li>
-    <a href="../importexport/" class="dropdown-item">Importing & Exporting Your Songs</a>
+    <a href="../import/" class="dropdown-item">Importing Songs</a>
+</li>
+                                    
+<li>
+    <a href="../export/" class="dropdown-item">Exporting Songs</a>
 </li>
                                     
 <li>
@@ -144,7 +148,27 @@
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#adding-and-deleting-notes" class="nav-link">Adding and deleting notes</a>
+            <li class="nav-item" data-level="2"><a href="#adding-deleting-notes" class="nav-link">Adding &amp; deleting notes</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#moving-resizing-notes" class="nav-link">Moving &amp; resizing notes</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#note-duration-priority" class="nav-link">Note duration &amp; priority</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#selecting-notes" class="nav-link">Selecting notes</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#release-point" class="nav-link">Release point</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#stop-notes" class="nav-link">Stop notes</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -152,15 +176,11 @@
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#recoding-mode" class="nav-link">Recoding mode</a>
+            <li class="nav-item" data-level="2"><a href="#recording-mode" class="nav-link">Recording mode</a>
               <ul class="nav flex-column">
               </ul>
             </li>
             <li class="nav-item" data-level="2"><a href="#snapping" class="nav-link">Snapping</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#stop-release-notes" class="nav-link">Stop &amp; Release notes</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -176,11 +196,7 @@
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#selecting-and-editing-notes" class="nav-link">Selecting and editing notes</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#cutting-copying-and-pasting-notes" class="nav-link">Cutting, copying and pasting notes</a>
+            <li class="nav-item" data-level="2"><a href="#copying-pasting-notes" class="nav-link">Copying &amp; pasting notes</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -192,35 +208,7 @@
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#copy-pasting-notes-between-projects" class="nav-link">Copy &amp; pasting notes between projects</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#editing-volume-tracks-effects" class="nav-link">Editing volume tracks &amp; effects</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#volume-track" class="nav-link">Volume track</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#vibrato-depth-speed" class="nav-link">Vibrato depth &amp; speed.</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#pitch" class="nav-link">Pitch</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#duty-cycle" class="nav-link">Duty Cycle</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#speed" class="nav-link">Speed</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#note-and-cut-delay" class="nav-link">Note and Cut delay</a>
+            <li class="nav-item" data-level="2"><a href="#editing-volume-effects" class="nav-link">Editing volume &amp; effects</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -247,14 +235,49 @@
 <p><img alt="" src="../images/PianoRollFrames.png#center" /></p>
 <h2 id="seeking">Seeking</h2>
 <p>Clicking in the timeline (header) of the piano roll will move the play position. You can also drag the seek back to more it more accurately.</p>
-<h2 id="adding-and-deleting-notes">Adding and deleting notes</h2>
-<p>Clicking a pattern in the sequencer will scroll the piano roll to its location. Left-clicking in the piano roll will add a note of the currently selected instrument. Holding the mouse when clicking will allow you to drag the note and will give audio feedback. You cannot add a note where the is not a pattern created.</p>
+<h2 id="adding-deleting-notes">Adding &amp; deleting notes</h2>
+<p>Clicking a pattern in the sequencer will scroll the piano roll to its location. </p>
+<p>Left-clicking in the piano roll will add a note of the currently selected instrument and dragging while still holding the left button will allow you to set the duration. A pattern may be automatically created if you click on an area where there was no pattern. </p>
+<p><img alt="" src="../images/CreateNote.gif#center" /></p>
 <p>Right-clicking deletes a note.</p>
+<h2 id="moving-resizing-notes">Moving &amp; resizing notes</h2>
+<p>When moving the mouse around the piano roll, the note under the mouse cursor will be highlighted and the mouse cursor will change to reflect the type of action you can do :</p>
+<p><img alt="" src="../images/EditNote.gif#center" /></p>
+<p>Possible actions are:</p>
+<ul>
+<li>Move one or multiple note(s)</li>
+<li>Resize one or multiple note(s)</li>
+<li>Move the release point of a note</li>
+</ul>
+<h2 id="note-duration-priority">Note duration &amp; priority</h2>
+<p>FamiStudio is a monophonic app, in other words, only one note can play at a time on a given channel. </p>
+<p>The general rule is that the latest/newest note (the one that is rightmost on the timeline) always has priority, this mean that it can interrupt a previous note, making it sorted than it would normally be. </p>
+<p>As you can see, in the following example, even through i am trying to resize the left note, I cannot go beyond the right note. If I move the right now back, it is still interrupting the left note. Only when I move the right now far enough to the right we can see the real duration of the left note.</p>
+<p><img alt="" src="../images/NotePriority.gif#center" /></p>
+<h2 id="selecting-notes">Selecting notes</h2>
+<p>There are three main wars of selecting notes, selected notes will appear with a thick silver border. </p>
+<ul>
+<li>You can select notes by right-clicking and dragging in the header of the piano roll or anywhere in the background of the piano roll (where there is no note). </li>
+<li>You can select an entire pattern by double right clicking in the header of a pattern.</li>
+<li>You can select the duration of a note by double right clicking in the above or below a now.</li>
+</ul>
+<p>The following images shows all 3 techniques.</p>
+<p><img alt="" src="../images/SelectNotes.gif#center" /></p>
+<p>Once notes are selected, then can be moved or resized all at once. They can also be moved or transposed using the keyboard array keys (up, down, left and right). Holding CTRL while doing so will make the notes move by larger increments.</p>
+<h2 id="release-point">Release point</h2>
+<p>Using Shift+click on an existing will add a release point on a note. Release points are shown as making the note thinner and triggers the envelope to jump to the release point. Release envelopes are useful to nicely fade out a note when its release, while preserving other effects like vibrato. There is no point to adding a release point to an instrument that does not have a release envelope.</p>
+<p>Once a note has a release point, it can be moved by dragging. To remove a release point, you can right-click on it, or shift-click again.</p>
+<p><img alt="" src="../images/ReleaseNote.gif#center" /></p>
+<h2 id="stop-notes">Stop notes</h2>
+<p>Using T+click will add a stop note. A stop note simple stops the sound and are displayed as little triangles. Although they are displayed next to the note preceding them, they actually have no pitch or instrument, they simply stop the sound. </p>
+<p><em>As of FamiStudio 3.0.0 stop notes are no longer needed since they have been replaced by note durations. There are cases where stop notes will still remain when notes are detected to have inconsistent durations, but those should be relatively rare.</em></p>
+<p><img alt="" src="../images/StopNote.png#center" /></p>
 <h2 id="instrument-picker">Instrument Picker</h2>
 <p>Holding <strong>I</strong> and clicking on a note will make the instrument of that note the current instrument. This is often known as the eye dropper or pipette tool in drawing software.</p>
 <p><img alt="" src="../images/InstrumentPicker.png#center" /></p>
-<h2 id="recoding-mode">Recoding mode</h2>
+<h2 id="recording-mode">Recording mode</h2>
 <p>Recording mode is another way to input notes and is enabled by pressing the record button on the toolbar. Recording mode allows inputting notes using a MIDI controller or using a piano-type layout on the QWERTY keyboard. This layout is very similar to what FamiTracker uses. Note that this is not a "real-time" recording mode, simply a note-by-note input mode.</p>
+<p>This is default layout for an en-US keyboard. The <a href="../config/">Configuration Dialog</a> allows re-mapping the keys for other types of keyboards.</p>
 <p><img alt="" src="../images/QWERTY.png#center" /></p>
 <p>The QWERTY keyboard input will give you a range of approximately 2.5 octaves. By default, this will go from C3 to C5 but it can be moved up/down by pressing <strong>Page Up</strong> and <strong>Page Down</strong>. Which keyboard key maps to which piano key will be displayed in the piano roll. </p>
 <p><img alt="" src="../images/RecordingPiano.png#center" /></p>
@@ -263,20 +286,12 @@
 <ul>
 <li><strong>Backspace</strong>: moves back by 1 note (or snapping interval), erasing any note inside the interval. </li>
 <li><strong>Tab</strong>: Advances by 1 note (or snapping interval), not recording anything.</li>
-<li><strong>1</strong>: Inserts a stop note and advances.</li>
 <li><strong>Page Up/Down</strong>: Moves the octave range that can be inputted using the QWERTY keyboard up/down.</li>
 </ul>
 <h2 id="snapping">Snapping</h2>
 <p>Snapping can be toggle by clicking the little magnet in the top-left corner of the piano roll. <strong>SHIFT+S</strong> can also be used to quickly toggle snapping on/off. The precision of the snapping can be changed by left/right clicking the number of using the mousewheel over the number or magnet icon. </p>
 <p><img alt="" src="../images/Snap.png#center" /></p>
-<p>Using FamiStudio tempo mode will allow you to use both fractional snapping (1/4, 1/3, 1/2) and integer snapping (1, 2, 3, 4). FamiTracker tempo mode is limited to integer snapping since it does not give you full control over the individual frames. Fractional snapping will perform rounding when the number of frames in a note isnt exactly divisible by the precision.</p>
 <p>Adding, selecting and dragging of notes are currently the only actions affected by snapping. More might be added in future based on user feedback.</p>
-<h2 id="stop-release-notes">Stop &amp; Release notes</h2>
-<p>Using Ctrl+click will add a stop note. Stops notes are displayed as little triangles. Although they are displayed next to the note preceding them, they actually have no pitch or instrument, they simply stop the sound. Stop notes are important because on the NES, a note will play indefinitely unless you tell it to stop.</p>
-<p><img alt="" src="../images/StopNote.png#center" /></p>
-<p>Using Shift+click will add a release notes. Release notes are shown as making the note thinner and triggers the envelope to jump to the release point. Release envelopes are useful to nicely fade out a note when its release, while preserving other effects like vibrato. There is no point to adding a release note to an instrument that does not have a release envelope.</p>
-<p><img alt="" src="../images/ReleaseNote.png#center" /></p>
-<p>Hovering the mouse in the piano roll will display the location and note in the toolbar. Hovering over a note will display which instrument it uses.</p>
 <h2 id="note-attack">Note attack</h2>
 <p>By default, notes will have an "attack" which mean they will restart their envelopes (volume, pitch, etc.) from the beginning. This is represented by the little dark rectangle on the left of each note. This can be toggled for a particular note by hold the A key and clicking on a note. Note that if a note does not use the same instrument as the previous one, the attack will still play, even if disabled. Also please note that this will generally not carry over to FamiTracker, besides specific use cases around slide notes.</p>
 <p>In this example, the first note will have an attack, while the second one will not.</p>
@@ -292,11 +307,12 @@
 <p><img alt="" src="../images/Arpeggio.png#center" /></p>
 <p>You can change which arpeggio is associated with a note the same way to can replace an instrument. You can select a new arpeggio and click on an existing note. Or you can select a few notes and drag and drop an arpeggio from the Project Explorer on to the selection.</p>
 <p>If an instrument uses an arpeggio envelope and also uses an arpeggio chord, the chord will take over and completely override the arpeggio envelope of the instrument. </p>
-<h2 id="selecting-and-editing-notes">Selecting and editing notes</h2>
-<p>You can select notes by right-clicking and dragging in the header of the piano roll or anywhere in the background of the piano roll (where there is no note). Selected notes will appear with a thick silver border. Once notes are selected, then can be moved using the arrows keys (up, down, left and right). Holding CTRL while doing so will make the notes move by larger increments.</p>
-<p><img alt="" src="../images/SelectNotes.png#center" /></p>
-<h2 id="cutting-copying-and-pasting-notes">Cutting, copying and pasting notes</h2>
+<h2 id="copying-pasting-notes">Copying &amp; pasting notes</h2>
 <p>Much like the sequencer, selcted notes can be copy (or cut) by pressing CTRL+C (or CTRL+X). You can then move the selection somewhere else and paste the notes with CTRL+V.</p>
+<h3 id="copying-pasting-notes-between-projects">Copying &amp; pasting notes between projects</h3>
+<p>It is possible to copy notes from one project to another. When doing so, FamiStudio will first look to make sure the instruments used by these notes exist in the other project. It will look for instruments having <em>the same name</em>. If some instruments are not found in the second project, it will offer you to create them for you, thus bringing the instrument from one project to another.</p>
+<p>For example, if you copy a note from project 1 using an instrument called "Piano", FamiStudio will look for an instrument named "Piano" in the second. If it finds one, it will assume it is the same (even though it might not be). If no "Piano" instrument is found, it will offer you to create it for you.</p>
+<p>This can be used as a way of transfering instruments from one project to another. Place a few notes using all the instruments you can to transfer. Copy them and paste them in the second project.</p>
 <h2 id="special-paste">Special paste</h2>
 <p>"Special paste" is a more advanced form of pasting. It is used to to do things like pasting notes without their associated effets or volume track (or vice-versa), or to just paste specific effects. You can use a "special paste" by pressing CTRL+SHIFT+V. This will open a popup dialog.</p>
 <p><img alt="" src="../images/PasteSpecial.png#center" /></p>
@@ -325,11 +341,7 @@
 <p><strong>Delete Effects</strong> : You can choose here the list of effects to delete. All unchecked effects will be preserved.</p>
 </li>
 </ul>
-<h2 id="copy-pasting-notes-between-projects">Copy &amp; pasting notes between projects</h2>
-<p>It is possible to copy notes from one project to another. When doing so, FamiStudio will first look to make sure the instruments used by these notes exist in the other project. It will look for instruments having <em>the same name</em>. If some instruments are not found in the second project, it will offer you to create them for you, thus bringing the instrument from one project to another.</p>
-<p>For example, if you copy a note from project 1 using an instrument called "Piano", FamiStudio will look for an instrument named "Piano" in the second. If it finds one, it will assume it is the same (even though it might not be). If no "Piano" instrument is found, it will offer you to create it for you.</p>
-<p>This can be used as a way of transfering instruments from one project to another. Place a few notes using all the instruments you can to transfer. Copy them and paste them in the second project.</p>
-<h2 id="editing-volume-tracks-effects">Editing volume tracks &amp; effects</h2>
+<h2 id="editing-volume-effects">Editing volume &amp; effects</h2>
 <p>The effect panel can be opened by clicking the little triangle at the top-left of the piano roll. </p>
 <p>Here is the list of effects currently supported, note that not every effect is available on every channel:</p>
 <ul>
@@ -347,18 +359,18 @@
 <p>Effects are edited by selecting and effect and dragging up or down to change the value. Right-clicking on an effect value deletes it. </p>
 <p>For effects that have huge values (such as FDS Depth), you can hold Shift to fine tune the exact value (a movement of 1 pixel will change the value by 1).</p>
 <p><img alt="" src="../images/VolumeTrack.png#center" /></p>
-<h2 id="volume-track">Volume track</h2>
+<h3 id="volume-track">Volume track</h3>
 <p>The volume tracks dictates how loud the current channel should play. This volume is combined with volume envelope by multiplication (50% volume track x 50% envelope volume = 25% total volume). It is much more efficient to use volume envelopes wherever possible and only use volume tracks to control the global volume of the song.</p>
-<h2 id="vibrato-depth-speed">Vibrato depth &amp; speed.</h2>
+<h3 id="vibrato-depth-speed">Vibrato depth &amp; speed</h3>
 <p>Vibrato depth and speed are used to add vibrato to a portion of the song without having to bother creating a new instrument. Please note that vibrato will temporarely override any pitch envelope on the current instrument. When vibrato is disabled (by setting depth or speed, or both to zero), the instrument will essentially have no pitch envelope until a new note is played.</p>
-<p>The depth values for the vibrato are indentical to FamiTracker but the speeds are slightly different. The way FamiTracker implements vibrato, while clever, is flawed as it undersamples the vibrato curve at high speed, leading to aliasing which ends up with a low-frequency tone that has a "ringing" sound to it. Please see the <a href="../importexport/">Import/Export</a> for a table that maps between FamiStudio and FamiTracker.</p>
-<h2 id="pitch">Pitch</h2>
+<p>The depth values for the vibrato are indentical to FamiTracker but the speeds are slightly different. The way FamiTracker implements vibrato, while clever, is flawed as it undersamples the vibrato curve at high speed, leading to aliasing which ends up with a low-frequency tone that has a "ringing" sound to it. Please see the <a href="../export/">Export</a> page for a table that maps between FamiStudio and FamiTracker.</p>
+<h3 id="pitch">Pitch</h3>
 <p>Controls the global pitch of the track. Can be used to make an entire channel slightly out of tune.</p>
-<h2 id="duty-cycle">Duty Cycle</h2>
+<h3 id="duty-cycle">Duty Cycle</h3>
 <p>Allow changing the duty cycle of an instrument without using a duty cycle envelope. This can only affect instruments with no duty cycle envelopes. This effect is mostly just there for compatibility with FamiTracker. Unless you have special cases where you often need to change the duty cycle, you should always favor creating different instruments instead of using this effect. </p>
-<h2 id="speed">Speed</h2>
+<h3 id="speed">Speed</h3>
 <p>This changes the speed parameter of the FamiTracker tempo settings and is only available in FamiTracker tempo mode. Larger values will make the song scroll slower. Please refer to the <a href="../song/">Editing Songs &amp; Project</a> section for more information about tempo management.</p>
-<h2 id="note-and-cut-delay">Note and Cut delay</h2>
+<h3 id="note-and-cut-delay">Note and Cut delay</h3>
 <p>Note delays allows delaying the moment a note is played by a few frames while cut delay will stop a note after a few frames. This also is only available in FamiTracker tempo mode. Please refer to the <a href="../song/">Editing Songs &amp; Project</a> section for more information about tempo management.</p></div>
             </div>
         </div>

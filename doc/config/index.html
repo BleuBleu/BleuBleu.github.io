@@ -66,7 +66,11 @@
 </li>
                                     
 <li>
-    <a href="../importexport/" class="dropdown-item">Importing & Exporting Your Songs</a>
+    <a href="../import/" class="dropdown-item">Importing Songs</a>
+</li>
+                                    
+<li>
+    <a href="../export/" class="dropdown-item">Exporting Songs</a>
 </li>
                                     
 <li>
@@ -140,6 +144,10 @@
               <ul class="nav flex-column">
               </ul>
             </li>
+            <li class="nav-item" data-level="2"><a href="#general-configuration" class="nav-link">General Configuration</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
             <li class="nav-item" data-level="2"><a href="#user-interface-configuration" class="nav-link">User Interface Configuration</a>
               <ul class="nav flex-column">
               </ul>
@@ -148,7 +156,15 @@
               <ul class="nav flex-column">
               </ul>
             </li>
+            <li class="nav-item" data-level="2"><a href="#mixer" class="nav-link">Mixer</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
             <li class="nav-item" data-level="2"><a href="#midi-configuration" class="nav-link">MIDI Configuration</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#qwerty-configuration" class="nav-link">QWERTY Configuration</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -163,6 +179,22 @@
 <p>The configuration dialog is accessed from the main toolbar.</p>
 <h2 id="configuration-dialog">Configuration Dialog</h2>
 <p>The configuration dialog dialog is accessed from the toolbar.</p>
+<h2 id="general-configuration">General Configuration</h2>
+<p><img alt="" src="../images/ConfigGeneral.png#center" /></p>
+<ul>
+<li>
+<p><strong>Check for updates</strong>: At startup FamiStudio checks for new version online. This can be disabled.</p>
+</li>
+<li>
+<p><strong>Trackpad controls</strong>: Enabling trackpad controls will switch to a control scheme that is better suited for trackpad users:</p>
+<ul>
+<li>Vertical mouse wheel up/down will scroll up/down instead of zooming in/out. This is the equivalent of swiping your fingers up/down on the trackpad.</li>
+<li>Horizontal mouse wheel will scroll left/right. This is equivalent of swiping your fingers left/right on the trackpad.</li>
+<li>Pinch to zoom (or alternatively CTRL + MouseWheel) will zoom in/out. If pinch-to-zoom does not work on Windows, please check your trackpad drivers, this is not an issue with FamiStudio.</li>
+</ul>
+<p>Note that these are poorly supported on Linux due to the fact that the app uses GTK 2 and gestures are generally poorly supported in Linux.</p>
+</li>
+</ul>
 <h2 id="user-interface-configuration">User Interface Configuration</h2>
 <p><img alt="" src="../images/ConfigUI.png#center" /></p>
 <ul>
@@ -188,22 +220,22 @@
 </ul>
 </li>
 <li>
-<p><strong>Check for updates</strong>: At startup FamiStudio checks for new version online. This can be disabled.</p>
-</li>
-<li>
 <p><strong>Show Piano Roll View Range</strong>: Displays a yellow rectangle in the sequencer representing the view range of the piano roll.</p>
 </li>
 <li>
 <p><strong>Show Note Labels</strong>: Displays note labels (e.q. "C#3") in the piano roll.</p>
 </li>
 <li>
-<p><strong>Trackpad controls</strong>: Enabling trackpad controls will switch to a control scheme that is better suited for trackpad users:</p>
-<ul>
-<li>Vertical mouse wheel up/down will scroll up/down instead of zooming in/out. This is the equivalent of swiping your fingers up/down on the trackpad.</li>
-<li>Horizontal mouse wheel will scroll left/right. This is equivalent of swiping your fingers left/right on the trackpad.</li>
-<li>Pinch to zoom (or alternatively CTRL + MouseWheel) will zoom in/out. If pinch-to-zoom does not work on Windows, please check your trackpad drivers, this is not an issue with FamiStudio.</li>
-</ul>
-<p>Note that these are poorly supported on Linux due to the fact that the app uses GTK 2 and gestures are generally poorly supported in Linux.</p>
+<p><strong>Show FamiTracker Stop Notes</strong>: When using FamiTracker tempo mode, display implicity stop notes (whenever a note ends without being interrupted by another note) as little triangles. This makes it easier to set note delays for those.</p>
+</li>
+<li>
+<p><strong>Show Scroll Bars</strong>: Display scrolls bars in the Sequencer and the Piano Roll.</p>
+</li>
+<li>
+<p><strong>Show Oscilloscope</strong>: Display an oscilloscope in the toolbar.</p>
+</li>
+<li>
+<p><strong>Force Compact Sequencer</strong>: Always keep the size of the channels in the sequencer to their minimum height. This is useful on monitor with very low resolution. </p>
 </li>
 </ul>
 <h2 id="sound-configuration">Sound Configuration</h2>
@@ -222,11 +254,19 @@
 <p><strong>Mute piano roll interactions during playback</strong> : When enabled, dragging/adding notes in the piano roll will not preview the notes when the song is playing. Some users find this distracting.</p>
 </li>
 </ul>
+<h2 id="mixer">Mixer</h2>
+<p><img alt="" src="../images/ConfigMixer.png#center" /></p>
+<p>This section allows adjusting the volume and treble of each audio expansion in the FamiStudio NES sound emulation. Audio expansion volume is a tricky subject since even different revisions of the Famicom had different resistor values which dramatically affected the volume of expansion audio. Here you can set any value you want.</p>
+<p>The treble (low-pass filter) has a logarithmic rolloff to treble dB at half sampling rate. Negative values reduce treble, small positive values (0 to 5.0) increase treble. FamiStudio emulates audio at 44.1KHz.</p>
+<p>Note that these settings have no effect outside of FamiStudio.</p>
 <h2 id="midi-configuration">MIDI Configuration</h2>
 <p><img alt="" src="../images/ConfigMIDI.png#center" /></p>
 <ul>
 <li><strong>Device</strong>: Allows choosing the MIDI device to use for previewing instruments.</li>
-</ul></div>
+</ul>
+<h2 id="qwerty-configuration">QWERTY Configuration</h2>
+<p><img alt="" src="../images/ConfigQWERTY.png#center" /></p>
+<p>This section allows remapping the keyboard keys for keyboard-piano input. This allows FamiStudio to support AZERTY, QWERTZ or any other international keyboard. Up to 2 keys can be assigned to a note.</p></div>
             </div>
         </div>
 

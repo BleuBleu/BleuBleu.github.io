@@ -66,7 +66,11 @@
 </li>
                                     
 <li>
-    <a href="../importexport/" class="dropdown-item">Importing & Exporting Your Songs</a>
+    <a href="../import/" class="dropdown-item">Importing Songs</a>
+</li>
+                                    
+<li>
+    <a href="../export/" class="dropdown-item">Exporting Songs</a>
 </li>
                                     
 <li>
@@ -144,7 +148,7 @@
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#mutingsoloing-channels" class="nav-link">Muting/soloing channels</a>
+            <li class="nav-item" data-level="2"><a href="#muting-soloing-channels" class="nav-link">Muting &amp; soloing channels</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -152,7 +156,7 @@
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#addingremoving-patterns" class="nav-link">Adding/removing patterns</a>
+            <li class="nav-item" data-level="2"><a href="#adding-removing-patterns" class="nav-link">Adding &amp; removing patterns</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -160,19 +164,15 @@
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#movingcopying-patterns" class="nav-link">Moving/copying patterns</a>
+            <li class="nav-item" data-level="2"><a href="#moving-copying-patterns" class="nav-link">Moving &amp; copying patterns</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#cutcopypasting-patterns" class="nav-link">Cut/copy/pasting patterns</a>
+            <li class="nav-item" data-level="2"><a href="#copy-pasting-patterns" class="nav-link">Copy &amp; pasting patterns</a>
               <ul class="nav flex-column">
               </ul>
             </li>
             <li class="nav-item" data-level="2"><a href="#paste-special" class="nav-link">Paste Special</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#copypasting-patterns-between-projects" class="nav-link">Copy/pasting patterns between projects</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -199,15 +199,15 @@
 <p>Clicking in the timeline (header) of the sequencer will move the play position. You can also drag the seek back to more it more accurately.</p>
 <h2 id="changing-the-active-channel">Changing the active channel</h2>
 <p>Clicking on a channel will make it the active one. Alternatively, you can press the keyboard key <strong>1...5</strong> (more if using expansion) to quickly change the active channel.</p>
-<h2 id="mutingsoloing-channels">Muting/soloing channels</h2>
+<h2 id="muting-soloing-channels">Muting &amp; soloing channels</h2>
 <p>Left-clicking on the icon of a channel (Square, triangle, noise, DPCM) will toggle mute. Right-clicking will toggle solo.</p>
 <h2 id="force-display-channel">Force display channel</h2>
-<p>Clicking the tiny square icon next to the channel name will force display it in the piano roll.  Alternatively, you can press the keyboard key <strong>Ctrl + 1...5</strong> (more if using expansion).</p>
+<p>Clicking the tiny square icon next to the channel name will force display it in the piano roll.  Alternatively, you can press the keyboard key <strong>Ctrl + F1...F5</strong> (more if using expansion).</p>
 <p><img alt="" src="../images/ForceDisplayButton.png#center" /></p>
 <p>Channels that are force displayed and are not the current channel will appear dimmed in the piano roll. This is useful when harmonizing between multiple channels, or editing drum patterns.</p>
 <p><img alt="" src="../images/ForceDisplayPianoRoll.png#center" /></p>
-<p>This can also achieved with the keyboard by pressing Ctrl + 1...5 (the number of the channel).</p>
-<h2 id="addingremoving-patterns">Adding/removing patterns</h2>
+<p>This can also achieved with the keyboard by pressing Ctrl + F1...F5 (the number of the channel).</p>
+<h2 id="adding-removing-patterns">Adding &amp; removing patterns</h2>
 <p>You can add a new pattern by left-clicking on an empty space. Right-clicking deletes.</p>
 <h2 id="editing-patterns_1">Editing patterns</h2>
 <p>Clicking a pattern selects it and opens the piano roll for the current channel at the location of the pattern. Double-clicking a pattern allows renaming and changing its color (pattern names need to be unique per channel).</p>
@@ -216,15 +216,19 @@
 <p><img alt="" src="../images/PatternSelection2.png#center" /></p>
 <p>You can select multiple patterns in a rectangular grid, first select a pattern and shift-clicking to a second pattern.</p>
 <p><img alt="" src="../images/SquareSelection.png#center" /></p>
-<h2 id="movingcopying-patterns">Moving/copying patterns</h2>
+<h2 id="moving-copying-patterns">Moving &amp; copying patterns</h2>
 <p>When one or multiple patterns are selected, dragging them will move them in the timeline. While dragging, holding CTRL will create another instance of the pattern(s). An instance is a copy that is linked to the original pattern, it will have the same name and color. Modifying one instance will modify all of them. This will be shown by a "link" icon when dragging.</p>
 <p><img alt="" src="../images/InstancePattern.png#center" /></p>
 <p>Holding CTRL+SHIFT while dragging will create a completely independant copy of the selected patterns. This will be showned by a "copy" icon when dragging. They will be renamed in the process.</p>
 <p><img alt="" src="../images/CopyPattern.png#center" /></p>
 <p>Dragging a pattern to a different channel will create a copy, but delete the original. This is because internally, patterns cannot be shared accross different channels. The pattern may be renamed in the processs. Holding CTRL+SHIFT will preserve the original (create a copy). </p>
 <p><img alt="" src="../images/MovePatternDifferentChannel.png#center" /></p>
-<h2 id="cutcopypasting-patterns">Cut/copy/pasting patterns</h2>
+<h2 id="copy-pasting-patterns">Copy &amp; pasting patterns</h2>
 <p>When one or multiple patterns are selected, press CTRL+C (or CTRL+X for cut). Move the selection somewhere else and paste with CTRL+V. Copy and pasting always create instances of patterns.</p>
+<h3 id="copying-pasting-patterns-between-projects">Copying &amp; pasting patterns between projects</h3>
+<p>Copy and pasting patterns between projects is possible When doing so, FamiStudio will assume patterns having the same name are identical. If a pattern is not found, it will offer you to create it for you. </p>
+<p>For example, if you copy a pattern named "Chorus1" from a project to another. If no such pattern is found, it will be copied. Otherwise, if an existing pattern named "Chorus1" is found in the second project, it will assume it is the same.</p>
+<p>Inside patterns, for notes and instrument, the <a href="../pianoroll/#copy-pasting-notes-between-projects">same rule</a> applies.</p>
 <h2 id="paste-special">Paste Special</h2>
 <p>Pressing CTRL+SHIFT+V will open the <strong>Paste Special</strong> dialog which gives more options than a regular paste.</p>
 <p><img alt="" src="../images/PasteSpecialSequencer.png#center" /></p>
@@ -233,10 +237,6 @@
 <li><strong>Extend song</strong> : Will extend the song duration to accomodate the newly inserted patterns (Only available when Insert is enabled).</li>
 <li><strong>Repeat</strong> : Allows pasting the copied patterns multiple times in a row.</li>
 </ul>
-<h2 id="copypasting-patterns-between-projects">Copy/pasting patterns between projects</h2>
-<p>Copy and pasting patterns between projects is possible When doing so, FamiStudio will assume patterns having the same name are identical. If a pattern is not found, it will offer you to create it for you. </p>
-<p>For example, if you copy a pattern named "Chorus1" from a project to another. If no such pattern is found, it will be copied. Otherwise, if an existing pattern named "Chorus1" is found in the second project, it will assume it is the same.</p>
-<p>Inside patterns, for notes and instrument, the <a href="../pianoroll/#copy-pasting-notes-between-projects">same rule</a> applies.</p>
 <h2 id="setting-the-loop-point">Setting the loop point</h2>
 <p>The <strong>Loop point</strong> is where the song will repeat once it reaches the end and is represented by a little arrow. </p>
 <p><img alt="" src="../images/LoopPoint.png#center" /></p>

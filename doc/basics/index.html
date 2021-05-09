@@ -66,7 +66,11 @@
 </li>
                                     
 <li>
-    <a href="../importexport/" class="dropdown-item">Importing & Exporting Your Songs</a>
+    <a href="../import/" class="dropdown-item">Importing Songs</a>
+</li>
+                                    
+<li>
+    <a href="../export/" class="dropdown-item">Exporting Songs</a>
 </li>
                                     
 <li>
@@ -151,6 +155,10 @@
               </ul>
             </li>
             <li class="nav-item" data-level="2"><a href="#playingpausing-the-song" class="nav-link">Playing/pausing the song</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#changing-the-playback-speed" class="nav-link">Changing the playback speed</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -241,24 +249,26 @@
 </ul>
 <p>The sequencer and piano roll will display the information for the currently selected song. When pressing the keys on the piano roll, it will play notes for the currently selected instrument, and output it on the currently selected channel. The same applies if you have a MIDI keyboard connected.</p>
 <h1 id="toolbar">Toolbar</h1>
-<p>The main toolbar contains your usual stuff: file operation, undo/redo, timecode and play control.</p>
+<p>The main toolbar contains your usual stuff: file operation, undo/redo, timecode, oscilloscope and play controls.</p>
 <p><img alt="" src="../images/Toolbar.png#center" /></p>
 <h2 id="tooltip">Tooltip</h2>
 <p>Keyboard shortcuts or special actions are always displayed as tooltips in the upper-right corner of the toolbar. Please keep an eye on it to learn new functionalities.</p>
 <p><img alt="" src="../images/Tooltip.png#center" /></p>
 <h2 id="playingpausing-the-song">Playing/pausing the song</h2>
 <p>Besides the toolbar, space bar is used to play/pause the song. Ctrl-space plays in pattern loop mode, Shift-space plays in song loop mode.</p>
+<h2 id="changing-the-playback-speed">Changing the playback speed</h2>
+<p>Rotating the mouse-wheel over the play button will allow you to change the playback speed to 1/2 or 1/4 speed. This is useful to hear very small/short notes.</p>
+<p><img alt="" src="../images/PlaybackSpeed.gif#center" /></p>
 <h2 id="changing-the-looping-mode">Changing the looping mode</h2>
-<p>There are 3 looping modes:</p>
+<p>There are 2 looping modes:</p>
 <ul>
-<li><strong>Song</strong>: loops the entire song</li>
-<li><strong>Pattern</strong>: loops at the end of the current pattern</li>
-<li><strong>None</strong>: stops at the end of the song</li>
+<li><strong>Song / None</strong>: Loops the entire song if a loop point is step, stops at the end if there are no loop point.</li>
+<li><strong>Pattern</strong>: Loops over the current pattern.</li>
 </ul>
 <h2 id="saving-the-project">Saving the project</h2>
 <p>Clicking on the icon save the project, right-clicking is a "save as..." and will prompt you for a new filename.</p>
 <h2 id="exporting-to-various-formats">Exporting to various formats</h2>
-<p>Please see the <a href="../importexport/">Import/Export</a> section for details on how to export to various formats.</p>
+<p>Please see the <a href="../export/">Export</a> section for details on how to export to various formats.</p>
 <h2 id="cleanup-dialog">Cleanup dialog</h2>
 <p>Please see the <a href="../cleanup/">Cleanup</a> section for details on how to cleanup your project.</p>
 <h2 id="configuration-dialog">Configuration dialog</h2>
@@ -285,6 +295,7 @@
 <li><strong>Enter</strong>: Toggles recording mode.</li>
 <li><strong>Ctrl+Space</strong>: Plays from beginning of current pattern.</li>
 <li><strong>Shift+Space</strong>: Plays from beginning of the song.</li>
+<li><strong>Ctrl+Shift+Space</strong>: Plays from loop point of the song (if any).</li>
 <li><strong>Home</strong>: Seeks back to beginning of the song.</li>
 <li><strong>Ctrl+Home</strong>: Seeks to beginning of the current pattern.</li>
 <li><strong>Esc</strong>: Stops any lindering sound, stops recording mode, clears the selection.</li>
@@ -295,10 +306,11 @@
 <li><strong>Ctrl+E</strong>: Export</li>
 <li><strong>Ctrl+Shift+E</strong>: Repeat last export</li>
 <li><strong>Ctrl+O</strong>: Open</li>
+<li><strong>Shift+Q</strong>: Toggle QWERTY keyboard input.</li>
 <li><strong>Delete</strong>: Delete selected patterns or notes.</li>
 <li><strong>Escape</strong>: Deselects patterns or notes, stops any sound that is stuck playing.</li>
-<li><strong>1...5</strong>: Changes the active channel (more than 5 if you have expansion audio enabled).</li>
-<li><strong>Ctrl+1...5</strong>: Force display a channel. (more than 5 if you have expansion audio enabled).</li>
+<li><strong>F1...F5</strong>: Changes the active channel (more than 5 if you have expansion audio enabled).</li>
+<li><strong>Ctrl+F1...F5</strong>: Force display a channel. (more than 5 if you have expansion audio enabled).</li>
 </ul>
 <p>Some keyboard shortcuts specific to the sequencer:</p>
 <ul>
@@ -306,15 +318,15 @@
 </ul>
 <p>Some keyboard shortcuts specific to the piano roll:</p>
 <ul>
-<li><strong>Ctrl+Click</strong>: Adds a stop note.</li>
 <li><strong>Shift+Click</strong>: Adds a release note.</li>
 <li><strong>S+Click</strong> (and drag): Creates or edit a slide note.</li>
 <li><strong>A+Click</strong>: Toggles the attack of a note.</li>
-<li><strong>I+Click</strong> : Instrument picker</li>
+<li><strong>I+Click</strong>: Instrument picker</li>
+<li><strong>T+Click</strong>: Adds an orphan stop note.</li>
 <li><strong>~ (Tilde)</strong>: Expand/collapse the effect panel.</li>
 <li><strong>Shift+S</strong>: Toggles snapping.</li>
 </ul>
-<p>When QWERTY keyboard input is active, some of the keys will be overriden to support piano input.</p>
+<p>When QWERTY keyboard input is active, some of the keys will be overriden to support piano input. This is default layout for an en-US keyboard. The <a href="../config/">Configuration Dialog</a> allows re-mapping the keys for other types of keyboards.</p>
 <p><img alt="" src="../images/QWERTY.png#center" /></p></div>
             </div>
         </div>
