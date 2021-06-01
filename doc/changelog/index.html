@@ -66,7 +66,11 @@
 </li>
                                     
 <li>
-    <a href="../importexport/" class="dropdown-item">Importing & Exporting Your Songs</a>
+    <a href="../import/" class="dropdown-item">Importing Songs</a>
+</li>
+                                    
+<li>
+    <a href="../export/" class="dropdown-item">Exporting Songs</a>
 </li>
                                     
 <li>
@@ -136,6 +140,10 @@
             
             <li class="nav-item" data-level="1"><a href="#change-log" class="nav-link">Change Log</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#version-300" class="nav-link">Version 3.0.0</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
             <li class="nav-item" data-level="2"><a href="#version-242-hotfix" class="nav-link">Version 2.4.2 (Hotfix)</a>
               <ul class="nav flex-column">
               </ul>
@@ -225,6 +233,34 @@
 
 <h1 id="change-log">Change Log</h1>
 <p>Version history / release notes for each release.</p>
+<h2 id="version-300">Version 3.0.0</h2>
+<p>Changes :</p>
+<ul>
+<li>Redesigned FamiStudio tempo</li>
+<li>Redesigned note editing</li>
+<li>MIDI import/export support</li>
+<li>Oscilloscope in toolbar</li>
+<li>Optional scrollbars</li>
+<li>Revamped Mac version</li>
+<li>1/2 and 1/4 playback speed</li>
+<li>Configurable QWERTY keyboard keys</li>
+<li>Improved sound engine music data compression (15-30% smaller)</li>
+<li>Audio expansion volume/low-pass filter configuration</li>
+<li>S5B and VRC7 and now properly low-pass filtered</li>
+<li>Ability to re-order songs</li>
+<li>Hi-DPI support on Linux</li>
+<li>Quick DPCM source data reload</li>
+<li>Improved video rendering speed</li>
+</ul>
+<p>Breaking/behavior changes:</p>
+<ul>
+<li>Setting a zero volume on the volume track of the triangle channel will now stop the sound. This was always the intention (this is what SoundEngine/NSF and FamiTracker does) but it was not correctly implemented inside FamiStudio.</li>
+</ul>
+<div style="position:relative;margin-left: auto;margin-right: auto;width:80%;height:0;padding-bottom:45%;">
+    <iframe style="position:absolute;top:0;left:0;width:100%;height:100%" src="https://www.youtube.com/embed/7j9mhY9XNsc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<p><br/></p>
 <h2 id="version-242-hotfix">Version 2.4.2 (Hotfix)</h2>
 <p>Fixes:</p>
 <ul>

@@ -36,54 +36,40 @@
 				<li>Arpeggios</li>
 				<li>NES sound engine (CA65, NESASM, ASM6)</li>
 				<li>MIDI input support </li>
+				<li>MIDI import/export</li>
 				<li>Audio expansions supported: VRC6, VRC7, FDS, MMC5, Namco 163 & Sunsoft S5B.</li>
 				<li>Windows, MacOS and Linux versions.</li>
 			</ul>
 
 			<h1>Latest Release</h1>
 
-			<h2>Fixes in 2.4.2 (Hotfix)</h2>
+			<h2>New features in 3.0.0 (Latest major release)</h2>
 			<ul>
-				<li>Fixed crash on startup.</li>
-				<li>Fixed crash when exporting SFX to sound engine from command-line.</li>
+				<li>Redesigned FamiStudio tempo</li>
+				<li>Redesigned note editing</li>
+				<li>MIDI import/export support</li>
+				<li>Oscilloscope in toolbar</li>
+				<li>Optional scrollbars</li>
+				<li>Revamped Mac version</li>
+				<li>1/2 and 1/4 playback speed</li>
+				<li>Configurable QWERTY keyboard keys</li>
+				<li>Improved sound engine music data compression (15-30% smaller)</li>
+				<li>Audio expansion volume/low-pass filter configuration</li>
+				<li>S5B and VRC7 and now properly low-pass filtered</li>
+				<li>Ability to re-order songs</li>
+				<li>Hi-DPI support on Linux</li>
+				<li>Quick DPCM source data reload</li>
+				<li>Improved video rendering speed</li>
 			</ul>
 
-			<h2>Fixes in 2.4.1 (Hotfix)</h2>
+			<p>Breaking/behavior changes:</p>
 			<ul>
-				<li>Fixed corruption when importing looping samples from .FTI files.</li>
-				<li>Fixed minor graphical issue in piano roll.</li>
-				<li>Fixed issues on Windows 7 installations that are missing some D3D11 components such as KB2670838.</li>
-				<li>Removed 320 kbps MP3 export option since it creates choppy audio.</li>
-			</ul>
-
-			<h2>New features in 2.4.0 (Latest major release)</h2>
-			<ul>
-				<li>Basic DPCM sample editor</li>
-				<li>Darker theme and more color choices</li>
-				<li>Ability to use QWERTY keyboard input without using recording mode</li>
-				<li>Slightly reduced audio latency and configurable number of buffered frames</li>
-				<li>Right-clicking anywhere in the background also starts a selection</li>
-				<li>Seek bar can be dragged and respects snapping precision</li>
-				<li>Pattern duplication preserves names when possible</li>
-				<li>Instrument picker tool (hold "I" + click on a note)</li>
-				<li>Paste special in Sequencer</li>
-				<li>Pattern are created automatically when adding notes.</li>
-				<li>Quickly repeat last export by right clicking button or CTRL+SHIFT+E</li>
-				<li>Edit multiple custom patterns at once</li>
-				<li>Video export resolution/framerate options (Contributed by Thomas McGrew)</li>
-				<li>Multiple VRC7 fixes</li>
-				<li>Multiple FamiTracker fixes</li>
-				<li>Multiple sound engine improvements & fixes</li>
-				<ul>
-					<li>Blaarg smooth vibrato support for SFX</li>
-					<li>Unlimited SFX size (Contributed by Brad Smith)</li>
-					<li>Linker support in CA65 (Based on idea by Brad Smith)</li>
-				</ul>
+				<li>Setting a zero volume on the volume track of the triangle channel will now stop the sound. This was always the intention (this is what SoundEngine/NSF and FamiTracker does) but it was not correctly implemented inside FamiStudio.</li>
 			</ul>
 
 			<h2>Release trailer</h2>
 			<div style="position:relative;margin-left: auto;margin-right: auto;width:80%;height:0;padding-bottom:45%;">
-				<iframe style="position:absolute;top:0;left:0;width:100%;height:100%" src="https://www.youtube.com/embed/zwkIV4VwlLw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<iframe style="position:absolute;top:0;left:0;width:100%;height:100%" src="https://www.youtube.com/embed/7j9mhY9XNsc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			</div>
 
 			<h1>Download</h1>
@@ -91,22 +77,22 @@
 			<h2>Download links</h2>
 			<table style="margin-left: auto;margin-right: auto;">
 				<tr>
-					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/2.4.2/FamiStudio242-WinInstaller.zip"><img src="windows.png"></a></td>
-					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/2.4.2/FamiStudio242-MacOS.zip"><img src="macos.png"></a></td>
-					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/2.4.2/FamiStudio242-LinuxAMD64.zip"><img src="linux.png"></a></td>
-					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/2.4.0/FamiStudio240-SoundEngine.zip"><img src="6502.png"></a></td>
+					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/3.0.0/FamiStudio300-WinInstaller.zip"><img src="windows.png"></a></td>
+					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/3.0.0/FamiStudio300-MacOS.zip"><img src="macos.png"></a></td>
+					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/3.0.0/FamiStudio300-LinuxAMD64.zip"><img src="linux.png"></a></td>
+					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/3.0.0/FamiStudio300-SoundEngine.zip"><img src="6502.png"></a></td>
 				</tr>
 				<tr>
 					<td style="padding: 20px;" align="center">
-						<a href="https://github.com/BleuBleu/FamiStudio/releases/download/2.4.2/FamiStudio242-WinInstaller.zip"><center>Windows Installer</center></a><br>
-						<a href="https://github.com/BleuBleu/FamiStudio/releases/download/2.4.2/FamiStudio242-WinPortableExe.zip"><center>Windows Portable EXE</center></a>
+						<a href="https://github.com/BleuBleu/FamiStudio/releases/download/3.0.0/FamiStudio300-WinInstaller.zip"><center>Windows Installer</center></a><br>
+						<a href="https://github.com/BleuBleu/FamiStudio/releases/download/3.0.0/FamiStudio300-WinPortableExe.zip"><center>Windows Portable EXE</center></a>
 						</td>
-					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/2.4.2/FamiStudio242-MacOS.zip"><center><p>MacOS Bundle</p></center></a></td>
+					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/3.0.0/FamiStudio300-MacOS.zip"><center><p>MacOS Bundle</p></center></a></td>
 					<td style="padding: 20px;" align="center">
 						<a href="https://flathub.org/apps/details/org.famistudio.FamiStudio"><center>FlatHub</center></a><br>
-						<a href="https://github.com/BleuBleu/FamiStudio/releases/download/2.4.2/FamiStudio242-LinuxAMD64.zip"><center>Linux AMD64 Binaries</center></a>
+						<a href="https://github.com/BleuBleu/FamiStudio/releases/download/3.0.0/FamiStudio300-LinuxAMD64.zip"><center>Linux AMD64 Binaries</center></a>
 					</td>
-					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/2.4.0/FamiStudio240-SoundEngine.zip"><center><p>NES Sound Engine<br>(CA65, NESASM, ASM6)</p></center></a></td>
+					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/3.0.0/FamiStudio300-SoundEngine.zip"><center><p>NES Sound Engine<br>(CA65, NESASM, ASM6)</p></center></a></td>
 				</tr>
 			</table>
 
@@ -118,21 +104,23 @@
 			</ul>
 
 			<h2>Demo Songs</h2>
-			<p>A few demo songs are included in the installation folder (typically <i>C:\Program Files (x86)\FamiStudio</i>). Songs marked as FT2-friendly on uses the feature set that FamiTone2 supports.</p>
+			<p>A few demo songs are included in the installation folder (typically <i>C:\Program Files (x86)\FamiStudio</i>). Songs with no author are my approximate re-creations, based on the NSF.</p>
 			<ul>
 				<li>After The Rain (by Shiru, included with FamiTone2)</li>
 				<li>Danger Streets (by Shiru, included with FamiTone2)</li>
-				<li>Mega Man 2 - Stage Select & Dr. Wily's Castle (my approximate recreations)</li>
-				<li>Journey To Silius - Intro (my approximate recreation)</li>
-				<li>DuckTales! - The Moon (my approximate recreation)</li>
-				<li>Castlevania 2 - Bloody Tears (my approximate recreation)</li>
-				<li>Shovel Knight - Strike the Earth! (Plains of Passage) (my approximate recreation)</li>
-				<li>Shatterhand - Final Stage (my approximate recreation)</li>
-				<li>Gimmick - Strange Memories of Death (my approximate recreation)</li>
-				<li>Silver Surfer : BGM2 (my approximate recreation)</li>
-				<li>Gradius II - Farewell (my approximate recreation)</li>
+				<li>Dedricil - Full Soundtrack (by <a href='https://www.youtube.com/channel/UCakSA488ft0bMgWoJmnnT8Q'>How2Bboss</a>. Thanks!!!)</li>
 				<li>Layla : The Iris Missions - Iris (by Supper, my approximate recreation)</li>
 				<li>Tower of Heaven - Indignant Divinity (Flashygoodness, cover by <a href='https://www.youtube.com/watch?v=0qV4dSBOH5s'>Danooct1</a>. Thanks!!!)</li>
+				<li>Mega Man 2 - Stage Select & Dr. Wily's Castle</li>
+				<li>Journey To Silius - Intro</li>
+				<li>DuckTales! - The Moon</li>
+				<li>Castlevania 2 - Bloody Tears</li>
+				<li>Shovel Knight - Strike the Earth! (Plains of Passage)</li>
+				<li>Shatterhand - Final Stage</li>
+				<li>Gimmick - Strange Memories of Death</li>
+				<li>Silver Surfer : BGM2</li>
+				<li>Gradius II - Farewell</li>
+				<li>Gyruss - Stage 2</li>
 				<li>FamiStudio - Tutorial Song (song created in tutorial)</li>
 			</ul>
 
@@ -145,7 +133,7 @@
 			<p>Here is a 1h video tutorial that will show you how to create a basic song from scratch.</p>
 
 			<div style="position:relative;margin-left: auto;margin-right: auto;width:80%;height:0;padding-bottom:45%;">
-				<iframe style="position:absolute;top:0;left:0;width:100%;height:100%" src="https://www.youtube.com/embed/YN79633FrDg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<iframe style="position:absolute;top:0;left:0;width:100%;height:100%" src="https://www.youtube.com/embed/UyECgqFbZPQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			</div>
 
 			<h1>Source Code</h1>
