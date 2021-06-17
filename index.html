@@ -6,7 +6,7 @@
 		<link rel="stylesheet" href="styles.css">
 		<script type="text/javascript" src="script.js"></script>
 		<link href="https://famistudio.org" rel="canonical">
-		<link rel="icon" type="image/png" href="FamiStudio_16.png">
+		<link rel="icon" type="image/png" href="FamiStudio_32.png">
 		<meta charset="utf-8" name="viewport" content= "width=device-width, initial-scale=1.0">
 		<meta name="Description" content="Official website of FamiStudio, a simple Nintendo Entertainment System (NES) music editor.">
 		<title>FamiStudio - NES Music Editor</title>
@@ -44,6 +44,21 @@
 
 			<h1>Latest Release</h1>
 
+			<h2>Fixes in 3.0.1 (Latest hotfix release)</h2>
+			<ul>
+				<li>Fixed crash on startup on Linux when RtMidi fails to initialize</li>
+				<li>Fixed fine effect adjustment (SHIFT + drag) when multiple values are selected</li>
+				<li>Fixed race condition when stopping song playback that could cause a crash</li>
+				<li>Fixed small OpenGL leaks</li>
+				<li>Fixed pattern duplication when CTRL+SHIFT were already pressed when starting the drag</li>
+				<li>Fixed import of MIDI files containing polyphonic key pressure events</li>
+				<li>Fixed duplicated labels when exporting projects containing multiple songs to Famitone2 or FamiStudio sound engine</li>
+				<li>Fixed crash when double clicking or left clicking in some cells of grids</li>
+				<li>Fixed export of VRC6 duty cycles to FamiTracker</li>
+				<li>Properly shutting down MIDI input on Windows</li>
+				<li>Adding error message when trying to import NSF using multiple expansion chips</li>
+			</ul>
+
 			<h2>New features in 3.0.0 (Latest major release)</h2>
 			<ul>
 				<li>Redesigned FamiStudio tempo</li>
@@ -78,20 +93,20 @@
 			<h2>Download links</h2>
 			<table style="margin-left: auto;margin-right: auto;">
 				<tr>
-					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/3.0.0/FamiStudio300-WinInstaller.zip"><img src="windows.png"></a></td>
-					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/3.0.0/FamiStudio300-MacOS.zip"><img src="macos.png"></a></td>
-					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/3.0.0/FamiStudio300-LinuxAMD64.zip"><img src="linux.png"></a></td>
+					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/3.0.1/FamiStudio301-WinInstaller.zip"><img src="windows.png"></a></td>
+					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/3.0.1/FamiStudio301-MacOS.zip"><img src="macos.png"></a></td>
+					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/3.0.1/FamiStudio301-LinuxAMD64.zip"><img src="linux.png"></a></td>
 					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/3.0.0/FamiStudio300-SoundEngine.zip"><img src="6502.png"></a></td>
 				</tr>
 				<tr>
 					<td style="padding: 20px;" align="center">
-						<a href="https://github.com/BleuBleu/FamiStudio/releases/download/3.0.0/FamiStudio300-WinInstaller.zip"><center>Windows Installer</center></a><br>
-						<a href="https://github.com/BleuBleu/FamiStudio/releases/download/3.0.0/FamiStudio300-WinPortableExe.zip"><center>Windows Portable EXE</center></a>
+						<a href="https://github.com/BleuBleu/FamiStudio/releases/download/3.0.1/FamiStudio301-WinInstaller.zip"><center>Windows Installer</center></a><br>
+						<a href="https://github.com/BleuBleu/FamiStudio/releases/download/3.0.1/FamiStudio301-WinPortableExe.zip"><center>Windows Portable EXE</center></a>
 						</td>
-					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/3.0.0/FamiStudio300-MacOS.zip"><center><p>MacOS Bundle</p></center></a></td>
+					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/3.0.1/FamiStudio301-MacOS.zip"><center><p>MacOS Bundle</p></center></a></td>
 					<td style="padding: 20px;" align="center">
 						<a href="https://flathub.org/apps/details/org.famistudio.FamiStudio"><center>FlatHub</center></a><br>
-						<a href="https://github.com/BleuBleu/FamiStudio/releases/download/3.0.0/FamiStudio300-LinuxAMD64.zip"><center>Linux AMD64 Binaries</center></a>
+						<a href="https://github.com/BleuBleu/FamiStudio/releases/download/3.0.1/FamiStudio301-LinuxAMD64.zip"><center>Linux AMD64 Binaries</center></a>
 					</td>
 					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/3.0.0/FamiStudio300-SoundEngine.zip"><center><p>NES Sound Engine<br>(CA65, NESASM, ASM6)</p></center></a></td>
 				</tr>

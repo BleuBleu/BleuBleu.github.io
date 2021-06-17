@@ -140,6 +140,10 @@
             
             <li class="nav-item" data-level="1"><a href="#change-log" class="nav-link">Change Log</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#version-301-hotfix" class="nav-link">Version 3.0.1 (Hotfix)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
             <li class="nav-item" data-level="2"><a href="#version-300" class="nav-link">Version 3.0.0</a>
               <ul class="nav flex-column">
               </ul>
@@ -233,6 +237,21 @@
 
 <h1 id="change-log">Change Log</h1>
 <p>Version history / release notes for each release.</p>
+<h2 id="version-301-hotfix">Version 3.0.1 (Hotfix)</h2>
+<p>Fixes:</p>
+<ul>
+<li>Fixed crash on startup on Linux when RtMidi fails to initialize</li>
+<li>Fixed fine effect adjustment (SHIFT + drag) when multiple values are selected</li>
+<li>Fixed race condition when stopping song playback that could cause a crash</li>
+<li>Fixed small OpenGL leaks</li>
+<li>Fixed pattern duplication when CTRL+SHIFT were already pressed when starting the drag</li>
+<li>Fixed import of MIDI files containing polyphonic key pressure events</li>
+<li>Fixed duplicated labels when exporting projects containing multiple songs to Famitone2 or FamiStudio sound engine</li>
+<li>Fixed crash when double clicking or left clicking in some cells of grids</li>
+<li>Fixed export of VRC6 duty cycles to FamiTracker</li>
+<li>Properly shutting down MIDI input on Windows</li>
+<li>Adding error message when trying to import NSF using multiple expansion chips</li>
+</ul>
 <h2 id="version-300">Version 3.0.0</h2>
 <p>Changes :</p>
 <ul>
