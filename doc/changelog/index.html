@@ -4,9 +4,9 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        
-        
+
+
+
         <link rel="shortcut icon" href="../img/favicon.ico">
         <title>Change Log - FamiStudio Documentation</title>
         <link href="../css/bootstrap.min.css" rel="stylesheet">
@@ -18,7 +18,7 @@
         <script src="../js/jquery-1.10.2.min.js" defer></script>
         <script src="../js/bootstrap.min.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-        <script>hljs.initHighlightingOnLoad();</script> 
+        <script>hljs.initHighlightingOnLoad();</script>
     </head>
 
     <body>
@@ -40,63 +40,63 @@
                             <li class="dropdown active">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">User Guide <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
-                                    
+
 <li>
     <a href="../basics/" class="dropdown-item">Basics</a>
 </li>
-                                    
+
 <li>
     <a href="../pianoroll/" class="dropdown-item">Editing Notes</a>
 </li>
-                                    
+
 <li>
     <a href="../sequencer/" class="dropdown-item">Editing Patterns</a>
 </li>
-                                    
+
 <li>
     <a href="../instruments/" class="dropdown-item">Editing Instruments & Arpeggios</a>
 </li>
-                                    
+
 <li>
     <a href="../song/" class="dropdown-item">Editing Songs & Project</a>
 </li>
-                                    
+
 <li>
     <a href="../dpcm/" class="dropdown-item">Editing DPCM Samples</a>
 </li>
-                                    
+
 <li>
     <a href="../import/" class="dropdown-item">Importing Songs</a>
 </li>
-                                    
+
 <li>
     <a href="../export/" class="dropdown-item">Exporting Songs</a>
 </li>
-                                    
+
 <li>
     <a href="../expansion/" class="dropdown-item">Using Expansion Audio</a>
 </li>
-                                    
+
 <li>
     <a href="../cleanup/" class="dropdown-item">Cleaning-up your Project</a>
 </li>
-                                    
+
 <li>
     <a href="../config/" class="dropdown-item">Configuring FamiStudio</a>
 </li>
-                                    
+
 <li>
     <a href="../cmdline/" class="dropdown-item">Command-line Processing</a>
 </li>
-                                    
+
 <li>
     <a href="../soundengine/" class="dropdown-item">NES/Famicom Sound Engine</a>
 </li>
-                                    
+
 <li>
     <a href="../troubleshooting/" class="dropdown-item">Troubleshooting</a>
 </li>
-                                    
+
 <li>
     <a href="./" class="dropdown-item active">Change Log</a>
 </li>
@@ -134,12 +134,16 @@
         </button>
     </div>
 
-    
+
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
-            
+
             <li class="nav-item" data-level="1"><a href="#change-log" class="nav-link">Change Log</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#version-302-hotfix" class="nav-link">Version 3.0.2 (Hotfix)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
             <li class="nav-item" data-level="2"><a href="#version-301-hotfix" class="nav-link">Version 3.0.1 (Hotfix)</a>
               <ul class="nav flex-column">
               </ul>
@@ -237,6 +241,21 @@
 
 <h1 id="change-log">Change Log</h1>
 <p>Version history / release notes for each release.</p>
+<h2 id="version-302-hotfix">Version 3.0.2 (Hotfix)</h2>
+<p>Fixes:</p>
+<ul>
+<li>Fixed crash when pasting past the end of an envelope</li>
+<li>Fixed FamiTracker (FTM/TXT) import when a jump or skip effect is exactly at row 255</li>
+<li>Fixed FamiStudio currupting the keyboard state on some european keyboards</li>
+<li>Fixed oscilloscope vertical orientation in toolbar + video export</li>
+<li>Fixed crash when using 150% scaling on Linux</li>
+<li>Fixed crash when parsing FamiStudio text file using VRC6 expansion.</li>
+<li>Fixed fine effect adjustment (shift + drag) again</li>
+<li>Stopping all audio when undo/redo happens to change the selected song</li>
+<li>Showing all 8 channels when importing MIDI using N163 expansion</li>
+<li>Added error message when trying to import a corrupted WAV file</li>
+<li>Made auto-scrolling when selecting more gradual in both sequencer and piano roll.</li>
+</ul>
 <h2 id="version-301-hotfix">Version 3.0.1 (Hotfix)</h2>
 <p>Fixes:</p>
 <ul>
