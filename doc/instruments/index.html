@@ -148,7 +148,7 @@
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#replacing-instruments" class="nav-link">Replacing instruments</a>
+            <li class="nav-item" data-level="2"><a href="#replacing-an-instrument-by-another" class="nav-link">Replacing an instrument by another</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -210,18 +210,26 @@
 <p>An envelope is simply a parameter that can change over the duration of a note as it plays. It can be used to create vibrato, tremolo, change the attack and release of a note, for example. If an instrument currently has no envelope for a particular type, it will appear dimmed.</p>
 <p>For details on Expansion audio instruments please visit the <a href="../expansion/">Expansion Audio section</a>.</p>
 <h2 id="editing-instrument-properties">Editing instrument properties</h2>
-<p>Double-clicking on an instrument will show its properties.</p>
-<ul>
-<li><strong>Relative pitch</strong> : By default, FamiStudio's pitch envelope are absolute. Meaning that the envelope values are the pitch you are going to hear, this is especially useful for vibrato where you can draw a simple sine wave. It is sometimes useful to have relative pitch envelope to create pitches that rapidly ascend or decend (useful for bassdrum sounds). This is how FamiTracker handles pitch envelopes.</li>
-</ul>
+<p>Double-clicking on an instrument will show its properties. Like most things in FamiStudio, you can rename the instrument and change its color.</p>
 <p><img alt="" src="../images/EditInstrument.png#center" /></p>
+<p>Most instruments also have parameters that can be edited in real-time by clicking the little arrow and expanding the button. </p>
+<p><img alt="" src="../images/EditInstrument2.png#center" /></p>
+<p>Parameter(s) that is available on most instruments:</p>
+<ul>
+<li><strong>Pitch Envelope</strong> : Defines how FamiStudio will interpret the values in the pitch envelope.<ul>
+<li><strong>Absolute</strong> : By default, FamiStudio's pitch envelope are absolute. Meaning that the envelope values are the pitch you are going to hear, this is especially useful for vibrato where you can draw a simple sine wave.</li>
+<li><strong>Relative</strong> : It is sometimes useful to have relative pitch envelope to create pitches that rapidly ascend or decend (useful for bassdrum sounds). This is how FamiTracker handles pitch envelopes.</li>
+</ul>
+</li>
+</ul>
 <h2 id="adding-instruments">Adding instruments</h2>
 <p>You can an instrument by pressing the "+" sign, and you can one by right-clicking on it. Deleting an instrument will delete all notes used by that instrument.</p>
-<h2 id="replacing-instruments">Replacing instruments</h2>
+<h2 id="replacing-an-instrument-by-another">Replacing an instrument by another</h2>
 <p>Clicking on an instrument name and dragging it over another instrument will allow you to replace all notes of the first instrument by the second. This is useful prior to deleting an instrument.</p>
 <h2 id="importing-instruments">Importing instruments</h2>
 <p>You can import intruments in your project from any supported input format, as well as FamiTracker instrument files (FTI files, official FamiTracker 0.4.6 only) by clicking the little folder icon. </p>
 <p>When importing instruments from another project or a FamiTracker file, you will be prompted with a list of instruments to import. Simply check the instrument to bring over.</p>
+<p>Also, when importing instruments from another FMS file that uses DPCM samples, you will also be able to import the "DPCM Instrument" from that project. This will import all the samples and their assignments to keys of the pianos.</p>
 <p><img alt="" src="../images/ImportInstruments.png#center" /></p>
 <p>Note that instruments that are using incompatible expansion audio will not be able to be imported. Also, instruments with the same names are assumed to be the same. If you project already contains an instrument called "Piano" and you try to import another one called "Piano", nothing will happen. You are responsible to uniquely name your instruments if they are truly different.</p>
 <h2 id="editing-instrument-envelopes">Editing instrument envelopes</h2>

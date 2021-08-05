@@ -166,6 +166,10 @@
               <ul class="nav flex-column">
               </ul>
             </li>
+            <li class="nav-item" data-level="2"><a href="#toggling-the-metronome" class="nav-link">Toggling the metronome</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
             <li class="nav-item" data-level="2"><a href="#saving-the-project" class="nav-link">Saving the project</a>
               <ul class="nav flex-column">
               </ul>
@@ -263,8 +267,11 @@
 <p>There are 2 looping modes:</p>
 <ul>
 <li><strong>Song / None</strong>: Loops the entire song if a loop point is step, stops at the end if there are no loop point.</li>
-<li><strong>Pattern</strong>: Loops over the current pattern.</li>
+<li><strong>Pattern</strong> or <strong>Selection</strong>: Loops over the current pattern if there is no selection in the sequencer. If there is a selection, will loop over that selection. The icon in the toolbar will change to reflection this.</li>
 </ul>
+<p><img alt="" src="../images/LoopingMode.png#center" /></p>
+<h2 id="toggling-the-metronome">Toggling the metronome</h2>
+<p>The metronome can be enabled by clicking the icon on the toolbar. The metronome will tick at every beat and will only work when the song is playing.</p>
 <h2 id="saving-the-project">Saving the project</h2>
 <p>Clicking on the icon save the project, right-clicking is a "save as..." and will prompt you for a new filename.</p>
 <h2 id="exporting-to-various-formats">Exporting to various formats</h2>

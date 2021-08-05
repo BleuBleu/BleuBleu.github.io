@@ -164,6 +164,10 @@
               <ul class="nav flex-column">
               </ul>
             </li>
+            <li class="nav-item" data-level="2"><a href="#ffmpeg-configuration" class="nav-link">FFMpeg Configuration</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
             <li class="nav-item" data-level="2"><a href="#qwerty-configuration" class="nav-link">QWERTY Configuration</a>
               <ul class="nav flex-column">
               </ul>
@@ -194,6 +198,15 @@
 </ul>
 <p>Note that these are poorly supported on Linux due to the fact that the app uses GTK 2 and gestures are generally poorly supported in Linux.</p>
 </li>
+<li>
+<p><strong>Clear Undo/Redo on save</strong>: Wipes the undo/redo stack every time the project is saved. This help keep the memory usage lower, but limits your ability to undo indefinately.</p>
+</li>
+<li>
+<p><strong>Open last project on start</strong>: Remember which project you last open and re-opens it next time you launch FamiStudio.</p>
+</li>
+<li>
+<p><strong>Auto-save a copy every 2 minutes</strong>: Save a backup copy of the current project every 2 minutes. This may prevent loosing data when the application crashes.</p>
+</li>
 </ul>
 <h2 id="user-interface-configuration">User Interface Configuration</h2>
 <p><img alt="" src="../images/ConfigUI.png#center" /></p>
@@ -212,11 +225,19 @@
 </ul>
 </li>
 <li>
-<p><strong>Follow Views</strong>: Select which type of follow mode to use:</p>
+<p><strong>Follow Views</strong>: Select which views to scroll:</p>
 <ul>
 <li><strong>Sequencer</strong>: Only enables follow mode in the sequencer.</li>
 <li><strong>Piano Roll</strong>: Only enables follow mode in the piano roll.</li>
 <li><strong>Both</strong>: Enables follow mode on both controls.<br><br></li>
+</ul>
+</li>
+<li>
+<p><strong>Scroll Bars</strong>: Display scrolls bars in the Sequencer and the Piano Roll.</p>
+<ul>
+<li><strong>None</strong>: No scroll bares.</li>
+<li><strong>Thin</strong>: Small scroll bars.</li>
+<li><strong>Thick</strong>: Large scroll bars.<br><br></li>
 </ul>
 </li>
 <li>
@@ -227,9 +248,6 @@
 </li>
 <li>
 <p><strong>Show FamiTracker Stop Notes</strong>: When using FamiTracker tempo mode, display implicity stop notes (whenever a note ends without being interrupted by another note) as little triangles. This makes it easier to set note delays for those.</p>
-</li>
-<li>
-<p><strong>Show Scroll Bars</strong>: Display scrolls bars in the Sequencer and the Piano Roll.</p>
 </li>
 <li>
 <p><strong>Show Oscilloscope</strong>: Display an oscilloscope in the toolbar.</p>
@@ -264,6 +282,9 @@
 <ul>
 <li><strong>Device</strong>: Allows choosing the MIDI device to use for previewing instruments.</li>
 </ul>
+<h2 id="ffmpeg-configuration">FFMpeg Configuration</h2>
+<p><img alt="" src="../images/ConfigFFMpeg.png#center" /></p>
+<p>FFMpeg is a video encoder required to enable video export. You can download it from <a href="../ffmpeg/">here</a>. Once downloaded and installed somewhere on your computer, you will need to tell FamiStudio where it is.</p>
 <h2 id="qwerty-configuration">QWERTY Configuration</h2>
 <p><img alt="" src="../images/ConfigQWERTY.png#center" /></p>
 <p>This section allows remapping the keyboard keys for keyboard-piano input. This allows FamiStudio to support AZERTY, QWERTZ or any other international keyboard. Up to 2 keys can be assigned to a note.</p></div>

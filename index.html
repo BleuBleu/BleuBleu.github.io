@@ -23,7 +23,7 @@
 
 			<h2>Features</h2>
 			<ul>
-				<li>Modern DAW-style UI with sequencer and piano roll, no hexadecimal anywhere</li>
+				<li>Modern DAW-style UI with piano roll, no hexadecimal anywhere</li>
 				<li>Instrument & Envelope edition</li>
 				<li>NSF import</li>
 				<li>DPCM sample editor (WAV and DMC support)</li>
@@ -44,63 +44,35 @@
 
 			<h1>Latest Release</h1>
 
-			<h2>Fixes in 3.0.2 (Latest hotfix release)</h2>
+			<h2>New features in 3.1.0</h2>
 			<ul>
-				<li>Fixed crash when pasting past the end of an envelope</li>
-				<li>Fixed FamiTracker (FTM/TXT) import when a jump or skip effect is exactly at row 255</li>
-				<li>Fixed FamiStudio currupting the keyboard state on some european keyboards</li>
-				<li>Fixed oscilloscope vertical orientation in toolbar + video export</li>
-				<li>Fixed crash when using 150% scaling on Linux</li>
-				<li>Fixed crash when parsing FamiStudio text file using VRC6 expansion.</li>
-				<li>Fixed fine effect adjustment (shift + drag) again</li>
-				<li>Stopping all audio when undo/redo happens to change the selected song</li>
-				<li>Showing all 8 channels when importing MIDI using N163 expansion</li>
-				<li>Added error message when trying to import a corrupted WAV file</li>
-				<li>Made auto-scrolling when selecting more gradual in both sequencer and piano roll.</li>
-			</ul>
-
-			<h2>Fixes in 3.0.1</h2>
-			<ul>
-				<li>Fixed crash on startup on Linux when RtMidi fails to initialize</li>
-				<li>Fixed fine effect adjustment (SHIFT + drag) when multiple values are selected</li>
-				<li>Fixed race condition when stopping song playback that could cause a crash</li>
-				<li>Fixed small OpenGL leaks</li>
-				<li>Fixed pattern duplication when CTRL+SHIFT were already pressed when starting the drag</li>
-				<li>Fixed import of MIDI files containing polyphonic key pressure events</li>
-				<li>Fixed duplicated labels when exporting projects containing multiple songs to Famitone2 or FamiStudio sound engine</li>
-				<li>Fixed crash when double clicking or left clicking in some cells of grids</li>
-				<li>Fixed export of VRC6 duty cycles to FamiTracker</li>
-				<li>Properly shutting down MIDI input on Windows</li>
-				<li>Adding error message when trying to import NSF using multiple expansion chips</li>
-			</ul>
-
-			<h2>New features in 3.0.0 (Latest major release)</h2>
-			<ul>
-				<li>Redesigned FamiStudio tempo</li>
-				<li>Redesigned note editing</li>
-				<li>MIDI import/export support</li>
-				<li>Oscilloscope in toolbar</li>
-				<li>Optional scrollbars</li>
-				<li>Revamped Mac version</li>
-				<li>1/2 and 1/4 playback speed</li>
-				<li>Configurable QWERTY keyboard keys</li>
-				<li>Improved sound engine music data compression (15-30% smaller)</li>
-				<li>Audio expansion volume/low-pass filter configuration</li>
-				<li>S5B and VRC7 and now properly low-pass filtered</li>
-				<li>Ability to re-order songs</li>
-				<li>Hi-DPI support on Linux</li>
-				<li>Quick DPCM source data reload</li>
-				<li>Improved video rendering speed</li>
+				<li>OGG export</li>
+				<li>Oscilloscope video export</li>
+				<li>Stereo WAV/MP3/OGG/Video export</li>
+				<li>Metronome</li>
+				<li>Noise slides</li>
+				<li>Volume slides</li>
+				<li>Noise emulation improvements</li>
+				<li>Portable mode (save settings in root folder if portable.txt is detected)</li>
+				<li>Import samples from other projects</li>
+				<li>Loop in selection mode</li>
+				<li>ROM export now uses MMC3 mapper</li>
+				<li>Fine tuning + DMC initial value parameters on DPCM samples</li>
+				<li>Option to auto-save copy every 2 minutes</li>
+				<li>Option for thicker scroll bars</li>
+				<li>Minor sequencer selection improvements</li>
+				<li>MacOS Monterey Beta support, Beta 3 or newer needed (Thanks OpenTK team!)</li>
+				<li>Sound Engine CC65 bindings (Contribution from jroweboy!)</li>
 			</ul>
 
 			<p>Breaking/behavior changes:</p>
 			<ul>
-				<li>Setting a zero volume on the volume track of the triangle channel will now stop the sound. This was always the intention (this is what SoundEngine/NSF and FamiTracker does) but it was not correctly implemented inside FamiStudio.</li>
+				<li>Pattern numbers in the sequencer and piano roll now start at 1 instead of 0. This is a purely esthetic change and does not impact anything.</li>
 			</ul>
 
 			<h2>Release trailer</h2>
 			<div style="position:relative;margin-left: auto;margin-right: auto;width:80%;height:0;padding-bottom:45%;">
-				<iframe style="position:absolute;top:0;left:0;width:100%;height:100%" src="https://www.youtube.com/embed/7j9mhY9XNsc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<iframe style="position:absolute;top:0;left:0;width:100%;height:100%" src="https://www.youtube.com/embed/GSYfj4MFGGE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			</div>
 
 			<h1>Download</h1>
@@ -108,22 +80,22 @@
 			<h2>Download links</h2>
 			<table style="margin-left: auto;margin-right: auto;">
 				<tr>
-					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/3.0.2/FamiStudio302-WinInstaller.zip"><img src="windows.png"></a></td>
-					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/3.0.2/FamiStudio302-MacOS.zip"><img src="macos.png"></a></td>
-					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/3.0.2/FamiStudio302-LinuxAMD64.zip"><img src="linux.png"></a></td>
-					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/3.0.0/FamiStudio300-SoundEngine.zip"><img src="6502.png"></a></td>
+					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/3.1.0/FamiStudio310-WinInstaller.zip"><img src="windows.png"></a></td>
+					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/3.1.0/FamiStudio310-MacOS.zip"><img src="macos.png"></a></td>
+					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/3.1.0/FamiStudio310-LinuxAMD64.zip"><img src="linux.png"></a></td>
+					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/3.1.0/FamiStudio310-SoundEngine.zip"><img src="6502.png"></a></td>
 				</tr>
 				<tr>
 					<td style="padding: 20px;" align="center">
-						<a href="https://github.com/BleuBleu/FamiStudio/releases/download/3.0.2/FamiStudio302-WinInstaller.zip"><center>Windows Installer</center></a><br>
-						<a href="https://github.com/BleuBleu/FamiStudio/releases/download/3.0.2/FamiStudio302-WinPortableExe.zip"><center>Windows Portable EXE</center></a>
+						<a href="https://github.com/BleuBleu/FamiStudio/releases/download/3.1.0/FamiStudio310-WinInstaller.zip"><center>Windows Installer</center></a><br>
+						<a href="https://github.com/BleuBleu/FamiStudio/releases/download/3.1.0/FamiStudio310-WinPortableExe.zip"><center>Windows Portable EXE</center></a>
 						</td>
-					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/3.0.2/FamiStudio302-MacOS.zip"><center><p>MacOS Bundle</p></center></a></td>
+					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/3.1.0/FamiStudio310-MacOS.zip"><center><p>MacOS Bundle</p></center></a></td>
 					<td style="padding: 20px;" align="center">
 						<a href="https://flathub.org/apps/details/org.famistudio.FamiStudio"><center>FlatHub</center></a><br>
-						<a href="https://github.com/BleuBleu/FamiStudio/releases/download/3.0.2/FamiStudio302-LinuxAMD64.zip"><center>Linux AMD64 Binaries</center></a>
+						<a href="https://github.com/BleuBleu/FamiStudio/releases/download/3.1.0/FamiStudio310-LinuxAMD64.zip"><center>Linux AMD64 Binaries</center></a>
 					</td>
-					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/3.0.0/FamiStudio300-SoundEngine.zip"><center><p>NES Sound Engine<br>(CA65, NESASM, ASM6)</p></center></a></td>
+					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/3.1.0/FamiStudio310-SoundEngine.zip"><center><p>NES Sound Engine<br>(CA65, NESASM, ASM6)</p></center></a></td>
 				</tr>
 			</table>
 

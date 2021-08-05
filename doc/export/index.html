@@ -140,15 +140,15 @@
             
             <li class="nav-item" data-level="1"><a href="#exporting-songs" class="nav-link">Exporting Songs</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#wave-mp3-file" class="nav-link">Wave / MP3 File</a>
+            <li class="nav-item" data-level="2"><a href="#wave-mp3-ogg-vorbis-file" class="nav-link">Wave / MP3 / OGG Vorbis File</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#video" class="nav-link">Video</a>
+            <li class="nav-item" data-level="2"><a href="#video-piano-roll-and-oscilloscope" class="nav-link">Video (Piano Roll and Oscilloscope)</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#nintendo-sound-format" class="nav-link">Nintendo Sound Format</a>
+            <li class="nav-item" data-level="2"><a href="#nintendo-sound-format-nsf" class="nav-link">Nintendo Sound Format (NSF)</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -185,34 +185,53 @@
 
 <h1 id="exporting-songs">Exporting Songs</h1>
 <p>The export dialog is access through the main toolbar or with CTRL+E on the keyboard. To quickly repeat a previous export (same format and output file), you can right click on the export icon in the toolbar or press CTRL+SHIFT+E.</p>
-<h2 id="wave-mp3-file">Wave / MP3 File</h2>
-<p>Only a single song can be exported at a time. You can choose the sample rate (and bitrate in case of MP3). It is recommended to stick to 44.1KHz if you want the sound to be exactly as you hear it in FamiStudio. Lower sample rate might lack high frequencies.</p>
+<h2 id="wave-mp3-ogg-vorbis-file">Wave / MP3 / OGG Vorbis File</h2>
+<p>Only a single song can be exported at a time. You can choose the sample rate (and bitrate in case of MP3/OGG). It is recommended to stick to 44.1KHz if you want the sound to be exactly as you hear it in FamiStudio. Lower sample rate might lack high frequencies.</p>
 <p>The song can be exported in one of two modes:</p>
 <ul>
 <li>Play N Times: Will play the song a specified number of times.</li>
 <li>Duration : Will loop though the song for the specified number of seconds.</li>
 </ul>
-<p>You can also export each channel to individual by enabling "Separate channel file". </p>
+<p>Other options:</p>
+<ul>
+<li><strong>Separate channel files</strong> : Will output each channel in a seperate audio file.</li>
+<li><strong>Seperate intro file</strong> : Will output the part before the loop point (intro) in a seperate file. </li>
+<li><strong>Stereo</strong> : Will output a stereo file and will allow setting the panning % in the channel list.</li>
+</ul>
 <p>Note that the quality of the MP3 encoding may not going to be as good as full fledge mp3 encoder such as LAME, but should be good enough for sending quick previews to people.</p>
 <p><img alt="" src="../images/ExportWav.png#center" /></p>
 <p>Channels can optionally be muted. This can be used, for example, to create stereo mix using and external application.</p>
-<h2 id="video">Video</h2>
+<h2 id="video-piano-roll-and-oscilloscope">Video (Piano Roll and Oscilloscope)</h2>
 <p>Video export is a great way to add a visual element to your songs when sharing them on YouTube/social media. For this to work, you will need to <a href="../ffmpeg/">manually download FFmpeg</a> and extract it somewhere on your computer. </p>
-<p><img alt="" src="../images/VideoScreenshot.jpg#center" /></p>
+<p>Example of the piano roll format:
+<img alt="" src="../images/VideoScreenshot.jpg#center" /></p>
+<p>Example of the oscilloscope format:
+<img alt="" src="../images/VideoOscScreenshot.jpg#center" /></p>
 <p><img alt="" src="../images/ExportVideo.png#center" /></p>
 <p>Besides the audio/video quality settings, there are a few options to control the look and feel of the video:</p>
 <ul>
-<li><strong>Piano roll zoom</strong> : The higher the zoom, the faster notes will scroll by. </li>
+<li><strong>Loop count</strong> : Number of times to repeat the looping part of the song.</li>
+<li><strong>Stereo</strong> : Same as WAV/MP3/OGG.</li>
 <li><strong>Channels</strong> : It is recommended to not export channels that do not have any notes, this will leave more space to the other channels.</li>
 </ul>
-<h2 id="nintendo-sound-format">Nintendo Sound Format</h2>
+<p>Options specific to piano roll video:</p>
+<ul>
+<li><strong>Piano roll zoom</strong> : The higher the zoom, the faster notes will scroll by. </li>
+</ul>
+<p>Options specific to oscilloscope video:</p>
+<ul>
+<li><strong>Oscilloscope Colums</strong> : Number of columns to split the channels into.</li>
+<li><strong>Oscilloscope Thickness</strong> : Thickness of the oscilloscope line, in pixels.</li>
+<li><strong>Oscilloscope Color</strong> : Can color the oscilloscope using the colors of the instruments or samples. Otherwise will use a neutral light grey. </li>
+</ul>
+<h2 id="nintendo-sound-format-nsf">Nintendo Sound Format (NSF)</h2>
 <p>Every feature supported by FamiStudio can be used in an NSF. </p>
 <p><img alt="" src="../images/ExportNsf.png#center" /></p>
 <p>Song that do not use any audio expansion can export as PAL and Dual mode, where as only NTSC is available for expansion audio.</p>
 <p>The maximum song size is approximately 28KB minus the size of the DPCM samples used. Note that this size are not printed anywhere and are not related to the size of the *.fms file. Best to simply try and see if it works.</p>
 <h2 id="rom-fds-disk">ROM / FDS Disk</h2>
 <p>Song(s) can be exported to a NES ROM file or a Famicom Disk System disk to play if back on an emulator or on actual hardware. </p>
-<p>For ROM export, the current iteration uses <a href="https://wiki.nesdev.com/w/index.php/INES_Mapper_031">Mapper 31</a> which is supported by most emulators and the <a href="https://krikzz.com/store/home/31-everdrive-n8-nes.html">Everdrive N8</a>. You can then copy the ROM to an SD card and listen to it on actual hardware. Note that expansion audio is not supported with this mapper.</p>
+<p>For ROM export uses the MMC3 mapper which is supported by most emulators and the <a href="https://krikzz.com/store/home/31-everdrive-n8-nes.html">Everdrive N8</a>. You can then copy the ROM to an SD card and listen to it on actual hardware. Note that expansion audio is not supported with this mapper.</p>
 <p><img alt="" src="../images/Rom.png#center" /></p>
 <p>The user interface is very simple, pressing left/right on the D-PAD will change the current track. Track/song names will be truncated to 28 characters. For something a lot more customizable, check out <a href="https://github.com/bbbradsmith/eznsf">EZNSF</a> by Brad Smith.</p>
 <p>For FDS export, the process is very similar and will output a FDS disk image instead of a ROM. It has been tested on actual hardware using the <a href="https://3dscapture.com/fdsstick/">FDSStick</a>. Songs are loaded on demand from the disk, so switching tracks will be a bit slower on FDS than on a ROM. </p>
@@ -422,8 +441,8 @@
                 Note Time="0" Value="C4" Instrument="Lead2" Volume="15"
                 Note Time="70" Value="D#4" Instrument="Lead2"
                 Note Time="98" Value="D4" Instrument="Lead2"
-        PatternInstance Time="0" Pattern="Intro1"
-        PatternInstance Time="1" Pattern="Melody1"
+            PatternInstance Time="0" Pattern="Intro1"
+            PatternInstance Time="1" Pattern="Melody1"
 </code></pre>
 <p>The possible types of objects and their attributes:</p>
 <table>
@@ -597,6 +616,12 @@
 <td>N163WavePos</td>
 <td></td>
 <td>(N163 instrument only) 0 to 244, multiple of 4 (4, 8, 12, etc.).</td>
+</tr>
+<tr>
+<td></td>
+<td>Vrc6SawMasterVolume</td>
+<td></td>
+<td>(VRC6 instrument only) Full, Half or Quarter.</td>
 </tr>
 <tr>
 <td></td>
@@ -795,6 +820,12 @@
 <td>Volume</td>
 <td></td>
 <td>The volume of the note, 0 to 15.</td>
+</tr>
+<tr>
+<td></td>
+<td>VolumeSlide</td>
+<td></td>
+<td>If specified, the note has a volume slide and slides to the specified value. Must also have a Volume.</td>
 </tr>
 <tr>
 <td></td>

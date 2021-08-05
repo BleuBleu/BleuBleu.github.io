@@ -196,6 +196,10 @@
               <ul class="nav flex-column">
               </ul>
             </li>
+            <li class="nav-item" data-level="2"><a href="#replacing-instruments" class="nav-link">Replacing Instruments</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
             <li class="nav-item" data-level="2"><a href="#copying-pasting-notes" class="nav-link">Copying &amp; pasting notes</a>
               <ul class="nav flex-column">
               </ul>
@@ -308,6 +312,9 @@
 <p><img alt="" src="../images/Arpeggio.png#center" /></p>
 <p>You can change which arpeggio is associated with a note the same way to can replace an instrument. You can select a new arpeggio and click on an existing note. Or you can select a few notes and drag and drop an arpeggio from the Project Explorer on to the selection.</p>
 <p>If an instrument uses an arpeggio envelope and also uses an arpeggio chord, the chord will take over and completely override the arpeggio envelope of the instrument. </p>
+<h2 id="replacing-instruments">Replacing Instruments</h2>
+<p>To replace the instrument used by a note, you can simply drag the instrument on the note. To replace multiple notes at a time, simply create a selection and drag the instrument on the selection.</p>
+<p><img alt="" src="../images/ReplaceInstrument.gif#center" /></p>
 <h2 id="copying-pasting-notes">Copying &amp; pasting notes</h2>
 <p>Much like the sequencer, selcted notes can be copy (or cut) by pressing CTRL+C (or CTRL+X). You can then move the selection somewhere else and paste the notes with CTRL+V.</p>
 <h3 id="copying-pasting-notes-between-projects">Copying &amp; pasting notes between projects</h3>
@@ -362,6 +369,8 @@
 <p><img alt="" src="../images/VolumeTrack.png#center" /></p>
 <h3 id="volume-track">Volume track</h3>
 <p>The volume tracks dictates how loud the current channel should play. This volume is combined with volume envelope by multiplication (50% volume track x 50% envelope volume = 25% total volume). It is much more efficient to use volume envelopes wherever possible and only use volume tracks to control the global volume of the song.</p>
+<p>The volume track is allowed to have slides to smoothly raise or lower the volume. They are created exactly like regular slide notes, by holding "S", clicking and dragging up or down. These slides use fixed point arithmetic and have limited precision. They will go up/down by 1 volume unit every 16 frames at most. Very slow/long slides may end earlier than their visual representation.</p>
+<p><img alt="" src="../images/VolumeSlide.gif#center" /></p>
 <h3 id="vibrato-depth-speed">Vibrato depth &amp; speed</h3>
 <p>Vibrato depth and speed are used to add vibrato to a portion of the song without having to bother creating a new instrument. Please note that vibrato will temporarely override any pitch envelope on the current instrument. When vibrato is disabled (by setting depth or speed, or both to zero), the instrument will essentially have no pitch envelope until a new note is played.</p>
 <p>The depth values for the vibrato are indentical to FamiTracker but the speeds are slightly different. The way FamiTracker implements vibrato, while clever, is flawed as it undersamples the vibrato curve at high speed, leading to aliasing which ends up with a low-frequency tone that has a "ringing" sound to it. Please see the <a href="../export/">Export</a> page for a table that maps between FamiStudio and FamiTracker.</p>
