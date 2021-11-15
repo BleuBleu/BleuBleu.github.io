@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>Cleaning-up your Project - FamiStudio Documentation</title>
+        <title>Installation - FamiStudio Documentation</title>
         <link href="../css/bootstrap.min.css" rel="stylesheet">
         <link href="../css/font-awesome.min.css" rel="stylesheet">
         <link href="../css/base.css" rel="stylesheet">
@@ -42,7 +42,7 @@
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="../install/" class="dropdown-item">Installation</a>
+    <a href="./" class="dropdown-item active">Installation</a>
 </li>
                                     
 <li>
@@ -82,7 +82,7 @@
 </li>
                                     
 <li>
-    <a href="./" class="dropdown-item active">Cleaning-up your Project</a>
+    <a href="../cleanup/" class="dropdown-item">Cleaning-up your Project</a>
 </li>
                                     
 <li>
@@ -119,12 +119,12 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../expansion/" class="nav-link">
+                                <a rel="prev" href=".." class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../config/" class="nav-link">
+                                <a rel="next" href="../basics/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -146,17 +146,17 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#cleaning-up-your-project" class="nav-link">Cleaning-up Your Project</a>
+            <li class="nav-item" data-level="1"><a href="#installation" class="nav-link">Installation</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#clean-up-dialog" class="nav-link">Clean-up Dialog</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#cleaning-up-song" class="nav-link">Cleaning-up Song</a>
+            <li class="nav-item" data-level="2"><a href="#windows" class="nav-link">Windows</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#cleaning-up-projects" class="nav-link">Cleaning-up Projects</a>
+            <li class="nav-item" data-level="2"><a href="#macos" class="nav-link">MacOS</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#linux" class="nav-link">Linux</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -167,43 +167,46 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="cleaning-up-your-project">Cleaning-up Your Project</h1>
-<h2 id="clean-up-dialog">Clean-up Dialog</h2>
-<p>The clean-up dialog dialog is accessed from the toolbar. It can perform various cleaning operations, such as deleting unused elements and merging identical ones.</p>
-<h2 id="cleaning-up-song">Cleaning-up Song</h2>
-<p><img alt="" src="../images/CleanupSong.png#center" /></p>
-<p>Here are the operations that can be performed on songs:</p>
+<h1 id="installation">Installation</h1>
+<p>Depending on how you download FamiStudio, you might get scary warnings the first time you try to install or run it.</p>
+<h2 id="windows">Windows</h2>
+<p>On Windows, if you get an error trying to start the application, but sure to install these 2 requirements:</p>
 <ul>
+<li>You will need the <a href="https://aka.ms/vs/16/release/vc_redist.x86.exe">Visual Studio runtime</a></li>
 <li>
-<p><strong>Merge identical patterns</strong> : Patterns that are identical on the same channel will be assumed to be the same and will all be replaced by instances of a single one. To be identical, patterns must have the exact same notes, effects, etc.</p>
-</li>
-<li>
-<p><strong>Delete empty patterns</strong> : Patterns with zero notes or effect values will be deleted. Only applies to the selected songs. </p>
+<p>You also may need (especially on Windows 7) to install this rather old and cluncky <a href="https://www.microsoft.com/en-us/download/confirmation.aspx?id=8109">DirectX package</a></p>
+<ol>
+<li>It is going to ask you to extra the files to somewhere, extract to a temporary folder</li>
+<li>Run DXSETUP.exe inside that temporary folder to really install.</li>
+<li>Delete the temp folder afterwards to cleanup.</li>
+</ol>
 </li>
 </ul>
-<h2 id="cleaning-up-projects">Cleaning-up Projects</h2>
-<p><img alt="" src="../images/CleanupProject.png#center" /></p>
-<p>Here are the operations that can be performed on the project:</p>
-<ul>
-<li>
-<p><strong>Merge identical instruments</strong> : Instruments that have the same settings and envelopes will be combined into ones and every notes using the intruments to be deleted will use the new one. </p>
+<p>On Windows, SmartScreen might say "Windows protected your PC".</p>
+<p><img alt="" src="../images/SmartScreen1.png#center" /></p>
+<p>To bypass the warning, simply click "More Info" and then "Run Anyway".</p>
+<p><img alt="" src="../images/SmartScreen2.png#center" /></p>
+<h2 id="macos">MacOS</h2>
+<p>On MacOS, you will need to install <a href="https://www.mono-project.com/download/stable/#download-mac">Mono</a>.</p>
+<p>GateKeeper can be quite agressive when first running the application. At first it will look like you simply cannot run it and it will give you the option to throw FamiStudio in the recycling bin.</p>
+<p><img alt="" src="../images/GateKeeper1.png#center" /></p>
+<p>To bypass this warning, open the "Security and Privacy" settings and look for the warning saying that FamiStudio was blocked. </p>
+<p><img alt="" src="../images/GateKeeper2.png#center" /></p>
+<p>Click "Open Anyway" and then you will have the option to launch it.</p>
+<p><img alt="" src="../images/GateKeeper3.png#center" /></p>
+<h2 id="linux">Linux</h2>
+<p>The Linux version should work on most x64 ditros. But given the very non-stardard nature of the OS, your mileage may vary.</p>
+<p>Please install the following dependencies before trying ot run the Linux version.</p>
+<ol>
+<li>Install <a href="https://www.mono-project.com/download/stable/#download-lin">Mono</a></li>
+<li>Install gtk-sharp2, this is usually by typing this, but this might vary depending on your distro :<pre><code>sudo apt-get install gtk-sharp2
+</code></pre>
 </li>
-<li>
-<p><strong>Delete unused instruments</strong> : Instruments without a single note played will be deleted.</p>
-</li>
-<li>
-<p><strong>Unassign unused DPCM instrument keys</strong> : Unassign samples to keys of the DPCM instrument that are not used by any song in the project.</p>
-</li>
-<li>
-<p><strong>Delete unassigned samples</strong> : Samples that are not assigned to any key of the DPCM instrument will be deleted.</p>
-</li>
-<li>
-<p><strong>Permanently apply all DPCM sample processing</strong> : Remove all the source data of any DPCM sample and replaces it with its processed DMC data. This will also reset all the processing parameters. Only do this when you know you are completely done adjusting your samples, to reduce the file size (it you were using WAV files as source). This will not affect the sound of the song, but will severely limit your ability to go back and adjust things like volume, etc. in a lossless way.</p>
-</li>
-<li>
-<p><strong>Delete unused arpeggios</strong> : Arpeggios that are not used by a single note will be deleted.</p>
-</li>
-</ul></div>
+</ol>
+<p>Then to run provided amd64 (basically any x64 processor), simply run:</p>
+<pre><code>mono FamiStudio.exe
+</code></pre>
+<p>If you run a very old version of Linux or if you are running an exotic architecture, you may have missing dependencies. If this is the case, you may have to compile some of the libraries. This is a rather manual process. Please follow the build steps on <a href="https://github.com/BleuBleu/FamiStudio">GitHub</a>. </p></div>
             </div>
         </div>
 

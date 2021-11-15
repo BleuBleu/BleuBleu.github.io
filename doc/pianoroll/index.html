@@ -42,6 +42,10 @@
                                 <ul class="dropdown-menu">
                                     
 <li>
+    <a href="../install/" class="dropdown-item">Installation</a>
+</li>
+                                    
+<li>
     <a href="../basics/" class="dropdown-item">Basics</a>
 </li>
                                     
@@ -95,6 +99,10 @@
                                     
 <li>
     <a href="../troubleshooting/" class="dropdown-item">Troubleshooting</a>
+</li>
+                                    
+<li>
+    <a href="../thanks/" class="dropdown-item">Acknowledgements</a>
 </li>
                                     
 <li>
@@ -295,7 +303,7 @@
 <h2 id="snapping">Snapping</h2>
 <p>Snapping can be toggle by clicking the little magnet in the top-left corner of the piano roll. <strong>SHIFT+S</strong> can also be used to quickly toggle snapping on/off. The precision of the snapping can be changed by left/right clicking the number of using the mousewheel over the number or magnet icon. </p>
 <p><img alt="" src="../images/Snap.png#center" /></p>
-<p>Using FamiStudio tempo mode will allow you to use both fractional snapping (1/4, 1/3, 1/2) and integer snapping (1, 2, 3, 4). FamiTracker tempo mode is limited to integer snapping since it does not give you full control over the individual frames. Fractional snapping will perform rounding when the number of frames in a note isnt exactly divisible by the precision.</p>
+<p>The snapping precision is expressed in <em>Beats</em> (which are numbered as x.1, x.2, x.3, etc. in the header). So with the default settings, a snapping precision of 1 will mean a quarter note.</p>
 <p>Adding, selecting and dragging of notes are currently the only actions affected by snapping. More might be added in future based on user feedback.</p>
 <h2 id="note-attack">Note attack</h2>
 <p>By default, notes will have an "attack" which mean they will restart their envelopes (volume, pitch, etc.) from the beginning. This is represented by the little dark rectangle on the left of each note. This can be toggled for a particular note by hold the A key and clicking on a note. Note that if a note does not use the same instrument as the previous one, the attack will still play, even if disabled. Also please note that this will generally not carry over to FamiTracker, besides specific use cases around slide notes.</p>

@@ -42,6 +42,10 @@
                                 <ul class="dropdown-menu">
                                     
 <li>
+    <a href="install/" class="dropdown-item">Installation</a>
+</li>
+                                    
+<li>
     <a href="basics/" class="dropdown-item">Basics</a>
 </li>
                                     
@@ -98,6 +102,10 @@
 </li>
                                     
 <li>
+    <a href="thanks/" class="dropdown-item">Acknowledgements</a>
+</li>
+                                    
+<li>
     <a href="changelog/" class="dropdown-item">Change Log</a>
 </li>
                                 </ul>
@@ -116,7 +124,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="basics/" class="nav-link">
+                                <a rel="next" href="install/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -148,25 +156,18 @@
               </ul>
             </li>
             
-            <li class="nav-item" data-level="1"><a href="#tutorial" class="nav-link">Tutorial</a>
+            <li class="nav-item" data-level="1"><a href="#tutorial-for-famistudio-desktop" class="nav-link">Tutorial for FamiStudio desktop</a>
               <ul class="nav flex-column">
               </ul>
             </li>
             
-            <li class="nav-item" data-level="1"><a href="#installation" class="nav-link">Installation</a>
-              <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#windows" class="nav-link">Windows</a>
+            <li class="nav-item" data-level="1"><a href="#tutorial-for-famistudio-mobile" class="nav-link">Tutorial for FamiStudio mobile</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#macos" class="nav-link">MacOS</a>
+            
+            <li class="nav-item" data-level="1"><a href="#discord-server" class="nav-link">Discord Server</a>
               <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#linux" class="nav-link">Linux</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
               </ul>
             </li>
         </ul>
@@ -174,10 +175,15 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
+<p style="border:3px; border-style:solid;border-color:#000000;padding:5px;background-color:#ffac7f;color:black;">
+    The FamiStudio documentation was mostly written for the desktop version. It is slowly being updated to include the mobile version. Thank you for your patience.
+</p>
+
 <h1 id="welcome">Welcome</h1>
 <p>Welcome to the FamiStudio documentation. Please use the <strong>User Guide</strong> menu above to navigate the the various sections or use the Table of Contents below. Also, you can use the <strong>Search</strong> button to search for a specific topic.</p>
 <h1 id="table-of-contents">Table of Contents</h1>
 <ul>
+<li><a href="install/">Installation Procedure &amp; Troubleshooting</a></li>
 <li><a href="basics/">FamiStudio Basics</a></li>
 <li><a href="pianoroll/">Editing Notes</a></li>
 <li><a href="sequencer/">Editing Patterns</a></li>
@@ -191,55 +197,27 @@
 <li><a href="config/">Configuring FamiStudio</a></li>
 <li><a href="cmdline/">Command-line Processing</a></li>
 <li><a href="soundengine/">NES/Famicom Sound Engine</a></li>
+<li><a href="thanks/">Acknowledgements</a></li>
 <li><a href="troubleshooting/">Troubleshooting</a></li>
 <li><a href="changelog/">Change Log</a></li>
 </ul>
-<h1 id="tutorial">Tutorial</h1>
+<h1 id="tutorial-for-famistudio-desktop">Tutorial for FamiStudio desktop</h1>
 <p>The quickest way of getting started with FamiStudio is simply to follow this tutorial video step by step. It will walk you through the creation a simple song, from beginning to end.</p>
 <div style="position:relative;margin-left: auto;margin-right: auto;width:80%;height:0;padding-bottom:45%;">
     <iframe style="position:absolute;top:0;left:0;width:100%;height:100%" src="https://www.youtube.com/embed/UyECgqFbZPQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-<h1 id="installation">Installation</h1>
-<p>Depending on how you download FamiStudio, you might get scary warnings the first time you try to install or run it.</p>
-<h2 id="windows">Windows</h2>
-<p>On Windows, if you get an error trying to start the application, but sure to install these 2 requirements:</p>
-<ul>
-<li>You will need the <a href="https://www.microsoft.com/en-pk/download/details.aspx?id=48145">Visual Studio 2015 runtime</a> (x86 version)</li>
-<li>
-<p>You also may need (especially on Windows 7) to install this rather old and cluncky <a href="https://www.microsoft.com/en-us/download/confirmation.aspx?id=8109">DirectX package</a></p>
-<ol>
-<li>It is going to ask you to extra the files to somewhere, extract to a temporary folder</li>
-<li>Run DXSETUP.exe inside that temporary folder to really install.</li>
-<li>Delete the temp folder afterwards to cleanup.</li>
-</ol>
-</li>
-</ul>
-<p>On Windows, SmartScreen might say "Windows protected your PC".</p>
-<p><img alt="" src="images/SmartScreen1.png#center" /></p>
-<p>To bypass the warning, simply click "More Info" and then "Run Anyway".</p>
-<p><img alt="" src="images/SmartScreen2.png#center" /></p>
-<h2 id="macos">MacOS</h2>
-<p>On MacOS, you will need to install <a href="https://www.mono-project.com/download/stable/#download-mac">Mono</a>.</p>
-<p>GateKeeper can be quite agressive when first running the application. At first it will look like you simply cannot run it and it will give you the option to throw FamiStudio in the recycling bin.</p>
-<p><img alt="" src="images/GateKeeper1.png#center" /></p>
-<p>To bypass this warning, open the "Security and Privacy" settings and look for the warning saying that FamiStudio was blocked. </p>
-<p><img alt="" src="images/GateKeeper2.png#center" /></p>
-<p>Click "Open Anyway" and then you will have the option to launch it.</p>
-<p><img alt="" src="images/GateKeeper3.png#center" /></p>
-<h2 id="linux">Linux</h2>
-<p>The Linux version should work on most x64 ditros. But given the very non-stardard nature of the OS, your mileage may vary.</p>
-<p>Please install the following dependencies before trying ot run the Linux version.</p>
-<ol>
-<li>Install <a href="https://www.mono-project.com/download/stable/#download-lin">Mono</a></li>
-<li>Install gtk-sharp2, this is usually by typing this, but this might vary depending on your distro :<pre><code>sudo apt-get install gtk-sharp2
-</code></pre>
-</li>
-</ol>
-<p>Then to run provided amd64 (basically any x64 processor), simply run:</p>
-<pre><code>mono FamiStudio.exe
-</code></pre>
-<p>If you run a very old version of Linux or if you are running an exotic architecture, you may have missing dependencies. If this is the case, you may have to compile some of the libraries. This is a rather manual process. Please follow the build steps on <a href="https://github.com/BleuBleu/FamiStudio">GitHub</a>. </p></div>
+<p><br/></p>
+<h1 id="tutorial-for-famistudio-mobile">Tutorial for FamiStudio mobile</h1>
+<p>If you are using the mobile version of FamiStudio, please check out this tutorial to get you started!</p>
+<div style="position:relative;margin-left: auto;margin-right: auto;width:80%;height:0;padding-bottom:45%;">
+    <iframe style="position:absolute;top:0;left:0;width:100%;height:100%" src="https://www.youtube.com/embed/xQC7YWGodeE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<p><br/></p>
+<h1 id="discord-server">Discord Server</h1>
+<p>If you need to talk other users or have a casual conversation with the developer, please come see us on <a href="https://discord.gg/88UPmxh">Discord</a>!</p>
+<p><a href="https://discord.gg/88UPmxh"><img alt="" src="images/Discord.png#center" /></a></p></div>
             </div>
         </div>
 
@@ -323,5 +301,5 @@
 
 <!--
 MkDocs version : 1.1.2
-Build Date UTC : 2021-08-16 04:36:43.407799+00:00
+Build Date UTC : 2021-11-15 08:39:45.336827+00:00
 -->

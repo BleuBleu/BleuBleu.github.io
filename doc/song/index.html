@@ -42,6 +42,10 @@
                                 <ul class="dropdown-menu">
                                     
 <li>
+    <a href="../install/" class="dropdown-item">Installation</a>
+</li>
+                                    
+<li>
     <a href="../basics/" class="dropdown-item">Basics</a>
 </li>
                                     
@@ -95,6 +99,10 @@
                                     
 <li>
     <a href="../troubleshooting/" class="dropdown-item">Troubleshooting</a>
+</li>
+                                    
+<li>
+    <a href="../thanks/" class="dropdown-item">Acknowledgements</a>
 </li>
                                     
 <li>
@@ -192,7 +200,7 @@
 <p>The project explorer displays the name of the project, the list of songs and instruments in the current project. This section is going to focus on the very top part, which is the project and the songs.</p>
 <p><img alt="" src="../images/ProjectExplorer.png#center" /></p>
 <h2 id="editing-project-properties">Editing project properties</h2>
-<p>Double-clicking on project name (first button in the project explorer) will allow you to change its name, author and copyright information. This information is used when exporting to NSF, for example.</p>
+<p>Clicking on the little gear icon or double clicking on the project name (first button in the project explorer) will allow you to change its name, author and copyright information. This information is used when exporting to NSF, for example.</p>
 <p><img alt="" src="../images/EditProject.png#center" /></p>
 <h2 id="expansion-audio">Expansion audio</h2>
 <p>The project properties is also where you select your <a href="../expansion/">Expansion Audio</a>. Expansion will add extra channels on top of the default 5 that the NES supported. Note that changing the expansion audio in a project will delete all data (patterns, notes, instrument) related to the previous expansion.</p>
@@ -204,7 +212,7 @@
 <p>FamiStudio tempo modes gives full control over every frame (1/60th of a second on NTSC, 1/50th on PAL). It is the default mode. In this mode you will see the individual frames in the piano roll and will have more precise control on where each note starts/end. 
 For example, a C-D-E-F scale where each note is stopped for 1 frame between each note will look like this using FamiStudio tempo. The dashed lines seperate individual frames, so you can leave and empty frame 1 frame before the new note starts. Very intuituve and visual.</p>
 <p><img alt="" src="../images/TempoExampleFamiStudio.png#center" /> </p>
-<p>FamiStudio tempo mode let's you simply choose a BPM value for the song (or an individual pattern) and will automatically choose the appropriate number of frames to make each notes. Some BPMs will require the use of a *groove" which is an uneven sequence of frames. </p>
+<p>FamiStudio tempo mode let's you simply choose a BPM value for the song (or an individual pattern) and will automatically choose the appropriate number of frames to make each notes. Some BPMs will require the use of a <em>groove</em> which is an uneven sequence of frames. </p>
 <p>For example, at 142 BPM (in NTSC), FamiStudio will know to use a 7-6-6 groove, which mean that the first note will be 7 frames long, then followed by two notes of 6 frames, and the whole thing will repeat until there is a tempo change in the song. But in order to keep the piano roll nice and even, FamiStudio will only only display the minimum values of the groove, 6 in our example. This mean that out of 19 frames in the groove, you only have control over 18. In other words, every 3rd note, FamiStudio will inject an empty frame for which you dont have any control. Effects, instrument envelopes &amp; arpeggios will still advance on these empty frames, but otherwise no new note will be processed. You can tell FamiStudio <em>where</em> to inject this empty frame, by changing the <strong>Groove Padding Mode</strong> (Beginning, Middle or End).</p>
 <p>On of the limitation of FamiStudio tempo mode is that it will limit your ability to suddently changes tempo in the middle of a pattern. When using FamiStudio tempo, you can only change the BPM at the start of a new pattern.</p>
 <h3 id="famitracker-tempo-mode">FamiTracker Tempo Mode</h3>
@@ -233,7 +241,7 @@ For example, a C-D-E-F scale where each note is stopped for 1 frame between each
 <p>To merge a song coming from another project, click on the little folder icon on the song header. </p>
 <p>Songs from another project must use the same audio expansion and tempo mode. Also, please note that instruments, samples and arpeggios, used by the other song will be matched by their name. In other words, instruments with the same names are assumed to be the same. If you project already contains an instrument called "Piano" and you try to import a song using another one called "Piano", the existing one will be used. You are responsible to uniquely name your instruments if they are truly different.</p>
 <h2 id="editing-song-properties">Editing song properties</h2>
-<p>Double-clicking on the a song will allow you to change its name, color and other attributes. Names must be unique.</p>
+<p>Clicking the gear icon next to a song (or double-clicking on the song) will allow you to change its name, color and other attributes. Names must be unique.</p>
 <p>This dialog will look different depending on the <strong>Tempo Mode</strong> of the current project.</p>
 <table>
 <thead>
