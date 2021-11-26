@@ -151,6 +151,16 @@
               </ul>
             </li>
             
+            <li class="nav-item" data-level="1"><a href="#basic-desktop-controls" class="nav-link">Basic Desktop Controls</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#basic-mobile-controls" class="nav-link">Basic Mobile Controls</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
             <li class="nav-item" data-level="1"><a href="#main-window" class="nav-link">Main Window</a>
               <ul class="nav flex-column">
               </ul>
@@ -212,6 +222,16 @@
               </ul>
             </li>
             
+            <li class="nav-item" data-level="1"><a href="#quick-access-bar-mobile-only" class="nav-link">Quick Access Bar (Mobile Only)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#pop-up-piano-mobile-only" class="nav-link">Pop-Up Piano (Mobile Only)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
             <li class="nav-item" data-level="1"><a href="#keyboard-shortcuts" class="nav-link">Keyboard shortcuts</a>
               <ul class="nav flex-column">
               </ul>
@@ -230,6 +250,7 @@
 <li>A list of Arpeggios</li>
 </ul>
 <p>Songs are made of Patterns, which are on one of the five Channels supported by the NES. Patterns contain Notes which are played by an Instrument (DPCM samples do not require an instrument) and may refer to an arpeggio. Instruments may have some of their attributes (pitch, volume, arpeggio) modulated by Envelopes.</p>
+<h1 id="basic-desktop-controls">Basic Desktop Controls</h1>
 <p>Most of the operations are performed with the mouse. In general:</p>
 <ul>
 <li>The <strong>left mouse button</strong> adds stuff, double-clicking something edits properties (songs, patterns, instruments, DPCM)</li>
@@ -242,6 +263,13 @@
 <li>All actions requiring the mouse wheel can be performed with Alt+Right click, then dragging up/down.</li>
 </ul>
 <p>If you are working on a trackpad, please check out how to enable <a href="../config/#user-interface-configuration">Trackpad controls</a> in the configuration dialog.</p>
+<h1 id="basic-mobile-controls">Basic Mobile Controls</h1>
+<p>On mobile, there are 3 main gestures used:</p>
+<ul>
+<li>A <strong>quick tap</strong> will usually add stuff. Tapping on an certain objects (notes, patterns, instruments, etc.) will sometimes toggle a <strong>white highlight</strong> around them. When an object has a white highlight, it will allow you to perform other actions such as moving them.</li>
+<li>A <strong>swipe</strong> will usually pan when clicking in the background. Swiping on the header will select a time range. Swiping on a item with a white highlight will usually drag/move it.</li>
+<li>A <strong>long press</strong> on something will sometimes reveal advanced options. </li>
+</ul>
 <h1 id="main-window">Main Window</h1>
 <p>The UI was designed to be a simple as possible, there are almost no context menus.</p>
 <p>The main window has 4 main components:</p>
@@ -263,6 +291,128 @@
 <h1 id="toolbar">Toolbar</h1>
 <p>The main toolbar contains your usual stuff: file operation, undo/redo, timecode, oscilloscope and play controls.</p>
 <p><img alt="" src="../images/Toolbar.png#center" /></p>
+<p>Here is the meaning of each toolbar icon and some additional actions that can be performed.</p>
+<table>
+<thead>
+<tr>
+<th>Icon</th>
+<th>Click Action</th>
+<th>Additional Actions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="" src="https://raw.githubusercontent.com/BleuBleu/FamiStudio/master/FamiStudio/Resources/File.png" /></td>
+<td>New project</td>
+<td></td>
+</tr>
+<tr>
+<td><img alt="" src="https://raw.githubusercontent.com/BleuBleu/FamiStudio/master/FamiStudio/Resources/Open.png" /></td>
+<td>Open FamiStudio project or other file format</td>
+<td></td>
+</tr>
+<tr>
+<td><img alt="" src="https://raw.githubusercontent.com/BleuBleu/FamiStudio/master/FamiStudio/Resources/Save.png" /></td>
+<td>Save project</td>
+<td>On Desktop, right click to "Save As...".<br/>On Mobile, use long press.</td>
+</tr>
+<tr>
+<td><img alt="" src="https://raw.githubusercontent.com/BleuBleu/FamiStudio/master/FamiStudio/Resources/Export.png" /></td>
+<td>Export to various formats Project</td>
+<td>On Desktop, right click to repeat the last export</td>
+</tr>
+<tr>
+<td><img alt="" src="https://raw.githubusercontent.com/BleuBleu/FamiStudio/master/FamiStudio/Resources/Copy.png" /></td>
+<td>Copy selection</td>
+<td></td>
+</tr>
+<tr>
+<td><img alt="" src="https://raw.githubusercontent.com/BleuBleu/FamiStudio/master/FamiStudio/Resources/Cut.png" /></td>
+<td>Cut selection</td>
+<td></td>
+</tr>
+<tr>
+<td><img alt="" src="https://raw.githubusercontent.com/BleuBleu/FamiStudio/master/FamiStudio/Resources/Paste.png" /></td>
+<td>Paste</td>
+<td>On Desktop, right-click to "Special Paste" (paste with advanced options). <br/>On Mobile, use long press.</td>
+</tr>
+<tr>
+<td><img alt="" src="https://raw.githubusercontent.com/BleuBleu/FamiStudio/master/FamiStudio/Resources/Delete.png" /></td>
+<td>Delete selection (mobile only)</td>
+<td>On mobile, long press to "Special Delete" (delete with advanced options)</td>
+</tr>
+<tr>
+<td><img alt="" src="https://raw.githubusercontent.com/BleuBleu/FamiStudio/master/FamiStudio/Resources/Undo.png" /></td>
+<td>Undo</td>
+<td></td>
+</tr>
+<tr>
+<td><img alt="" src="https://raw.githubusercontent.com/BleuBleu/FamiStudio/master/FamiStudio/Resources/Redo.png" /></td>
+<td>Redo</td>
+<td></td>
+</tr>
+<tr>
+<td><img alt="" src="https://raw.githubusercontent.com/BleuBleu/FamiStudio/master/FamiStudio/Resources/Transform.png" /></td>
+<td>Transform/cleanup project/songs</td>
+<td></td>
+</tr>
+<tr>
+<td><img alt="" src="https://raw.githubusercontent.com/BleuBleu/FamiStudio/master/FamiStudio/Resources/Config.png" /></td>
+<td>Application settings</td>
+<td></td>
+</tr>
+<tr>
+<td><img alt="" src="https://raw.githubusercontent.com/BleuBleu/FamiStudio/master/FamiStudio/Resources/Play.png" /></td>
+<td>Play song</td>
+<td>On desktop, rotate mouse wheel to change playback speed. <br/>On mobile, long press to change playback speed.</td>
+</tr>
+<tr>
+<td><img alt="" src="https://raw.githubusercontent.com/BleuBleu/FamiStudio/master/FamiStudio/Resources/Rec.png" /></td>
+<td>Toggle recording mode</td>
+<td></td>
+</tr>
+<tr>
+<td><img alt="" src="https://raw.githubusercontent.com/BleuBleu/FamiStudio/master/FamiStudio/Resources/Rewind.png" /></td>
+<td>Rewing to beginning</td>
+<td></td>
+</tr>
+<tr>
+<td><img alt="" src="https://raw.githubusercontent.com/BleuBleu/FamiStudio/master/FamiStudio/Resources/Loop.png" /></td>
+<td>Change looping mode</td>
+<td></td>
+</tr>
+<tr>
+<td><img alt="" src="https://raw.githubusercontent.com/BleuBleu/FamiStudio/master/FamiStudio/Resources/QwertyPiano.png" /></td>
+<td>Toggle QWERTY input (desktop only)</td>
+<td></td>
+</tr>
+<tr>
+<td><img alt="" src="https://raw.githubusercontent.com/BleuBleu/FamiStudio/master/FamiStudio/Resources/Piano.png" /></td>
+<td>Toggle pop-up piano (mobile only)</td>
+<td></td>
+</tr>
+<tr>
+<td><img alt="" src="https://raw.githubusercontent.com/BleuBleu/FamiStudio/master/FamiStudio/Resources/Metronome.png" /></td>
+<td>Toggle metronome click</td>
+<td></td>
+</tr>
+<tr>
+<td><img alt="" src="https://raw.githubusercontent.com/BleuBleu/FamiStudio/master/FamiStudio/Resources/NTSC.png" /></td>
+<td>Toggle playback machine</td>
+<td></td>
+</tr>
+<tr>
+<td><img alt="" src="https://raw.githubusercontent.com/BleuBleu/FamiStudio/master/FamiStudio/Resources/Follow.png" /></td>
+<td>Toggle follow mode</td>
+<td></td>
+</tr>
+<tr>
+<td><img alt="" src="https://raw.githubusercontent.com/BleuBleu/FamiStudio/master/FamiStudio/Resources/More.png" /></td>
+<td>Reveal hidden toolbar buttons (mobile only)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <h2 id="tooltip">Tooltip</h2>
 <p>Keyboard shortcuts or special actions are always displayed as tooltips in the upper-right corner of the toolbar. Please keep an eye on it to learn new functionalities.</p>
 <p><img alt="" src="../images/Tooltip.png#center" /></p>
@@ -305,6 +455,12 @@
 <p>Please check out the <a href="../pianoroll/">Editing Notes</a> section for more details.</p>
 <p>The piano roll can be maximized to full screen by pressing the little maximize button in the top right corner, or by pressing <strong>1</strong> on the keyboard.</p>
 <p><img alt="" src="../images/MaximizePianoRoll.gif#center" /></p>
+<h1 id="quick-access-bar-mobile-only">Quick Access Bar (Mobile Only)</h1>
+<p>The "Quick Access Bar" is specific to the mobile version, is the bar on the right hand side of the screen (of the bottom when in portrait mode). Its content will change depending on the context but will typically give you a series of convenient shortcuts (such as changing the active channel, instrument, etc.) so you dont have to go back and forth between the other views.</p>
+<p><img alt="" src="../images/MobileQuickAccessBar.png#center" /></p>
+<h1 id="pop-up-piano-mobile-only">Pop-Up Piano (Mobile Only)</h1>
+<p>Another little view that is unique to the mobile version is the pop-up piano that lets you preview the sound of instrument. This is also used in recording mode, which whill be covered later in the documentation.</p>
+<p><img alt="" src="../images/MobilePopupPiano.png#center" /></p>
 <h1 id="keyboard-shortcuts">Keyboard shortcuts</h1>
 <p>Here is a list of useful keyboard shortcuts:</p>
 <ul>

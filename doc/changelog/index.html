@@ -148,6 +148,10 @@
             
             <li class="nav-item" data-level="1"><a href="#change-log" class="nav-link">Change Log</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#version-321-hotfix" class="nav-link">Version 3.2.1 (Hotfix)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
             <li class="nav-item" data-level="2"><a href="#version-320" class="nav-link">Version 3.2.0</a>
               <ul class="nav flex-column">
               </ul>
@@ -261,6 +265,22 @@
 
 <h1 id="change-log">Change Log</h1>
 <p>Version history / release notes for each release.</p>
+<h2 id="version-321-hotfix">Version 3.2.1 (Hotfix)</h2>
+<p>Fixes/Changes:</p>
+<ul>
+<li>Added option to disable vibration (new "Mobile" section of Settings)</li>
+<li>Added support for importing 8-bit and 24-bit WAV files for DPCM samples.</li>
+<li>Added support for importing NSF2, if they dont use any of the advanced features.</li>
+<li>Fixed FamiTracker text export not asking for a filename.</li>
+<li>Fixed DPCM samples not playing if placing the seek bar exactly on their attack.</li>
+<li>Fixed NSF export tempo issue when using grooves in specific situations.</li>
+<li>Creating new effect values will respect snapping on mobile.</li>
+<li>Drawing note attacks for force display channel to help readability.</li>
+<li>Fixed an issue with release note that are beyond the visual duration of the note.</li>
+<li>Correct emulation of Tri-Noise-DMC volumes when using stereo export (+hidden INI option to also do it for seperate channels)</li>
+<li>Experimental "double-tap to delete patterns/note" option (off by default)</li>
+<li>Minor UI tweaks (hit boxes of buttons, zoom levels, scroll bar issues, etc.).</li>
+</ul>
 <h2 id="version-320">Version 3.2.0</h2>
 <p>Changes:</p>
 <ul>

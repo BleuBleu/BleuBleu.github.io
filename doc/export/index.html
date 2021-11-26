@@ -209,6 +209,7 @@
 <p>Note that the quality of the MP3 encoding may not going to be as good as full fledge mp3 encoder such as LAME, but should be good enough for sending quick previews to people.</p>
 <p><img alt="" src="../images/ExportWav.png#center" /></p>
 <p>Channels can optionally be muted. This can be used, for example, to create stereo mix using and external application.</p>
+<p>OGG Vorbis is currently only available on the desktop version of FamiStudio.</p>
 <h2 id="video-piano-roll-and-oscilloscope">Video (Piano Roll and Oscilloscope)</h2>
 <p>Video export is a great way to add a visual element to your songs when sharing them on YouTube/social media. For this to work, you will need to <a href="../ffmpeg/">manually download FFmpeg</a> and extract it somewhere on your computer. </p>
 <p>Example of the piano roll format:
@@ -245,7 +246,7 @@
 <p>For FDS export, the process is very similar and will output a FDS disk image instead of a ROM. It has been tested on actual hardware using the <a href="https://3dscapture.com/fdsstick/">FDSStick</a>. Songs are loaded on demand from the disk, so switching tracks will be a bit slower on FDS than on a ROM. </p>
 <p><img alt="" src="../images/ExportFds.png#center" /></p>
 <h2 id="midi">MIDI</h2>
-<p>Songs created using the FamiStudio tempo mode can be exported to MIDI. </p>
+<p>Songs created using the FamiStudio tempo mode can be exported to MIDI. This is only available in the desktop version.</p>
 <p><img alt="" src="../images/ExportMIDI.png#center" /></p>
 <p>There are 2 ways in which FamiStudio can assign General-MIDI instruments:</p>
 <ul>
@@ -254,7 +255,7 @@
 </ul>
 <p>At the bottom of the dialog is the instrument table. This is where you can assign instrument to channels or FamiStudio instrument (depending on the Instrument Mode). Double-clicking on a row will allow selecting the instrument.</p>
 <h2 id="famitracker-text">FamiTracker Text</h2>
-<p>You can export songs to FamiTracker using their Text Export format.</p>
+<p>You can export songs to FamiTracker using their Text Export format. This is only available in the desktop version.</p>
 <p><img alt="" src="../images/ExportFamiTracker.png#center" /></p>
 <p>There are some limitations:</p>
 <ul>
@@ -396,6 +397,7 @@
 <p>Only the final processed data of DPCM samples will exported. The source data as well as any processing parameter will be lost. </p>
 </li>
 </ul>
+<p>Only the desktop version of FamiStudio supports exporting to this format.</p>
 <h3 id="format-specification">Format Specification</h3>
 <p>The format describe one object per line followed by some attributes and values. Attribute are always between double-quotes. All indentation is purely cosmetic. </p>
 <pre><code>Object Attribute1="Value1" Attribute2="Value2"
@@ -914,9 +916,11 @@
 <p><img alt="" src="../images/ExportFamiTone2.png#center" /></p>
 <p>When exporting file in separate files, you can specific a name format template for each song. The {project} and {song} macros are available.</p>
 <p>When exporting as a single file (non-separate), you will be prompt to name the output assembly file. If any of the exported songs uses DPCM samples, a .dmc file of the same name will also be outputted.</p>
+<p>Only the desktop version of FamiStudio supports exporting to this format.</p>
 <h2 id="famistudio-famitone2-sfx">FamiStudio / FamiTone2 SFX</h2>
 <p>The same goes for sound effect export. In this mode, one song is one sound effect, so songs should be very short. Unlike the FamiStudio/FamiTone2 music format which only support a subset of all the FamiTracker/FamiStudio features, here any feature (except DPCM samples) can be used and the sound effect should export correctly.</p>
-<p><img alt="" src="../images/ExportFamiTone2SFX.png#center" /></p></div>
+<p><img alt="" src="../images/ExportFamiTone2SFX.png#center" /></p>
+<p>Only the desktop version of FamiStudio supports exporting to this format.</p></div>
             </div>
         </div>
 

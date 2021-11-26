@@ -210,7 +210,7 @@
 </ul>
 <p>When importing from FamiTracker, all possible slide effects (1xx, 2xx, 3xx, Qxx and Rxx) will be converted to slide notes. Sometimes attack will be disabled as well to mimic the same behavior. This in an inherently imperfect process since they approaches are so different. For this reason, importing/exporting slide notes with FamiTracker should be considered a <strong>lossy</strong> process.</p>
 <h2 id="midi">MIDI</h2>
-<p>Standard MIDI files can be imported. </p>
+<p>Standard MIDI files can be imported with the desktop version of FamiStudio. </p>
 <p>Notes, time signature and tempo changes will be imported. Only blank instruments, named after their GM instrument, will be created. Users should not expect the imported song to sound anything like the original. </p>
 <p>Moreover, since the NES can only play one note at a time for a given channel, any kind of polyphony is not supported. Users are responsible for properly processing their MIDI files before importing them. That being said, this can be a handy feature to bring notes from an old project in FamiStudio.</p>
 <p><img alt="" src="../images/ImportMIDI.png#center" /></p>
@@ -238,7 +238,7 @@
 <h2 id="famistudio-text">FamiStudio Text</h2>
 <p>The FamiStudio text format is support, please see the documentation above for the format specification.</p>
 <h2 id="nintendo-sound-format">Nintendo Sound Format</h2>
-<p>NSF (and NSFE) files can be imported in FamiStudio. This includes NSF with expansion audio. When opening and NSF file, you will be presented a dialog box.</p>
+<p>NSF (and NSFE) files can be imported in the desktop version of FamiStudio. This includes NSF with expansion audio. When opening and NSF file, you will be presented a dialog box.</p>
 <p><img alt="" src="../images/ImportNsf.png#center" /></p>
 <p>Most NSF file will not contain the names of songs so they will usually have placeholder names. Besides the song to import, are the most important settings :</p>
 <ul>
@@ -256,7 +256,8 @@
 <p>Only features that are supported by FamiStudio will be imported. Things like hardware sweeps &amp; advanced DPCM manipulations will all be ignored.</p>
 <h1 id="error-log">Error Log</h1>
 <p>When importing/exporting from/to specific format, an error log may appear providing a list of warnings/errors that occured during the process. Please pay attention to these as they may explain why your song sound differently than intended.</p>
-<p><img alt="" src="../images/ErrorLog.png#center" /></p></div>
+<p><img alt="" src="../images/ErrorLog.png#center" /></p>
+<p>The mobile version does not display these types of errors. So if you encounter a weird behavior, opening the file with the desktop version may help diagnose the issue.</p></div>
             </div>
         </div>
 

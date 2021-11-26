@@ -180,6 +180,19 @@
               <ul class="nav flex-column">
               </ul>
             </li>
+            <li class="nav-item" data-level="2"><a href="#mobile-configuration" class="nav-link">Mobile Configuration</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#configuration-file" class="nav-link">Configuration File</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#undocumented-settings" class="nav-link">Undocumented Settings</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
         </ul>
@@ -296,7 +309,38 @@
 <p>FFMpeg is a video encoder required to enable video export. You can download it from <a href="../ffmpeg/">here</a>. Once downloaded and installed somewhere on your computer, you will need to tell FamiStudio where it is.</p>
 <h2 id="qwerty-configuration">QWERTY Configuration</h2>
 <p><img alt="" src="../images/ConfigQWERTY.png#center" /></p>
-<p>This section allows remapping the keyboard keys for keyboard-piano input. This allows FamiStudio to support AZERTY, QWERTZ or any other international keyboard. Up to 2 keys can be assigned to a note.</p></div>
+<p>This section allows remapping the keyboard keys for keyboard-piano input. This allows FamiStudio to support AZERTY, QWERTZ or any other international keyboard. Up to 2 keys can be assigned to a note.</p>
+<h2 id="mobile-configuration">Mobile Configuration</h2>
+<p><img alt="" src="../images/ConfigMobile.png#center" /></p>
+<p>This section is only available on the Mobile version of FamiStudio.</p>
+<ul>
+<li><strong>Allow vibration</strong>: Toggle for all vibration effect in the app.</li>
+<li><strong>Double-tap to delete</strong>: Experimental option to delete pattern/notes with a double-tap.</li>
+</ul>
+<h1 id="configuration-file">Configuration File</h1>
+<p>All FamiStudio settings are saved in "FamiStudio.ini". The location of this file will vary depending on the operating system. </p>
+<ul>
+<li>On Windows it will be in <code>AppData\Local\FamiStudio</code>, unless you are using the portable version, in which case it will be in the root folder.</li>
+<li>On Linux it will be in <code>~/.config/FamiStudio</code></li>
+<li>On MacOS it will be in <code>~/Library/Application Support/FamiStudio</code></li>
+<li>On Android it is not user accessible.</li>
+</ul>
+<h2 id="undocumented-settings">Undocumented Settings</h2>
+<p>Almost all settings are configurable through the user interface. This section will contain some settings that can only be changed directly in the INI file.</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SeparateChannelsExportTndMode</td>
+<td>This define if the triangle-noise-DPCM volume interactions should be emulated when exporting to a WAV file using separate channels (1 WAV file per channel). Possible values are 0, 1 and 2. <br/>- 0 (default) will not emulate those at all<br/>- 1 will emulated them fully, which will give the correct triangle channel volume but will also make the three channels bleed into each other slightly.<br/>- 2 will allow the triangle/noise to be affected by the DPCM, but not the other way around. This will give the correct triangle volume, but will prevent bleeding into the DPCM channel.</td>
+</tr>
+</tbody>
+</table></div>
             </div>
         </div>
 

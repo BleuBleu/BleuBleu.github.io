@@ -21,6 +21,22 @@
 			<h1>FamiStudio NES Music Editor</h1>
 			<p>FamiStudio is very simple music editor for the Nintendo Entertainment System or Famicom. It is targeted at both chiptune artists and NES homebrewers.</p>
 
+			<h2>Fixes in 3.2.1</h2>
+			<ul>
+				<li>Added option to disable vibration (new "Mobile" section of Settings)</li>
+				<li>Added support for importing 8-bit and 24-bit WAV files for DPCM samples.</li>
+				<li>Added support for importing NSF2, if they dont use any of the advanced features.</li>
+				<li>Fixed FamiTracker text export not asking for a filename.</li>
+				<li>Fixed DPCM samples not playing if placing the seek bar exactly on their attack.</li>
+				<li>Fixed NSF export tempo issue when using grooves in specific situations.</li>
+				<li>Creating new effect values will respect snapping on mobile.</li>
+				<li>Drawing note attacks for force display channel to help readability.</li>
+				<li>Fixed an issue with release note that are beyond the visual duration of the note.</li>
+				<li>Correct emulation of Tri-Noise-DMC volumes when using stereo export (+hidden INI option to also do it for seperate channels)</li>
+				<li>Experimental "double-tap to delete patterns/note" option (off by default)</li>
+				<li>Minor UI tweaks (hit boxes of buttons, zoom levels, scroll bar issues, etc.).</li>
+			</ul>			
+
 			<h2>New features in 3.2.0</h2>
 			<ul>
 				<li>Multi-expansion support</li>
@@ -49,25 +65,24 @@
 					<td colspan="2"><center><h2>Download links</h2></center></td>
 				</tr>
 				<tr>
-					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/3.2.0/FamiStudio320-WinInstaller.zip"><img src="windows.png"></a></td>
+					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/3.2.1/FamiStudio320-WinInstaller.zip"><img src="windows.png"></a></td>
 					<td style="padding: 20px;" align="center">
-						<a href="https://github.com/BleuBleu/FamiStudio/releases/download/3.2.0/FamiStudio320-WinInstaller.zip"><center>Windows Installer</center></a><br>
-						<a href="https://github.com/BleuBleu/FamiStudio/releases/download/3.2.0/FamiStudio320-WinPortableExe.zip"><center>Windows Portable EXE</center></a>
+						<a href="https://github.com/BleuBleu/FamiStudio/releases/download/3.2.1/FamiStudio320-WinInstaller.zip"><center>Windows Installer</center></a><br>
+						<a href="https://github.com/BleuBleu/FamiStudio/releases/download/3.2.1/FamiStudio320-WinPortableExe.zip"><center>Windows Portable EXE</center></a>
 					</td>
 				</tr>
 				<tr>
-					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/3.2.0/FamiStudio320-MacOS.zip"><img src="macos.png"></a></td>
-					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/3.2.0/FamiStudio320-MacOS.zip"><center>MacOS Bundle</center></a></td>
+					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/3.2.1/FamiStudio320-MacOS.zip"><img src="macos.png"></a></td>
+					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/3.2.1/FamiStudio320-MacOS.zip"><center>MacOS Bundle</center></a></td>
 				</tr>
 				<tr>
-					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/3.2.0/FamiStudio320-LinuxAMD64.zip"><img src="linux.png"></a></td>
+					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/3.2.1/FamiStudio320-LinuxAMD64.zip"><img src="linux.png"></a></td>
 					<td style="padding: 20px;" align="center">
 						<a href="https://flathub.org/apps/details/org.famistudio.FamiStudio"><center>FlatHub</center></a><br>
-						<a href="https://github.com/BleuBleu/FamiStudio/releases/download/3.2.0/FamiStudio320-LinuxAMD64.zip"><center>Linux AMD64 Binaries</center></a>
+						<a href="https://github.com/BleuBleu/FamiStudio/releases/download/3.2.1/FamiStudio320-LinuxAMD64.zip"><center>Linux AMD64 Binaries</center></a>
 					</td>
 				</tr>
 				<tr>
-					<!-- TODO! Play store link! -->
 					<td style="padding: 20px;" align="center"><a href="https://play.google.com/store/apps/details?id=org.famistudio"><img src="android.png"></a></td>
 					<td style="padding: 20px;" align="center"><a href="https://play.google.com/store/apps/details?id=org.famistudio"><center>Play Store</center></a></td>
 				</tr>
