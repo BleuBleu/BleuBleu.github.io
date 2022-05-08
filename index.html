@@ -21,60 +21,25 @@
 			<h1>FamiStudio NES Music Editor</h1>
 			<p>FamiStudio is very simple music editor for the Nintendo Entertainment System or Famicom. It is targeted at both chiptune artists and NES homebrewers.</p>
 
-			<h2>Fixes in 3.2.3</h2>
+			<h2>New features in 3.3.0</h2>
 			<ul>
-				<li>Fixed OpenGL crash at startup when SDL2.dll is found</li>
-				<li>Fixed export to sound engine when using an audio expansion</li>
-				<li>Fixed release of wrong instrument being played when editing envelopes</li>
-				<li>Fixed FTM import of some noise channel notes</li>
-				<li>Clamping pitch values to the range supported by FamiStudio (-64...63) when importing Famitracker files </li>
-				<li>Added a new tutorial about snapping</li>
-				<li>Saving snap settings to INI file</li>
-			</ul>	
-
-			<h2>Fixes in 3.2.3</h2>
-			<ul>
-				<li>Fixed issue where some effect values could go beyond their intended range, and lead to crashes desktop.</li>
-				<li>Fixed FDS modulation on Mobile.</li>
-				<li>Fixed crash in MIDI import dialog when lots of channels are present (desktop only)</li>
-				<li>Potential CPU/GPU usage reduction on some computers (desktop only)</li>			
-			</ul>		
-
-			<h2>Fixes in 3.2.1</h2>
-			<ul>
-				<li>Added option to disable vibration (new "Mobile" section of Settings)</li>
-				<li>Added support for importing 8-bit and 24-bit WAV files for DPCM samples.</li>
-				<li>Added support for importing NSF2, if they dont use any of the advanced features.</li>
-				<li>Fixed FamiTracker text export not asking for a filename.</li>
-				<li>Fixed DPCM samples not playing if placing the seek bar exactly on their attack.</li>
-				<li>Fixed NSF export tempo issue when using grooves in specific situations.</li>
-				<li>Creating new effect values will respect snapping on mobile.</li>
-				<li>Drawing note attacks for force display channel to help readability.</li>
-				<li>Fixed an issue with release note that are beyond the visual duration of the note.</li>
-				<li>Correct emulation of Tri-Noise-DMC volumes when using stereo export (+hidden INI option to also do it for seperate channels)</li>
-				<li>Experimental "double-tap to delete patterns/note" option (off by default)</li>
-				<li>Minor UI tweaks (hit boxes of buttons, zoom levels, scroll bar issues, etc.).</li>
-			</ul>			
-
-			<h2>New features in 3.2.0</h2>
-			<ul>
-				<li>Multi-expansion support</li>
-				<li>Proper emulation of triangle/noise/DPCM volume interactions</li>
-				<li>Android app (free on Play Store)</li>
-				<li>Significant graphic optimizations, especially on lower-end machines or large projects.</li>
-				<li>Minor quality of life features</li>
-				<li>Minor cosmetic UI changes (icons, envelope editor, coloring piano with DPCM colors, etc.)</li>
-			</ul>
-
-			<h2>Breaking/behavior changes:</h2>
-			<ul>
-				<li>Snapping precision is now expressed in beats. So with the default settings, 1 means a quarter note.</li>
-				<li>Channel volumes have been slightly adjusted to match the NES hardware more closely.</li>
+				<li>EPSM support</li>
+				<li>Register viewer (desktop version only)</li>
+				<li>Delta Counter (Zxx) effect support</li>
+				<li>Ability to override initial DMC value for each sample assignment
+				<li>VGM export (Thanks Perkka!)</li>
+				<li>Bamboo Tracker instruments import (desktop version only) (Thanks Perkka!)</li>
+				<li>Minor cosmetic changes (ADSR diagrams, tabs in instrument editor, etc.)</li>
+				<li>CTRL+A selects all patterns/notes in sequencer/piano roll on desktop</li>
+				<li>Additional selection options on mobile (select note/pattern/all)</li>
+				<li>Option not to clamp periods/notes to make the app behave more like the NSF driver</li>
+				<li>Experimental file association on MacOS (Thanks beetrootpaul!)</li>
+				<li>Tons of small bugfixes (N163 tuning, crashes, etc.)</li>
 			</ul>
 
 			<h2>Latest release trailer</h2>
 			<div style="position:relative;margin-left: auto;margin-right: auto;width:80%;height:0;padding-bottom:45%;">
-				<iframe style="position:absolute;top:0;left:0;width:100%;height:100%" src="https://www.youtube.com/embed/vXfvDSRZYco" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<iframe style="position:absolute;top:0;left:0;width:100%;height:100%" src="https://www.youtube.com/embed/n1sOtT-s65A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			</div>
 
 			<h1>Download</h1>
@@ -84,21 +49,21 @@
 					<td colspan="2"><center><h2>Download links</h2></center></td>
 				</tr>
 				<tr>
-					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/3.2.3/FamiStudio323-WinInstaller.zip"><img src="windows.png"></a></td>
+					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/3.3.0/FamiStudio330-WinInstaller.zip"><img src="windows.png"></a></td>
 					<td style="padding: 20px;" align="center">
-						<a href="https://github.com/BleuBleu/FamiStudio/releases/download/3.2.3/FamiStudio323-WinInstaller.zip"><center>Windows Installer</center></a><br>
-						<a href="https://github.com/BleuBleu/FamiStudio/releases/download/3.2.3/FamiStudio323-WinPortableExe.zip"><center>Windows Portable EXE</center></a>
+						<a href="https://github.com/BleuBleu/FamiStudio/releases/download/3.3.0/FamiStudio330-WinInstaller.zip"><center>Windows Installer</center></a><br>
+						<a href="https://github.com/BleuBleu/FamiStudio/releases/download/3.3.0/FamiStudio330-WinPortableExe.zip"><center>Windows Portable EXE</center></a>
 					</td>
 				</tr>
 				<tr>
-					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/3.2.3/FamiStudio323-MacOS.zip"><img src="macos.png"></a></td>
-					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/3.2.3/FamiStudio323-MacOS.zip"><center>MacOS Bundle</center></a></td>
+					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/3.3.0/FamiStudio330-MacOS.zip"><img src="macos.png"></a></td>
+					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/3.3.0/FamiStudio330-MacOS.zip"><center>MacOS Bundle</center></a></td>
 				</tr>
 				<tr>
-					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/3.2.3/FamiStudio323-LinuxAMD64.zip"><img src="linux.png"></a></td>
+					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/3.3.0/FamiStudio330-LinuxAMD64.zip"><img src="linux.png"></a></td>
 					<td style="padding: 20px;" align="center">
 						<a href="https://flathub.org/apps/details/org.famistudio.FamiStudio"><center>FlatHub</center></a><br>
-						<a href="https://github.com/BleuBleu/FamiStudio/releases/download/3.2.3/FamiStudio323-LinuxAMD64.zip"><center>Linux AMD64 Binaries</center></a>
+						<a href="https://github.com/BleuBleu/FamiStudio/releases/download/3.3.0/FamiStudio330-LinuxAMD64.zip"><center>Linux AMD64 Binaries</center></a>
 					</td>
 				</tr>
 				<tr>
@@ -106,8 +71,8 @@
 					<td style="padding: 20px;" align="center"><a href="https://play.google.com/store/apps/details?id=org.famistudio"><center>Play Store</center></a></td>
 				</tr>
 				<tr>
-					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/3.2.0/FamiStudio320-SoundEngine.zip"><img src="6502.png"></a></td>
-					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/3.2.0/FamiStudio320-SoundEngine.zip"><center>NES Sound Engine<br>(CA65, NESASM, ASM6)</center></a></td>
+					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/3.3.0/FamiStudio330-SoundEngine.zip"><img src="6502.png"></a></td>
+					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/3.3.0/FamiStudio330-SoundEngine.zip"><center>NES Sound Engine<br>(CA65, NESASM, ASM6)</center></a></td>
 				</tr>
 			</table>
 
