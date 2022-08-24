@@ -21,32 +21,39 @@
 			<h1>FamiStudio NES Music Editor</h1>
 			<p>FamiStudio is very simple music editor for the Nintendo Entertainment System or Famicom. It is targeted at both chiptune artists and NES homebrewers.</p>
 
-			<h2>Changes/fixes in 3.3.1 (Latest hotfix release)</h2>
+			<h2>New features in 4.0.0 (Latest major release)</h2>
 			<ul>
-				<li>Fixed crash when exporting (or cancelling export) to audio or video</li>
-				<li>Fixed crash when undo-ing certain manipulations in the Sequencer</li>
-				<li>Allowing register viewer on Mobile (off by default)</li>
-			</ul>
-
-			<h2>New features in 3.3.0 (Latest major release)</h2>
-			<ul>
-				<li>EPSM support</li>
-				<li>Register viewer (desktop version only)</li>
-				<li>Delta Counter (Zxx) effect support</li>
-				<li>Ability to override initial DMC value for each sample assignment
-				<li>VGM export (Thanks Perkka!)</li>
-				<li>Bamboo Tracker instruments import (desktop version only) (Thanks Perkka!)</li>
-				<li>Minor cosmetic changes (ADSR diagrams, tabs in instrument editor, etc.)</li>
-				<li>CTRL+A selects all patterns/notes in sequencer/piano roll on desktop</li>
-				<li>Additional selection options on mobile (select note/pattern/all)</li>
-				<li>Option not to clamp periods/notes to make the app behave more like the NSF driver</li>
-				<li>Experimental file association on MacOS (Thanks beetrootpaul!)</li>
-				<li>Tons of small bugfixes (N163 tuning, crashes, etc.)</li>
+				<li>Revamped desktop version :</li>
+				<ul>
+					<li>Redesigned controls, more similar to mobile version : Context menus, Gizmos, etc.</li>
+					<li>Based on GLFW using custom drawn widgets, consistent across Win/MacOS/Linux</li>
+					<li>Getting rid of all dependencies to OpenTK, WinForms, GTK# and System.Drawing in preparation to eventual migration to modern .NET.</li>
+					<li>Animated GIFs for intro tutorial</li>
+				</ul>
+				<li>More control over sequencer height and ability to hide unused channels on desktop</li>
+				<li>Support to multiple audio expansions with EPSM</li>
+				<li>Support for multiple waveforms for N163</li>
+				<li>Support for single audio expansions for ROM export </li>
+				<li>Wave resampling for N163/FDS waveforms, import WAV files and adjust period & offset.</li>
+				<li>Basic NSFe export support, only track names and durations for now.</li>
+				<li>Improved oscilloscope stability:</li>
+				<ul>
+					<li>Use of emulation-generated triggers when rendering oscilloscope in exported video or in toolbar when previewing instruments.</li>
+					<li>Improved trigger detection for toolbar oscilloscope when playing a song (using "peak speed trigger" algorithm).</li>
+				</ul>	
+				<li>Audio delay effect when exporting video or audio.</li>
+				<li>Snapping improvements, most notably:</li>
+				<ul>
+					<li>**Alt+1**, **Alt+2**, **Alt+3** and **Alt+4** quickly changes between common snapping values</li>
+					<li>Hold **Alt** anytime when resizing or moving notes to temporarily disable snapping</li>
+					<li>Context menu to set snapping to a specific note duration</li>
+					<li>Option to snap effect values</li>
+				</ul>	
 			</ul>
 
 			<h2>Latest release trailer</h2>
 			<div style="position:relative;margin-left: auto;margin-right: auto;width:80%;height:0;padding-bottom:45%;">
-				<iframe style="position:absolute;top:0;left:0;width:100%;height:100%" src="https://www.youtube.com/embed/n1sOtT-s65A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<iframe style="position:absolute;top:0;left:0;width:100%;height:100%" src="https://www.youtube.com/embed/pgJYHGu8yio" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			</div>
 
 			<h1>Download</h1>
@@ -56,21 +63,21 @@
 					<td colspan="2"><center><h2>Download links</h2></center></td>
 				</tr>
 				<tr>
-					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/3.3.1/FamiStudio331-WinInstaller.zip"><img src="windows.png"></a></td>
+					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.0.0/FamiStudio400-WinInstaller.zip"><img src="windows.png"></a></td>
 					<td style="padding: 20px;" align="center">
-						<a href="https://github.com/BleuBleu/FamiStudio/releases/download/3.3.1/FamiStudio331-WinInstaller.zip"><center>Windows Installer</center></a><br>
-						<a href="https://github.com/BleuBleu/FamiStudio/releases/download/3.3.1/FamiStudio331-WinPortableExe.zip"><center>Windows Portable EXE</center></a>
+						<a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.0.0/FamiStudio400-WinInstaller.zip"><center>Windows Installer</center></a><br>
+						<a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.0.0/FamiStudio400-WinPortableExe.zip"><center>Windows Portable EXE</center></a>
 					</td>
 				</tr>
 				<tr>
-					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/3.3.1/FamiStudio331-MacOS.zip"><img src="macos.png"></a></td>
-					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/3.3.1/FamiStudio331-MacOS.zip"><center>MacOS Bundle</center></a></td>
+					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.0.0/FamiStudio400-MacOS.zip"><img src="macos.png"></a></td>
+					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.0.0/FamiStudio400-MacOS.zip"><center>MacOS Bundle</center></a></td>
 				</tr>
 				<tr>
-					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/3.3.1/FamiStudio331-LinuxAMD64.zip"><img src="linux.png"></a></td>
+					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.0.0/FamiStudio400-LinuxAMD64.zip"><img src="linux.png"></a></td>
 					<td style="padding: 20px;" align="center">
 						<a href="https://flathub.org/apps/details/org.famistudio.FamiStudio"><center>FlatHub</center></a><br>
-						<a href="https://github.com/BleuBleu/FamiStudio/releases/download/3.3.1/FamiStudio331-LinuxAMD64.zip"><center>Linux AMD64 Binaries</center></a>
+						<a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.0.0/FamiStudio400-LinuxAMD64.zip"><center>Linux AMD64 Binaries</center></a>
 					</td>
 				</tr>
 				<tr>
@@ -78,8 +85,8 @@
 					<td style="padding: 20px;" align="center"><a href="https://play.google.com/store/apps/details?id=org.famistudio"><center>Play Store</center></a></td>
 				</tr>
 				<tr>
-					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/3.3.0/FamiStudio330-SoundEngine.zip"><img src="6502.png"></a></td>
-					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/3.3.0/FamiStudio330-SoundEngine.zip"><center>NES Sound Engine<br>(CA65, NESASM, ASM6)</center></a></td>
+					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.0.0/FamiStudio400-SoundEngine.zip"><img src="6502.png"></a></td>
+					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.0.0/FamiStudio400-SoundEngine.zip"><center>NES Sound Engine<br>(CA65, NESASM, ASM6)</center></a></td>
 				</tr>
 			</table>
 
@@ -96,10 +103,10 @@
 
 			<h1>Getting Started on Desktop</h1>
 
-			<p>Here is a 1h video tutorial that will show you how to create a basic song from scratch.</p>
+			<p>Here is a 20min video tutorial that will show you how to create a basic song from scratch.</p>
 
 			<div style="position:relative;margin-left: auto;margin-right: auto;width:80%;height:0;padding-bottom:45%;">
-				<iframe style="position:absolute;top:0;left:0;width:100%;height:100%" src="https://www.youtube.com/embed/UyECgqFbZPQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<iframe style="position:absolute;top:0;left:0;width:100%;height:100%" src="https://www.youtube.com/embed/46jjM9c36ZE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			</div>
 
 			<h1>Getting Started on Mobile</h1>

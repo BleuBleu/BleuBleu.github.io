@@ -167,22 +167,30 @@
 <h2 id="libraries">Libraries</h2>
 <p>FamiStudio uses some external libraries for sound emulation, import and export to various formats. Many thanks to the developers working on these.</p>
 <h3 id="nes_snd_emu">Nes_Snd_Emu</h3>
-<p>Created by <a href="http://www.slack.net/~ant/">Blargg</a>. It also includes improvements they made later on in Game_Music_Emu. Was also modified by me to add a few more expansions.</p>
+<p>Great little NES sound emulation library created by <a href="http://www.slack.net/~ant/">Blargg</a>. It also includes improvements they made later on in Game_Music_Emu. Was also modified by me to add a few more expansions.</p>
 <h3 id="notsofatso">NotSoFatso</h3>
-<p>Created by <a href="http://www.vgmpf.com/Wiki/index.php/Not_So,_Fatso!">Disch</a>. Was stripped down to only keep the audio emulation core and is used for the NSF import.</p>
-<h3 id="emu2149-and-emu2413">emu2149 and emu2413</h3>
-<p>Created by by <a href="https://github.com/okaxaki">Mitsutaka Okazaki</a>. emu2149 is currently unused by the code.</p>
+<p>Originally a Winamp plugin to play NSF created by <a href="http://www.vgmpf.com/Wiki/index.php/Not_So,_Fatso!">Disch</a>, it was stripped down to only keep the audio emulation core and is used for the NSF import.</p>
+<h3 id="emu2149">emu2149</h3>
+<p>Small library that emulates the YM2149 chip (aka PSG), created by by <a href="https://github.com/okaxaki">Mitsutaka Okazaki</a>. It is used for the EPSM emulation.</p>
+<h3 id="emu2413">emu2413</h3>
+<p>Very similar to emu2149 and also created by <a href="https://github.com/okaxaki">Mitsutaka Okazaki</a>, but used for the VRC7 emulation. </p>
+<h3 id="nuked-opn2">Nuked-OPN2</h3>
+<p><a href="https://github.com/nukeykt/Nuked-OPN2">OPN2</a> is a high-accuracy YM3438 emulator. FamiStudio uses a slightly modified version of this library from <a href="https://github.com/BambooTracker/BambooTracker/tree/master/BambooTracker/chip/nuked">BambooTracker</a> for EPSM emulation.</p>
 <h3 id="shinemp3">ShineMp3</h3>
 <p>Created by Gabriel Bouvigne, Pete Everett, Patrick Roberts and others. Used for the MP3 export.</p>
 <h3 id="vorbis">Vorbis</h3>
 <p>Created by the <a href="https://xiph.org/">Xiph.Org Foundation</a>. Used for the OGG/Vorbis export.</p>
+<h3 id="gifdec">GifDec</h3>
+<p><a href="https://github.com/lecram/gifdec">GifDec</a> is a tiny little C library to read animated GIF files. It does one thing and does it very well. It is used to display the tutorials on all platforms.</p>
+<h3 id="glfw">GLFW</h3>
+<p><a href="https://www.glfw.org/">GLFW</a> is a very simple windowing &amp; input management system for OpenGL. It is used by all 3 platforms on Desktop for the main FamiStudio window. The C# bindings are provided by <a href="https://github.com/smack0007/GLFWDotNet">GLFWDotNet</a>.</p>
 <h2 id="demo-songs">Demo Songs</h2>
-<p>A few demo songs are also provided with FamiStudio. Unless mentionned, the demo songs are my re-creations, done by reverse-engineering the NSF.</p>
+<p>A few demo songs are also provided with FamiStudio. Unless mentioned, the demo songs are my re-creations, done by reverse-engineering the NSF.</p>
 <ul>
 <li>Another Winter - Anamanagughi (cover by <a href='https://www.youtube.com/c/How2Bboss'>How2Bboss</a>. Thanks!!!)</li>
 <li>Nice - Full Soundtrack (by <a href='https://www.youtube.com/c/How2Bboss'>How2Bboss</a>. Thanks!!!)</li>
 <li>Dedrecil - Full Soundtrack (by <a href='https://www.youtube.com/c/How2Bboss'>How2Bboss</a>. Thanks!!!)</li>
-<li>Layla : The Iris Missions - Iris (by Supper, my approximate recreation)</li>
+<li>Layla : The Iris Missions - Iris (by Supper)</li>
 <li>Tower of Heaven - Indignant Divinity (Flashygoodness, cover by <a href='https://www.youtube.com/watch?v=0qV4dSBOH5s'>Danooct1</a>. Thanks!!!)</li>
 <li>Green Hill Zone Theme - Sonic (cover by <a href='https://www.youtube.com/c/How2Bboss'>How2Bboss</a>. Thanks!!!)</li>
 <li>Mega Man 2 - Stage Select &amp; Dr. Wily's Castle</li>

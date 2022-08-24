@@ -146,44 +146,48 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#exporting-songs" class="nav-link">Exporting Songs</a>
-              <ul class="nav flex-column">
             <li class="nav-item" data-level="2"><a href="#wave-mp3-ogg-vorbis-file" class="nav-link">Wave / MP3 / OGG Vorbis File</a>
               <ul class="nav flex-column">
               </ul>
             </li>
+            
             <li class="nav-item" data-level="2"><a href="#video-piano-roll-and-oscilloscope" class="nav-link">Video (Piano Roll and Oscilloscope)</a>
               <ul class="nav flex-column">
               </ul>
             </li>
+            
             <li class="nav-item" data-level="2"><a href="#nintendo-sound-format-nsf" class="nav-link">Nintendo Sound Format (NSF)</a>
               <ul class="nav flex-column">
               </ul>
             </li>
+            
             <li class="nav-item" data-level="2"><a href="#rom-fds-disk" class="nav-link">ROM / FDS Disk</a>
               <ul class="nav flex-column">
               </ul>
             </li>
+            
             <li class="nav-item" data-level="2"><a href="#midi" class="nav-link">MIDI</a>
               <ul class="nav flex-column">
               </ul>
             </li>
+            
             <li class="nav-item" data-level="2"><a href="#famitracker-text" class="nav-link">FamiTracker Text</a>
               <ul class="nav flex-column">
               </ul>
             </li>
+            
             <li class="nav-item" data-level="2"><a href="#famistudio-text" class="nav-link">FamiStudio Text</a>
               <ul class="nav flex-column">
               </ul>
             </li>
+            
             <li class="nav-item" data-level="2"><a href="#famistudio-famitone2-music" class="nav-link">FamiStudio / FamiTone2 Music</a>
               <ul class="nav flex-column">
               </ul>
             </li>
+            
             <li class="nav-item" data-level="2"><a href="#famistudio-famitone2-sfx" class="nav-link">FamiStudio / FamiTone2 SFX</a>
               <ul class="nav flex-column">
-              </ul>
-            </li>
               </ul>
             </li>
         </ul>
@@ -191,22 +195,23 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="exporting-songs">Exporting Songs</h1>
+<p>6# Exporting Songs</p>
 <p>The export dialog is access through the main toolbar or with CTRL+E on the keyboard. To quickly repeat a previous export (same format and output file), you can right click on the export icon in the toolbar or press CTRL+SHIFT+E.</p>
 <h2 id="wave-mp3-ogg-vorbis-file">Wave / MP3 / OGG Vorbis File</h2>
 <p>Only a single song can be exported at a time. You can choose the sample rate (and bitrate in case of MP3/OGG). It is recommended to stick to 44.1KHz if you want the sound to be exactly as you hear it in FamiStudio. Lower sample rate might lack high frequencies.</p>
 <p>The song can be exported in one of two modes:</p>
 <ul>
-<li>Play N Times: Will play the song a specified number of times.</li>
-<li>Duration : Will loop though the song for the specified number of seconds.</li>
+<li><strong>Play N Times</strong>: Will play the song a specified number of times.</li>
+<li><strong>Duration</strong> : Will loop though the song for the specified number of seconds.</li>
 </ul>
 <p>Other options:</p>
 <ul>
-<li><strong>Separate channel files</strong> : Will output each channel in a seperate audio file.</li>
-<li><strong>Seperate intro file</strong> : Will output the part before the loop point (intro) in a seperate file. </li>
+<li><strong>Delay (ms)</strong> : Optional audio delay effect that will include an echo of the audio at the specified delay. Highly recommanded to use with Stereo and heavy L/R panning (ex: set channels entirely on one side) as the echo effect will be on the opposite side. </li>
+<li><strong>Separate channel files</strong> : Will output each channel in a separate audio file.</li>
+<li><strong>Separate intro file</strong> : Will output the part before the loop point (intro) in a separate file. </li>
 <li><strong>Stereo</strong> : Will output a stereo file and will allow setting the panning % in the channel list.</li>
 </ul>
-<p>Note that the quality of the MP3 encoding may not going to be as good as full fledge mp3 encoder such as LAME, but should be good enough for sending quick previews to people.</p>
+<p>Note that the quality of the MP3 encoding may not going to be as good as full fledged MP3 encoder such as LAME, but should be good enough for sending quick previews to people.</p>
 <p><img alt="" src="../images/ExportWav.png#center" /></p>
 <p>Channels can optionally be muted. This can be used, for example, to create stereo mix using and external application.</p>
 <p>OGG Vorbis is currently only available on the desktop version of FamiStudio.</p>
@@ -219,6 +224,7 @@
 <p><img alt="" src="../images/ExportVideo.png#center" /></p>
 <p>Besides the audio/video quality settings, there are a few options to control the look and feel of the video:</p>
 <ul>
+<li><strong>Audio Delay (ms)</strong> : Optional audio delay effect that will include an echo of the audio at the specified delay. Highly recommanded to use with Stereo and heavy L/R panning (ex: set channels entirely on one side) as the echo effect will be on the opposite side. </li>
 <li><strong>Loop count</strong> : Number of times to repeat the looping part of the song.</li>
 <li><strong>Stereo</strong> : Same as WAV/MP3/OGG.</li>
 <li><strong>Channels</strong> : It is recommended to not export channels that do not have any notes, this will leave more space to the other channels.</li>
@@ -229,18 +235,34 @@
 </ul>
 <p>Options specific to oscilloscope video:</p>
 <ul>
-<li><strong>Oscilloscope Colums</strong> : Number of columns to split the channels into.</li>
+<li><strong>Oscilloscope Columns</strong> : Number of columns to split the channels into.</li>
 <li><strong>Oscilloscope Thickness</strong> : Thickness of the oscilloscope line, in pixels.</li>
 <li><strong>Oscilloscope Color</strong> : Can color the oscilloscope using the colors of the instruments or samples. Otherwise will use a neutral light grey. </li>
 </ul>
 <h2 id="nintendo-sound-format-nsf">Nintendo Sound Format (NSF)</h2>
 <p>Every feature supported by FamiStudio can be used in an NSF. </p>
 <p><img alt="" src="../images/ExportNsf.png#center" /></p>
-<p>Song that do not use any audio expansion can export as PAL and Dual mode, where as only NTSC is available for expansion audio.</p>
+<p>Options:</p>
+<ul>
+<li><strong>Format</strong> : You can choose between NSF/NSFe. NSF is more widely support, NSFe adds support for per-track names and durations.</li>
+<li><strong>Mode</strong> : Song that do not use any audio expansion can export as PAL and Dual mode, where as only NTSC is available for expansion audio.</li>
+</ul>
 <p>The maximum song size is approximately 28KB minus the size of the DPCM samples used. Note that this size are not printed anywhere and are not related to the size of the *.fms file. Best to simply try and see if it works.</p>
 <h2 id="rom-fds-disk">ROM / FDS Disk</h2>
 <p>Song(s) can be exported to a NES ROM file or a Famicom Disk System disk to play if back on an emulator or on actual hardware. </p>
-<p>For ROM export uses the MMC3 mapper which is supported by most emulators and the <a href="https://krikzz.com/store/home/31-everdrive-n8-nes.html">Everdrive N8</a>. You can then copy the ROM to an SD card and listen to it on actual hardware. Note that expansion audio is not supported with this mapper.</p>
+<p><img alt="" src="../images/ExportRom.png#center" /></p>
+<p>The exported ROMs can run on actual hardware using devices such as the <a href="https://krikzz.com/store/home/31-everdrive-n8-nes.html">Everdrive N8</a>.</p>
+<p>Here are the mappers used for each audio expansions:</p>
+<ul>
+<li><strong>None</strong> : MMC3 - iNES Mapper 004 </li>
+<li><strong>VRC6</strong> : VRC6a - iNES Mapper 024</li>
+<li><strong>VRC7</strong> : VRC7 - iNES Mapper 085 </li>
+<li><strong>MMC5</strong> : MMC5 - iNES Mapper 005</li>
+<li><strong>N163</strong> : N163 - iNES Mapper 019</li>
+<li><strong>S5B</strong> : FME-7 - iNES Mapper 069</li>
+<li><strong>EPSM</strong> : MMC3 - iNES Mapper 004 </li>
+</ul>
+<p>Note that projects using multiple audio expansions cannot be exported to ROM/FDS.</p>
 <p><img alt="" src="../images/Rom.png#center" /></p>
 <p>The user interface is very simple, pressing left/right on the D-PAD will change the current track. Track/song names will be truncated to 28 characters. For something a lot more customizable, check out <a href="https://github.com/bbbradsmith/eznsf">EZNSF</a> by Brad Smith.</p>
 <p>For FDS export, the process is very similar and will output a FDS disk image instead of a ROM. It has been tested on actual hardware using the <a href="https://3dscapture.com/fdsstick/">FDSStick</a>. Songs are loaded on demand from the disk, so switching tracks will be a bit slower on FDS than on a ROM. </p>
@@ -386,7 +408,7 @@
 </tbody>
 </table>
 <h2 id="famistudio-text">FamiStudio Text</h2>
-<p>FamiStudio text format is a textual representation of the of the binary FamiStudio format. It is designed to favor interopability with other softwares, tools and sound engines. Unlike .FMS files, this format is not forward or backward compatible. FamiStudio can only read FamiStudio text files generated with the same major and minor version (ex: 3.0.x).</p>
+<p>FamiStudio text format is a textual representation of the of the binary FamiStudio format. It is designed to favor interoperability with other apps, tools and sound engines. Unlike .FMS files, this format is not forward or backward compatible. FamiStudio can only read FamiStudio text files generated with the same major and minor version (ex: 3.0.x).</p>
 <p><img alt="" src="../images/ExportFamiStudioText.png#center" /></p>
 <p>Exporting or importing using this format mostly lossless. These are the features that will not be preserved:</p>
 <ul>
@@ -912,7 +934,7 @@
 </tbody>
 </table>
 <h2 id="famistudio-famitone2-music">FamiStudio / FamiTone2 Music</h2>
-<p>Exporting music to the <a href="../soundengine/">FamiStudio Sound Engine</a> or <a href="https://shiru.untergrund.net/code.shtml">FamiTone2</a> work very similarely. It will generate assembly code that can be included in your homebrew project and played using the FamiTone2 sound engine. </p>
+<p>Exporting music to the <a href="../soundengine/">FamiStudio Sound Engine</a> or <a href="https://shiru.untergrund.net/code.shtml">FamiTone2</a> work very similarly. It will generate assembly code that can be included in your homebrew project and played using the FamiTone2 sound engine. </p>
 <p><img alt="" src="../images/ExportFamiTone2.png#center" /></p>
 <p>When exporting file in separate files, you can specific a name format template for each song. The {project} and {song} macros are available.</p>
 <p>When exporting as a single file (non-separate), you will be prompt to name the output assembly file. If any of the exported songs uses DPCM samples, a .dmc file of the same name will also be outputted.</p>

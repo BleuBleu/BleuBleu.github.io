@@ -41,6 +41,9 @@ img[src*="#center"] {
     display: block;
     margin: 0 auto;
 }
+img[src*="#grey"] {
+    filter: brightness(70%)
+}
 th {
     text-align: center;
 }
@@ -52,3 +55,8 @@ th {
 .col-md-3 {
     max-width:30%;
 }
+blockquote {              
+  background-color: rgb(25,28,31);
+  font-style: italic;     
+  padding: 12px 12px 1px 12px;
+}      

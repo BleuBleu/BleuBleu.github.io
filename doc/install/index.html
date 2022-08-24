@@ -188,24 +188,24 @@
 <p><img alt="" src="../images/SmartScreen2.png#center" /></p>
 <h2 id="macos">MacOS</h2>
 <p>On MacOS, you will need to install <a href="https://www.mono-project.com/download/stable/#download-mac">Mono</a>.</p>
-<p>GateKeeper can be quite agressive when first running the application. At first it will look like you simply cannot run it and it will give you the option to throw FamiStudio in the recycling bin.</p>
+<p>GateKeeper can be quite aggressive when first running the application. At first it will look like you simply cannot run it and it will give you the option to throw FamiStudio in the recycling bin.</p>
 <p><img alt="" src="../images/GateKeeper1.png#center" /></p>
 <p>To bypass this warning, open the "Security and Privacy" settings and look for the warning saying that FamiStudio was blocked. </p>
 <p><img alt="" src="../images/GateKeeper2.png#center" /></p>
 <p>Click "Open Anyway" and then you will have the option to launch it.</p>
 <p><img alt="" src="../images/GateKeeper3.png#center" /></p>
 <h2 id="linux">Linux</h2>
-<p>The Linux version should work on most x64 ditros. But given the very non-stardard nature of the OS, your mileage may vary.</p>
-<p>Please install the following dependencies before trying ot run the Linux version.</p>
+<p>The Linux version should work on most x64 ditros. But given the very non-standard nature of the OS, your mileage may vary.</p>
+<p>Please install the following dependencies before trying to run the Linux version.</p>
 <ol>
-<li>Install <a href="https://www.mono-project.com/download/stable/#download-lin">Mono</a></li>
-<li>Install gtk-sharp2, this is usually by typing this, but this might vary depending on your distro :<pre><code>sudo apt-get install gtk-sharp2
-</code></pre>
+<li>
+<p>Install <a href="https://www.mono-project.com/download/stable/#download-lin">Mono</a></p>
+</li>
+<li>
+<p>Then simply run:</p>
+<p>mono FamiStudio.exe</p>
 </li>
 </ol>
-<p>Then to run provided amd64 (basically any x64 processor), simply run:</p>
-<pre><code>mono FamiStudio.exe
-</code></pre>
 <p>If you run a very old version of Linux or if you are running an exotic architecture, you may have missing dependencies. If this is the case, you may have to compile some of the libraries. This is a rather manual process. Please follow the build steps on <a href="https://github.com/BleuBleu/FamiStudio">GitHub</a>. </p></div>
             </div>
         </div>

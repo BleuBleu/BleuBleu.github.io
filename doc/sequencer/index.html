@@ -204,57 +204,55 @@
                     <div class="col-md-9" role="main">
 
 <h1 id="editing-patterns">Editing Patterns</h1>
-<p>The Sequencer is where you decide which pattern plays when. A pattern is a small portion of a song (usually of fixed length) that is likely to be repeated. </p>
+<p>The Sequencer is where you decide which pattern plays when. A pattern is a small portion of a song, usually of fixed length, that is likely to be repeated. </p>
 <p>Patterns are laid out on one of the five channels that NES support (more if you have expansion audio enabled).</p>
 <p><img alt="" src="../images/Sequencer.png#center" /></p>
 <h2 id="seeking">Seeking</h2>
 <p>Clicking in the timeline (header) of the sequencer will move the play position. You can also drag the seek back to move it more accurately.</p>
 <h2 id="changing-the-active-channel">Changing the active channel</h2>
-<p>Clicking on a channel will make it the active one. Alternatively, you can press the keyboard key <strong>1...5</strong> (more if using expansion) to quickly change the active channel.</p>
+<p>Clicking on a channel will make it the active one. Alternatively, you can press the keyboard key <strong>F1...F5</strong> (more if using expansion) to quickly change the active channel.</p>
 <h2 id="muting-soloing-channels">Muting &amp; soloing channels</h2>
-<p>Left-clicking on the icon of a channel (Square, triangle, noise, DPCM) will toggle mute. Right-clicking will toggle solo. </p>
+<p><strong>Clicking</strong> on the icon of a channel (Square, triangle, noise, DPCM) will toggle mute. <strong>Double-clicking</strong> will toggle solo. Alternatively, you can <strong>right-click</strong> on the channel name to get a context menu that will offer you these options.</p>
 <p>On mobile, this is done by long pressing on a channel name, either here in the sequencer, or in the Quick Access Bar.</p>
 <h2 id="force-display-channel">Force display channel</h2>
-<p>Clicking the tiny square icon next to the channel name will force display it in the piano roll.  Alternatively, you can press the keyboard key <strong>Ctrl + F1...F5</strong> (more if using expansion).</p>
+<p>Clicking the tiny eye icon next to the channel name will force display it in the piano roll.  Alternatively, you can press the keyboard key <strong>Ctrl + F1...F5</strong> (more if using expansion). You can force display all channels at once by <strong>double-clicking</strong> on the eye icon.</p>
 <p><img alt="" src="../images/ForceDisplayButton.png#center" /></p>
 <p>Channels that are force displayed and are not the current channel will appear dimmed in the piano roll. This is useful when harmonizing between multiple channels, or editing drum patterns.</p>
 <p><img alt="" src="../images/ForceDisplayPianoRoll.png#center" /></p>
-<p>This can also achieved with the keyboard by pressing Ctrl + F1...F5 (the number of the channel).</p>
 <p>On mobile, this is done by long pressing on a channel name, either here in the sequencer, or in the Quick Access Bar.</p>
 <h2 id="adding-removing-patterns">Adding &amp; removing patterns</h2>
-<p>You can add a new pattern by left-clicking on an empty space. Right-clicking deletes.</p>
+<p>You can add a new pattern by <strong>left-clicking</strong> on an empty space. <strong>Double-clicking</strong> on a pattern deletes it.</p>
 <h2 id="editing-patterns_1">Editing patterns</h2>
-<p>Clicking a pattern selects it and opens the piano roll for the current channel at the location of the pattern. Double-clicking a pattern allows renaming and changing its color (pattern names need to be unique per channel).</p>
+<p>Clicking a pattern selects it and opens the piano roll for the current channel at the location of the pattern. </p>
+<p><strong>Right-clicking</strong> a pattern (or long pressing on mobile) will reveal a context menu with various options. Selecting "Pattern Properties..." allows renaming and changing its color (pattern names need to be unique per channel).</p>
 <p><img alt="" src="../images/EditPattern.png#center" /></p>
-<p>On mobile, this is achieved by long pressing on a pattern and selecting "Pattern Properties...".</p>
 <h2 id="selecting-patterns">Selecting patterns</h2>
-<p>You can select multiple patterns by right-cliking and dragging in the header bar of the Sequencer or in an empty space in the sequencer. To un-select everything, simply press Esc. When multiple patterns are selected, only the color can be edited.</p>
-<p><img alt="" src="../images/SelectPatternsColumn.gif#center" /></p>
-<p>You can select multiple patterns in a rectangular grid by holding SHIFT and right clicking to create a selection.</p>
-<p><img alt="" src="../images/SelectPatternsRect.gif#center" /></p>
+<p>You can select entire columns of patterns by <strong>right-clicking and dragging</strong> from the header bar. You can do a rectangle selection <strong>right-clicking and dragging</strong> from any pattern location in the sequencer.</p>
+<p>To un-select everything, simply press <strong>Esc</strong>. When multiple patterns are selected, only the color can be edited in the pattern properties.</p>
+<p><img alt="" src="../images/SelectPatterns.gif#center" /></p>
 <p>On mobile, you can select full columns of patterns by swiping from the header. You can do rectangular selection by first selecting a single pattern, then long pressing somewhere else and selecting "Expand Selection".</p>
 <p><img alt="" src="../images/MobileSelectPatterns.gif#center" /></p>
 <h2 id="moving-copying-patterns">Moving &amp; copying patterns</h2>
-<p>When one or multiple patterns are selected, dragging them will move them in the timeline. While dragging, holding CTRL will create another instance of the pattern(s). An instance is a copy that is linked to the original pattern, it will have the same name and color. Modifying one instance will modify all of them. This will be shown by a "link" icon when dragging.</p>
+<p>When one or multiple patterns are selected, dragging them will move them in the timeline. While dragging, holding <strong>Ctrl</strong> will create another instance of the pattern(s). An instance is a copy that is linked to the original pattern, it will have the same name and color. Modifying one instance will modify all of them. This will be shown by a "link" icon when dragging.</p>
 <p><img alt="" src="../images/InstancePattern.png#center" /></p>
-<p>Holding CTRL+SHIFT while dragging will create a completely independant copy of the selected patterns. This will be showned by a "copy" icon when dragging. They will be renamed in the process.</p>
+<p>Holding <strong>Ctrl+Shift</strong> while dragging will create a completely independent copy of the selected patterns. This will be shown by a "copy" icon when dragging. They will be renamed in the process.</p>
 <p><img alt="" src="../images/CopyPattern.png#center" /></p>
-<p>Dragging a pattern to a different channel will create a copy, but delete the original. This is because internally, patterns cannot be shared accross different channels. The pattern may be renamed in the processs. Holding CTRL+SHIFT will preserve the original (create a copy). </p>
+<p>Dragging a pattern to a different channel will create a copy, but delete the original. This is because internally, patterns cannot be shared across different channels. The pattern may be renamed in the process. Holding <strong>Ctrl+Shift</strong> will preserve the original (create a copy). </p>
 <p><img alt="" src="../images/MovePatternDifferentChannel.png#center" /></p>
 <p>On mobile, patterns can be moved in a similar way but they first must be tapped to be given the white highlight. To create copies/instances of one or multiple patterns, first make a selection, then long press where you want to copy them.</p>
 <p><img alt="" src="../images/MobileInstancePattern.gif#center" /></p>
 <h2 id="copy-pasting-patterns">Copy &amp; pasting patterns</h2>
-<p>When one or multiple patterns are selected, press CTRL+C (or CTRL+X for cut). Move the selection somewhere else and paste with CTRL+V. Copy and pasting always create instances of patterns.</p>
+<p>When one or multiple patterns are selected, press <strong>Ctrl+C</strong> (or <strong>Ctrl+X</strong> for cut). Move the selection somewhere else and paste with <strong>Ctrl+V</strong>. Copy and pasting always create instances of patterns.</p>
 <h3 id="copying-pasting-patterns-between-projects">Copying &amp; pasting patterns between projects</h3>
 <p>Copy and pasting patterns between projects is possible When doing so, FamiStudio will assume patterns having the same name are identical. If a pattern is not found, it will offer you to create it for you. </p>
 <p>For example, if you copy a pattern named "Chorus1" from a project to another. If no such pattern is found, it will be copied. Otherwise, if an existing pattern named "Chorus1" is found in the second project, it will assume it is the same.</p>
 <p>Inside patterns, for notes and instrument, the <a href="../pianoroll/#copy-pasting-notes-between-projects">same rule</a> applies.</p>
 <h2 id="paste-special">Paste Special</h2>
-<p>Pressing CTRL+SHIFT+V will open the <strong>Paste Special</strong> dialog which gives more options than a regular paste.</p>
+<p>Pressing <strong>Ctrl+Shift+V</strong> will open the <strong>Paste Special</strong> dialog which gives more options than a regular paste.</p>
 <p><img alt="" src="../images/PasteSpecialSequencer.png#center" /></p>
 <ul>
 <li><strong>Insert</strong> : Will insert the copied patterns and move all the existing ones to the right.</li>
-<li><strong>Extend song</strong> : Will extend the song duration to accomodate the newly inserted patterns (Only available when Insert is enabled).</li>
+<li><strong>Extend song</strong> : Will extend the song duration to accommodate the newly inserted patterns (Only available when Insert is enabled).</li>
 <li><strong>Repeat</strong> : Allows pasting the copied patterns multiple times in a row.</li>
 </ul>
 <p>On mobile, the same functionality is accessible by long pressing the "Paste" button while in the Sequencer.</p>
@@ -262,11 +260,9 @@
 <h2 id="setting-the-loop-point">Setting the loop point</h2>
 <p>The <strong>Loop point</strong> is where the song will repeat once it reaches the end and is represented by a little arrow. </p>
 <p><img alt="" src="../images/LoopPoint.png#center" /></p>
-<p>You can move the loop point around by holding the <strong>L</strong> key and clicking at a location in the Sequencer. The loop point is optional and can be toggle by re-setting it to the current location.</p>
-<p>On mobile, you can set the loop point by long pressing the header of the sequencer, and selecting "Set Loop Point".</p>
+<p>You can move the loop point around or remove it entirely by <strong>right-clicking</strong> (or <strong>long pressing</strong> on mobile) in the header and selecting the appropriate option from the context menu. Alternatively, you can hold the <strong>L</strong> key and clicking at a location in the Sequencer. </p>
 <h2 id="custom-pattern-settings">Custom pattern settings</h2>
-<p>Double clicking on the header of sequencer will allow you to set some customs settings for one or multiple columns of patterns. This will allow you to change the number of notes and tempo parameters.</p>
-<p><img alt="" src="../images/CustomPatternSettings.png#center" /></p>
+<p><strong>Right-clicking</strong> on the header of sequencer and selecting "Custom Pattern Settings..." will allow you to set some customs settings for one or multiple columns of patterns. This will allow you to change the number of notes and tempo parameters.</p>
 <p>This dialog will look quite different depending on the tempo mode you are using. To learn more about tempo modes, please check out the <a href="../song/">Project properties section</a>. </p>
 <table>
 <thead>
@@ -277,7 +273,7 @@
 </thead>
 <tbody>
 <tr>
-<td><img alt="" src="../images/CustomPatternSettingsNoPAL.png#center" /></td>
+<td><img alt="" src="../images/CustomPatternSettingsFamiStudio.png#center" /></td>
 <td><img alt="" src="../images/CustomPatternSettingsFamiTracker.png#center" /></td>
 </tr>
 </tbody>

@@ -203,7 +203,7 @@
 <li>ASM6</li>
 </ul>
 <h2 id="features">Features</h2>
-<p>The engine has a basic set of features, as well as a few extra toggeable features that you may wish to disable to same CPU/RAM. If you disable a feature, you need to make sure that you definetaly are not using it in any of your songs. Using a feature in a song without enabling it in the song engine may lead to crashes (BRK) or undefined behaviors.</p>
+<p>The engine has a basic set of features, as well as a few extra toggeable features that you may wish to disable to same CPU/RAM. If you disable a feature, you need to make sure that you definitely are not using it in any of your songs. Using a feature in a song without enabling it in the song engine may lead to crashes (BRK) or undefined behaviors.</p>
 <p>The basic feature set that is always available in engine is:</p>
 <ul>
 <li>Support for the first four 2A03 channels (2 squares, triangle and noise channel).</li>
@@ -226,6 +226,7 @@
 <li>Sound effect support (with configurable number of streams)</li>
 <li>Blaarg Smooth Vibrato technique to eliminate "pops" on square channels</li>
 <li>FamiTracker/FamiStudio tempo mode.</li>
+<li>Release notes support</li>
 <li>Volume track support.</li>
 <li>Volume slides</li>
 <li>Fine pitch track support.</li>
@@ -235,6 +236,7 @@
 <li>Arpeggios (not to be confused with arpeggio instrument envelopes which are always enabled).</li>
 <li>Duty cycle effect track</li>
 <li>Delayed notes/cuts (only when FamiTracker tempo is enabled)</li>
+<li>Delta counter effect track</li>
 </ul>
 <h2 id="ramcode-usage">RAM/CODE usage</h2>
 <p>Enabling more features will make the sound engine code larger and use more RAM. The zeropage usage is 7 bytes and can be easily aliased with some of your ZP variables as they are only used as temporary variables inside the famistudio_xxx subroutines.</p>
@@ -267,7 +269,7 @@
 <li>NESASM: <code>famistudio_nesasm.asm</code></li>
 <li>ASM6: <code>famistudio_asm6.asm</code></li>
 </ul>
-<p>Another approach would be to compile the engine as a seperate obj file and link it. This might require you to import the famistudio_xxx calls in other parts of your project.</p>
+<p>Another approach would be to compile the engine as a separate obj file and link it. This might require you to import the famistudio_xxx calls in other parts of your project.</p>
 <p>All the instructions to use it in your project are included as comments at the top of these files.</p>
 <p>For using the C bindings with CC65, you will need to include the <code>famistudio_cc65.h</code> header and also include the <code>famistudio_ca65.s</code> into your assembly startup routine. Make sure that <code>FAMISTUDIO_CFG_C_BINDINGS = 1</code> is set either as part of your external config or in the file or else the linker will be unable link object files.</p>
 <h2 id="interface">Interface</h2>
@@ -389,6 +391,10 @@ FAMISTUDIO_USE_FAMITRACKER_TEMPO = 1
 ; FamiTracker tempo mode as FamiStudio tempo mode does not need this.
 FAMISTUDIO_USE_FAMITRACKER_DELAYED_NOTES_OR_CUTS = 1
 
+; Must be enabled if the songs uses release notes. 
+; More information at: https://famistudio.org/doc/pianoroll/#release-point
+FAMISTUDIO_USE_RELEASE_NOTES = 1
+
 ; Must be enabled if any song uses the volume track. The volume track allows manipulating the volume at the track
 ; level independently from instruments.
 ; More information at: https://famistudio.org/doc/pianoroll/#editing-volume-tracks-effects
@@ -422,6 +428,11 @@ FAMISTUDIO_USE_ARPEGGIO          = 1
 
 ; Must be enabled if any song uses the "Duty Cycle" effect (equivalent of FamiTracker Vxx, also called "Timbre").  
 FAMISTUDIO_USE_DUTYCYCLE_EFFECT  = 1
+
+; Must be enabled if any song uses the DPCM delta counter. Only makes sense if DPCM samples
+; are enabled (FAMISTUDIO_CFG_DPCM_SUPPORT).
+; More information at: (TODO)
+; FAMISTUDIO_USE_DELTA_COUNTER     = 1
 </code></pre>
 <h2 id="exporting-musicsfx-to-the-engine">Exporting Music/SFX to the engine</h2>
 <p>You can export music or sound effect data to the engine by using either the <a href="../export/">Export Dialog</a> or from the <a href="../cmdline/">command line</a>.</p>

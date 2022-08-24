@@ -253,16 +253,28 @@
 <h1 id="basic-desktop-controls">Basic Desktop Controls</h1>
 <p>Most of the operations are performed with the mouse. In general:</p>
 <ul>
-<li>The <strong>left mouse button</strong> adds stuff, double-clicking something edits properties (songs, patterns, instruments, DPCM)</li>
-<li>The <strong>right mouse button</strong> removes stuff. Right clicking in the header of the Sequencer or Piano Roll selects.</li>
-<li>The <strong>middle mouse button</strong> pans when you press it and zooms and you use the mouse wheel.</li>
+<li>The <strong>left mouse button</strong> adds and removes stuff. <ul>
+<li><strong>Single-clicking</strong> add notes/patterns.</li>
+<li><strong>Double-clicking</strong> deletes notes/patterns. Alternatively <strong>Shift+click</strong> can be used.</li>
+</ul>
+</li>
+<li>The <strong>right mouse button</strong> opens context menus and selects things.<ul>
+<li><strong>Right-clicking</strong> quickly will open a context menu.</li>
+<li><strong>Right-clicking + holding and dragging</strong> will select a range of notes or patterns in the piano roll or sequencer.</li>
+</ul>
+</li>
+<li>The <strong>middle mouse button</strong> is used for navigation:<ul>
+<li><strong>Middle-clicking + holding and dragging</strong> will pan the viewport.</li>
+<li><strong>Rotating the mouse wheel</strong> will zoom the viewport in/out.</li>
+</ul>
+</li>
 </ul>
 <p>Alternatively, if your mouse does not have a middle mouse button or mouse wheel:</p>
 <ul>
-<li>All actions requiring pressing the middle mouse buttons can be done with Alt+Left click.</li>
-<li>All actions requiring the mouse wheel can be performed with Alt+Right click, then dragging up/down.</li>
+<li>All actions requiring pressing the middle mouse buttons can be done with Alt+Left click if the "Alt+Left emulates Middle" option is enabled in the settings.</li>
+<li>All actions requiring rotating the mouse wheel can be performed with Alt+Right click, then dragging up/down.</li>
 </ul>
-<p>If you are working on a trackpad, please check out how to enable <a href="../config/#user-interface-configuration">Trackpad controls</a> in the configuration dialog.</p>
+<p>If you are working on a trackpad, please check out how to enable <a href="../config/#input-configuration">Trackpad controls</a> in the configuration dialog.</p>
 <h1 id="basic-mobile-controls">Basic Mobile Controls</h1>
 <p>On mobile, there are 3 main gestures used:</p>
 <ul>
@@ -271,7 +283,6 @@
 <li>A <strong>long press</strong> on something will sometimes reveal advanced options. </li>
 </ul>
 <h1 id="main-window">Main Window</h1>
-<p>The UI was designed to be a simple as possible, there are almost no context menus.</p>
 <p>The main window has 4 main components:</p>
 <ul>
 <li>The Toolbar (on top)</li>
@@ -282,132 +293,132 @@
 <p><img alt="" src="../images/MainWindow.png#center" /></p>
 <p>At any given moment there is always:</p>
 <ul>
-<li>A selected channel, in bold in the sequencer</li>
-<li>A selected song, in bold in the project explorer song list</li>
-<li>A selected instrument, in bold in the project explorer instrument list.</li>
-<li>A selected arpeggio, in bold in the project explorer arpeggio list.</li>
+<li>A selected channel, in <strong>bold</strong> in the sequencer</li>
+<li>A selected song, in <strong>bold</strong> in the project explorer song list</li>
+<li>A selected instrument, in <strong>bold</strong> in the project explorer instrument list.</li>
+<li>A selected arpeggio, in <strong>bold</strong> in the project explorer arpeggio list.</li>
 </ul>
 <p>The sequencer and piano roll will display the information for the currently selected song. When pressing the keys on the piano roll, it will play notes for the currently selected instrument, and output it on the currently selected channel. The same applies if you have a MIDI keyboard connected.</p>
 <h1 id="toolbar">Toolbar</h1>
 <p>The main toolbar contains your usual stuff: file operation, undo/redo, timecode, oscilloscope and play controls.</p>
 <p><img alt="" src="../images/Toolbar.png#center" /></p>
-<p>Here is the meaning of each toolbar icon and some additional actions that can be performed.</p>
+<p>Here is the meaning of each toolbar icon and some additional actions that can be performed. Unless specified, additionnal actions are performed by right-clicking on desktop, or long pressing on mobile.</p>
 <table>
 <thead>
 <tr>
 <th>Icon</th>
 <th>Click Action</th>
-<th>Additional Actions</th>
+<th>Additional Actions<br/>(Right click on desktop, long-press on mobile)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><img alt="" src="https://raw.githubusercontent.com/BleuBleu/FamiStudio/master/FamiStudio/Resources/File.png" /></td>
+<td><img alt="" src="https://raw.githubusercontent.com/BleuBleu/FamiStudio/3.3.0/FamiStudio/Resources/File.png#grey" /></td>
 <td>New project</td>
 <td></td>
 </tr>
 <tr>
-<td><img alt="" src="https://raw.githubusercontent.com/BleuBleu/FamiStudio/master/FamiStudio/Resources/Open.png" /></td>
+<td><img alt="" src="https://raw.githubusercontent.com/BleuBleu/FamiStudio/3.3.0/FamiStudio/Resources/Open.png#grey" /></td>
 <td>Open FamiStudio project or other file format</td>
-<td></td>
+<td>On desktop, opens a list of recently opened files</td>
 </tr>
 <tr>
-<td><img alt="" src="https://raw.githubusercontent.com/BleuBleu/FamiStudio/master/FamiStudio/Resources/Save.png" /></td>
+<td><img alt="" src="https://raw.githubusercontent.com/BleuBleu/FamiStudio/3.3.0/FamiStudio/Resources/Save.png#grey" /></td>
 <td>Save project</td>
-<td>On Desktop, right click to "Save As...".<br/>On Mobile, use long press.</td>
+<td>Open a context menu to "Save As...".</td>
 </tr>
 <tr>
-<td><img alt="" src="https://raw.githubusercontent.com/BleuBleu/FamiStudio/master/FamiStudio/Resources/Export.png" /></td>
+<td><img alt="" src="https://raw.githubusercontent.com/BleuBleu/FamiStudio/3.3.0/FamiStudio/Resources/Export.png#grey" /></td>
 <td>Export to various formats Project</td>
-<td>On Desktop, right click to repeat the last export</td>
+<td>Open a context menu that allows repeating the last export, if any/</td>
 </tr>
 <tr>
-<td><img alt="" src="https://raw.githubusercontent.com/BleuBleu/FamiStudio/master/FamiStudio/Resources/Copy.png" /></td>
+<td><img alt="" src="https://raw.githubusercontent.com/BleuBleu/FamiStudio/3.3.0/FamiStudio/Resources/Copy.png#grey" /></td>
 <td>Copy selection</td>
 <td></td>
 </tr>
 <tr>
-<td><img alt="" src="https://raw.githubusercontent.com/BleuBleu/FamiStudio/master/FamiStudio/Resources/Cut.png" /></td>
+<td><img alt="" src="https://raw.githubusercontent.com/BleuBleu/FamiStudio/3.3.0/FamiStudio/Resources/Cut.png#grey" /></td>
 <td>Cut selection</td>
 <td></td>
 </tr>
 <tr>
-<td><img alt="" src="https://raw.githubusercontent.com/BleuBleu/FamiStudio/master/FamiStudio/Resources/Paste.png" /></td>
+<td><img alt="" src="https://raw.githubusercontent.com/BleuBleu/FamiStudio/3.3.0/FamiStudio/Resources/Paste.png#grey" /></td>
 <td>Paste</td>
-<td>On Desktop, right-click to "Special Paste" (paste with advanced options). <br/>On Mobile, use long press.</td>
+<td>Opens a context menu to "Special Paste" (paste with advanced options).</td>
 </tr>
 <tr>
-<td><img alt="" src="https://raw.githubusercontent.com/BleuBleu/FamiStudio/master/FamiStudio/Resources/Delete.png" /></td>
+<td><img alt="" src="https://raw.githubusercontent.com/BleuBleu/FamiStudio/3.3.0/FamiStudio/Resources/Delete.png#grey" /></td>
 <td>Delete selection (mobile only)</td>
 <td>On mobile, long press to "Special Delete" (delete with advanced options)</td>
 </tr>
 <tr>
-<td><img alt="" src="https://raw.githubusercontent.com/BleuBleu/FamiStudio/master/FamiStudio/Resources/Undo.png" /></td>
+<td><img alt="" src="https://raw.githubusercontent.com/BleuBleu/FamiStudio/3.3.0/FamiStudio/Resources/Undo.png#grey" /></td>
 <td>Undo</td>
 <td></td>
 </tr>
 <tr>
-<td><img alt="" src="https://raw.githubusercontent.com/BleuBleu/FamiStudio/master/FamiStudio/Resources/Redo.png" /></td>
+<td><img alt="" src="https://raw.githubusercontent.com/BleuBleu/FamiStudio/3.3.0/FamiStudio/Resources/Redo.png#grey" /></td>
 <td>Redo</td>
 <td></td>
 </tr>
 <tr>
-<td><img alt="" src="https://raw.githubusercontent.com/BleuBleu/FamiStudio/master/FamiStudio/Resources/Transform.png" /></td>
+<td><img alt="" src="https://raw.githubusercontent.com/BleuBleu/FamiStudio/3.3.0/FamiStudio/Resources/Transform.png#grey" /></td>
 <td>Transform/cleanup project/songs</td>
 <td></td>
 </tr>
 <tr>
-<td><img alt="" src="https://raw.githubusercontent.com/BleuBleu/FamiStudio/master/FamiStudio/Resources/Config.png" /></td>
+<td><img alt="" src="https://raw.githubusercontent.com/BleuBleu/FamiStudio/3.3.0/FamiStudio/Resources/Config.png#grey" /></td>
 <td>Application settings</td>
 <td></td>
 </tr>
 <tr>
-<td><img alt="" src="https://raw.githubusercontent.com/BleuBleu/FamiStudio/master/FamiStudio/Resources/Play.png" /></td>
+<td><img alt="" src="https://raw.githubusercontent.com/BleuBleu/FamiStudio/3.3.0/FamiStudio/Resources/Play.png#grey" /></td>
 <td>Play song</td>
-<td>On desktop, rotate mouse wheel to change playback speed. <br/>On mobile, long press to change playback speed.</td>
+<td>Opens a context menu to play from different locations or change the playback speed.</td>
 </tr>
 <tr>
-<td><img alt="" src="https://raw.githubusercontent.com/BleuBleu/FamiStudio/master/FamiStudio/Resources/Rec.png" /></td>
+<td><img alt="" src="https://raw.githubusercontent.com/BleuBleu/FamiStudio/3.3.0/FamiStudio/Resources/Rec.png#grey" /></td>
 <td>Toggle recording mode</td>
 <td></td>
 </tr>
 <tr>
-<td><img alt="" src="https://raw.githubusercontent.com/BleuBleu/FamiStudio/master/FamiStudio/Resources/Rewind.png" /></td>
+<td><img alt="" src="https://raw.githubusercontent.com/BleuBleu/FamiStudio/3.3.0/FamiStudio/Resources/Rewind.png#grey" /></td>
 <td>Rewing to beginning</td>
 <td></td>
 </tr>
 <tr>
-<td><img alt="" src="https://raw.githubusercontent.com/BleuBleu/FamiStudio/master/FamiStudio/Resources/Loop.png" /></td>
+<td><img alt="" src="https://raw.githubusercontent.com/BleuBleu/FamiStudio/3.3.0/FamiStudio/Resources/Loop.png#grey" /></td>
 <td>Change looping mode</td>
 <td></td>
 </tr>
 <tr>
-<td><img alt="" src="https://raw.githubusercontent.com/BleuBleu/FamiStudio/master/FamiStudio/Resources/QwertyPiano.png" /></td>
+<td><img alt="" src="https://raw.githubusercontent.com/BleuBleu/FamiStudio/3.3.0/FamiStudio/Resources/QwertyPiano.png#grey" /></td>
 <td>Toggle QWERTY input (desktop only)</td>
 <td></td>
 </tr>
 <tr>
-<td><img alt="" src="https://raw.githubusercontent.com/BleuBleu/FamiStudio/master/FamiStudio/Resources/Piano.png" /></td>
+<td><img alt="" src="https://raw.githubusercontent.com/BleuBleu/FamiStudio/3.3.0/FamiStudio/Resources/Piano.png#grey" /></td>
 <td>Toggle pop-up piano (mobile only)</td>
 <td></td>
 </tr>
 <tr>
-<td><img alt="" src="https://raw.githubusercontent.com/BleuBleu/FamiStudio/master/FamiStudio/Resources/Metronome.png" /></td>
+<td><img alt="" src="https://raw.githubusercontent.com/BleuBleu/FamiStudio/3.3.0/FamiStudio/Resources/Metronome.png#grey" /></td>
 <td>Toggle metronome click</td>
 <td></td>
 </tr>
 <tr>
-<td><img alt="" src="https://raw.githubusercontent.com/BleuBleu/FamiStudio/master/FamiStudio/Resources/NTSC.png" /></td>
+<td><img alt="" src="https://raw.githubusercontent.com/BleuBleu/FamiStudio/3.3.0/FamiStudio/Resources/NTSC.png#grey" /></td>
 <td>Toggle playback machine</td>
 <td></td>
 </tr>
 <tr>
-<td><img alt="" src="https://raw.githubusercontent.com/BleuBleu/FamiStudio/master/FamiStudio/Resources/Follow.png" /></td>
+<td><img alt="" src="https://raw.githubusercontent.com/BleuBleu/FamiStudio/3.3.0/FamiStudio/Resources/Follow.png#grey" /></td>
 <td>Toggle follow mode</td>
 <td></td>
 </tr>
 <tr>
-<td><img alt="" src="https://raw.githubusercontent.com/BleuBleu/FamiStudio/master/FamiStudio/Resources/More.png" /></td>
+<td><img alt="" src="https://raw.githubusercontent.com/BleuBleu/FamiStudio/3.3.0/FamiStudio/Resources/More.png#grey" /></td>
 <td>Reveal hidden toolbar buttons (mobile only)</td>
 <td></td>
 </tr>
@@ -417,21 +428,27 @@
 <p>Keyboard shortcuts or special actions are always displayed as tooltips in the upper-right corner of the toolbar. Please keep an eye on it to learn new functionalities.</p>
 <p><img alt="" src="../images/Tooltip.png#center" /></p>
 <h2 id="playingpausing-the-song">Playing/pausing the song</h2>
-<p>Besides the toolbar, space bar is used to play/pause the song. Ctrl-space plays in pattern loop mode, Shift-space plays in song loop mode.</p>
-<h2 id="changing-the-playback-speed">Changing the playback speed</h2>
-<p>Rotating the mouse-wheel over the play button will allow you to change the playback speed to 1/2 or 1/4 speed. This is useful to hear very small/short notes.</p>
-<p><img alt="" src="../images/PlaybackSpeed.gif#center" /></p>
-<h2 id="changing-the-looping-mode">Changing the looping mode</h2>
-<p>There are 2 looping modes:</p>
+<p>The toolbar is used to play/pause the song. Alternatively, the keyboard can also be used:</p>
 <ul>
-<li><strong>Song / None</strong>: Loops the entire song if a loop point is step, stops at the end if there are no loop point.</li>
+<li><strong>Space</strong> is used to play/pause the song.</li>
+<li><strong>Shift+Space</strong> plays from the beginning of the song.</li>
+<li><strong>Ctrl+Space</strong> plays from the beginning of the current pattern.</li>
+<li><strong>Ctrl+Shift+Space</strong> plays from the loop point of the song.</li>
+</ul>
+<h2 id="changing-the-playback-speed">Changing the playback speed</h2>
+<p>Right-clicking on the play button will open a context menu allowing you to change the playback speed to 1/2 or 1/4 speed. This is useful to hear very small/short notes.</p>
+<p><img alt="" src="../images/PlaybackSpeed.png#center" /></p>
+<h2 id="changing-the-looping-mode">Changing the looping mode</h2>
+<p>There are 4 looping modes, but only 2 are usable at any given time:</p>
+<ul>
+<li><strong>Song</strong> or <strong>None</strong>: Loops the entire song if a loop point is step, stops at the end if there are no loop point.</li>
 <li><strong>Pattern</strong> or <strong>Selection</strong>: Loops over the current pattern if there is no selection in the sequencer. If there is a selection, will loop over that selection. The icon in the toolbar will change to reflection this.</li>
 </ul>
 <p><img alt="" src="../images/LoopingMode.png#center" /></p>
 <h2 id="toggling-the-metronome">Toggling the metronome</h2>
 <p>The metronome can be enabled by clicking the icon on the toolbar. The metronome will tick at every beat and will only work when the song is playing.</p>
 <h2 id="saving-the-project">Saving the project</h2>
-<p>Clicking on the icon save the project, right-clicking is a "save as..." and will prompt you for a new filename.</p>
+<p>Clicking on the icon save the project, right-clicking will open a context menu allowing you to "Save As..." and prompt you for a new filename.</p>
 <h2 id="exporting-to-various-formats">Exporting to various formats</h2>
 <p>Please see the <a href="../export/">Export</a> section for details on how to export to various formats.</p>
 <h2 id="cleanup-dialog">Cleanup dialog</h2>
@@ -449,6 +466,8 @@
 <h1 id="sequencer">Sequencer</h1>
 <p>The sequencer is where you organize the high-level structure of the song: which patterns play and when they play. The thumbnails of the patterns in the sequencer are by no mean accurate. Please visit the <a href="../sequencer/">Editing Patterns</a> section for more details.</p>
 <p><img alt="" src="../images/Sequencer.png#center" /></p>
+<p>You can hide the channels that do not contain any pattern by pressing the little nosy character icon in the top left corner. This is known as "shy mode" and is borrowed from Adobe After Effects.</p>
+<p><img alt="" src="../images/ShyMode.gif#center" /></p>
 <h1 id="piano-roll">Piano Roll</h1>
 <p>The piano roll is where you editing the actual notes of the song, the instrument envelopes, as well as some special effects. </p>
 <p><img alt="" src="../images/PianoRoll.png#center" /></p>
@@ -456,10 +475,10 @@
 <p>The piano roll can be maximized to full screen by pressing the little maximize button in the top right corner, or by pressing <strong>1</strong> on the keyboard.</p>
 <p><img alt="" src="../images/MaximizePianoRoll.gif#center" /></p>
 <h1 id="quick-access-bar-mobile-only">Quick Access Bar (Mobile Only)</h1>
-<p>The "Quick Access Bar" is specific to the mobile version, is the bar on the right hand side of the screen (of the bottom when in portrait mode). Its content will change depending on the context but will typically give you a series of convenient shortcuts (such as changing the active channel, instrument, etc.) so you dont have to go back and forth between the other views.</p>
+<p>The "Quick Access Bar" is specific to the mobile version, is the bar on the right hand side of the screen (of the bottom when in portrait mode). Its content will change depending on the context but will typically give you a series of convenient shortcuts (such as changing the active channel, instrument, etc.) so you do not have to go back and forth between the other views.</p>
 <p><img alt="" src="../images/MobileQuickAccessBar.png#center" /></p>
 <h1 id="pop-up-piano-mobile-only">Pop-Up Piano (Mobile Only)</h1>
-<p>Another little view that is unique to the mobile version is the pop-up piano that lets you preview the sound of instrument. This is also used in recording mode, which whill be covered later in the documentation.</p>
+<p>Another little view that is unique to the mobile version is the pop-up piano that lets you preview the sound of instrument. This is also used in recording mode, which will be covered later in the documentation.</p>
 <p><img alt="" src="../images/MobilePopupPiano.png#center" /></p>
 <h1 id="keyboard-shortcuts">Keyboard shortcuts</h1>
 <p>Here is a list of useful keyboard shortcuts:</p>
@@ -471,11 +490,12 @@
 <li><strong>Ctrl+Shift+Space</strong>: Plays from loop point of the song (if any).</li>
 <li><strong>Home</strong>: Seeks back to beginning of the song.</li>
 <li><strong>Ctrl+Home</strong>: Seeks to beginning of the current pattern.</li>
-<li><strong>Esc</strong>: Stops any lindering sound, stops recording mode, clears the selection.</li>
+<li><strong>Esc</strong>: Stops any lingering sound, stops recording mode, clears the selection.</li>
 <li><strong>Ctrl+Z</strong>: Undo</li>
 <li><strong>Ctrl+Y</strong>: Redo</li>
 <li><strong>Ctrl+N</strong>: New project</li>
 <li><strong>Ctrl+S</strong>: Save</li>
+<li><strong>Ctrl+Shift+S</strong>: Save As...</li>
 <li><strong>Ctrl+E</strong>: Export</li>
 <li><strong>Ctrl+Shift+E</strong>: Repeat last export</li>
 <li><strong>Ctrl+O</strong>: Open</li>
@@ -487,6 +507,7 @@
 <li><strong>1</strong>: Toggle maximize the piano roll.</li>
 <li><strong>Ctrl+1</strong>: Toggle the effect panel.</li>
 <li><strong>Shift+S</strong>: Toggle snapping in the piano roll.</li>
+<li><strong>Alt+1</strong>, <strong>Alt+2</strong>, <strong>Alt+3</strong>, <strong>Alt+4</strong> : Changes snap precision to 1, 1/2, 1/4 and 1/8 of a beat respectively.</li>
 </ul>
 <p>Some keyboard shortcuts specific to the sequencer:</p>
 <ul>
@@ -494,14 +515,14 @@
 </ul>
 <p>Some keyboard shortcuts specific to the piano roll:</p>
 <ul>
-<li><strong>Shift+Click</strong>: Adds a release note.</li>
+<li><strong>R+Click</strong>: Adds a release note.</li>
 <li><strong>S+Click</strong> (and drag): Creates or edit a slide note.</li>
 <li><strong>A+Click</strong>: Toggles the attack of a note.</li>
 <li><strong>I+Click</strong>: Instrument picker</li>
 <li><strong>T+Click</strong>: Adds an orphan stop note.</li>
 <li><strong>Shift+S</strong>: Toggles snapping.</li>
 </ul>
-<p>When QWERTY keyboard input is active, some of the keys will be overriden to support piano input. This is default layout for an en-US keyboard. The <a href="../config/">Configuration Dialog</a> allows re-mapping the keys for other types of keyboards.</p>
+<p>When QWERTY keyboard input is active, some of the keys will be overridden to support piano input. This is default layout for an en-US keyboard. The <a href="../config/">Configuration Dialog</a> allows re-mapping the keys for other types of keyboards.</p>
 <p><img alt="" src="../images/QWERTY.png#center" /></p></div>
             </div>
         </div>

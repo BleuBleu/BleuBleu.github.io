@@ -160,6 +160,10 @@
               <ul class="nav flex-column">
               </ul>
             </li>
+            <li class="nav-item" data-level="2"><a href="#input-configuration" class="nav-link">Input Configuration</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
             <li class="nav-item" data-level="2"><a href="#sound-configuration" class="nav-link">Sound Configuration</a>
               <ul class="nav flex-column">
               </ul>
@@ -211,16 +215,10 @@
 <p><strong>Check for updates</strong>: At startup FamiStudio checks for new version online. This can be disabled.</p>
 </li>
 <li>
-<p><strong>Trackpad controls</strong>: Enabling trackpad controls will switch to a control scheme that is better suited for trackpad users:</p>
-<ul>
-<li>Vertical mouse wheel up/down will scroll up/down instead of zooming in/out. This is the equivalent of swiping your fingers up/down on the trackpad.</li>
-<li>Horizontal mouse wheel will scroll left/right. This is equivalent of swiping your fingers left/right on the trackpad.</li>
-<li>Pinch to zoom (or alternatively CTRL + MouseWheel) will zoom in/out. If pinch-to-zoom does not work on Windows, please check your trackpad drivers, this is not an issue with FamiStudio.</li>
-</ul>
-<p>Note that these are poorly supported on Linux due to the fact that the app uses GTK 2 and gestures are generally poorly supported in Linux.</p>
+<p><strong>Show Tutorial at Startup</strong>: If enabled, the on-boarding tutorial will be showed when FamiStudio is launched.</p>
 </li>
 <li>
-<p><strong>Clear Undo/Redo on save</strong>: Wipes the undo/redo stack every time the project is saved. This help keep the memory usage lower, but limits your ability to undo indefinately.</p>
+<p><strong>Clear Undo/Redo on save</strong>: Wipes the undo/redo stack every time the project is saved. This help keep the memory usage lower, but limits your ability to undo indefinitely.</p>
 </li>
 <li>
 <p><strong>Open last project on start</strong>: Remember which project you last open and re-opens it next time you launch FamiStudio.</p>
@@ -233,7 +231,7 @@
 <p><img alt="" src="../images/ConfigUI.png#center" /></p>
 <ul>
 <li>
-<p><strong>Scaling</strong>: By default, FamiStudio will use the scaling of your primary monitor on Windows (100%, 150% and 200% are support) and on macOS it will choose between 100% or 200% depending on if you have a retina display or not. This behavior can be overriden by a scaling of your choosing. This requires restarting the app:</p>
+<p><strong>Scaling</strong>: By default, FamiStudio will use the scaling of your primary monitor on Windows (100%, 150% and 200% are support) and on macOS it will choose between 100% or 200% depending on if you have a retina display or not. This behavior can be overridden by a scaling of your choosing. This requires restarting the app:</p>
 </li>
 <li>
 <p><strong>Time Format</strong>: Allow changing the format of the timer in the main toolbar of the application. </p>
@@ -262,19 +260,36 @@
 </ul>
 </li>
 <li>
+<p><strong>Ideal Sequencer Height</strong> : The ideal height of the Sequencer, in percentage of the height of the FamiStudio window. Note that patterns have a minimum size, so this <em>ideal</em> size may not be achievable when there are many channels.</p>
+</li>
+<li>
+<p><strong>Allow Sequencer Vertical Scrolling</strong> : If enabled and the ideal height above cannot be achieve (usually because there are too many channels), will allow vertically scrolling in the sequencer instead of going above the ideal size.</p>
+</li>
+<li>
+<p><strong>Show FamiTracker Stop Notes</strong>: When using FamiTracker tempo mode, display implicit stop notes (whenever a note ends without being interrupted by another note) as little triangles. This makes it easier to set note delays for those.</p>
+</li>
+<li>
 <p><strong>Show Piano Roll View Range</strong>: Displays a yellow rectangle in the sequencer representing the view range of the piano roll.</p>
 </li>
+</ul>
+<h2 id="input-configuration">Input Configuration</h2>
+<p><img alt="" src="../images/ConfigInput.png#center" /></p>
+<ul>
 <li>
-<p><strong>Show Note Labels</strong>: Displays note labels (e.q. "C#3") in the piano roll.</p>
+<p><strong>Trackpad controls</strong>: Enabling trackpad controls will switch to a control scheme that is better suited for trackpad users:</p>
+<ul>
+<li>You will be able to swipe up/down/left/right on the trackpad to pan around.</li>
+<li>Pinch to zoom (or alternatively <strong>Ctrl+Swipe</strong>) will zoom in/out. This gesture is not supported on Linux.<br><br></li>
+</ul>
 </li>
 <li>
-<p><strong>Show FamiTracker Stop Notes</strong>: When using FamiTracker tempo mode, display implicity stop notes (whenever a note ends without being interrupted by another note) as little triangles. This makes it easier to set note delays for those.</p>
+<p><strong>Reverse trackpad scroll X/Y</strong>: Can be used to flip the direction of the trackpad scrolling.</p>
 </li>
 <li>
-<p><strong>Show Oscilloscope</strong>: Display an oscilloscope in the toolbar.</p>
+<p><strong>Trackpad scroll sensitivity</strong>: Can be used to increase/decrease the sensitivity of the trackpad controls.</p>
 </li>
 <li>
-<p><strong>Force Compact Sequencer</strong>: Always keep the size of the channels in the sequencer to their minimum height. This is useful on monitor with very low resolution. </p>
+<p><strong>Alt+Left emulates Middle</strong>: For use with mouses that do not have a middle mouse button. Will allow using <strong>Alt+Left</strong> as a substitute.</p>
 </li>
 </ul>
 <h2 id="sound-configuration">Sound Configuration</h2>
@@ -287,10 +302,16 @@
 <p><strong>Stop instrument after</strong>: When instruments have release notes, there is no way for FamiStudio to know when to stop the notes. This allows stopping any sound after a specified number of seconds. This only applies to MIDI or when previewing instruments on the piano roll and has no impact on the actual song.</p>
 </li>
 <li>
-<p><strong>Prevent popping on square channels</strong>: The NES/Famicom had a bug where the phase of square channels will reset around some notes (A-3, A-2, D-2, A-1, F-1, D-1, and B-0 on NTSC, or A#3, A#2, D#2, A#1, F#1, D#1, and C-0 on PAL), resulting in audible clicks or pops. This option will work around that bug using the Smooth Vibrato technique by Blargg, resulting in smooth pitch changes. Note that this option will not carry over to FamiTracker if you export.</p>
+<p><strong>Prevent popping on square channels</strong>: The NES/Famicom had a bug where the phase of square channels will reset around some notes (A-3, A-2, D-2, A-1, F-1, D-1, and B-0 on NTSC, or A#3, A#2, D#2, A#1, F#1, D#1, and C-0 on PAL), resulting in audible clicks or pops. This option will work around that bug using the Smooth Vibrato technique by Blaarg, resulting in smooth pitch changes. Note that this option will not carry over to FamiTracker if you export.</p>
+</li>
+<li>
+<p><strong>Clamp periods and notes</strong> : Notes that go below the lowest possible note or above the highest possible note will typically wrap around when listening the song on real hardware. This is due to the fact that currently the SoundEngine does not clamp notes or period to the valid range. The emulation inside FamiStudio does it by default. If you want a more hardware accurate behavior, you can disable this option.</p>
 </li>
 <li>
 <p><strong>Mute piano roll interactions during playback</strong> : When enabled, dragging/adding notes in the piano roll will not preview the notes when the song is playing. Some users find this distracting.</p>
+</li>
+<li>
+<p><strong>Metronome volume</strong> : Volume of the metronome.</p>
 </li>
 </ul>
 <h2 id="mixer">Mixer</h2>
@@ -315,7 +336,6 @@
 <p>This section is only available on the Mobile version of FamiStudio.</p>
 <ul>
 <li><strong>Allow vibration</strong>: Toggle for all vibration effect in the app.</li>
-<li><strong>Double-tap to delete</strong>: Experimental option to delete pattern/notes with a double-tap.</li>
 </ul>
 <h1 id="configuration-file">Configuration File</h1>
 <p>All FamiStudio settings are saved in "FamiStudio.ini". The location of this file will vary depending on the operating system. </p>

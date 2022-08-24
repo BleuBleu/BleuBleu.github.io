@@ -176,7 +176,7 @@
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#deleting-envelopes" class="nav-link">Deleting envelopes</a>
+            <li class="nav-item" data-level="2"><a href="#clearing-or-deleting-envelopes" class="nav-link">Clearing or Deleting envelopes</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -194,10 +194,6 @@
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#copying-arpeggios" class="nav-link">Copying arpeggios</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
               </ul>
             </li>
         </ul>
@@ -208,7 +204,7 @@
 <h1 id="editing-instruments">Editing Instruments</h1>
 <p>The project explorer displays the list of songs and instruments in the current project. This section is only going to cover editing of instruments and arpeggios. Please refer to the <a href="../song/">Editing Songs &amp; Project</a> section to learn how to edit project and song properties.</p>
 <p><img alt="" src="../images/ProjectExplorer.png#center" /></p>
-<p>Most instrument (except DPCM samples) has 4 buttons :</p>
+<p>Most standard instruments have 4 buttons :</p>
 <ul>
 <li>The duty cycle envelope</li>
 <li>The volume envelope</li>
@@ -216,9 +212,9 @@
 <li>The arpeggio envelope</li>
 </ul>
 <p>An envelope is simply a parameter that can change over the duration of a note as it plays. It can be used to create vibrato, tremolo, change the attack and release of a note, for example. If an instrument currently has no envelope for a particular type, it will appear dimmed.</p>
-<p>For details on Expansion audio instruments please visit the <a href="../expansion/">Expansion Audio section</a>.</p>
+<p>Expansion instruments may have different envelope types. For details on Expansion audio instruments please visit the <a href="../expansion/">Expansion Audio section</a>.</p>
 <h2 id="editing-instrument-properties">Editing instrument properties</h2>
-<p>Clicking on the little gear icon next to an instrument (or double-clicking on an instrument) will show its properties. Like most things in FamiStudio, you can rename the instrument and change its color.</p>
+<p>Clicking on the little gear icon next to an instrument (or <strong>right-clicking</strong> and selecting "Instrument Properties...") will show its properties. Like most things in FamiStudio, you can rename the instrument and change its color. </p>
 <p><img alt="" src="../images/EditInstrument.png#center" /></p>
 <p>Most instruments also have parameters that can be edited in real-time by clicking the little arrow and expanding the button. </p>
 <p><img alt="" src="../images/EditInstrument2.png#center" /></p>
@@ -226,35 +222,39 @@
 <ul>
 <li><strong>Pitch Envelope</strong> : Defines how FamiStudio will interpret the values in the pitch envelope.<ul>
 <li><strong>Absolute</strong> : By default, FamiStudio's pitch envelope are absolute. Meaning that the envelope values are the pitch you are going to hear, this is especially useful for vibrato where you can draw a simple sine wave.</li>
-<li><strong>Relative</strong> : It is sometimes useful to have relative pitch envelope to create pitches that rapidly ascend or decend (useful for bassdrum sounds). This is how FamiTracker handles pitch envelopes.</li>
+<li><strong>Relative</strong> : It is sometimes useful to have relative pitch envelope to create pitches that rapidly ascend or descend (useful for bass drum sounds). This is how FamiTracker handles pitch envelopes.</li>
 </ul>
 </li>
 </ul>
 <h2 id="adding-instruments">Adding instruments</h2>
-<p>You can add an instrument by pressing the "+" sign, and you can delete one by right-clicking on it. Deleting an instrument will delete all notes used by that instrument.</p>
+<p>You can add an instrument by pressing the "+" sign, and you can delete one by selecting "Delete Instrument" from the context menu. Deleting an instrument will delete all notes used by that instrument.</p>
 <h2 id="replacing-an-instrument-by-another">Replacing an instrument by another</h2>
-<p>Clicking on an instrument name and dragging it over another instrument will allow you to replace all notes of the first instrument by the second. This is useful prior to deleting an instrument.</p>
+<p>To replace an instrument by another throughout the entire project, you can select the "Replace Instrument..." option from the context menu of the instrument. This will bring up a list allowing you to select the new instrument. This works similarly on mobile, except the list is less colored.</p>
+<p><img alt="" src="../images/ReplaceInstrument2.png#center" /></p>
 <h2 id="importing-instruments">Importing instruments</h2>
-<p>You can import intruments in your project from any supported input format, as well as FamiTracker instrument files (FTI files, official FamiTracker 0.4.6 only) by clicking the little folder icon. </p>
+<p>You can import instruments in your project from any supported input format, as well as FamiTracker instrument files (FTI files, official FamiTracker 0.4.6 only) by clicking the little folder icon. </p>
 <p>When importing instruments from another project or a FamiTracker file, you will be prompted with a list of instruments to import. Simply check the instrument to bring over.</p>
 <p>Also, when importing instruments from another FMS file that uses DPCM samples, you will also be able to import the "DPCM Instrument" from that project. This will import all the samples and their assignments to keys of the pianos.</p>
 <p><img alt="" src="../images/ImportInstruments.png#center" /></p>
 <p>Note that instruments that are using incompatible expansion audio will not be able to be imported. Also, instruments with the same names are assumed to be the same. If you project already contains an instrument called "Piano" and you try to import another one called "Piano", nothing will happen. You are responsible to uniquely name your instruments if they are truly different.</p>
 <h2 id="editing-instrument-envelopes">Editing instrument envelopes</h2>
-<p>Clicking on an envelope icon in the project explorer will open the envelope of that instrument in the piano roll. The length of the envelope can be changed by left-clicking (and potentially dragging) in the timeline of the piano roll. Setting the length of an envelope to zero will disable it.</p>
+<p>Clicking on an envelope icon in the project explorer will open the envelope of that instrument in the piano roll. The length of the envelope can be changed by <strong>clicking and dragging</strong> the little arrow icon in the top right corner. Setting the length of an envelope to zero will essentially disable it.</p>
 <p><img alt="" src="../images/EditEnvelope.png#center" /></p>
-<p>The loop point of an envelope can be set by right-clicking in the timeline. Volume tracks are also allowed to have release envelopes. Release envelopes are played when a release note is encountered and terminates the loop by jumping to the release point. This is useful for fading out notes smoothly. The release point is set by right-dragging from the rightmost side of the envelope.</p>
+<p>The loop point of an envelope can be set by <strong>left-clicking</strong> in bottom part of the header or by using the context menu. </p>
+<p>Volume tracks (and N163 wave envelopes) are also allowed to have release points. Releases are played when a release note is encountered and terminates the loop by jumping to the release point. This is useful for fading out notes smoothly. </p>
+<p>The release point is set by <strong>right-clicking</strong> in the bottom part of the header, or by using the context menu.</p>
 <p><img alt="" src="../images/EditEnvelopeRelease.png#center" /></p>
-<p>On mobile, you can editing envelope values individually by tapping them. But a much more natural way of drawing envelope is by first long pressing, waiting for the prompt, and then drawing the shape of the envelope. </p>
+<p>On mobile, you can editing envelope values individually by tapping them. But a much more natural way of drawing envelope is by first <strong>long pressing,</strong> waiting for the prompt, and then drawing the shape of the envelope. </p>
 <p><img alt="" src="../images/MobileDrawEnvelope.gif#center" /></p>
 <h2 id="copying-envelope-values">Copying envelope values</h2>
-<p>Right-clicking on the numbers on the header of the envelope editor allows for range selection of envelope values. These can then be copy and pasted elsewhere.</p>
+<p><strong>Right-clicking and dragging</strong> in the envelope editor allows for range selection of envelope values. These can then be copy and pasted elsewhere.</p>
 <p><img alt="" src="../images/CopyEnvelopeValues.png#center" /></p>
 <p>It is also possible to paste envelope values coming from raw text. Any series of number that is space, tab, comma, semicolon or newline separated can be pasted in the envelope editor. </p>
+<p>You can also copy envelope values as text if you want to use them in another app. To do so, use the "Copy Selected Values as Text" option from the context menu when there is a valid selection.</p>
 <h2 id="copying-envelopes">Copying envelopes</h2>
-<p>Clicking on an envelope button and dragging it on another instrument will copy that envelope from the first to the second. Note that unlike FamiTracker, envelopes are not explicitly shared between instruments. Identical envelopes will be combined when exporting to FamiTone2, but it is your responsibility to optimize the content and ensure that you limit the number of unique envelopes.</p>
-<h2 id="deleting-envelopes">Deleting envelopes</h2>
-<p>Right-clicking on the icon of an envelope deletes it.</p>
+<p>Clicking on an envelope button and dragging it on another instrument will copy that envelope from the first to the second. Note that unlike FamiTracker, envelopes are not explicitly shared between instruments. Identical envelopes will be combined when exporting to various formats, but it is your responsibility to optimize the content and ensure that you limit the number of unique envelopes.</p>
+<h2 id="clearing-or-deleting-envelopes">Clearing or Deleting envelopes</h2>
+<p>Envelopes cannot be deleted per-se, they can be cleared to they have essentially no effect. To clear and envelope, simply select the "Clear Envelope" option from the instrument context menu.</p>
 <h1 id="dpcm-instrument">DPCM Instrument</h1>
 <p>The DPCM Instrument is a special instrument able to play DPCM samples. It is always present and cannot be deleted. For more information, please refer to the <a href="../dpcm/">DPCM Samples</a> section. </p>
 <h1 id="editing-arpeggios">Editing Arpeggios</h1>
@@ -264,9 +264,7 @@
 <p>You can also assign a name and a color to each arpeggio by clicking the little gear icon next to it (or double-clicking on the arpeggio). This color will be displayed in the piano roll when the arpeggio is used.</p>
 <p><img alt="" src="../images/EditArpeggioProperties.png#center" /></p>
 <h2 id="replacing-arpeggios-by-another">Replacing arpeggios by another</h2>
-<p>Much like instrument, you can replace every usage of an arpeggio by another by simply dragging an arpeggio on to another. FamiStudio will prompt you to confirm the replacement.</p>
-<h2 id="copying-arpeggios">Copying arpeggios</h2>
-<p>You can also copy the sequence of note from one arpeggio to another by dragging the little note icon (the one on the right side) on to another arpeggio. </p></div>
+<p>Much like instrument, you can replace every usage of an arpeggio by another by using the "Replace Arpeggio..." option from the context menu.</p></div>
             </div>
         </div>
 

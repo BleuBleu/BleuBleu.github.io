@@ -148,6 +148,10 @@
             
             <li class="nav-item" data-level="1"><a href="#change-log" class="nav-link">Change Log</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#version-400" class="nav-link">Version 4.0.0</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
             <li class="nav-item" data-level="2"><a href="#version-331-hotfix" class="nav-link">Version 3.3.1 (Hotfix)</a>
               <ul class="nav flex-column">
               </ul>
@@ -281,6 +285,45 @@
 
 <h1 id="change-log">Change Log</h1>
 <p>Version history / release notes for each release.</p>
+<h2 id="version-400">Version 4.0.0</h2>
+<p>Changes:</p>
+<ul>
+<li>Revamped desktop version : <ul>
+<li>Redesigned controls, more similar to mobile version : Context menus, Gizmos, etc.</li>
+<li>Based on GLFW using custom drawn widgets, consistent across Win/MacOS/Linux</li>
+<li>Getting rid of all dependencies to OpenTK, WinForms, GTK# and System.Drawing in preparation to eventual migration to modern .NET.</li>
+<li>Animated GIFs for intro tutorial</li>
+</ul>
+</li>
+<li>More control over sequencer height and ability to hide unused channels on desktop</li>
+<li>Support to multiple audio expansions with EPSM</li>
+<li>Support for multiple waveforms for N163</li>
+<li>Support for single audio expansions for ROM export </li>
+<li>Wave resampling for N163/FDS waveforms, import WAV files and adjust period &amp; offset.</li>
+<li>Basic NSFe export support, only track names and durations for now.</li>
+<li>Improved oscilloscope stability:<ul>
+<li>Use of emulation-generated triggers when rendering oscilloscope in exported video or in toolbar when previewing instruments.</li>
+<li>Improved trigger detection for toolbar oscilloscope when playing a song (using "peak speed trigger" algorithm).</li>
+</ul>
+</li>
+<li>Audio delay effect when exporting video or audio.</li>
+<li>Snapping improvements, most notably:<ul>
+<li><strong>Alt+1</strong>, <strong>Alt+2</strong>, <strong>Alt+3</strong> and <strong>Alt+4</strong> quickly changes between common snapping values</li>
+<li>Hold <strong>Alt</strong> anytime when resizing or moving notes to temporarily disable snapping</li>
+<li>Context menu to set snapping to a specific note duration</li>
+<li>Option to snap effect values</li>
+</ul>
+</li>
+</ul>
+<p>Breaking/Behavior changes:</p>
+<ul>
+<li>The sound engine now has a dedicated define for release note. If you use release notes you now must set <code>FAMISTUDIO_USE_RELEASE_NOTES</code>. </li>
+</ul>
+<div style="position:relative;margin-left: auto;margin-right: auto;width:80%;height:0;padding-bottom:45%;">
+    <iframe style="position:absolute;top:0;left:0;width:100%;height:100%" src="https://www.youtube.com/embed/pgJYHGu8yio" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<p><br/></p>
 <h2 id="version-331-hotfix">Version 3.3.1 (Hotfix)</h2>
 <p>Fixes/Changes:</p>
 <ul>
@@ -333,14 +376,14 @@
 <ul>
 <li>Added option to disable vibration (new "Mobile" section of Settings)</li>
 <li>Added support for importing 8-bit and 24-bit WAV files for DPCM samples.</li>
-<li>Added support for importing NSF2, if they dont use any of the advanced features.</li>
+<li>Added support for importing NSF2, if they do not use any of the advanced features.</li>
 <li>Fixed FamiTracker text export not asking for a filename.</li>
 <li>Fixed DPCM samples not playing if placing the seek bar exactly on their attack.</li>
 <li>Fixed NSF export tempo issue when using grooves in specific situations.</li>
 <li>Creating new effect values will respect snapping on mobile.</li>
 <li>Drawing note attacks for force display channel to help readability.</li>
 <li>Fixed an issue with release note that are beyond the visual duration of the note.</li>
-<li>Correct emulation of Tri-Noise-DMC volumes when using stereo export (+hidden INI option to also do it for seperate channels)</li>
+<li>Correct emulation of Tri-Noise-DMC volumes when using stereo export (+hidden INI option to also do it for separate channels)</li>
 <li>Experimental "double-tap to delete patterns/note" option (off by default)</li>
 <li>Minor UI tweaks (hit boxes of buttons, zoom levels, scroll bar issues, etc.).</li>
 </ul>
@@ -409,7 +452,7 @@
 <ul>
 <li>Fixed crash when pasting past the end of an envelope</li>
 <li>Fixed FamiTracker (FTM/TXT) import when a jump or skip effect is exactly at row 255</li>
-<li>Fixed FamiStudio currupting the keyboard state on some european keyboards</li>
+<li>Fixed FamiStudio corrupting the keyboard state on some European keyboards</li>
 <li>Fixed oscilloscope vertical orientation in toolbar + video export</li>
 <li>Fixed crash when using 150% scaling on Linux</li>
 <li>Fixed crash when parsing FamiStudio text file using VRC6 expansion.</li>
@@ -521,7 +564,7 @@
 <li>Fixed scaling issues on Retina display.</li>
 <li>Fixed lingering noise when dragging/adding notes in VRC7.</li>
 <li>Fixed multiple FamiTracker import (Text + Binary) issues/crashes.</li>
-<li>Fixed potential desync in NSF/sound engine when using delayed notes.</li>
+<li>Fixed potential de-sync in NSF/sound engine when using delayed notes.</li>
 <li>Fixed various issues with expansion instruments UI (sliders/checkboxes for VRC7/FDS/N163).</li>
 <li>Fixed import of older FamiStudio text files (pre 2.3.0).</li>
 <li>Fixed NSF/sound engine crash when exporting empty arpeggios.</li>
@@ -545,7 +588,7 @@
 <li>Option to display note labels in piano roll</li>
 <li>FamiTracker tempo improvements (delayed notes, cuts, fixes).</li>
 <li>Added support for Cxx (Halt) FamiTracker effect.</li>
-<li>Option to export each channel to a seperate WAV/MP3 file. </li>
+<li>Option to export each channel to a separate WAV/MP3 file. </li>
 <li>Small DPCM improvements (Drag &amp; drop, bit reverse option)</li>
 <li>Small tempo improvements</li>
 <li>Sound engine code size reduction</li>
@@ -676,7 +719,7 @@
 <li>VRC6 audio expansion support</li>
 <li>Slide notes</li>
 <li>Vibrato effect</li>
-<li>Workaround "pops" on square channels (Blargg's smooth vibrato technique)</li>
+<li>Workaround "pops" on square channels (Blaarg's smooth vibrato technique)</li>
 <li>NSF improvements</li>
 <li>Ability to remove attack on notes</li>
 <li>Relative pitch envelopes</li>

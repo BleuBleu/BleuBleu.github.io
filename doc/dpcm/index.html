@@ -192,7 +192,7 @@
                     <div class="col-md-9" role="main">
 
 <h1 id="editing-dpcm-samples">Editing DPCM Samples</h1>
-<p>DPCM (Delta Pulse Coded Modulation)samples are very low quality 1-bit digital samples that the NES/Famicom supported. They are of very low quality but have been used quite successfully for drums and basses. </p>
+<p>DPCM (Delta Pulse Code Modulation) samples are 1-bit digital samples that the NES/Famicom supports. They are of very low quality but have been used quite successfully for drums and basses. </p>
 <p>To use a DPCM sample, it first needs to be loaded, then it needs to be assigned to a key of the piano, in the DPCM instrument.</p>
 <p>The samples workflow in FamiStudio is lossless in a way that once a sample is imported, any modification done to it will not modify the source data. Every time a parameter is changed, the source data will be re-processed to generate the final sample.</p>
 <p>This short 6 minutes tutorial will teach you the general workflow of DPCM samples in FamiStudio. </p>
@@ -209,8 +209,8 @@
 <p><br/></p>
 <p>If you do not wish to use the built-in DPCM sample editor of FamiStudio there are many other alternative : <a href="http://famitracker.com/">FamiTracker</a>, <a href="http://forums.famitracker.com/viewtopic.php?t=95">RJDMC</a> and <a href="https://www.romhacking.net/utilities/1451/">MakeDPCM</a>. </p>
 <h2 id="loading-dpcm-samples">Loading DPCM Samples</h2>
-<p>Samples are loaded by clicking the little folder icon next to the "DPCM Samples" section in the project explorer. FamiStudio can import samples from WAV files or from a DMC files. Note that importing DMC files and doing extensive processing is not recommended as these samples are very low-quality fo begin with and any extra processing will degrade it further.</p>
-<p>It is also possible to import samples from another FamiStudio project. Note that doing this will not import the sample assignments to keys of the piano (DPCM Instrument). To import those as well, you mayb want to import the DPCM instrument in the Instrument section of the Project Explorer.</p>
+<p>Samples are loaded by clicking the little folder icon next to the "DPCM Samples" section in the project explorer. FamiStudio can import samples from WAV files or from a DMC files. Note that importing DMC files and doing extensive processing is not recommended as these samples are very low-quality to begin with and any extra processing will degrade it further.</p>
+<p>It is also possible to import samples from another FamiStudio project. Note that doing this will not import the sample assignments to keys of the piano (DPCM Instrument). To import those as well, you maybe want to import the DPCM instrument in the Instrument section of the Project Explorer.</p>
 <p>Once loaded, you can rename a sample or change its color by clicking the gear icon (or double-clicking on it)button. You can also play the sample by clicking the little play button next to it:</p>
 <ul>
 <li>Left-clicking will play the processed sample.</li>
@@ -234,13 +234,13 @@
 <p><strong>Unpadded</strong> : The sample will be unpadded.</p>
 </li>
 <li>
-<p><strong>Pad to 16</strong> : The sample will be padded with silence until a multiple of 16 bytes is reached. This is what most games did and will cause an extra byte of garbage to be played every time the sample is played, but this is usucally not audible. </p>
+<p><strong>Pad to 16</strong> : The sample will be padded with silence until a multiple of 16 bytes is reached. This is what most games did and will cause an extra byte of garbage to be played every time the sample is played, but this is usually not audible. </p>
 </li>
 <li>
 <p><strong>Pad to 16 + 1</strong> : The sample will be padded with silence until a multiple of 16 bytes (plus one) is reached. This is technically the best way to process samples and it will ensure that no extra garbage sample is played but will waste 15 bytes.</p>
 </li>
 <li>
-<p><strong>Round to 16</strong> : The sample will be resampled in a way that the end of sample aligned to 16 bytes. This may affect the pitch slightly. This will cause an extra byte of garbage to be played every time the sample is played, but this is usucally not audible. </p>
+<p><strong>Round to 16</strong> : The sample will be resampled in a way that the end of sample aligned to 16 bytes. This may affect the pitch slightly. This will cause an extra byte of garbage to be played every time the sample is played, but this is usually not audible. </p>
 </li>
 <li>
 <p><strong>Round to 16 + 1</strong> : The sample will be resampled in a way that the end of sample aligned to 16 bytes (plus one). This may affect the pitch slightly. This is a good mode to create looping samples.</p>
@@ -276,12 +276,12 @@
 <p>The color of in the header will also show the length of the processed sample, which may be shorter than the source.</p>
 <p><img alt="" src="../images/EditWaveform.png#center" /></p>
 <h3 id="selecting-and-deleting-samples">Selecting and deleting samples</h3>
-<p>Zooming in will reveal the indivual samples of both waveforms. It is possible to select samples of the source data to trim them (by pressing the Delete key). Note that deleting samples manually is the only destructive operation that you can perform on the source data.</p>
+<p>Zooming in will reveal the individual samples of both waveforms. It is possible to select samples of the source data to trim them (by pressing the Delete key). Note that deleting samples manually is the only destructive operation that you can perform on the source data.</p>
 <p><img alt="" src="../images/EditWaveformSelectSamples.png#center" /></p>
 <h3 id="adjusting-volume-with-the-volume-envelope">Adjusting volume with the volume envelope</h3>
 <p>Much like when editing notes, the effect panel can be expanded by clicking the little arrow in the upper left corner of the piano roll. This will reveal the 4-point volume envelope which can be used to adjust the volume of sample with more precision. </p>
 <p><img alt="" src="../images/EditWaveformVolumeEnvelope.png#center" /></p>
-<p>The center line represents 100% volume which the bottom and top represente 0% and 200% respectively. You can drag the envelope points by left clicking and dragging them. Note that the first and last vertex will always be at the beginning and end of the sample. Right-clicking on a vertex will reset its volume to 100%. </p>
+<p>The center line represents 100% volume which the bottom and top represent 0% and 200% respectively. You can drag the envelope points by left clicking and dragging them. Note that the first and last vertex will always be at the beginning and end of the sample. Right-clicking on a vertex will reset its volume to 100%. </p>
 <p>This is especially powerful when combined with the "Trim Zero Volume" option. For example, in the example above, the sample is made a lot shorter (and smaller) without deleting anything from the source data by reducing the volume to zero and letting FamiStudio trim the part with zero volume. </p>
 <h2 id="exporting-dpcm-samples">Exporting DPCM samples</h2>
 <p>Clicking on the little disk icon in the Project Explorer allows you to export a sample. Both the source and processed data can be exported.</p>
