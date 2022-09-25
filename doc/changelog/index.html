@@ -148,6 +148,10 @@
             
             <li class="nav-item" data-level="1"><a href="#change-log" class="nav-link">Change Log</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#version-402-hotfix" class="nav-link">Version 4.0.2 (Hotfix)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
             <li class="nav-item" data-level="2"><a href="#version-401-linux-android-hotfix" class="nav-link">Version 4.0.1 (Linux &amp; Android Hotfix)</a>
               <ul class="nav flex-column">
               </ul>
@@ -289,6 +293,21 @@
 
 <h1 id="change-log">Change Log</h1>
 <p>Version history / release notes for each release.</p>
+<h2 id="version-402-hotfix">Version 4.0.2 (Hotfix)</h2>
+<p>Fixes:</p>
+<ul>
+<li>Added option for trigger algorithm in oscilloscope export (desktop only)</li>
+<li>Fixed files without extensions not displaying correctly in the file dialog on Linux</li>
+<li>Fixed drag &amp; drop of files containing unicode characters</li>
+<li>Fixed crash when saving with CTRL+S while editing something</li>
+<li>Fixed crash when exporting NSF/ROM with instrument containing dashes in their names</li>
+<li>Fixed crash when attempting to export a FDS project as a NES ROM</li>
+<li>Fixed crash when importing NSF containing non-ASCII characters on Linux/MacOS</li>
+<li>Fixed crash when importing some Famitracker modules/instruments with N163 instruments</li>
+<li>Added safeguards for import of Famitracker N163 instruments that were generated in forks</li>
+<li>Added option for Alt+Right-click zoom gesture (Input section of the settings), off by default</li>
+<li>Fixed typos</li>
+</ul>
 <h2 id="version-401-linux-android-hotfix">Version 4.0.1 (Linux &amp; Android Hotfix)</h2>
 <p>Fixes:</p>
 <ul>

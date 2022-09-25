@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<link href='https://fonts.googleapis.com/css?family=Quicksand:400' rel='stylesheet'>
+		<link href='https://fonts.googleapis.com/css?family=Quicksand:402' rel='stylesheet'>
 		<link href='https://fonts.googleapis.com/css?family=Quicksand:700' rel='stylesheet'>
 		<link rel="stylesheet" href="styles.css">
 		<script type="text/javascript" src="script.js"></script>
@@ -20,14 +20,23 @@
 		<div style="margin:10px;">
 			<h1>FamiStudio NES Music Editor</h1>
 			<p>FamiStudio is very simple music editor for the Nintendo Entertainment System or Famicom. It is targeted at both chiptune artists and NES homebrewers.</p>
-			<h2>Fixes in 4.0.1 (Latest hotfix)</h2>
+			<h2>Fixes in 4.0.2 (Latest hotfix)</h2>
 
 			<ul>
-				<li>Fixed file dialog on Linux.</li>
-				<li>Fixed some piano touches being ignored on Android.</li>
+				<li>Added option for trigger algorithm in oscilloscope export (desktop only)</li>
+				<li>Fixed files without extensions not displaying correctly in the file dialog on Linux</li>
+				<li>Fixed drag and drop of files containing unicode characters</li>
+				<li>Fixed crash when saving with CTRL+S while editing something</li>
+				<li>Fixed crash when exporting NSF/ROM with instrument containing dashes in their names</li>
+				<li>Fixed crash when attempting to export a FDS project as a NES ROM</li>
+				<li>Fixed crash when importing NSF containing non-ASCII characters on Linux/MacOS</li>
+				<li>Fixed crash when importing some Famitracker modules/instruments with N163 instruments</li>
+				<li>Added safeguards for import of Famitracker N163 instruments that were generated in forks</li>
+				<li>Added option for Alt+Right-click zoom gesture (Input section of the settings), off by default</li>
+				<li>Fixed typos</li>
 			</ul>
 
-			<h2>New features in 4.0.0 (Latest major release)</h2>
+			<h2>New features in 4.0.2 (Latest major release)</h2>
 			<ul>
 				<li>Revamped desktop version :</li>
 				<ul>
@@ -69,21 +78,21 @@
 					<td colspan="2"><center><h2>Download links</h2></center></td>
 				</tr>
 				<tr>
-					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.0.0/FamiStudio400-WinInstaller.zip"><img src="windows.png"></a></td>
+					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.0.2/FamiStudio402-WinInstaller.zip"><img src="windows.png"></a></td>
 					<td style="padding: 20px;" align="center">
-						<a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.0.0/FamiStudio400-WinInstaller.zip"><center>Windows Installer</center></a><br>
-						<a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.0.0/FamiStudio400-WinPortableExe.zip"><center>Windows Portable EXE</center></a>
+						<a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.0.2/FamiStudio402-WinInstaller.zip"><center>Windows Installer</center></a><br>
+						<a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.0.2/FamiStudio402-WinPortableExe.zip"><center>Windows Portable EXE</center></a>
 					</td>
 				</tr>
 				<tr>
-					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.0.0/FamiStudio400-MacOS.zip"><img src="macos.png"></a></td>
-					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.0.0/FamiStudio400-MacOS.zip"><center>MacOS Bundle</center></a></td>
+					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.0.2/FamiStudio402-MacOS.zip"><img src="macos.png"></a></td>
+					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.0.2/FamiStudio402-MacOS.zip"><center>MacOS Bundle</center></a></td>
 				</tr>
 				<tr>
-					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.0.1/FamiStudio401-LinuxAMD64.zip"><img src="linux.png"></a></td>
+					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.0.2/FamiStudio402-LinuxAMD64.zip"><img src="linux.png"></a></td>
 					<td style="padding: 20px;" align="center">
 						<a href="https://flathub.org/apps/details/org.famistudio.FamiStudio"><center>FlatHub</center></a><br>
-						<a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.0.1/FamiStudio401-LinuxAMD64.zip"><center>Linux AMD64 Binaries</center></a>
+						<a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.0.2/FamiStudio402-LinuxAMD64.zip"><center>Linux AMD64 Binaries</center></a>
 					</td>
 				</tr>
 				<tr>
