@@ -148,6 +148,10 @@
             
             <li class="nav-item" data-level="1"><a href="#change-log" class="nav-link">Change Log</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#version-405-hotfix" class="nav-link">Version 4.0.5 (Hotfix)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
             <li class="nav-item" data-level="2"><a href="#version-404-hotfix" class="nav-link">Version 4.0.4 (Hotfix)</a>
               <ul class="nav flex-column">
               </ul>
@@ -301,6 +305,46 @@
 
 <h1 id="change-log">Change Log</h1>
 <p>Version history / release notes for each release.</p>
+<h2 id="version-405-hotfix">Version 4.0.5 (Hotfix)</h2>
+<p>Changes/Fixes:</p>
+<ul>
+<li>Added option for default pattern name</li>
+<li>Added option to rewind to the previous position when stopping playback</li>
+<li>Added warning when user is editing an arpeggio different than the currently selected one</li>
+<li>Added a proper warning when songs are too big to be exported to NSF, ROM or sound engine</li>
+<li>Allowed longer pattern on NSF import</li>
+<li>Fixed crash when using pattern length of 2048 frames</li>
+<li>Fixed opening of NSF when FamiStudio is set to the default app</li>
+<li>Fixed glitch that could cause visual overlap of notes in piano roll</li>
+<li>Fixed notes ending prematurely near the end of songs</li>
+<li>Fixed crash when exporting to NSF, ROM or sound engine with certain vibrato settings</li>
+<li>Fixed multiple issues when importing instruments from other projects</li>
+<li>Fixed issue causing exported NSFe to start at song #2.</li>
+<li>Fixed crash when MIDI notes are out of range.</li>
+<li>Fixed rasterization issue in the pattern thumbnails</li>
+<li>Fixed multiple FamiTracker (FTM/TXT) import/export issues</li>
+<li>Fixed minor annoyances in the piano roll on mobile</li>
+<li>Fixed app crashing when using more than 2GB of RAM on Windows</li>
+<li>Fixed loophole where the FDS envelopes could be cleared/resized</li>
+<li>Fixed various issues with dropdown list scrollbars </li>
+<li>Fixed crash when exporting video with lots of channels</li>
+<li>Fixed releases for VRC7 and EPSM </li>
+<li>Fixed multiple inconsistencies and improved the register viewer (Thanks alexmush!)</li>
+</ul>
+<p>Sound Engine changes/fixes:</p>
+<ul>
+<li>Fixed inconsistencies with vibrato with the main app</li>
+<li>Fixed issues with relative pitch envelopes</li>
+<li>Fixed notes always reapply instruments on EPSM FM Channel 4,5,6 in NSF driver (Thanks Perkka!)</li>
+<li>Fixed EPSM rhythm occasionally missing beats (Thanks Perkka!)</li>
+<li>Fixed volume being off by one for EPSM (Thanks Perkka!)</li>
+</ul>
+<p>Breaking/Behavior changes:</p>
+<ul>
+<li>The register viewer will now show the real note pitches and wont necessarily match the notes on the piano roll</li>
+<li>Vibrato depths of more than 13 cant unfortunately be supported in the sound engine at the moment. A warning will be given instead of producing the wrong result.</li>
+<li>Releases for VRC7/EPSM instrument will now be handled correctly. That was always the intention, but a bug was preventing them from working</li>
+</ul>
 <h2 id="version-404-hotfix">Version 4.0.4 (Hotfix)</h2>
 <p>Fixes:</p>
 <ul>
