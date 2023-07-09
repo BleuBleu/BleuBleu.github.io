@@ -5,6 +5,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
+        <meta name="description" content="The project explorer displays the name of the project, the list of songs and instruments in the current project. This section is going to focus on the very top part, which is the project and the songs.">
+        
         
         
         <link rel="shortcut icon" href="../img/favicon.ico">
@@ -12,12 +14,12 @@
         <link href="../css/bootstrap.min.css" rel="stylesheet">
         <link href="../css/font-awesome.min.css" rel="stylesheet">
         <link href="../css/base.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/darcula.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/darcula.min.css">
         <link href="../css/extra.css" rel="stylesheet">
 
         <script src="../js/jquery-1.10.2.min.js" defer></script>
         <script src="../js/bootstrap.min.js" defer></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script> 
     </head>
 
@@ -169,7 +171,7 @@
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#reordering-songs" class="nav-link">Reordering songs</a>
+            <li class="nav-item" data-level="2"><a href="#reordering-songs-instruments-dpcm-samples-or-arpeggios" class="nav-link">Reordering songs, instruments, DPCM Samples or Arpeggios</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -239,8 +241,8 @@ For example, a C-D-E-F scale where each note is stopped for 1 frame between each
 <p>Right below the project name are the songs.</p>
 <h2 id="addingdeleting-songs">Adding/Deleting songs</h2>
 <p>To add new songs, simply click on the little "+" icon on the song header.</p>
-<h2 id="reordering-songs">Reordering songs</h2>
-<p>You can drag &amp; drop songs to reorder them in the list. Songs are the only things that are not always sorted alphabetically in the project explorer at the moment.</p>
+<h2 id="reordering-songs-instruments-dpcm-samples-or-arpeggios">Reordering songs, instruments, DPCM Samples or Arpeggios</h2>
+<p>Each section of the project explorer has a little "sort" button (A-Z) next to it. If highlighted, it means items will be kept in alphabetical order. Disabling this will allow you to re-order things to your liking. Re-ordering an item will disable auto-sorting.</p>
 <h2 id="importingmerging-songs">Importing/Merging songs</h2>
 <p>To merge a song coming from another project, click on the little folder icon on the song header. </p>
 <p>Songs from another project must use the same audio expansion and tempo mode. Also, please note that instruments, samples and arpeggios, used by the other song will be matched by their name. In other words, instruments with the same names are assumed to be the same. If you project already contains an instrument called "Piano" and you try to import a song using another one called "Piano", the existing one will be used. You are responsible to uniquely name your instruments if they are truly different.</p>
@@ -387,16 +389,13 @@ Observations:</p>
                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
             </div>
             <div class="modal-body">
-                <p>
-                    From here you can search these documents. Enter
-                    your search terms below.
-                </p>
+                <p>From here you can search these documents. Enter your search terms below.</p>
                 <form>
                     <div class="form-group">
                         <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
                     </div>
                 </form>
-                <div id="mkdocs-search-results"></div>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
             </div>
             <div class="modal-footer">
             </div>

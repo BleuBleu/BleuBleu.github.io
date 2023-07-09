@@ -12,12 +12,12 @@
         <link href="../css/bootstrap.min.css" rel="stylesheet">
         <link href="../css/font-awesome.min.css" rel="stylesheet">
         <link href="../css/base.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/darcula.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/darcula.min.css">
         <link href="../css/extra.css" rel="stylesheet">
 
         <script src="../js/jquery-1.10.2.min.js" defer></script>
         <script src="../js/bootstrap.min.js" defer></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script> 
     </head>
 
@@ -192,10 +192,10 @@
 <p><strong>Namco 163</strong>: Adds up to 8 wavetable channels. It has 128 bytes of RAM to store all the currently used waveforms. Waveforms can be 4, 8, 16 and 32 in size. Smaller waveforms will sound worse, but you can have more of them at any given time. FamiStudio will work at its best with a sample size of 16. Also, it should be noted that for technical reasons, the more channels you add, the worse the audio quality will be. It is recommended that you use 4 channels or less, which is what most games using the expansion did.</p>
 </li>
 <li>
-<p><strong>Sunsoft S5B</strong>: Add 3 extra square channels. These channels are fixed at a duty cycle or 50%. It was based off the Yamaha YM2149F. While this expansion was extremely powerful, it was only ever used in one game (Gimmick!) and this game did not make use of any advanced features of the chip. For this reason, FamiStudio (and most emulator) only support a small subset of features.</p>
+<p><strong>Sunsoft S5B</strong>: Add 3 extra square channels with shared noise capabilities. These channels are fixed at a duty cycle or 50%. It was based off the Yamaha YM2149F. While this expansion was extremely powerful, it was only ever used in one game (Gimmick!) and this game did not make use of any advanced features of the chip. For this reason, FamiStudio (and most emulator) only support a small subset of features.</p>
 </li>
 <li>
-<p><strong>EPSM</strong>: EPSM is not an audio expansion that ever used, or even existed in the lifetime of the NES, but rather the pet project of <a href="https://github.com/Perkka2/EPSM">Perkka</a> who designed a small circuit board that can be plugged in the expansion port of the NES and controlled by it to produce sound. The expansion is based off the Yamaha YMF288 chip and adds 3 extra square channels, 6 FM synthesis channels and 6 rhythm channels. The square are fixed at a duty cycle or 50%. Those are essentially the same as Sunsoft S5B. The FM channels are 4-OP channels that can be configured independently. The rhythm channels are 6 pre-defined drum samples.</p>
+<p><strong>EPSM</strong>: EPSM is not an audio expansion that ever used, or even existed in the lifetime of the NES, but rather the pet project of <a href="https://github.com/Perkka2/EPSM">Perkka</a> who designed a small circuit board that can be plugged in the expansion port of the NES and controlled by it to produce sound. The expansion is based off the Yamaha YMF288 chip and adds 3 extra square channels with shared noise capabilities, 6 FM synthesis channels and 6 rhythm channels. The square are fixed at a duty cycle or 50%. Those are essentially the same as Sunsoft S5B. The FM channels are 4-OP channels that can be configured independently. The rhythm channels are 6 pre-defined drum samples.</p>
 </li>
 </ul>
 <h2 id="enabling-expansion-audio">Enabling expansion audio</h2>
@@ -340,16 +340,13 @@
                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
             </div>
             <div class="modal-body">
-                <p>
-                    From here you can search these documents. Enter
-                    your search terms below.
-                </p>
+                <p>From here you can search these documents. Enter your search terms below.</p>
                 <form>
                     <div class="form-group">
                         <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
                     </div>
                 </form>
-                <div id="mkdocs-search-results"></div>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
             </div>
             <div class="modal-footer">
             </div>

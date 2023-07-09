@@ -5,6 +5,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
+        <meta name="description" content="The project explorer displays the list of songs and instruments in the current project. This section is only going to cover editing of instruments and arpeggios. Please refer to the Editing Songs &amp; Project section to learn how to edit project and song properties.">
+        
         
         
         <link rel="shortcut icon" href="../img/favicon.ico">
@@ -12,12 +14,12 @@
         <link href="../css/bootstrap.min.css" rel="stylesheet">
         <link href="../css/font-awesome.min.css" rel="stylesheet">
         <link href="../css/base.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/darcula.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/darcula.min.css">
         <link href="../css/extra.css" rel="stylesheet">
 
         <script src="../js/jquery-1.10.2.min.js" defer></script>
         <script src="../js/bootstrap.min.js" defer></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script> 
     </head>
 
@@ -183,7 +185,7 @@
               </ul>
             </li>
             
-            <li class="nav-item" data-level="1"><a href="#dpcm-instrument" class="nav-link">DPCM Instrument</a>
+            <li class="nav-item" data-level="1"><a href="#editing-dpcm-samples" class="nav-link">Editing DPCM Samples</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -204,12 +206,13 @@
 <h1 id="editing-instruments">Editing Instruments</h1>
 <p>The project explorer displays the list of songs and instruments in the current project. This section is only going to cover editing of instruments and arpeggios. Please refer to the <a href="../song/">Editing Songs &amp; Project</a> section to learn how to edit project and song properties.</p>
 <p><img alt="" src="../images/ProjectExplorer.png#center" /></p>
-<p>Most standard instruments have 4 buttons :</p>
+<p>Most standard instruments have 5 buttons :</p>
 <ul>
 <li>The duty cycle envelope</li>
 <li>The volume envelope</li>
 <li>The pitch envelope</li>
 <li>The arpeggio envelope</li>
+<li>DPCM Samples</li>
 </ul>
 <p>An envelope is simply a parameter that can change over the duration of a note as it plays. It can be used to create vibrato, tremolo, change the attack and release of a note, for example. If an instrument currently has no envelope for a particular type, it will appear dimmed.</p>
 <p>Expansion instruments may have different envelope types. For details on Expansion audio instruments please visit the <a href="../expansion/">Expansion Audio section</a>.</p>
@@ -255,8 +258,8 @@
 <p>Clicking on an envelope button and dragging it on another instrument will copy that envelope from the first to the second. Note that unlike FamiTracker, envelopes are not explicitly shared between instruments. Identical envelopes will be combined when exporting to various formats, but it is your responsibility to optimize the content and ensure that you limit the number of unique envelopes.</p>
 <h2 id="clearing-or-deleting-envelopes">Clearing or Deleting envelopes</h2>
 <p>Envelopes cannot be deleted per-se, they can be cleared to they have essentially no effect. To clear and envelope, simply select the "Clear Envelope" option from the instrument context menu.</p>
-<h1 id="dpcm-instrument">DPCM Instrument</h1>
-<p>The DPCM Instrument is a special instrument able to play DPCM samples. It is always present and cannot be deleted. For more information, please refer to the <a href="../dpcm/">DPCM Samples</a> section. </p>
+<h1 id="editing-dpcm-samples">Editing DPCM Samples</h1>
+<p>DPCM Samples are covered in depth in the <a href="../dpcm/">DPCM Samples</a> section. </p>
 <h1 id="editing-arpeggios">Editing Arpeggios</h1>
 <p>Arpeggios (not to be confused with arpeggio instrument envelopes) are typically used to simulate chords by playing changing notes very rapidly. They work in the exact same way as arpeggio instrument envelopes, but they are not bound to any specific instrument. For example, if you define a "Major chord" arpeggio that repeats a sequence 0-4-7 of notes, you can then re-use this arpeggio on any instrument later on. Saving you the trouble or either inputting many tiny notes, or creating many instruments for each chord.</p>
 <p>Arpeggios are handled in a very similar way to instrument. You can add a new arpeggio by click on the <strong>+</strong> button of the <strong>Arpeggios</strong> section. To edit the sequence of note you can then click of the little note icon on the right side of the arpeggio button. </p>
@@ -287,16 +290,13 @@
                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
             </div>
             <div class="modal-body">
-                <p>
-                    From here you can search these documents. Enter
-                    your search terms below.
-                </p>
+                <p>From here you can search these documents. Enter your search terms below.</p>
                 <form>
                     <div class="form-group">
                         <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
                     </div>
                 </form>
-                <div id="mkdocs-search-results"></div>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
             </div>
             <div class="modal-footer">
             </div>

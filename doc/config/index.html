@@ -5,6 +5,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
+        <meta name="description" content="The configuration dialog is accessed from the main toolbar.">
+        
         
         
         <link rel="shortcut icon" href="../img/favicon.ico">
@@ -12,12 +14,12 @@
         <link href="../css/bootstrap.min.css" rel="stylesheet">
         <link href="../css/font-awesome.min.css" rel="stylesheet">
         <link href="../css/base.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/darcula.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/darcula.min.css">
         <link href="../css/extra.css" rel="stylesheet">
 
         <script src="../js/jquery-1.10.2.min.js" defer></script>
         <script src="../js/bootstrap.min.js" defer></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script> 
     </head>
 
@@ -180,7 +182,7 @@
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#qwerty-configuration" class="nav-link">QWERTY Configuration</a>
+            <li class="nav-item" data-level="2"><a href="#keyboards-configuration" class="nav-link">Keyboards Configuration</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -212,6 +214,9 @@
 <p><img alt="" src="../images/ConfigGeneral.png#center" /></p>
 <ul>
 <li>
+<p><strong>Language</strong>: Language to use in the app. These translations are user-contributed and may vary in quality/completeness. This also may affect the font used inside the app. By default, FamiStudio will try to make a best-guess based on the language of the OS.</p>
+</li>
+<li>
 <p><strong>Check for updates</strong>: At startup FamiStudio checks for new version online. This can be disabled.</p>
 </li>
 <li>
@@ -221,10 +226,16 @@
 <p><strong>Clear Undo/Redo on save</strong>: Wipes the undo/redo stack every time the project is saved. This help keep the memory usage lower, but limits your ability to undo indefinitely.</p>
 </li>
 <li>
+<p><strong>Rewing after play</strong> : If enabled, the play head will move back to its previous location when stopping playback.</p>
+</li>
+<li>
 <p><strong>Open last project on start</strong>: Remember which project you last open and re-opens it next time you launch FamiStudio.</p>
 </li>
 <li>
 <p><strong>Auto-save a copy every 2 minutes</strong>: Save a backup copy of the current project every 2 minutes. This may prevent loosing data when the application crashes.</p>
+</li>
+<li>
+<p><strong>Pattern name prefix</strong> / <strong>digits</strong>: Allows customizing the default name of patterns. The prefix may be empty to get a purerely numeric name. The number of digit will be prefixed with zeroes.</p>
 </li>
 </ul>
 <h2 id="user-interface-configuration">User Interface Configuration</h2>
@@ -252,6 +263,9 @@
 </ul>
 </li>
 <li>
+<p><strong>Follow Mode Range Limit</strong>: The position at which follow mode your start scrolling, relative to the width of the sequencer/piano roll.</p>
+</li>
+<li>
 <p><strong>Scroll Bars</strong>: Display scrolls bars in the Sequencer and the Piano Roll.</p>
 <ul>
 <li><strong>None</strong>: No scroll bares.</li>
@@ -260,7 +274,10 @@
 </ul>
 </li>
 <li>
-<p><strong>Ideal Sequencer Height</strong> : The ideal height of the Sequencer, in percentage of the height of the FamiStudio window. Note that patterns have a minimum size, so this <em>ideal</em> size may not be achievable when there are many channels.</p>
+<p><strong>Ideal Sequencer Height</strong>: The ideal height of the Sequencer, in percentage of the height of the FamiStudio window. Note that patterns have a minimum size, so this <em>ideal</em> size may not be achievable when there are many channels.</p>
+</li>
+<li>
+<p><strong>DPCM Channel Color Mode</strong>: Color to use for the notes on the DPCM channel. You may use the color of the instrument, or the color of the DPCM samples.</p>
 </li>
 <li>
 <p><strong>Allow Sequencer Vertical Scrolling</strong> : If enabled and the ideal height above cannot be achieve (usually because there are too many channels), will allow vertically scrolling in the sequencer instead of going above the ideal size.</p>
@@ -269,7 +286,10 @@
 <p><strong>Show FamiTracker Stop Notes</strong>: When using FamiTracker tempo mode, display implicit stop notes (whenever a note ends without being interrupted by another note) as little triangles. This makes it easier to set note delays for those.</p>
 </li>
 <li>
-<p><strong>Show Piano Roll View Range</strong>: Displays a yellow rectangle in the sequencer representing the view range of the piano roll.</p>
+<p><strong>Show Register View Tab</strong>: When enabled, will show the Register Viewer tab in the Project Explorer, which displays the state of the registers in real-time.</p>
+</li>
+<li>
+<p><strong>Use Operating System Dialogs</strong>: If enabled, will use the Windows dialogs for things like file open/save and message boxes. When disabled, will use the custom FamiStudio dialogs. This is only available on Windows.</p>
 </li>
 </ul>
 <h2 id="input-configuration">Input Configuration</h2>
@@ -305,7 +325,10 @@
 <p><strong>Prevent popping on square channels</strong>: The NES/Famicom had a bug where the phase of square channels will reset around some notes (A-3, A-2, D-2, A-1, F-1, D-1, and B-0 on NTSC, or A#3, A#2, D#2, A#1, F#1, D#1, and C-0 on PAL), resulting in audible clicks or pops. This option will work around that bug using the Smooth Vibrato technique by Blaarg, resulting in smooth pitch changes. Note that this option will not carry over to FamiTracker if you export.</p>
 </li>
 <li>
-<p><strong>Clamp periods and notes</strong> : Notes that go below the lowest possible note or above the highest possible note will typically wrap around when listening the song on real hardware. This is due to the fact that currently the SoundEngine does not clamp notes or period to the valid range. The emulation inside FamiStudio does it by default. If you want a more hardware accurate behavior, you can disable this option.</p>
+<p><strong>Mix Namco 163 channels</strong>: When enabled, FamiStudio will correctly mix the Namco 163 channels. Leave this OFF and set a very agressive low-pass filter to mimic real hardware. </p>
+</li>
+<li>
+<p><strong>Clamp periods and notes</strong>: Notes that go below the lowest possible note or above the highest possible note will typically wrap around when listening the song on real hardware. This is due to the fact that currently the SoundEngine does not clamp notes or period to the valid range. The emulation inside FamiStudio does it by default. If you want a more hardware accurate behavior, you can disable this option.</p>
 </li>
 <li>
 <p><strong>Mute piano roll interactions during playback</strong> : When enabled, dragging/adding notes in the piano roll will not preview the notes when the song is playing. Some users find this distracting.</p>
@@ -328,9 +351,9 @@
 <h2 id="ffmpeg-configuration">FFMpeg Configuration</h2>
 <p><img alt="" src="../images/ConfigFFMpeg.png#center" /></p>
 <p>FFMpeg is a video encoder required to enable video export. You can download it from <a href="../ffmpeg/">here</a>. Once downloaded and installed somewhere on your computer, you will need to tell FamiStudio where it is.</p>
-<h2 id="qwerty-configuration">QWERTY Configuration</h2>
-<p><img alt="" src="../images/ConfigQWERTY.png#center" /></p>
-<p>This section allows remapping the keyboard keys for keyboard-piano input. This allows FamiStudio to support AZERTY, QWERTZ or any other international keyboard. Up to 2 keys can be assigned to a note.</p>
+<h2 id="keyboards-configuration">Keyboards Configuration</h2>
+<p><img alt="" src="../images/ConfigKeys.png#center" /></p>
+<p>This section allows remapping the keyboard shortcuts for most actions. The default layout will usually be based off the QWERTY layout, but it can be modified after to support arbitrary keyboard layouts such as QWERTZ or AZERTY.</p>
 <h2 id="mobile-configuration">Mobile Configuration</h2>
 <p><img alt="" src="../images/ConfigMobile.png#center" /></p>
 <p>This section is only available on the Mobile version of FamiStudio.</p>
@@ -383,16 +406,13 @@
                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
             </div>
             <div class="modal-body">
-                <p>
-                    From here you can search these documents. Enter
-                    your search terms below.
-                </p>
+                <p>From here you can search these documents. Enter your search terms below.</p>
                 <form>
                     <div class="form-group">
                         <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
                     </div>
                 </form>
-                <div id="mkdocs-search-results"></div>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
             </div>
             <div class="modal-footer">
             </div>

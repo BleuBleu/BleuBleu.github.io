@@ -20,45 +20,50 @@
 		<div style="margin:10px;">
 			<h1>FamiStudio NES Music Editor</h1>
 			<p>FamiStudio is very simple music editor for the Nintendo Entertainment System or Famicom. It is targeted at both chiptune artists and NES homebrewers.</p>
-			
-			<h2>Latest Hotfix Release 4.0.6</h2>			
+
+			<h2>Latest Release 4.1.0</h2>			
 			<p>
-				For a detailed release notes for each hotfix release, please visit the <a href='doc/changelog/index.html'>change log</a> section of the documentation.
+				Please note that this release has pretty significant changes to the system requirements since it includes a migration to .NET and newer OpenGL. Please see the list of changes below.
 			</p>
 
-			<h2>New features in 4.0.0 (Latest major release)</h2>
+			<h2>Changes/Fixes:</h2>
 			<ul>
-				<li>Revamped desktop version :</li>
+				<li>DPCM improvements:</li>
 				<ul>
-					<li>Redesigned controls, more similar to mobile version : Context menus, Gizmos, etc.</li>
-					<li>Based on GLFW using custom drawn widgets, consistent across Win/MacOS/Linux</li>
-					<li>Getting rid of all dependencies to OpenTK, WinForms, GTK# and System.Drawing in preparation to eventual migration to modern .NET.</li>
-					<li>Animated GIFs for intro tutorial</li>
+					<li>No more "DPCM instrument", each instrument can have DPCM samples assigned (a-la FamiTracker)</li>
+					<li>Up to 256KB of samples using bank switching.</li>
 				</ul>
-				<li>More control over sequencer height and ability to hide unused channels on desktop</li>
-				<li>Support to multiple audio expansions with EPSM</li>
-				<li>Support for multiple waveforms for N163</li>
-				<li>Support for single audio expansions for ROM export </li>
-				<li>Wave resampling for N163/FDS waveforms, import WAV files and adjust period & offset.</li>
-				<li>Basic NSFe export support, only track names and durations for now.</li>
-				<li>Improved oscilloscope stability:</li>
+				<li>Configurable keyboard shortcuts</li>
+				<li>Text rendering changes, small text may look slightly blurrier </li>
+				<li>More UI scaling % options</li>
+				<li>More context menus options throughout the app</li>
+				<li>Option to mix N163 or not</li>
+				<li>Project explorer sorting improvements</li>
+				<li>NSF import support on Android</li>
+				<li>Stereo and delay export support on Android
+				<li>Sunsoft 5B noise support (Perkka contribution)</li>
+				<li>Experimental VGM import support (Perkka contribution)</li>
+				<li>Experimental translations </li>
 				<ul>
-					<li>Use of emulation-generated triggers when rendering oscilloscope in exported video or in toolbar when previewing instruments.</li>
-					<li>Improved trigger detection for toolbar oscilloscope when playing a song (using "peak speed trigger" algorithm).</li>
-				</ul>	
-				<li>Audio delay effect when exporting video or audio.</li>
-				<li>Snapping improvements, most notably:</li>
-				<ul>
-					<li>**Alt+1**, **Alt+2**, **Alt+3** and **Alt+4** quickly changes between common snapping values</li>
-					<li>Hold **Alt** anytime when resizing or moving notes to temporarily disable snapping</li>
-					<li>Context menu to set snapping to a specific note duration</li>
-					<li>Option to snap effect values</li>
-				</ul>	
+					<li>Spanish (MiniTube contribution)</li>
+					<li>Portuguese (PBnJK contribution)</li>
+					<li>Simplified chinese (xwjcool123 contribution)</li>
+				</ul>
+			</ul>
+
+			<h2>System Requirement Changes:</h2>
+			<ul>
+				<li>Windows version is now 64-bit and targets .NET 5.0</li>
+				<li>Linux/MacOS versions now uses .NET 6.0. Mono is not longer used (See [installation](install.md) page for .NET download links)</li>
+				<li>MacOS now requires at least Catalina and will run natively on ARM if you install the ARM version of .NET</li>
+				<li>All desktop version now requires OpenGL 3.3</li>
+				<li>Android version now requires OpenGL ES 2.0</li>
+				<li>Windows 7 and 32-bit systems are longer supported</li>
 			</ul>
 
 			<h2>Latest release trailer</h2>
 			<div style="position:relative;margin-left: auto;margin-right: auto;width:80%;height:0;padding-bottom:45%;">
-				<iframe style="position:absolute;top:0;left:0;width:100%;height:100%" src="https://www.youtube.com/embed/pgJYHGu8yio" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<iframe style="position:absolute;top:0;left:0;width:100%;height:100%" src="https://www.youtube.com/embed/1xQbFUGz0Co" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			</div>
 
 			<h1>Download</h1>
@@ -68,21 +73,21 @@
 					<td colspan="2"><center><h2>Download links</h2></center></td>
 				</tr>
 				<tr>
-					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.0.6/FamiStudio406-WinInstaller.zip"><img src="windows.png"></a></td>
+					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.1.0/FamiStudio410-WinInstaller.zip"><img src="windows.png"></a></td>
 					<td style="padding: 20px;" align="center">
-						<a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.0.6/FamiStudio406-WinInstaller.zip"><center>Windows Installer</center></a><br>
-						<a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.0.6/FamiStudio406-WinPortableExe.zip"><center>Windows Portable EXE</center></a>
+						<a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.1.0/FamiStudio410-WinInstaller.zip"><center>Windows Installer</center></a><br>
+						<a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.1.0/FamiStudio410-WinPortableExe.zip"><center>Windows Portable EXE</center></a>
 					</td>
 				</tr>
 				<tr>
-					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.0.6/FamiStudio406-MacOS.zip"><img src="macos.png"></a></td>
-					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.0.6/FamiStudio406-MacOS.zip"><center>MacOS Bundle</center></a></td>
+					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.1.0/FamiStudio410-MacOS.zip"><img src="macos.png"></a></td>
+					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.1.0/FamiStudio410-MacOS.zip"><center>MacOS Bundle</center></a></td>
 				</tr>
 				<tr>
-					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.0.6/FamiStudio406-LinuxAMD64.zip"><img src="linux.png"></a></td>
+					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.1.0/FamiStudio410-LinuxAMD64.zip"><img src="linux.png"></a></td>
 					<td style="padding: 20px;" align="center">
 						<a href="https://flathub.org/apps/details/org.famistudio.FamiStudio"><center>FlatHub</center></a><br>
-						<a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.0.6/FamiStudio406-LinuxAMD64.zip"><center>Linux AMD64 Binaries</center></a>
+						<a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.1.0/FamiStudio410-LinuxAMD64.zip"><center>Linux AMD64 Binaries</center></a>
 					</td>
 				</tr>
 				<tr>
@@ -90,16 +95,20 @@
 					<td style="padding: 20px;" align="center"><a href="https://play.google.com/store/apps/details?id=org.famistudio"><center>Play Store</center></a></td>
 				</tr>
 				<tr>
-					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.0.5/FamiStudio405-SoundEngine.zip"><img src="6502.png"></a></td>
-					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.0.5/FamiStudio405-SoundEngine.zip"><center>NES Sound Engine<br>(CA65, NESASM, ASM6)</center></a></td>
+					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.1.0/FamiStudio410-SoundEngine.zip"><img src="6502.png"></a></td>
+					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.1.0/FamiStudio410-SoundEngine.zip"><center>NES Sound Engine<br>(CA65, NESASM, ASM6)</center></a></td>
 				</tr>
 			</table>
 
 			<h2>Installation Instructions</h2>
 			<ul>
-				<li>On Windows simply download and run the installer (Setup.exe). A shortcut to FamiStudio and the included demo songs will be added to your Start Menu. If you get a warning when installing or if the app crashes when running, please check out the <a href='doc/install/#windows'>documentation</a> for the fix.</li>
-				<li>On macOS, download and uncompress the file anywhere and the launch FamiStudio app. The demo songs and included in the zip. The app is unsigned and might require you to <a href='doc/install/#macos'>ignore a few warning</a>.</li>
-				<li>On Linux, the FlatHub page contains the instructions, if installing from the ZIP file please read the <a href='https://famistudio.org/doc/install/#linux'>installation instructions</a>.</li>
+				<li>On Windows simply download and run the installer (Setup.exe), it should take care of installing most dependencies. A shortcut to FamiStudio and the included demo songs will be added to your Start Menu. If you get a warning when installing or if the app crashes when running, please check out the <a href='doc/install/#windows'>documentation</a> for the fix.</li>
+				<li>On macOS, download and uncompress the file anywhere and the launch FamiStudio app. The demo songs and included in the zip. The app is unsigned and might require you to <a href='doc/install/#macos'>ignore a few warning</a>. If you do not have .NET installed, it should prompt you to install it.</li>
+				<li>On Linux:</li>
+				<ul>
+					<li>If you are using the standalone version from the ZIP file, you will need to install .NET yourself. Please see the <a href='https://famistudio.org/doc/install/#linux'>installation instructions</a> for more information.</li>
+					<li>The FlatHub version should take care of installing all dependencies.</li>
+				</ul>
 			</ul>
 
 			<h1>Documentation</h1>
