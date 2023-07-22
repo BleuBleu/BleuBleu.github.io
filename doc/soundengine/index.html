@@ -242,7 +242,7 @@
 </ul>
 <h2 id="ramcode-usage">RAM/CODE usage</h2>
 <p>Enabling more features will make the sound engine code larger and use more RAM. The zeropage usage is 7 bytes and can be easily aliased with some of your ZP variables as they are only used as temporary variables inside the famistudio_xxx subroutines.</p>
-<p>Here is a table to give a rough idea of the best/worst cast of RAM/CODE usage. Note that each column includes all features of the columns on the left. So the rightmost column has every feature enabled. In reality, you can toggle features individually. These tables where generated with only NTSC support, DPCM support enabled and no SFX streams.</p>
+<p>Here is a table to give a rough idea of the best/worst case of RAM/CODE usage. Note that each column includes all features of the columns on the left. So the rightmost column has every feature enabled. In reality, you can toggle features individually. These tables where generated with only NTSC support, DPCM support enabled and no SFX streams.</p>
 <p><strong>Code size</strong></p>
 <p><img alt="" src="../images/SoundEngineCodeTable.png#center" /></p>
 <p><strong>RAM usage</strong></p>
@@ -339,7 +339,7 @@ FAMISTUDIO_ASM6_BSS_ENUM  = $0200
 FAMISTUDIO_ASM6_CODE_BASE = $8000
 </code></pre>
 <h3 id="2-audio-expansions-configuration">2. Audio Expansions Configuration</h3>
-<p>You can enable up to one audio expansion (<code>FAMISTUDIO_EXP_XXX</code>). Enabling more than one expansion will lead to undefined behavior. Memory usage goes up as more complex expansions are used. The audio expansion you choose <strong>MUST MATCH</strong> with the data you will load in the engine. Loading a FDS song while enabling VRC6 will lead to undefined behavior.</p>
+<p>You can only enable one audio expansion (<code>FAMISTUDIO_EXP_XXX</code>). Enabling more than one expansion will lead to undefined behavior. Memory usage goes up as more complex expansions are used. The audio expansion you choose <strong>MUST MATCH</strong> with the data you will load in the engine. Loading a FDS song while enabling VRC6 will lead to undefined behavior.</p>
 <pre><code>; Konami VRC6 (2 extra square + saw)
 FAMISTUDIO_EXP_VRC6          = 1
 

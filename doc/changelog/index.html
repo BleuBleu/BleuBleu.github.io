@@ -150,6 +150,10 @@
             
             <li class="nav-item" data-level="1"><a href="#change-log" class="nav-link">Change Log</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#version-411-hotfix" class="nav-link">Version 4.1.1 (Hotfix)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
             <li class="nav-item" data-level="2"><a href="#version-410" class="nav-link">Version 4.1.0</a>
               <ul class="nav flex-column">
               </ul>
@@ -315,6 +319,25 @@
 
 <h1 id="change-log">Change Log</h1>
 <p>Version history / release notes for each release.</p>
+<h2 id="version-411-hotfix">Version 4.1.1 (Hotfix)</h2>
+<p>Changes/Fixes:</p>
+<ul>
+<li>Fixed DPCM samples not playing when exporting to ROM with VRC6</li>
+<li>Fixed transposition of DPCM samples incorrectly affecting all instruments</li>
+<li>Fixed "Clear effect values" not always working</li>
+<li>Fixed startup crashes with rtmidi on Linux and updating the version we provide</li>
+<li>Fixed export of DPCM samples with FamiStudio Text format</li>
+<li>Fixed file association on Windows when using the portable EXE version</li>
+<li>Fixed file association on MacOS not always working</li>
+<li>Fixed first mouse click outside a context menu being ignored (will behave like 4.0.x)</li>
+<li>Fixed occasional crash on MacOS when using Cmd+Q</li>
+<li>Fixed issues with MIDI device on MacOS</li>
+<li>Fixed trackpad controls on MacOS </li>
+<li>Fixed keyboard shortcut confusion with select/force display channels</li>
+<li>Fixed minor localization issues.</li>
+<li>Changed the ffmpeg path option to allow text input, and allow using ffmpeg if its on the PATH</li>
+<li>Changed the default keyboard shortcut to force display channel to SHIFT + F-keys on MacOS to avoid issues</li>
+</ul>
 <h2 id="version-410">Version 4.1.0</h2>
 <p>Changes/Fixes:</p>
 <ul>
@@ -335,7 +358,7 @@
 <li>VGM &amp; WAV code cleanup (alexmush contribution)</li>
 <li>VGM import support (Perkka &amp; alexmush contribution)</li>
 <li>Translations:<ul>
-<li>Spanish (NicolAR contribution)</li>
+<li>Spanish (NicolAR, zukinnyk and LagMager contribution)</li>
 <li>Portuguese (BeepsNBoops contribution)</li>
 <li>Simplified chinese (xwjcool123 and FRC contribution)</li>
 </ul>

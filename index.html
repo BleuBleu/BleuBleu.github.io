@@ -21,7 +21,26 @@
 			<h1>FamiStudio NES Music Editor</h1>
 			<p>FamiStudio is very simple music editor for the Nintendo Entertainment System or Famicom. It is targeted at both chiptune artists and NES homebrewers.</p>
 
-			<h2>Latest Release 4.1.0</h2>			
+			<h2>Changes in Latest Hotfix 4.1.1</h2>			
+			<ul>
+				<li>Fixed DPCM samples not playing when exporting to ROM with VRC6</li>
+				<li>Fixed transposition of DPCM samples incorrectly affecting all instruments</li>
+				<li>Fixed "Clear effect values" not always working</li>
+				<li>Fixed startup crashes with rtmidi on Linux and updating the version we provide</li>
+				<li>Fixed export of DPCM samples with FamiStudio Text format</li>
+				<li>Fixed file association on Windows when using the portable EXE version</li>
+				<li>Fixed file association on MacOS not always working</li>
+				<li>Fixed first mouse click outside a context menu being ignored (will behave like 4.0.x)</li>
+				<li>Fixed occasional crash on MacOS when using Cmd+Q</li>
+				<li>Fixed issues with MIDI device on MacOS</li>
+				<li>Fixed trackpad controls on MacOS </li>
+				<li>Fixed keyboard shortcut confusion with select/force display channels</li>
+				<li>Fixed minor localization issues.</li>
+				<li>Changed the ffmpeg path option to allow text input, and allow using ffmpeg if its on the PATH</li>
+				<li>Changed the default keyboard shortcut to force display channel to SHIFT + F-keys on MacOS to avoid issues</li>
+			</ul>
+
+			<h2>Latest Major Release 4.1.0</h2>			
 			<p>
 				Please note that this release has pretty significant changes to the system requirements since it includes a migration to .NET and newer OpenGL. Please see the list of changes below.
 			</p>
@@ -74,21 +93,21 @@
 					<td colspan="2"><center><h2>Download links</h2></center></td>
 				</tr>
 				<tr>
-					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.1.0/FamiStudio410-WinInstaller.zip"><img src="windows.png"></a></td>
+					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.1.1/FamiStudio410-WinInstaller.zip"><img src="windows.png"></a></td>
 					<td style="padding: 20px;" align="center">
-						<a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.1.0/FamiStudio410-WinInstaller.zip"><center>Windows Installer</center></a><br>
-						<a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.1.0/FamiStudio410-WinPortableExe.zip"><center>Windows Portable EXE</center></a>
+						<a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.1.1/FamiStudio410-WinInstaller.zip"><center>Windows Installer</center></a><br>
+						<a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.1.1/FamiStudio410-WinPortableExe.zip"><center>Windows Portable EXE</center></a>
 					</td>
 				</tr>
 				<tr>
-					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.1.0/FamiStudio410-MacOS.zip"><img src="macos.png"></a></td>
-					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.1.0/FamiStudio410-MacOS.zip"><center>MacOS Bundle</center></a></td>
+					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.1.1/FamiStudio411-MacOS.zip"><img src="macos.png"></a></td>
+					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.1.1/FamiStudio411-MacOS.zip"><center>MacOS Bundle</center></a></td>
 				</tr>
 				<tr>
-					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.1.0/FamiStudio410-LinuxAMD64.zip"><img src="linux.png"></a></td>
+					<td style="padding: 20px;" align="center"><a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.1.1/FamiStudio411-LinuxAMD64.zip"><img src="linux.png"></a></td>
 					<td style="padding: 20px;" align="center">
 						<a href="https://flathub.org/apps/details/org.famistudio.FamiStudio"><center>FlatHub</center></a><br>
-						<a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.1.0/FamiStudio410-LinuxAMD64.zip"><center>Linux AMD64 Binaries</center></a>
+						<a href="https://github.com/BleuBleu/FamiStudio/releases/download/4.1.1/FamiStudio411-LinuxAMD64.zip"><center>Linux AMD64 Binaries</center></a>
 					</td>
 				</tr>
 				<tr>
@@ -135,7 +154,7 @@
 			<h1>Source Code</h1>
 			<p>The entire source code is available on <a href="https://github.com/BleuBleu/FamiStudio">GitHub</a>.</p>
 
-			<h1>Contact & Social Media</h1>
+			<h1>Contact &amp; Social Media</h1>
 			<center>
 				<a href="mailto:famistudio@outlook.com"><img style="padding: 10px;" src="email.png"></a>
 				<a href="https://twitter.com/nesbleubleu"><img style="padding: 10px;" src="twitter.png"></a>
