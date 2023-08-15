@@ -150,6 +150,10 @@
             
             <li class="nav-item" data-level="1"><a href="#change-log" class="nav-link">Change Log</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#version-412-hotfix" class="nav-link">Version 4.1.2 (Hotfix)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
             <li class="nav-item" data-level="2"><a href="#version-411-hotfix" class="nav-link">Version 4.1.1 (Hotfix)</a>
               <ul class="nav flex-column">
               </ul>
@@ -318,7 +322,27 @@
                     <div class="col-md-9" role="main">
 
 <h1 id="change-log">Change Log</h1>
-<p>Version history / release notes for each release.</p>
+<p>Version history / release notes for each release. </p>
+<p>To download older versions or view the release dates, please visit the <a href="https://github.com/BleuBleu/FamiStudio/releases">Github Releases</a> page.</p>
+<h2 id="version-412-hotfix">Version 4.1.2 (Hotfix)</h2>
+<p>Changes/Fixes:</p>
+<ul>
+<li>Fixed instrument context menu disappearing when using a left-click</li>
+<li>Fixed "Follow Mode" jittering when using small % values</li>
+<li>Fixed out of range volumes when importing .fti containing FDS instruments</li>
+<li>Fixed effect icons sometimes visible past the end of a pattern</li>
+<li>Fixed issue where instruments fail to load properly when a stop note is used before any other notes</li>
+<li>Fixed crash when playing a note from all channels with all expansions enabled</li>
+<li>Fixed a couple of minor issues with demo songs</li>
+<li>Fixed N163 emulation issue where waves where not properly biased by -8</li>
+<li>OPNI instrument import support for EPSM instruments (Perkka contribution)</li>
+<li>Minor localization fixes</li>
+<li>An APK of the Android version is now available for download, but no support will be provided if it does not work on your device</li>
+</ul>
+<p>Breaking/Behavior changes:</p>
+<ul>
+<li>Songs using 7 or 8 N163 channels may sound slight quieter now and volume might react a bit differently as well</li>
+</ul>
 <h2 id="version-411-hotfix">Version 4.1.1 (Hotfix)</h2>
 <p>Changes/Fixes:</p>
 <ul>
