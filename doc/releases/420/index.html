@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="FamiStudio 4.2.0 Release Highlights!">
+
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="FamiStudio 4.2.0 Release Highlights!" />
+        <meta property="og:description" content="S5B envelopes, FDS auto-modulation, phase resets, video export improvements, more filtering options, folders in project explorer, german translation, audio backend improvements and a lot more!" />
+        <meta property="og:url" content="https://famistudio.org/doc/releases/420/" />
+        <meta property="og:image" content="https://famistudio.org/doc/releases/420/Thumbnail.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta name="twitter:site" content="@NesBleuBleu">
+        <meta name="twitter:title" content="FamiStudio 4.2.0 Release Highlights!">
+        <meta name="twitter:description" content="S5B envelopes, FDS auto-modulation, phase resets, video export improvements, more filtering options, folders in project explorer, german translation, audio backend improvements and a lot more!">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:image:src" content="https://famistudio.org/doc/releases/420/Thumbnail.png">
+        <meta name="theme-color" content="#b2b9c6">       
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>FamiStudio 4.2.0 Highlights - FamiStudio Documentation</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/darcula.min.css">
+        <link href="../../css/extra.css" rel="stylesheet">
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">FamiStudio Documentation</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../.." class="nav-link">Welcome</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">User Guide <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../install/" class="dropdown-item">Installation</a>
+</li>
+                                    
+<li>
+    <a href="../../basics/" class="dropdown-item">Basics</a>
+</li>
+                                    
+<li>
+    <a href="../../pianoroll/" class="dropdown-item">Editing Notes</a>
+</li>
+                                    
+<li>
+    <a href="../../sequencer/" class="dropdown-item">Editing Patterns</a>
+</li>
+                                    
+<li>
+    <a href="../../instruments/" class="dropdown-item">Editing Instruments & Arpeggios</a>
+</li>
+                                    
+<li>
+    <a href="../../song/" class="dropdown-item">Editing Songs & Project</a>
+</li>
+                                    
+<li>
+    <a href="../../dpcm/" class="dropdown-item">Editing DPCM Samples</a>
+</li>
+                                    
+<li>
+    <a href="../../import/" class="dropdown-item">Importing Songs</a>
+</li>
+                                    
+<li>
+    <a href="../../export/" class="dropdown-item">Exporting Songs</a>
+</li>
+                                    
+<li>
+    <a href="../../expansion/" class="dropdown-item">Using Expansion Audio</a>
+</li>
+                                    
+<li>
+    <a href="../../cleanup/" class="dropdown-item">Cleaning-up your Project</a>
+</li>
+                                    
+<li>
+    <a href="../../config/" class="dropdown-item">Configuring FamiStudio</a>
+</li>
+                                    
+<li>
+    <a href="../../cmdline/" class="dropdown-item">Command-line Processing</a>
+</li>
+                                    
+<li>
+    <a href="../../soundengine/" class="dropdown-item">NES/Famicom Sound Engine</a>
+</li>
+                                    
+<li>
+    <a href="../../troubleshooting/" class="dropdown-item">Troubleshooting</a>
+</li>
+                                    
+<li>
+    <a href="../../thanks/" class="dropdown-item">Acknowledgements</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Change Log <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../changelog/" class="dropdown-item">All Version History</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active">FamiStudio 4.2.0 Highlights</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../../changelog/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" class="nav-link disabled">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#famistudio-420-highlights" class="nav-link">FamiStudio 4.2.0 Highlights</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#sunsoft-5b-envelope-support" class="nav-link">Sunsoft 5B Envelope Support</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#fds-auto-modulation-and-fds-emulation-improvements" class="nav-link">FDS Auto-Modulation and FDS Emulation Improvements</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#phase-reset-support" class="nav-link">Phase Reset Support</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#improved-ability-to-disable-attacks" class="nav-link">Improved Ability to Disable Attacks</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#folders-in-project-explorer" class="nav-link">Folders in Project Explorer</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#video-export-improvements" class="nav-link">Video Export Improvements</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#eraser-mode" class="nav-link">Eraser Mode</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#copy-dpcm-sample-mapping-between-instruments" class="nav-link">Copy DPCM Sample Mapping between instruments</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#more-filtering-options-and-per-project-overrides" class="nav-link">More Filtering Options and Per-Project Overrides</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#german-translation" class="nav-link">German translation</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#and-more" class="nav-link">...and more!</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="famistudio-420-highlights">FamiStudio 4.2.0 Highlights</h1>
+<p>FamiStudio 4.2.0 was just released! You can download it <a href="https://famistudio.org/#download">here</a>.</p>
+<p><img alt="" src="Thumbnail.png#center" /></p>
+<p>This post is simply going to showcase 10 of the most interesting new features and how to use them. Please visit the <a href="../../changelog/#version-420">change log for a full list of changes, fixes and system requirement changes</a>.</p>
+<h2 id="sunsoft-5b-envelope-support">Sunsoft 5B Envelope Support</h2>
+<p>In FamiStudio 4.1.0 we added noise support, we now have envelope support. This applies to both 5B and EPSM square channels.</p>
+<p>To enable envelope on an instrument, simply select and envelope shape and choose between auto or manual pitch. <strong>Auto-Pitch</strong> will set the envelope period/frequency to a multiple of the note frequency, which is useful to create a bass instrument, for example. Manual pitch is better suited for normal note attacks. </p>
+<p><img alt="" src="S5BEnvelope.gif#center" /></p>
+<p>There is also a new <strong>Env Period</strong> effect which can be used to change the period of instrument using Manual pitch. </p>
+<p>Please check out the <a href="../../expansion/#sunsoft-5b">Sunsoft 5B documentation</a> for more detail on how to use this audio expansion and the limitations of envelope.</p>
+<h2 id="fds-auto-modulation-and-fds-emulation-improvements">FDS Auto-Modulation and FDS Emulation Improvements</h2>
+<p>The Famicom Disk System audio expansion has received some attention.</p>
+<p>We added support for <strong>Auto-Modulation</strong> which will set the modulation speed automatically as a fraction of the note's pitch. To enable, simply check the <strong>Auto-Mod</strong> checkbox on the instrument.</p>
+<p>For example, setting the <strong>Numerator</strong> to 1 and <strong>Denominator</strong> to 4 would set the speed to 1/4 of the note's period. </p>
+<p><img alt="" src="FDSAutoMod.gif#center" /></p>
+<p>FDS emulation has also received some improvements. It features proper 2000KHz filtering and DAC emulation and sounds much closer to real hardware. That being said, it may now sound different from other emulators. FamiStudio should be considered more accurate here.</p>
+<p>Please check out the <a href="../../expansion/#famicom-disk-system">FDS documentation</a> for more information.</p>
+<h2 id="phase-reset-support">Phase Reset Support</h2>
+<p>We added <strong>Phase Reset</strong> support for all channels where it is physically possible. Resetting the phase allows you manually specify where a waveform restarts and can be used to create interesting effects such as constructive/destructive interference between 2 channels.</p>
+<p><img alt="" src="PhaseReset.png#center" /></p>
+<p>Is recommended to enable the <a href="../../config/#sound-configuration">Fully emulate when seeking</a> option when working with phase resets. This will force FamiStudio to fully emulate the song from the start and ensuring that phase resets are fully taken into account. When this option is off, FamiStudio takes a few shortcuts when seeking.</p>
+<p><img alt="" src="AccurateSeek.png#center" /></p>
+<p>For more information see the <a href="../../pianoroll/#phase-reset">Phase Reset section</a> of the piano roll documentation.</p>
+<h2 id="improved-ability-to-disable-attacks">Improved Ability to Disable Attacks</h2>
+<p>Disabling note attacks prevents envelopes from resetting when playing a new note. Prior to FamiStudio 4.2.0 you only disable the attack when the instrument remained the same.</p>
+<p>We've relaxed this rule a bit:</p>
+<ol>
+<li>You can disable the attack if the note uses the same instrument as the previous note.</li>
+<li>You can now also disable the attack if the instruments are different, but have <strong>identical envelopes</strong>. </li>
+</ol>
+<p>This new second option is useful on FM channels (VRC7 or EPSM) to change patch mid-note. </p>
+<p>Failure to follow these rules will display a "hollow" attack, indicating that you broke at least one of the 2 rules. In the example below, the green instrument did not have identical envelopes. </p>
+<p><img alt="" src="../../images/NoAttackError.png#center" /></p>
+<p>We will be trying to relax these rules further in future versions to allow more use-cases.</p>
+<p>Please visit the <a href="../../pianoroll/#note-attack">Note Attack documentation</a> for more information.</p>
+<h2 id="folders-in-project-explorer">Folders in Project Explorer</h2>
+<p>You can now create little folder in the Project Explorer by pressing the "+" button. Folders can be created for songs, instruments, DPCM samples and arpeggios.</p>
+<p>To move items inside a folder, simply drag it inside the appropriate folder. Folders themselves can be re-ordered and also obey sorting rules. </p>
+<p><img alt="" src="../../images/MoveFolder.gif#center" /></p>
+<p>Please visit the <a href="../../instruments/#organizing-instruments">documentation</a> for more information on how to use folders.</p>
+<h2 id="video-export-improvements">Video Export Improvements</h2>
+<p>Video export has received some love and has more settings than ever. </p>
+<p><img alt="" src="../../images/ExportVideo.png#center" /></p>
+<p>There is also a new <strong>Unified</strong> piano roll, complete with optional 3D effect and depth-of-field!</p>
+<p><img alt="" src="../../images/VideoScreenshot.jpg#center" /></p>
+<p>There is also a video "Preview" window that can be access by pressing the "Preview" button which is located at the bottom of all the video settings. On mobile, the "Preview" button is accessed by pressing the "..." button </p>
+<p><img alt="" src="../../images/MobileVideoPreview.gif#center" /></p>
+<p>Please check out the <a href="../../export/#video">video export documentation</a> for more detail on video export.</p>
+<h2 id="eraser-mode">Eraser Mode</h2>
+<p>You can now quickly delete multiple notes by holding the mouse after a <strong>Double-Click</strong> or a <strong>Shift+Click</strong>. The mouse cursor will turn into a little eraser and will allow you to delete notes until you release the button.</p>
+<p><img alt="" src="../../images/EraserMode.gif#center" /></p>
+<p>For more information, including how to use on mobile, please visit the <a href="../../pianoroll/#adding-deleting-notes">piano roll documentation</a></p>
+<h2 id="copy-dpcm-sample-mapping-between-instruments">Copy DPCM Sample Mapping between instruments</h2>
+<p>You can now copy DPCM sample mappings between instrument by simply drag &amp; drop the little "sample" icon from one to the other. </p>
+<p><img alt="" src="../../images/CopySampleMappings.gif#center" /></p>
+<p>For more information, including how to use on mobile, please visit the <a href="../../instruments/#copying-dpcm-sample-mappings">documentation</a></p>
+<h2 id="more-filtering-options-and-per-project-overrides">More Filtering Options and Per-Project Overrides</h2>
+<p>You now have more audio filtering options in the <a href="../../config/#mixer">Mixer section of the configuration dialog</a>. </p>
+<p><img alt="" src="../../images/ConfigMixer.png#center" /></p>
+<p>Moreover, projects can now override and store their own volume/filtering settings so that <code>.fms</code> files you send to your friends sound exactly as you want it to sound. These overrides are set in the <a href="../../song/#mixer-settings">Mixer section of the project properties dialog</a>. </p>
+<p>You can quickly disable any override that the project has set by clicking the little "mixer" icon next to the project name. When the icon is dimmed, project overrides are not applied.</p>
+<p><img alt="" src="../../images/MixerSettingsOverride.png#center" /></p>
+<p>For more information, please see the <a href="../../song/#mixer-settings">Project properties documentation</a>.</p>
+<h2 id="german-translation">German translation</h2>
+<p>FamiStudio has been fully translated to German thanks for Arda and VRC6Lover123! You can change the language in the <a href="../../config/#general-configuration">Configuration Dialog</a></p>
+<p><img alt="" src="German.png#center" /></p>
+<h2 id="and-more">...and more!</h2>
+<p>There is a lot more, please visit the <a href="../../changelog/#version-420">change log</a> for a full list of changes.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
