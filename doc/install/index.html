@@ -104,9 +104,18 @@
 <li>
     <a href="../thanks/" class="dropdown-item">Acknowledgements</a>
 </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Change Log <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
                                     
 <li>
-    <a href="../changelog/" class="dropdown-item">Change Log</a>
+    <a href="../changelog/" class="dropdown-item">All Version History</a>
+</li>
+                                    
+<li>
+    <a href="../releases/420/" class="dropdown-item">FamiStudio 4.2.0 Highlights</a>
 </li>
                                 </ul>
                             </li>
@@ -175,37 +184,42 @@
 <h2 id="system-requirements">System requirements</h2>
 <p>For all 3 desktop platforms, FamiStudio requires the following software/hardware environment:</p>
 <ul>
-<li>Windows 8 (64-bit) or newer (Windows 7 or 32-bit systems are no longer supported after 4.1.0).</li>
+<li>Windows 8 (64-bit) or newer</li>
 <li>MacOS 10.15 "Catalina" or newer</li>
-<li>.NET Runtime (5.0 on Windows, 6.0 on other platforms)</li>
-<li>OpenGL 3.3 support or newer</li>
+<li>.NET Runtime 7.0</li>
+<li>OpenGL 3.0 support or newer</li>
 </ul>
 <h2 id="windows">Windows</h2>
 <h3 id="installation_1">Installation</h3>
 <p>On Windows, it is highly recommended to use the installer and run <code>Setup.exe</code>. This should take care of installing all dependencies.</p>
-<p>If you are having problems running the portable application, be sure to install the .NET 5.0 Runtime.</p>
+<p>If you are having problems running the portable application, be sure to install the .NET 7.0 Runtime.</p>
 <ul>
-<li><a href="https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-desktop-5.0.17-windows-x64-installer">.NET 5.0 Runtime</a></li>
+<li><a href="https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-desktop-7.0.14-windows-x64-installer">.NET 7.0 Runtime</a></li>
 </ul>
 <p>If you are getting a VS2019 C++ Runtime error message, be sure to install the following package.</p>
 <ul>
-<li><a href="https://aka.ms/vs/16/release/vc_redist.x86.exe">Visual Studio Runtime</a></li>
-</ul>
-<p>If you are getting an XAudio 2 error, install the old DirectX redist package. This should not be needed as we no longer support Windows 7, but i am leaving here just in case.</p>
-<ul>
-<li><a href="https://www.microsoft.com/en-us/download/confirmation.aspx?id=8109">DirectX Redistributables</a> </li>
+<li><a href="https://aka.ms/vs/17/release/vc_redist.x64.exe">Visual Studio Runtime</a></li>
 </ul>
 <h3 id="warning-on-first-launch">Warning on First Launch</h3>
 <p>On first launch, SmartScreen might say "Windows protected your PC".</p>
 <p><img alt="" src="../images/SmartScreen1.png#center" /></p>
 <p>To bypass the warning, simply click "More Info" and then "Run Anyway".</p>
 <p><img alt="" src="../images/SmartScreen2.png#center" /></p>
+<h3 id="windows-7">Windows 7</h3>
+<p>Windows 7 is not officially supported. This mean if the app crashes or does not work correctly, you are on your own. Github issues or bug reports on Discord related to Windows 7 will be ignored.</p>
+<p>That being said, if you are willing to jump through a few hoops, you may be able to make it work:</p>
+<ol>
+<li>Install the Visual Studio x64 Runtime, see link above.</li>
+<li>Run the app and follow the link to install .NET 7.0, get the x64 version. Install and reboot.</li>
+<li>Run the app. If you get a <code>hostfxr.dll</code> error, download <a href="https://www.catalog.update.microsoft.com/Search.aspx?q=KB4457144">this update package</a>. Get the Windows 7 x64 version, it should be a <code>.msu</code> file of rougly 235MB. Install and reboot.</li>
+<li>Run the app. If OpenGL fails to initialize, you may have to use a software renderer. <a href="https://fdossena.com/?p=mesa/index.frag">Mesa</a> is a popular renderer, simply download the x64 version and put <code>opengl32.dll</code> in the same folder as <code>FamiStudio.exe</code>. Note that using a software renderer will make the app a lot more sluggish.</li>
+</ol>
 <h2 id="macos">MacOS</h2>
 <h3 id="installation_2">Installation</h3>
-<p>On MacOS, you will need to install the .NET 6.0 Runtime. Here are some direct download links from Microsoft. Pick the architecture that matches your hardware. Installing the correct version for your CPU is important as it will ensure the app runs natively on your Mac.</p>
+<p>On MacOS, you will need to install the .NET 7.0 Runtime. Here are some direct download links from Microsoft. Pick the architecture that matches your hardware. Installing the correct version for your CPU is important as it will ensure the app runs natively on your Mac.</p>
 <ul>
-<li><a href="https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-6.0.19-macos-x64-installer">.NET 6.0 Runtime</a> for x64 (Intel)</li>
-<li><a href="https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-6.0.19-macos-arm64-installer">.NET 6.0 Runtime</a> for ARM64 (M1/M2)</li>
+<li><a href="https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-7.0.14-macos-x64-installer">.NET 7.0 Runtime</a> for x64 (Intel)</li>
+<li><a href="https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-7.0.14-macos-arm64-installer">.NET 7.0 Runtime</a> for ARM64 (M1/M2)</li>
 </ul>
 <h3 id="warning-on-first-launch_1">Warning on First Launch</h3>
 <p>GateKeeper can be quite aggressive when first running the application. At first it will look like you simply cannot run it and it will give you the option to throw FamiStudio in the recycling bin.</p>
@@ -219,7 +233,7 @@
 <p>The Linux version should work on most x64 ditros. But given the very non-standard nature of the OS, your mileage may vary.</p>
 <p>Please install the following dependencies before trying to run the Linux version:</p>
 <ul>
-<li><a href="https://dotnet.microsoft.com/en-us/download/dotnet/6.0">.NET 6.0 Runtime</a></li>
+<li><a href="https://dotnet.microsoft.com/en-us/download/dotnet/7.0">.NET 7.0 Runtime</a></li>
 </ul>
 <h3 id="launching">Launching</h3>
 <p>Then simply launch the application with this command:</p>

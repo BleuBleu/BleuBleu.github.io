@@ -106,9 +106,18 @@
 <li>
     <a href="../thanks/" class="dropdown-item">Acknowledgements</a>
 </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Change Log <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
                                     
 <li>
-    <a href="../changelog/" class="dropdown-item">Change Log</a>
+    <a href="../changelog/" class="dropdown-item">All Version History</a>
+</li>
+                                    
+<li>
+    <a href="../releases/420/" class="dropdown-item">FamiStudio 4.2.0 Highlights</a>
 </li>
                                 </ul>
                             </li>
@@ -163,6 +172,10 @@
               </ul>
             </li>
             <li class="nav-item" data-level="2"><a href="#moving-resizing-notes" class="nav-link">Moving &amp; resizing notes</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#quickly-duplicating-notes" class="nav-link">Quickly duplicating Notes</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -222,7 +235,7 @@
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#editing-volume-effects" class="nav-link">Editing volume &amp; effects</a>
+            <li class="nav-item" data-level="2"><a href="#editing-effects" class="nav-link">Editing Effects</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -254,7 +267,9 @@
 <p>Clicking a pattern in the sequencer will scroll the piano roll to its location. </p>
 <p>On desktop, <strong>Left-clicking</strong> in the piano roll will add a note of the currently selected instrument and dragging while still holding the left button will allow you to set the duration. A pattern may be automatically created if you click on an area where there was no pattern. <strong>Double-clicking</strong> deletes a note. Alternatively <strong>Shift+click</strong> also deletes.</p>
 <p><img alt="" src="../images/CreateNote.gif#center" /></p>
-<p>Similarly, on mobile, notes are created by a quick tap and deleted by <strong>double-tapping</strong>.</p>
+<p>Another way to delete multiple notes is to use the <strong>Eraser Mode</strong> which is accessed by simply holding and dragging the mouse after a <strong>Double-clicking</strong> or a <strong>Shift+click</strong>. The cursor will turn into a pencil eraser, allowing you to quickly delete notes.</p>
+<p><img alt="" src="../images/EraserMode.gif#center" /></p>
+<p>Similarly, on mobile, notes are created by a quick tap and deleted by <strong>double-tapping</strong>. <strong>Eraser Mode</strong> is activated by holding and dragging your finger after deleting the first note.</p>
 <p><img alt="" src="../images/MobileCreateNote.gif#center" /></p>
 <h2 id="moving-resizing-notes">Moving &amp; resizing notes</h2>
 <p>When moving the mouse around the piano roll, the note under the mouse cursor will be highlighted and the mouse cursor will change to reflect the type of action you can do :</p>
@@ -267,6 +282,10 @@
 </ul>
 <p>On mobile, notes must be first given a <strong>white highlight</strong> by tapping once before being edited. Only they have that, you can move them or resize them. </p>
 <p><img alt="" src="../images/MobileEditNote.gif#center" /></p>
+<h2 id="quickly-duplicating-notes">Quickly duplicating Notes</h2>
+<p>On desktop, one way to quickly duplicate notes is to hold <strong>Ctrl</strong> while dragging a selection. It will duplicate the select and allow you to place the new notes where you want.</p>
+<p><img alt="" src="../images/DuplicateNotes.gif#center" /></p>
+<p>Another way to achieve similar result is to use <a href="./#special-paste">special paste</a> with the "Repeat" option.</p>
 <h2 id="note-duration-priority">Note duration &amp; priority</h2>
 <p>FamiStudio is a monophonic app, in other words, only one note can play at a time on a given channel. </p>
 <p>The general rule is that the latest/newest note (the one that is rightmost on the timeline) always has priority, this mean that it can interrupt a previous note, making it shorter than it would normally be. </p>
@@ -335,13 +354,20 @@
 <p>On mobile, the snapping precision is set from the Quick Access Bar, on the right size but works similarly. </p>
 <p><img alt="" src="../images/MobileSnap.png#center" /></p>
 <h2 id="note-attack">Note attack</h2>
-<p>By default, notes will have an "attack" which mean they will restart their envelopes (volume, pitch, etc.) from the beginning. This is represented by the little dark rectangle on the left of each note. </p>
+<p>By default, notes will have an "attack" which mean they will restart their envelopes (volume, pitch, etc.) from the beginning. This is represented by the little dark rectangle on the left of each note. For FM instruments this mean re-triggering their ADSR envelopes.</p>
 <p>The attack can be toggled for a particular note by selecting the "Toggle Attack" option from the note context menu. Alternatively, you can hold <strong>A</strong> and click on a note to toggle its attack. Similarly, on mobile, toggling the note attack is done by long pressing on a note and selecting "Toggle Attack".</p>
-<p>Note that if a note does not use the same instrument as the previous one, the attack will still play, even if disabled. Also please note that this will generally not carry over to FamiTracker, besides specific use cases around slide notes.</p>
 <p>In this example, the first note will have an attack, while the second one will not.</p>
 <p><img alt="" src="../images/NoAttack.png#center" /></p>
 <p>Since envelopes are not reset, this means that if a note was released, it will remain released if the subsequent notes have no attack.</p>
 <p><img alt="" src="../images/NoAttackReleased.png#center" /></p>
+<p>There are a few rules on when attacks can be disabled:</p>
+<ol>
+<li>You can disable the attack if the note uses the same instrument as the previous note.</li>
+<li>You can disable the attack if the instruments are different, but have <strong>identical envelopes</strong>. This is useful on FM channels (VRC7 or EPSM) to change patch mid-note. Note that N163 does not support this, instruments must be the same.</li>
+</ol>
+<p>Failure to follow these rules will display a "hollow" attack, indicating that you broke one of the 2 rules. In the example below, the green instrument did not have identical envelopes. We will be trying to relax these rules further in future versions to allow more use-cases.</p>
+<p><img alt="" src="../images/NoAttackError.png#center" /></p>
+<p>Finally, please note that this will generally not carry over to FamiTracker when exporting, besides specific use cases around slide notes.</p>
 <h2 id="slide-notes">Slide notes</h2>
 <p>Slide notes are notes that start at a given pitch (the pitch of the note) and slowly change to hit a target pitch which is represented by where the triangle ends. In this example, the attack of the second note is also disabled.</p>
 <p><img alt="" src="../images/SlideNote.gif#center" /></p>
@@ -355,7 +381,10 @@
 <h2 id="replacing-instruments">Replacing Instruments</h2>
 <p>To replace the instrument used by a note, you can simply drag the instrument on the note. To replace multiple notes at a time, simply create a selection and drag the instrument on the selection.</p>
 <p><img alt="" src="../images/ReplaceInstrument.gif#center" /></p>
-<p>On mobile, you can replace an instrument or arpeggio by first making a selection, then long pressing on an instrument from the Quick Access Bar, then selecting "Replace Selection Instrument".</p>
+<p>To replace just a specific instrument in the selection, you can right click on any note in the selection and the context menu will offer you to replace the note's instrument with the currently selected one.</p>
+<p><img alt="" src="../images/ReplaceSpecificInstrument.gif#center" /></p>
+<p>On mobile, you can replace an instrument or arpeggio by first making a selection, then long pressing on an instrument from the Quick Access Bar, then selecting "Replace Selection Instrument". </p>
+<p>For specific instrument replacement, simply long press on a note that is part of a selection to get the content menu.</p>
 <p><img alt="" src="../images/MobileReplaceInstrument.gif#center" /></p>
 <h2 id="copying-pasting-notes">Copying &amp; pasting notes</h2>
 <p>Much like the sequencer, selected notes can be copy (or cut) by pressing <strong>Ctrl+C</strong> (or <strong>Ctrl+X</strong>). You can then move the selection somewhere else and paste the notes with <strong>Ctrl+V</strong>.</p>
@@ -395,25 +424,12 @@
 </ul>
 <p>On mobile, the same functionality is accessible by long pressing on the "Delete" icon of the toolbar. The dialog will look different by contains the same functionality.</p>
 <p><img alt="" src="../images/MobileDeleteSpecial.png#center" /></p>
-<h2 id="editing-volume-effects">Editing volume &amp; effects</h2>
-<p>The effect panel can be opened by clicking the little triangle at the top-left of the piano roll. </p>
-<p>Here is the list of effects currently supported, note that not every effect is available on every channel:</p>
-<ul>
-<li><strong>Volume</strong>: The overall volume of the channel.</li>
-<li><strong>Vib Speed</strong>: Vibrato speed, used in conjunction with vibrato depth to create a vibrato effect.</li>
-<li><strong>Vib Depth</strong>: Vibrato depth, used in conjunction with vibrato speed to create a vibrato effect.</li>
-<li><strong>Pitch</strong>: Allow tweaking the fine-pitch of a channel.</li>
-<li><strong>Duty Cycle</strong> : Allow changing the duty cycle of an instrument without using a duty cycle envelope (only instruments with no duty cycle envelopes will use the specified value).</li>
-<li><strong>FDS Speed</strong>: Famicom Disk System audio modulation speed (FDS audio expansion only).</li>
-<li><strong>FDS Depth</strong>: Famicom Disk System audio modulation depth (FDS audio expansion only).</li>
-<li><strong>Speed</strong>: Changes the speed of the song (FamiTracker tempo mode only)</li>
-<li><strong>Note Delay</strong>: Number of frames to delay the current note (FamiTracker tempo mode only)</li>
-<li><strong>Cut Delay</strong>: Stop the note after the specified number of frames (FamiTracker tempo mode only)</li>
-</ul>
-<p>Effects are edited by selecting and effect and dragging up or down to change the value. Right-clicking on an effect value deletes it. </p>
-<p>For effects that have huge values (such as FDS Depth), you can hold Shift to fine tune the exact value (a movement of 1 pixel will change the value by 1).</p>
+<h2 id="editing-effects">Editing Effects</h2>
+<p>The effect panel can be opened by clicking the little triangle at the top-left of the piano roll. On mobile you select the effect you want to edit using the <a href="../basics/#quick-access-bar-mobile-only">Quick Access Bar</a> when in the Piano Roll.</p>
+<p>Effects are edited by selecting and effect and dragging up or down to change the value. Double-clicking on an effect value deletes it. For effects that have huge values (such as FDS Depth), they may change in a logarithmic way. You can also hold Shift to fine tune the exact value (a movement of 1 pixel will change the value by 1).</p>
+<p>Here are all the effects that are supported, note that not every effect is available on every channel. Some are even specific to certain expansions or tempo modes.</p>
 <p><img alt="" src="../images/VolumeTrack.png#center" /></p>
-<h3 id="volume-track">Volume track</h3>
+<h3 id="volume">Volume</h3>
 <p>The volume tracks dictates how loud the current channel should play. This volume is combined with volume envelope by multiplication (50% volume track x 50% envelope volume = 25% total volume). It is much more efficient to use volume envelopes wherever possible and only use volume tracks to control the global volume of the song.</p>
 <p>The volume track is allowed to have slides to smoothly raise or lower the volume. </p>
 <p>Volume slides are created exactly like regular slide notes, by either using the context menu that appears by <strong>right-clicking</strong> on an effect value or by holding <strong>S</strong>, clicking on effect values and dragging up or down. </p>
@@ -421,9 +437,70 @@
 <p><img alt="" src="../images/VolumeSlide.gif#center" /></p>
 <p>On mobile, a volume slide is created by long pressing on a volume value and selecting "Toggle Volume Slide". </p>
 <p><img alt="" src="../images/MobileVolumeSlide.gif#center" /></p>
-<h3 id="vibrato-depth-speed">Vibrato depth &amp; speed</h3>
+<h3 id="vibrato-depth-speed">Vibrato Depth &amp; Speed</h3>
 <p>Vibrato depth and speed are used to add vibrato to a portion of the song without having to bother creating a new instrument. Please note that vibrato will temporarily override any pitch envelope on the current instrument. When vibrato is disabled (by setting depth or speed, or both to zero), the instrument will essentially have no pitch envelope until a new note is played.</p>
-<p>The depth values for the vibrato are identical to FamiTracker but the speeds are slightly different. The way FamiTracker implements vibrato, while clever, is flawed as it undersamples the vibrato curve at high speed, leading to aliasing which ends up with a low-frequency tone that has a "ringing" sound to it. Please see the <a href="../export/">Export</a> page for a table that maps between FamiStudio and FamiTracker.</p>
+<p>The depth values for the vibrato are identical to FamiTracker but the speeds are slightly different. Please see the <a href="../export/">Export</a> page for a table that maps between FamiStudio and FamiTracker.</p>
+<p>In its current implementation, changing the speed/depth of the vibrato is likely to result in a "pop" since it will restart the vibrato envelope, a sine wave, from the start. That being said, if you want to do it, it is possible if you carefully take the number of frames of a full cycle into account and change it at the exact right time. It will be tedious to setup, but it can be done.</p>
+<p>Here is a table the period (in frame) for each value of the vibrato speed effect.</p>
+<table>
+<thead>
+<tr>
+<th>Vibrato Speed</th>
+<th>Period (in frames)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>64</td>
+</tr>
+<tr>
+<td>2</td>
+<td>32</td>
+</tr>
+<tr>
+<td>3</td>
+<td>21</td>
+</tr>
+<tr>
+<td>4</td>
+<td>16</td>
+</tr>
+<tr>
+<td>5</td>
+<td>13</td>
+</tr>
+<tr>
+<td>6</td>
+<td>11</td>
+</tr>
+<tr>
+<td>7</td>
+<td>9</td>
+</tr>
+<tr>
+<td>8</td>
+<td>8</td>
+</tr>
+<tr>
+<td>9</td>
+<td>7</td>
+</tr>
+<tr>
+<td>10</td>
+<td>6</td>
+</tr>
+<tr>
+<td>11</td>
+<td>5</td>
+</tr>
+<tr>
+<td>12</td>
+<td>4</td>
+</tr>
+</tbody>
+</table>
+<p>For example, if you start a vibrato at speed 5, you can change it seamlessly every 13 frame since you will be at the beginning of the cycle.</p>
 <h3 id="pitch">Pitch</h3>
 <p>Controls the global pitch of the track. Can be used to make an entire channel slightly out of tune.</p>
 <h3 id="duty-cycle">Duty Cycle</h3>
@@ -431,7 +508,21 @@
 <h3 id="speed">Speed</h3>
 <p>This changes the speed parameter of the FamiTracker tempo settings and is only available in FamiTracker tempo mode. Larger values will make the song scroll slower. Please refer to the <a href="../song/">Editing Songs &amp; Project</a> section for more information about tempo management.</p>
 <h3 id="note-and-cut-delay">Note and Cut delay</h3>
-<p>Note delays allows delaying the moment a note is played by a few frames while cut delay will stop a note after a few frames. This also is only available in FamiTracker tempo mode. Please refer to the <a href="../song/">Editing Songs &amp; Project</a> section for more information about tempo management.</p></div>
+<p>Note delays allows delaying the moment a note is played by a few frames while cut delay will stop a note after a few frames. This also is only available in FamiTracker tempo mode. Please refer to the <a href="../song/">Editing Songs &amp; Project</a> section for more information about tempo management.</p>
+<h3 id="dac-dpcm-channel-only">DAC (DPCM channel only)</h3>
+<p>Unique to the DPCM channel, can be used to manually set the current DAC value. Can be usefull to artifically create "pop" sounds without any samples or to slightly affect the volume of the noise/triangle channels due to the non-linear mixing of the NES/Famicom.</p>
+<h3 id="phase-reset">Phase Reset</h3>
+<p>On supported channels, will reset the phase if this effect is present. Can be used to make sure 2 channels have their waveform perfectly aligned and create creative/destructive interference. Note that is recommended to use the <a href="../config/#sound-configuration">Fully emulate when seeking</a> option when working with phase reset. Phase resets are extremely time sensitive and may not sound exactly the same in-app and on real hardware/emulators, and the exact timing may even change in future versions.</p>
+<h3 id="fds-modulation-speed-depth-fds-expansion-only">FDS Modulation Speed / Depth (FDS expansion only)</h3>
+<p>These are only available when using the FDS audio expansion. These can be used to change the modulation speed/depth. Note that instruments that use Auto-Modulation cannot have their speed changed manually. </p>
+<p>Also, instrument will contantly reset their modulation speed/depth to the values of the instrument on every note with an attack. In other words, it will loose its effect on every note attack and will need to be re-set to override the instrument.</p>
+<h3 id="env-period-sunsoft-5b-and-epsm-squares-only">Env Period (Sunsoft 5B and EPSM squares only)</h3>
+<p>Controls the pitch/period of the envelope for instruments that have it enabled and dont use the Auto-Pitch feature. Note that since envelope is shared accross all 3 channel, this effect may have impact on the other square channels.</p>
+<p>Also, instrument with envelope enabled will contantly reset the envelope frequency to the values of the instrument on every note with an attack. In other words, it will loose its effect on every note attack and will need to be re-set to override the instrument.</p>
+<h3 id="speed-famitracker-tempo-only">Speed (Famitracker-Tempo only)</h3>
+<p>Changes the "speed" parameter of the FamiTracker tempo.</p>
+<h3 id="note-delay-and-cut-delay-famitracker-tempo-only">Note Delay and Cut Delay (Famitracker-Tempo only)</h3>
+<p>These 2 effects are used to offset note starts and end respectively, by a specific number of frames. This is the main way to achieve frame granularity when using FamiTracker tempo. For example, a note delay of 2 will trigger that note 2 frames later than normal.</p></div>
             </div>
         </div>
 

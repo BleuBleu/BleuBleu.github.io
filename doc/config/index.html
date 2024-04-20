@@ -106,9 +106,18 @@
 <li>
     <a href="../thanks/" class="dropdown-item">Acknowledgements</a>
 </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Change Log <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
                                     
 <li>
-    <a href="../changelog/" class="dropdown-item">Change Log</a>
+    <a href="../changelog/" class="dropdown-item">All Version History</a>
+</li>
+                                    
+<li>
+    <a href="../releases/420/" class="dropdown-item">FamiStudio 4.2.0 Highlights</a>
 </li>
                                 </ul>
                             </li>
@@ -316,7 +325,10 @@
 <p><img alt="" src="../images/ConfigSound.png#center" /></p>
 <ul>
 <li>
-<p><strong>Number of buffered frames</strong> : Number of NES/Famicom frames to buffer ahead of time. Higher values help prevent audio starvation, but also raise latency. The minimum is 2 and requires a relatively fast CPU to run without audio starvation.</p>
+<p><strong>Audio Buffer Size</strong> : The size of the internal audio buffer, in milliseconds. It is recommended that you set this to the smallest number your computer/phone is able to handle without the audio becoming choppy. On some platforms, the OS may clamp this to the minimum size supported by the hardware, so you may stop seeing a reduction in latency below a certain value.</p>
+</li>
+<li>
+<p><strong>Buffered Emulation Frames</strong> : For systems with relatively slow CPU, the app can optionally emulate additional NES frames ahead of time (16ms in NTSC, 20ms in PAL) on separate threads to prevent the audio from starving. This adds latency but makes the app much more efficient. When this feature is enabled, the total audio latency will be roughly <code>(Buffered Emulation Frames) x 16ms + (Audio Buffer Size)</code> on NTSC. If this is zero, this feature is disabled entirely. Set this to zero if your system has good single-core performance, leave to a low value (2 or 3) otherwise.</p>
 </li>
 <li>
 <p><strong>Stop instrument after</strong>: When instruments have release notes, there is no way for FamiStudio to know when to stop the notes. This allows stopping any sound after a specified number of seconds. This only applies to MIDI or when previewing instruments on the piano roll and has no impact on the actual song.</p>
@@ -334,14 +346,17 @@
 <p><strong>Mute piano roll interactions during playback</strong> : When enabled, dragging/adding notes in the piano roll will not preview the notes when the song is playing. Some users find this distracting.</p>
 </li>
 <li>
+<p><strong>Fully emulates when seeking</strong> : When enabled, pressing Play will fully emulate the song from the very beginning to reach the desired play location, exactly as if it was playing for real. This is useful when using time-sensive effects such as phase resets. When this is disabled, FamiStudio takes a few shortcut to quickly play from the specified location. On CPU-intensive expansions, such as EPSM, it may take a couple of seconds before the song starts playing.</p>
+</li>
+<li>
 <p><strong>Metronome volume</strong> : Volume of the metronome.</p>
 </li>
 </ul>
 <h2 id="mixer">Mixer</h2>
 <p><img alt="" src="../images/ConfigMixer.png#center" /></p>
-<p>This section allows adjusting the global volume of FamiStudio and the volume/treble of each audio expansion in the FamiStudio NES sound emulation. The global audio volume may need to be lowered to avoid clipping when using a massive amount of audio expansions at the same time.</p>
-<p>Audio expansion volume is a tricky subject since even different revisions of the Famicom had different resistor values which dramatically affected the volume of expansion audio. Here you can set any value you want.</p>
-<p>The treble (low-pass filter) has a logarithmic rolloff to treble dB at half sampling rate. Negative values reduce treble, small positive values (0 to 5.0) increase treble. FamiStudio emulates audio at 44.1KHz.</p>
+<p>This section allows adjusting the global volume of FamiStudio and the volume/treble of each audio expansion in the FamiStudio NES sound emulation. The global audio volume may need to be lowered slightly to avoid clipping when using a massive amount of audio expansions at the same time.</p>
+<p>Audio expansion volume is a tricky subject since even different revisions of the Famicom had different resistor values which dramatically affected the volume of expansion audio. Moreover some expansions, such as N163, had multiple different versions with significant volume differences. For this reason, FamiStudio does not even try to be hardware-accurate and lets you set any value you want.</p>
+<p>The treble (low-pass filter) has a logarithmic rolloff to treble dB at the specified sampling rate. In other words, the treble will start to gradually reduce above the specified frequency. Negative values reduce treble while small positive values (0 to 5.0) increase treble.</p>
 <p>Note that these settings have no effect outside of FamiStudio.</p>
 <h2 id="midi-configuration">MIDI Configuration</h2>
 <p><img alt="" src="../images/ConfigMIDI.png#center" /></p>
