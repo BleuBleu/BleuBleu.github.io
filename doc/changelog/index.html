@@ -159,6 +159,10 @@
             
             <li class="nav-item" data-level="1"><a href="#change-log" class="nav-link">Change Log</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#version-421-hotfix" class="nav-link">Version 4.2.1 (Hotfix)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
             <li class="nav-item" data-level="2"><a href="#version-420" class="nav-link">Version 4.2.0</a>
               <ul class="nav flex-column">
               </ul>
@@ -341,6 +345,24 @@
 <h1 id="change-log">Change Log</h1>
 <p>Version history / release notes for each release. </p>
 <p>To download older versions or view the release dates, please visit the <a href="https://github.com/BleuBleu/FamiStudio/releases">Github Releases</a> page.</p>
+<h2 id="version-421-hotfix">Version 4.2.1 (Hotfix)</h2>
+<p>Changes/Fixes:</p>
+<ul>
+<li>Fixed MSI installer pointing to .NET 5.0 instead of 7.0</li>
+<li>Fixed sound engine settings not being saved in project properties</li>
+<li>Fixed bass filter setting not being saved in app settings</li>
+<li>Fixed VRC6 initialization in sound engine by writing zero to $9003</li>
+<li>Fixed issue with vibrato in sound engine that could stall the audio</li>
+<li>Fixed the "+" button of DPCM samples in project explorer on mobile</li>
+<li>Fixed crash when pasting items between projects when using folders</li>
+<li>Fixed GLFW compatibility issues on Linux (Thanks Steo!)</li>
+<li>Fixed incorrect size of FDS disks</li>
+<li>Fixed issue with non-looping relative pitch envelope in Sound Engine/NSF/ROM</li>
+<li>Fixed issue with volume slides and FamiTracker tempo in Sound Engine/NSF/ROM</li>
+<li>Made the video looping more consistent with how the audio loops in the app</li>
+<li>Made it clearer that you cannot rename multiple patterns</li>
+<li>Optimized VGM import</li>
+</ul>
 <h2 id="version-420">Version 4.2.0</h2>
 <p><a href="../releases/420/"><img alt="" src="../releases/420/Thumbnail420.png#center" /></a></p>
 <p>Changes/Fixes:</p>
